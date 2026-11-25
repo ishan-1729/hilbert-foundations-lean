@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Installs the toolchain from lean-toolchain, fetches the mathlib cache, runs `lake build`.
+      - uses: leanprover/lean-action@v1
+
+      - name: Axiom audit (no sorry, only standard axioms)
+        run: lake env lean scripts/AxiomsAudit.lean
+
+      - name: Unit map is complete and honest
+        run: |
+          python3 scripts/unit_table.py --check
+          git diff --exit-code docs/UNITS.md || (echo "docs/UNITS.md is stale: run scripts/unit_table.py" && exit 1)
