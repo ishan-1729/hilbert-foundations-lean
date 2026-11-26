@@ -457,7 +457,7 @@ theorem s23_fig40_hilbert :
 
 > This new geometry serves at the same time as an example of a plane geometry in which the axioms I, 1–2, II–III, IV, 1–5, V all hold, but which cannot be considered as a part of a geometry of space.
 
-**Lean reading.** `PartOfSpace P L`: there is a space geometry satisfying I, II, III
+**Lean reading.** `IsPartOfSpace P L`: there is a space geometry satisfying I, II, III
 (`SpaceOrder`, `SpaceParallels`, as in § 22) with a plane `α` and bijections of the points and the
 lines of the given plane geometry onto the points and the lines of `α` preserving and reflecting
 incidence and betweenness. Hilbert's reason is § 22: Desargues's theorem holds in every plane of a
@@ -471,8 +471,10 @@ earlier conditional form.
 **Status.** proved
 -/
 
-/-- The plane geometry `(P, L)` is part of a geometry of space satisfying I, II, III. -/
-def PartOfSpace (P : Type) (L : Type) [HasLines P L] [HasBetween P] : Prop :=
+/-- The plane geometry `(P, L)` is part of a geometry of space satisfying I, II, III. This is the
+notion `PartOfSpace` of § 22 (`Desargues.lean`), written out for types in `Type`; this file does not
+import that one. -/
+def IsPartOfSpace (P : Type) (L : Type) [HasLines P L] [HasBetween P] : Prop :=
   ∃ (P' : Type) (L' : Type) (Pl' : Type) (_ : HasLines P' L') (_ : HasPlanes P' Pl')
     (_ : HasBetween P'), SpaceOrder P' L' Pl' ∧ SpaceParallels P' L' Pl' ∧
     ∃ (α : Pl') (f : P → P') (g : L → L'), Function.Injective f ∧ Function.Injective g ∧
@@ -503,7 +505,7 @@ def SpaceDesargues : Prop :=
 open Moulton in
 /-- **The Moulton plane is not part of a space geometry satisfying I–III**, granted that Desargues's
 theorem holds in the planes of such a space (§ 22). -/
-theorem moulton_not_partOfSpace_of (hD : SpaceDesargues) : ¬PartOfSpace Pt Ln := by
+theorem moulton_not_partOfSpace_of (hD : SpaceDesargues) : ¬IsPartOfSpace Pt Ln := by
   rintro ⟨P', L', Pl', iL, iP, iB, hO, hPar, α, f, g, hf, -, hfα, hgα, hfs, hgs, hinc, -⟩
   obtain ⟨n1, n2, h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, pa, pb, pc, p1, p2, q1, q2,
     r1, r2, hno, hqr⟩ := desargues_config
@@ -547,7 +549,7 @@ theorem spaceDesargues_holds : SpaceDesargues :=
 /-- **Desargues's theorem is a necessary condition** for a plane geometry to be part of a space
 geometry satisfying I–III (§ 22, used in § 23). -/
 theorem desarguesParallel_of_partOfSpace {P : Type} {L : Type} [HasLines P L] [HasBetween P]
-    (h : PartOfSpace P L) : DesarguesParallel P := by
+    (h : IsPartOfSpace P L) : DesarguesParallel P := by
   obtain ⟨P', L', Pl', iL, iP, iB, -, hPar, α, f, g, hf, -, hfα, hgα, hfs, hgs, hinc, -⟩ := h
   have : SpaceConnection P' L' Pl' := hPar.toSpaceConnection
   intro A B C A' B' C' a b c a' b' c' p q r nABC nABC' hBa hCa hCb hAb hAc hBc hBa' hCa' hCb' hAb'
@@ -578,7 +580,7 @@ theorem desarguesParallel_of_partOfSpace {P : Type} {L : Type} [HasLines P L] [H
   · exact Or.inr ⟨hback _ _ h.1, hback _ _ h.2.1, hback _ _ h.2.2⟩
 
 /-- **The Moulton plane is not part of a space geometry satisfying I–III.** -/
-theorem moulton_not_partOfSpace : ¬PartOfSpace Moulton.Pt Moulton.Ln :=
+theorem moulton_not_partOfSpace : ¬IsPartOfSpace Moulton.Pt Moulton.Ln :=
   fun h => moulton_not_desarguesParallel (desarguesParallel_of_partOfSpace h)
 
 end HilbertFoundations

@@ -4,7 +4,7 @@ David Hilbert's *The Foundations of Geometry*, in E. J. Townsend's 1902 translat
 
 Every axiom, theorem and claim of the book is a *unit*. Each unit quotes the text, says how it is read in Lean, and gives the declarations that prove it. Where Hilbert is wrong or imprecise, the unit says so and proves the correct statement.
 
-> **Work in progress.** The chapters on Pascal's theorem, proportion, plane areas and Desargues's theorem from the axioms of congruence (§§ 14–22) are still being formalized and are not yet in the root module. The documentation is not yet written.
+> **Work in progress.** Every chapter is formalized and builds: 430 units, 28 of them stated but not yet proved (listed in [docs/UNITS.md](docs/UNITS.md)). The documentation is not yet written.
 
 ## Status
 
@@ -13,7 +13,7 @@ The unit map, with each unit's status and file, is [docs/UNITS.md](docs/UNITS.md
 ## Layout
 
 ```
-HilbertFoundations.lean               root: imports every finished chapter
+HilbertFoundations.lean               root: imports every chapter
 HilbertFoundations/Basic.lean         the axioms I–V as Lean classes, standalone axiom statements
 HilbertFoundations/Order.lean         §§ 2–5: consequences of the axioms of connection and order
 HilbertFoundations/Congruence.lean    §§ 6–7: congruence

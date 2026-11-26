@@ -1,5 +1,5 @@
 import HilbertFoundations.Pascal
-import HilbertFoundations.ProportionAux3
+import HilbertFoundations.ProportionAux6
 
 /-!
 # Algebra of segments, proportion, equations of lines and planes (§§ 15–17)
@@ -14,7 +14,8 @@ Sections of Hilbert's text covered here (full text in `data/foundations.json`):
 
 The setting is a plane geometry with I 1–2, II, III, IV (`PlaneCongruence`, `PlaneParallels`),
 except for the laws of addition of § 15 (linear axioms only, `SegmentCongruence`) and the last part
-of § 17 (Archimedes's axiom). The helper modules:
+of § 17 (Archimedes's axiom) and the units on space (groups I–V of space geometry, restricted to a
+plane). The helper modules:
 
 * `ProportionAux1.lean`: sums of segments from the linear axioms (`Pas.SegSum`), lengths add
   (`Pas.len_add`), Hilbert's product construction on an arbitrary right angle (`Pas.HilbertProd`)
@@ -23,6 +24,14 @@ of § 17 (Archimedes's axiom). The helper modules:
   (`Pas.similar_prop`), the co-ordinates of points and the equations of lines.
 * `ProportionAux3.lean`: betweenness on a line is the order of the field of segments; with
   Archimedes's axiom the field is archimedean.
+* `ProportionAux4.lean`: the distance formula, the perpendicular to the axis `y`, the real
+  correspondence normalised as in § 17, and the restriction of a geometry of space to a plane
+  (lines of space, plane co-ordinates of the planes of space). It imports IndependenceAux3.lean for
+  the restriction of the congruences of space to a plane (`planeCongruence`).
+* `ProportionAux5.lean`: betweenness and sides in co-ordinates, the bisectors of the angles of a
+  triangle meet in a point and the perpendiculars from it to the sides are congruent (the incircle
+  that Hilbert's proof of Theorem 22 presupposes).
+* `ProportionAux6.lean`: Hilbert's product construction succeeds in every right angle.
 
 The field of segments `Pas.G ax` (positive and negative segments of an axis, `PascalAux5.lean`) is
 built from Hilbert's own multiplication; its commutativity and associativity come from the
@@ -37,7 +46,10 @@ commutation of the rotations (see Pascal.lean), and they are the content of Pasc
 `theorem23_converse`, `signed_segments_laws`, `signed_particular`, `coordinates_bijective`,
 `perpendicular_coordinate`, `line_through_origin_eq`, `parallel_line_eq'`, `lines_are_linear`,
 `linear_eqs_are_lines`, `archimedean_segments`, `exists_real_correspondence`,
-`SpaceCoordinatesClaim`, `IdealElementsClaim`.
+`SpaceCoordinatesClaim`, `IdealElementsClaim`, `hilbertProd_construction`, `theorem22_special'`,
+`incircle`, `perpendicular_coordinate_y`, `coordinates_perpendiculars`,
+`exists_real_correspondence_space`, `real_correspondence_midpoint`, `omega_points`,
+`omega_points_space`, `real_points_depend`, `plane_coordinates_space'`.
 -/
 
 namespace HilbertFoundations
@@ -227,12 +239,15 @@ theorem segSum_assoc' [HasLines P L] [HasBetween P] [HasSegCong P] [SegmentCongr
 are a right angle `∠P₁OP₂` (`IsRightAngle`, any right angle), points `E₁`, `B'` of the side `OP₁` with
 `OE₁ ≡ 1`, `OB' ≡ b`, points `A'`, `C'` of the side `OP₂` with `OA' ≡ a`, `OC' ≡ c`, and the line
 `B'C'` is the parallel to `E₁A'` through `B'` (or this line itself, when `b ≡ 1`). Plane geometry
-with I 1–2, II, III, IV. Hilbert tacitly claims that the construction always gives a segment, that
-it does not depend on the right angle chosen nor on the representatives: `hilbertProd_iff'`
-(`c = ab` iff `len c = len a · len b` in the field of segments with unit `1`), whence
-`hilbertProd_exists` and `hilbertProd_unique` (any two products are congruent, whatever the right
-angles used). The proof maps the right angle onto the axes by an isometry and computes with the
-cross product of the directions of the two parallels.
+with I 1–2, II, III, IV. Hilbert claims that the construction always gives a segment ("this parallel
+will cut off from the other side of the right angle a segment `c`"), and tacitly that the result
+does not depend on the right angle chosen nor on the representatives. `hilbertProd_construction`:
+in *every* right angle, the parallel through the extremity of `b` meets the other side (the half-ray,
+not only its line) in a point `C'`, and `OC'` is a product `ab`. `hilbertProd_iff'` (`c = ab` iff
+`len c = len a · len b` in the field of segments with unit `1`), whence `hilbertProd_exists` and
+`hilbertProd_unique` (any two products are congruent, whatever the right angles used). The proofs map
+the right angle onto the axes by an isometry and compute with the cross product of the directions
+of the two parallels (`Pas.prod_construction`, ProportionAux6.lean).
 
 **Status.** definition
 -/
@@ -245,6 +260,22 @@ theorem hilbertProd_def [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong
         SegCong O A' A1 A2 ∧ C' ∈ ray O P2 ∧ SegCong O C' C1 C2 ∧
         ∃ l m : L, E1 ∈ l ∧ A' ∈ l ∧ B' ∈ m ∧ C' ∈ m ∧ (l = m ∨ ¬Meets (Point := P) l m) :=
   Iff.rfl
+
+/-- **The construction succeeds in every right angle**: the parallel to `E₁A'` through `B'` cuts
+off from the other side a segment `OC'`, and `OC' = ab`. -/
+theorem hilbertProd_construction [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
+    [PlaneCongruence P L] [PlaneParallels P L] {U1 U2 O' P1 P2 E1 A' B' : P} (hU : U1 ≠ U2)
+    (hr : IsRightAngle (L := L) P1 O' P2) (hE1 : E1 ∈ ray O' P1) (sE1 : SegCong O' E1 U1 U2)
+    (hB' : B' ∈ ray O' P1) (hA' : A' ∈ ray O' P2) {l m : L} (hl1 : E1 ∈ l) (hl2 : A' ∈ l)
+    (hm : B' ∈ m) (hpar : l = m ∨ ¬Meets (Point := P) l m) :
+    ∃ C' : P, C' ∈ ray O' P2 ∧ C' ∈ m ∧ Pas.HilbertProd (L := L) U1 U2 O' A' O' B' O' C' := by
+  obtain ⟨ax, hO, hE⟩ := Pas.exists_axes (L := L) hU
+  subst hO hE
+  obtain ⟨C', hC', hCm, -⟩ := Pas.prod_construction ax hr hE1 sE1 hB' hA' hl1 hl2 hm hpar
+  refine ⟨C', hC', hCm, O', P1, P2, E1, A', B', C', hr, hE1, sE1, hB',
+    segCong_refl (Line := L) (Ne.symm (ne_of_mem_ray hB')), hA',
+    segCong_refl (Line := L) (Ne.symm (ne_of_mem_ray hA')), hC',
+    segCong_refl (Line := L) (Ne.symm (ne_of_mem_ray hC')), l, m, hl1, hl2, hm, hCm, hpar⟩
 
 section Product
 
@@ -493,7 +524,8 @@ pairs are these with `a`, `b` exchanged, which is the same proportion read backw
 proves the case of right triangles laid off in one right angle (`theorem22_special`) and reduces the
 general case to it through the incircles (the angle bisectors meet in a point `S`, the
 perpendiculars `r` from `S` cut the sides into the segments `a_b`, `a_c`, …), a construction which he
-does not justify (that the bisectors are concurrent and the feet lie on the sides). Here the proof
+does not justify (that the bisectors are concurrent, that the three perpendiculars are congruent and
+that their feet lie on the sides: proved here in unit `s16.incircle`). Here the proof
 goes the other way: Theorem 23 is proved first (in co-ordinates over the field of segments), and
 Theorem 22 follows by laying off `A'B'`, `A'C'` on the sides of the angle `A` (SAS) and the converse
 of Theorem 19 (`Pas.similar_prop`); only two of the three angle congruences are used.
@@ -537,14 +569,42 @@ theorem theorem22 [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
 
 > Proof. We shall first consider the special case where the angle included between $a$ and $b$ and the one included between $a'$ and $b'$ are right angles. … Then, according to our definition of the product of two segments, we have \[ b = ea, b' = ea', \] from which we obtain \[ ab'=ba', \] that is to say, \[ a:b=a':b'. \]
 
-**Lean reading.** `theorem22_special`: two right triangles laid off in one right angle `∠X₁OY₁`
-(`X₁, X₂` on one side, `Y₁, Y₂` on the other) with parallel (or equal) hypotenuses `X₁Y₁`, `X₂Y₂` have
-proportional legs: `OX₁ · OY₂ = OY₁ · OX₂`. Plane geometry with I 1–2, II, III, IV; a special case
-of Theorem 23 (`Pas.thales`). Hilbert's `e` (the segment cut off by the parallel through the unit
-point) is the common ratio.
+**Lean reading.** Plane geometry with I 1–2, II, III, IV. The special case as Hilbert states it,
+`theorem22_special'`: two *similar* triangles `OX₁Y₁`, `OX₂Y₂` (`Similar`) with the right angle at
+`O`, laid off in one and the same right angle (`X₂` on the half-ray `OX₁`, `Y₂` on the half-ray
+`OY₁`), have proportional legs, `OX₁ : OY₁ = OX₂ : OY₂` (`SegProportion`, any unit). Hilbert's
+argument draws "a straight line parallel to the hypotenuses", i.e. it uses tacitly that the
+hypotenuses `X₁Y₁`, `X₂Y₂` are parallel (or equal), which follows from the congruence of the angles
+at `X₁`, `X₂` by the converse of Theorem 19; `theorem22_special` is the step he actually proves:
+right triangles in one right angle with parallel (or equal) hypotenuses have proportional legs,
+`OX₁ · OY₂ = OY₁ · OX₂` (lengths in the field of segments; a special case of Theorem 23,
+`Pas.thales`). Hilbert's `e` (the segment cut off by the parallel through the unit point) is the
+common ratio. Proof of `theorem22_special'`: `Pas.similar_prop` (laying off and the converse of
+Theorem 19, then Theorem 23).
 
 **Status.** proved
 -/
+
+/-- **The special case of Theorem 22**: similar right triangles laid off in one right angle. -/
+theorem theorem22_special' [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
+    [PlaneCongruence P L] [PlaneParallels P L] {U1 U2 O X1 X2 Y1 Y2 : P} (hU : U1 ≠ U2)
+    (hr : IsRightAngle (L := L) X1 O Y1) (hX2 : X2 ∈ ray O X1) (hY2 : Y2 ∈ ray O Y1)
+    (hs : Similar (L := L) O X1 Y1 O X2 Y2) :
+    SegProportion (L := L) U1 U2 O X1 O Y1 O X2 O Y2 := by
+  obtain ⟨hn, hn', -, hB, -⟩ := hs
+  obtain ⟨ax, hO, hE⟩ := Pas.exists_axes (L := L) hU
+  subst hO hE
+  have h1 : ¬Collinear (Line := L) X1 O Y1 := hr.1
+  have h2 : ¬Collinear (Line := L) X2 O Y2 := not_collinear_of_mem_rays (L := L) h1 hX2 hY2
+  have hA : AngCong X1 O Y1 X2 O Y2 :=
+    angCong_of_sameAngle h1 h1 (sameAngle_refl X1 O Y1)
+      (sameAngle_of_ray_eq (L := L) (ray_eq_of_mem (L := L) hX2).symm
+        (ray_eq_of_mem (L := L) hY2).symm) (angCong_refl (Line := L) h1)
+  have e := Pas.similar_prop ax hn hn' hA hB
+  obtain ⟨hX1O, hY1O, -⟩ := Pas.nc_ne ax h1
+  rw [segProportion_iff ax (Ne.symm hX1O) (Ne.symm hY1O) (Ne.symm (ne_of_mem_ray hX2))
+    (Ne.symm (ne_of_mem_ray hY2))]
+  exact e
 
 theorem theorem22_special [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
     [PlaneCongruence P L] [PlaneParallels P L] (ax : Pas.Axes P L) {O X1 X2 Y1 Y2 : P}
@@ -553,6 +613,62 @@ theorem theorem22_special [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCo
     (hpar : l = m ∨ ¬Meets (Point := P) l m) :
     Pas.len ax O X1 * Pas.len ax O Y2 = Pas.len ax O Y1 * Pas.len ax O X2 :=
   Pas.thales ax hr.1 hX2 hY2 hX1l hY1l hX2m hY2m hpar
+
+/-!
+## [s16.incircle] The general case: the bisectors of the angles meet in a point
+
+*(§ 16)*
+
+> Let us now return to the general case. In each of the two similar triangles, find the point of intersection of the bisectors of the three angles. … Consequently, by virtue of the commutative law of multiplication, we have \[ a:b=a':b'. \]
+
+**Lean reading.** Plane geometry with I 1–2, II, III, IV. Hilbert's reduction of the general case
+presupposes that the bisectors of the three angles of a triangle meet in a point `S`, and (writing
+one letter `r` for the three perpendiculars from `S` to the sides, and the segments `a_b`, `a_c`, …
+"determined upon the sides") that these perpendiculars are congruent and that their feet lie on the
+sides. None of this is proved in the text; it is proved here: `incenter_exists`, for a triangle
+`ABC` there is a point `S` inside the three angles (`Interior`) with `∠BAS ≡ ∠SAC`,
+`∠ABS ≡ ∠SBC`, `∠ACS ≡ ∠SCB` (so `S` lies on the three bisectors), and there are points `F_a`,
+`F_b`, `F_c` between the vertices on the three sides with `∠B F_a S`, `∠C F_b S`, `∠A F_c S` right and
+`S F_a ≡ S F_b ≡ S F_c`. The hypothesis `A ≠ B` (a triangle has distinct vertices) only excludes the
+one-point model of the plane axioms (Commentary.lean), in which three equal points are "not
+collinear" for want of a line. Proof in co-ordinates over the field of segments (ProportionAux5.lean):
+`S = (a A + b B + c C) / (a + b + c)` with `a`, `b`, `c` the lengths of the sides; at each vertex
+`S - V` is a positive multiple of the sum of the unit vectors of the two sides, whence the
+congruence of the two half-angles by Theorem 16 (three sides) and the distance formula; the feet are
+the orthogonal projections, between the vertices by the strict triangle inequalities (from the
+laws of cosines), the right angles again by Theorem 16, and the three perpendiculars have the length
+`|ABC| / (a + b + c)`. The rest of Hilbert's argument (the proportions `a_b : r = a'_b : r'`, … from
+the special case, which also needs that the halves of congruent angles are congruent, and their
+addition `a : r = a' : r'` by the distributive law) is not formalized, Theorem 22 being proved by
+another route (`th.22`). Misprint: "`a : r = a' : r`" should read "`a : r = a' : r'`".
+
+**Status.** proved
+-/
+
+/-- **The bisectors of the angles of a triangle meet in a point, the centre of the incircle.** -/
+theorem incircle [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
+    [PlaneCongruence P L] [PlaneParallels P L] {A B C : P} (hn : IsTriangle (Line := L) A B C)
+    (hAB : A ≠ B) :
+    ∃ S : P, (S ∈ Interior B A C ∧ S ∈ Interior A B C ∧ S ∈ Interior A C B) ∧
+      (AngCong B A S S A C ∧ AngCong A B S S B C ∧ AngCong A C S S C B) ∧
+      ∃ Fa Fb Fc : P, Between B Fa C ∧ Between C Fb A ∧ Between A Fc B ∧
+        IsRightAngle (L := L) B Fa S ∧ IsRightAngle (L := L) C Fb S ∧
+        IsRightAngle (L := L) A Fc S ∧ SegCong S Fa S Fb ∧ SegCong S Fa S Fc := by
+  obtain ⟨ax, -, -⟩ := Pas.exists_axes (L := L) hAB
+  exact Pas.incenter_exists ax hn
+
+/-!
+## [s16.fundamental] The fundamental theorem of the theory of proportion
+
+*(§ 16)*
+
+> From the theorem just demonstrated, we can easily deduce the fundamental theorem in the theory of proportion. This theorem may be stated as follows:
+
+**Lean reading.** A remark introducing Theorem 23; in Hilbert's order Theorem 23 is deduced from
+Theorem 22, here the order of the proofs is reversed (see `th.22`).
+
+**Status.** remark
+-/
 
 /-!
 ## [th.23] Theorem 23
@@ -625,19 +741,6 @@ theorem theorem23_converse [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngC
       (segCong_refl (Line := L) (Ne.symm hX1V))
 
 /-!
-## [s16.fundamental] The fundamental theorem of the theory of proportion
-
-*(§ 16)*
-
-> From the theorem just demonstrated, we can easily deduce the fundamental theorem in the theory of proportion. This theorem may be stated as follows:
-
-**Lean reading.** A remark introducing Theorem 23; in Hilbert's order Theorem 23 is deduced from
-Theorem 22, here the order of the proofs is reversed (see `th.22`).
-
-**Status.** remark
--/
-
-/-!
 ## [s17.signed] Negative segments and the rules of § 13
 
 *(§ 17)*
@@ -691,12 +794,16 @@ theorem signed_particular [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCo
 **Lean reading.** Plane geometry with I 1–2, II, III, IV. The axes are `x = OE` and the
 perpendicular `y` at `O` (`Pas.Axes`; they form a right angle, `Pas.axes_right'`), the segment `y`
 being laid off on `y` by the rotation `J` (taking `E` to the point `F` of `y`). The co-ordinates of a
-point `Z` are `Pas.px ax Z`, `Pas.py ax Z`: `Z = x + J y` in vectors. `perpendicular_coordinate`:
-the perpendicular to the axis `x` at its point `x ≠ 0` (the points `Z` off `x` with `∠OxZ` right)
-is the set of points with first co-ordinate `x`, which is Hilbert's construction (the second
-co-ordinate is the same with the axes exchanged by `J`). `coordinates_bijective`: every point is
-uniquely determined by its co-ordinates, and every pair of signed segments is the pair of
-co-ordinates of a point.
+point `Z` are `Pas.px ax Z`, `Pas.py ax Z`: `Z = x + J y` in vectors; the point with co-ordinates
+`(x, y)` is `Pas.mkPt ax x y`, the point `x` of the axis `x` is `ofV x`, the point `y` of the axis
+`y` is `mkPt 0 y`. `perpendicular_coordinate`: the perpendicular to the axis `x` at its point `x ≠ 0`
+(the points `Z` off `x` with `∠OxZ` right) is the set of points with first co-ordinate `x`;
+`perpendicular_coordinate_y`: the perpendicular to the axis `y` at its point `y ≠ 0` is the set of
+points with second co-ordinate `y`; `coordinates_perpendiculars`: for `x, y ≠ 0` the two
+perpendiculars "erected at the extremities of `x` and `y`" meet in exactly one point, the point
+with co-ordinates `(x, y)` (when `x` or `y` is `0` the perpendicular at `O` is the other axis).
+`coordinates_bijective`: every point is uniquely determined by its co-ordinates, and every pair of
+signed segments is the pair of co-ordinates of a point.
 
 **Status.** proved
 -/
@@ -712,6 +819,19 @@ theorem perpendicular_coordinate [HasLines P L] [HasBetween P] [HasSegCong P] [H
     IsRightAngle (L := L) ax.O (Pas.ofV (x : Pas.V ax)) Z ↔ Pas.px ax Z = x :=
   Pas.perp_iff_px ax hx hZ
 
+theorem perpendicular_coordinate_y [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
+    [PlaneCongruence P L] [PlaneParallels P L] (ax : Pas.Axes P L) {y : Pas.G ax} (hy : y ≠ 0)
+    {Z : P} (hZ : Z ∉ ax.y) :
+    IsRightAngle (L := L) ax.O (Pas.mkPt ax 0 y) Z ↔ Pas.py ax Z = y :=
+  Pas.perp_iff_py ax hy hZ
+
+theorem coordinates_perpendiculars [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
+    [PlaneCongruence P L] [PlaneParallels P L] (ax : Pas.Axes P L) {x y : Pas.G ax} (hx : x ≠ 0)
+    (hy : y ≠ 0) (Z : P) :
+    (IsRightAngle (L := L) ax.O (Pas.ofV (x : Pas.V ax)) Z ∧
+      IsRightAngle (L := L) ax.O (Pas.mkPt ax 0 y) Z) ↔ Z = Pas.mkPt ax x y :=
+  Pas.coords_perpendiculars ax hx hy Z
+
 /-!
 ## [s17.line_origin] The equation of a line through the origin
 
@@ -722,9 +842,12 @@ theorem perpendicular_coordinate [HasLines P L] [HasBetween P] [HasSegCong P] [H
 **Lean reading.** `line_through_origin_eq`: for `C ≠ O` with co-ordinates `(a, b)` and the line
 `l = OC`, a point `Z` lies on `l` iff `b·x - a·y = 0` for its co-ordinates `(x, y)` ("is the
 equation": the points of `l` are exactly the solutions). Plane geometry with I 1–2, II, III, IV.
-Proof by the cross product (`Pas.mem_line_iff_cross`), not by Theorem 22 (Hilbert's derivation
-needs Theorem 22 for the right triangles `O(x,0)Z`, which are similar but not laid off in one right
-angle; it also silently covers points on either side of `O`).
+Proof by the cross product (`Pas.mem_line_iff_cross`), not by Theorem 22. Hilbert's derivation
+applies Theorem 22 to the similar right triangles `O (a,0) C` and `O (x,0) Z`; this covers only the
+points `Z` of the half-ray `OC` off the axes. The points of the opposite half-ray (where `x`, `y`
+change sign, and the proportion of signed segments needs a separate argument), the point `O`, and
+the case of `l` being an axis (`a = 0` or `b = 0`, no triangle) are passed over in silence; the
+equation holds in all these cases.
 
 **Status.** proved
 -/
@@ -791,25 +914,47 @@ theorem linear_eqs_are_lines [HasLines P L] [HasBetween P] [HasSegCong P] [HasAn
 
 > The corresponding results for the geometry of space may be easily deduced.
 
-**Lean reading.** `SpaceCoordinatesClaim`: for a space geometry with I–IV (`SpaceCongruence`,
-`SpaceParallels`) having a plane, there are an ordered field `K` and a bijection of the points onto
-`K³` under which the planes are exactly the solution sets of the linear equations
-`a x + b y + c z + d = 0`, `(a, b, c) ≠ 0`. (A plane is needed: by the literal reading of I 7 a single
-line without planes satisfies the space axioms.) Not proved here: the plane results of this file
-apply to plane geometries, and transferring them to space needs the restriction of the congruences
-to a plane of space as a plane geometry and the construction of a third axis, which is not carried
-out.
+**Lean reading.** "The corresponding results": every plane is represented by an equation linear in
+the co-ordinates `x, y, z`, and every such equation represents a plane. `SpaceCoordinatesClaim`:
+for a space geometry with I–IV (`SpaceCongruence`, `SpaceParallels`) having a plane, there are an
+ordered field `K` and a bijection of the points onto `K³` under which the planes are exactly the
+solution sets of the linear equations `a x + b y + c z + d = 0`, `(a, b, c) ≠ 0` (both directions).
+(A plane is needed: by the literal reading of I 7 a single line without planes satisfies the space
+axioms.) **Proved here** (`plane_coordinates_space`): the plane part transfers to space, i.e. every
+plane `α` of a geometry of space with I–IV carries rectangular co-ordinates over an ordered field in
+which the lines of `α` are exactly the solution sets of the linear equations in `x, y`; the proof
+restricts the geometry of space to `α` (groups I, II, III from Order.lean, IV from
+IndependenceAux3.lean) and applies `lines_are_linear`, `linear_eqs_are_lines`. **Not proved here**:
+the co-ordinates of space themselves, which need a third axis perpendicular to a plane and the
+theory of perpendicular lines and planes in space (not developed by Hilbert, nor in this project).
 
 **Status.** stated (open here)
 -/
 
-/-- **Hilbert's claim** (§ 17): co-ordinates in space, planes given by linear equations. -/
+/-- **Hilbert's claim** (§ 17): co-ordinates in space, the planes being exactly the solution sets
+of the linear equations. -/
 def SpaceCoordinatesClaim : Prop :=
   ∀ (P : Type u) (L : Type v) (Pl : Type u) [HasLines P L] [HasPlanes P Pl] [HasBetween P]
     [HasSegCong P] [HasAngCong P], SpaceCongruence P L Pl → SpaceParallels P L Pl → Nonempty Pl →
     ∃ (K : Type u) (_ : Field K) (_ : LinearOrder K) (_ : IsStrictOrderedRing K)
-      (f : P ≃ K × K × K), ∀ α : Pl, ∃ a b c d : K, (a ≠ 0 ∨ b ≠ 0 ∨ c ≠ 0) ∧
-        ∀ Z : P, Z ∈ α ↔ a * (f Z).1 + b * (f Z).2.1 + c * (f Z).2.2 + d = 0
+      (f : P ≃ K × K × K),
+      (∀ α : Pl, ∃ a b c d : K, (a ≠ 0 ∨ b ≠ 0 ∨ c ≠ 0) ∧
+        ∀ Z : P, Z ∈ α ↔ a * (f Z).1 + b * (f Z).2.1 + c * (f Z).2.2 + d = 0) ∧
+      (∀ a b c d : K, (a ≠ 0 ∨ b ≠ 0 ∨ c ≠ 0) → ∃ α : Pl,
+        ∀ Z : P, Z ∈ α ↔ a * (f Z).1 + b * (f Z).2.1 + c * (f Z).2.2 + d = 0)
+
+/-- **Proved part**: every plane of a geometry of space with I–IV has rectangular co-ordinates in
+which its lines are exactly the solution sets of the linear equations. -/
+theorem plane_coordinates_space' {P : Type u} {L : Type v} {Pl : Type*} [HasLines P L]
+    [HasPlanes P Pl] [HasBetween P] [HasSegCong P] [HasAngCong P] [SpaceCongruence P L Pl]
+    [SpaceParallels P L Pl] (α : Pl) :
+    ∃ (K : Type u) (_ : Field K) (_ : LinearOrder K) (_ : IsStrictOrderedRing K)
+      (f : {A : P // A ∈ α} ≃ K × K),
+      (∀ a : L, LiesInPlane (Point := P) a α → ∃ p q r : K, (p ≠ 0 ∨ q ≠ 0) ∧
+        ∀ Z : {A : P // A ∈ α}, (Z : P) ∈ a ↔ p * (f Z).1 + q * (f Z).2 + r = 0) ∧
+      (∀ p q r : K, (p ≠ 0 ∨ q ≠ 0) → ∃ a : L, LiesInPlane (Point := P) a α ∧
+        ∀ Z : {A : P // A ∈ α}, (Z : P) ∈ a ↔ p * (f Z).1 + q * (f Z).2 + r = 0) :=
+  plane_coordinates_space α
 
 /-!
 ## [s17.analytic] Analytic geometry
@@ -843,30 +988,71 @@ assumes the class `Archimedes`.
 
 > If now we assume the validity of this axiom, we can arrange a definite correspondence between the points on any straight line in space and the real numbers. This may be accomplished in the following manner. … From the axiom of Archimedes, we now easily see that, upon the basis of this association, to each arbitrary point of a straight line there corresponds a single, definite, real number, and, indeed, such that this correspondence possesses the following property: If $A$, $B$, $C$ are any three points on a straight line and $\alpha$, $\beta$, $\gamma$ are the corresponding real numbers, and, if $B$ lies between $A$ and $C$, then one of the inequalities, \[ \alpha<\beta<\gamma or \alpha>\beta>\gamma, \] is always fulfilled.
 
-**Lean reading.** `exists_real_correspondence`: plane geometry with I 1–2, II, III, IV and V
-(`Archimedes`); for every line `ℓ` there is a map `f` of the points to `ℝ`, one-to-one on `ℓ`, such
-that if `B` lies between `A` and `C` (points of `ℓ`) then `f A < f B < f C` or `f A > f B > f C`.
-Construction: with axes on `ℓ`, Archimedes's axiom makes the field of segments archimedean
-(`Pas.archimedean_G`: the multiples `n·y` of a segment exceed any segment), hence it embeds into `ℝ`
-as an ordered field (mathlib's `Real.nonemptyOrderRingHom`), and `f` is this embedding applied to the
-co-ordinate on `ℓ`. Hilbert's own construction (the dyadic points `±m/2ⁿ` obtained by bisection,
-every point being then determined by the dyadic points on either side) is not followed; the map
-built here also sends the point at the distance `m/2ⁿ` (unit `OE`) to the number `m/2ⁿ`, being a
-field homomorphism. Departure: "any straight line in space" is read for a plane geometry, i.e. for the lines
-of a plane; a space version needs the restriction of the congruences of space to a plane (see
-`s17.space`).
+**Lean reading.** Groups I–V. Hilbert's correspondence assigns `0` and `1` to two chosen points
+`O ≠ E` of the line, the mean of the numbers to the midpoint (bisection), `±m/2ⁿ` to the points
+obtained by laying off `m` times the segment `(0, 1/2ⁿ)`, and to every other point the real number
+determined by the dyadic points on either side. `exists_real_correspondence` (plane geometry,
+`PlaneCongruence`, `PlaneParallels`, `Archimedes`): for every line `ℓ` and points `O ≠ E` of `ℓ`
+there is `f : P → ℝ` with `f O = 0`, `f E = 1`, one-to-one on `ℓ`, such that if `B` lies between
+`A` and `C` (points of `ℓ`) then `f A < f B < f C` or `f A > f B > f C` (Hilbert's property), such
+that congruent segments of `ℓ` are exactly those whose extremities have equal absolute differences of
+numbers, and such that every number of `Ω` is the number of a point of `ℓ` (unit `s17.omega`).
+`real_correspondence_midpoint`: every such map sends the midpoint of two points to the mean of their
+numbers, so it agrees with Hilbert's on his dyadic points (bisection and laying off), and, being
+monotone, it is Hilbert's map (each point is placed by the dyadic points on either side, and the
+dyadic numbers are dense in `ℝ`; this uniqueness is argued, not formalized). "Any straight line in
+space": `exists_real_correspondence_space`, for every line of a geometry of space with I–V that has a
+plane (`SpaceCongruence`, `SpaceParallels`, `Archimedes`; by the literal reading of I 7 a geometry of
+space may have no plane, and then nothing is claimed), through the restriction of the geometry to a
+plane through the line (`exists_real_coord_space`, ProportionAux4.lean). Construction (not Hilbert's
+bisections): with axes on `ℓ` with origin `O` and unit point `E`, Archimedes's axiom makes the field of
+segments archimedean (`archimedean_segments`, `Pas.archimedean_G`), hence it embeds into `ℝ` as an
+ordered field (mathlib's `Real.nonemptyOrderRingHom`), and `f` is this embedding applied to the
+co-ordinate on `ℓ`; lengths on the axis are absolute differences of co-ordinates (`Pas.len_axis`, from
+the distance formula `Pas.len_sq`).
 
 **Status.** proved (reading)
 -/
 
-/-- **The points of a line correspond to the real numbers** (with Archimedes's axiom). -/
+/-- **The points of a line correspond to the real numbers** (with Archimedes's axiom), normalised
+as Hilbert does it. -/
 theorem exists_real_correspondence [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
-    [PlaneCongruence P L] [PlaneParallels P L] [Archimedes P L] (ℓ : L) :
-    ∃ f : P → ℝ, (∀ Z W : P, Z ∈ ℓ → W ∈ ℓ → f Z = f W → Z = W) ∧
-      ∀ A B C : P, A ∈ ℓ → B ∈ ℓ → C ∈ ℓ → Between A B C →
-        (f A < f B ∧ f B < f C) ∨ (f C < f B ∧ f B < f A) := by
-  obtain ⟨f, h1, h2, -⟩ := Pas.exists_real_coord (P := P) (L := L) ℓ
-  exact ⟨f, h1, h2⟩
+    [PlaneCongruence P L] [PlaneParallels P L] [Archimedes P L] (ℓ : L) {O E : P} (hO : O ∈ ℓ)
+    (hE : E ∈ ℓ) (hOE : O ≠ E) :
+    ∃ f : P → ℝ, f O = 0 ∧ f E = 1 ∧ (∀ Z W : P, Z ∈ ℓ → W ∈ ℓ → f Z = f W → Z = W) ∧
+      (∀ A B C : P, A ∈ ℓ → B ∈ ℓ → C ∈ ℓ → Between A B C →
+        (f A < f B ∧ f B < f C) ∨ (f C < f B ∧ f B < f A)) ∧
+      (∀ X Y Z W : P, X ∈ ℓ → Y ∈ ℓ → Z ∈ ℓ → W ∈ ℓ → X ≠ Y → Z ≠ W →
+        (SegCong X Y Z W ↔ |f X - f Y| = |f Z - f W|)) := by
+  obtain ⟨f, h0, h1, h2, h3, h4, -⟩ := Pas.exists_real_coord_norm (P := P) (L := L) ℓ hO hE hOE
+  exact ⟨f, h0, h1, h2, h3, h4⟩
+
+/-- **The same for any line of a geometry of space** (I–V) having a plane. -/
+theorem exists_real_correspondence_space {Pl : Type*} [HasLines P L] [HasPlanes P Pl]
+    [HasBetween P] [HasSegCong P] [HasAngCong P] [SpaceCongruence P L Pl] [SpaceParallels P L Pl]
+    [Archimedes P L] (α0 : Pl) (ℓ : L) {O E : P} (hO : O ∈ ℓ) (hE : E ∈ ℓ) (hOE : O ≠ E) :
+    ∃ f : P → ℝ, f O = 0 ∧ f E = 1 ∧ (∀ Z W : P, Z ∈ ℓ → W ∈ ℓ → f Z = f W → Z = W) ∧
+      (∀ A B C : P, A ∈ ℓ → B ∈ ℓ → C ∈ ℓ → Between A B C →
+        (f A < f B ∧ f B < f C) ∨ (f C < f B ∧ f B < f A)) ∧
+      (∀ X Y Z W : P, X ∈ ℓ → Y ∈ ℓ → Z ∈ ℓ → W ∈ ℓ → X ≠ Y → Z ≠ W →
+        (SegCong X Y Z W ↔ |f X - f Y| = |f Z - f W|)) := by
+  obtain ⟨f, h0, h1, h2, h3, h4, -⟩ := exists_real_coord_space (L := L) α0 ℓ hO hE hOE
+  exact ⟨f, h0, h1, h2, h3, h4⟩
+
+/-- Such a correspondence sends the **midpoint** of two points to the mean of their numbers (the
+step of Hilbert's bisections). -/
+theorem real_correspondence_midpoint [HasBetween P] [HasSegCong P] {ℓ : L} [Membership P L]
+    {f : P → ℝ}
+    (hbet : ∀ A B C : P, A ∈ ℓ → B ∈ ℓ → C ∈ ℓ → Between A B C →
+      (f A < f B ∧ f B < f C) ∨ (f C < f B ∧ f B < f A))
+    (hcong : ∀ X Y Z W : P, X ∈ ℓ → Y ∈ ℓ → Z ∈ ℓ → W ∈ ℓ → X ≠ Y → Z ≠ W →
+      (SegCong X Y Z W ↔ |f X - f Y| = |f Z - f W|))
+    {X M Y : P} (hX : X ∈ ℓ) (hM : M ∈ ℓ) (hY : Y ∈ ℓ) (hXM : X ≠ M) (hMY : M ≠ Y)
+    (hb : Between X M Y) (hs : SegCong X M M Y) : f M = (f X + f Y) / 2 := by
+  have e := (hcong X M M Y hX hM hM hY hXM hMY).1 hs
+  rcases hbet X M Y hX hM hY hb with ⟨h1, h2⟩ | ⟨h1, h2⟩
+  · rw [abs_of_neg (by linarith), abs_of_neg (by linarith)] at e; linarith
+  · rw [abs_of_pos (by linarith), abs_of_pos (by linarith)] at e; linarith
 
 /-- With Archimedes's axiom the field of segments is archimedean. -/
 theorem archimedean_segments [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
@@ -881,8 +1067,10 @@ theorem archimedean_segments [HasLines P L] [HasBetween P] [HasSegCong P] [HasAn
 
 > From the development given in § 9, p. \pageref{folio27}, it is evident, that to every number belonging to the field of algebraic numbers $\Omega$, there must exist a corresponding point upon the straight line.
 
-**Lean reading.** `omega_points`: plane geometry with I–V; for every line `ℓ` the correspondence of
-`s17.reals` can be chosen so that every number of Hilbert's field `Ω` (`Omega`, Analytic.lean: the
+**Lean reading.** `omega_points` (plane geometry with I–V), `omega_points_space` (any line of a
+geometry of space with I–V having a plane): for every line `ℓ` and points `O ≠ E` of `ℓ`, the
+correspondence of `s17.reals` (with `f O = 0`, `f E = 1`, Hilbert's property of betweenness and the
+congruence property) is such that every number of Hilbert's field `Ω` (`Omega`, Analytic.lean: the
 smallest field of reals closed under `ω ↦ √(1 + ω²)`) is the number of a point of `ℓ`. "The field
 of algebraic numbers `Ω`" is Hilbert's `Ω` of § 9 (a field of algebraic numbers, not the field of
 all of them). Proof: the image of the field of segments in `ℝ` is a subfield, and it is closed under
@@ -894,12 +1082,26 @@ right triangle with legs `1` and `t` has the length `h` with `h² = 1 + t²`, fr
 -/
 
 theorem omega_points [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
-    [PlaneCongruence P L] [PlaneParallels P L] [Archimedes P L] (ℓ : L) :
-    ∃ f : P → ℝ, (∀ Z W : P, Z ∈ ℓ → W ∈ ℓ → f Z = f W → Z = W) ∧
+    [PlaneCongruence P L] [PlaneParallels P L] [Archimedes P L] (ℓ : L) {O E : P} (hO : O ∈ ℓ)
+    (hE : E ∈ ℓ) (hOE : O ≠ E) :
+    ∃ f : P → ℝ, f O = 0 ∧ f E = 1 ∧ (∀ Z W : P, Z ∈ ℓ → W ∈ ℓ → f Z = f W → Z = W) ∧
       (∀ A B C : P, A ∈ ℓ → B ∈ ℓ → C ∈ ℓ → Between A B C →
         (f A < f B ∧ f B < f C) ∨ (f C < f B ∧ f B < f A)) ∧
+      (∀ X Y Z W : P, X ∈ ℓ → Y ∈ ℓ → Z ∈ ℓ → W ∈ ℓ → X ≠ Y → Z ≠ W →
+        (SegCong X Y Z W ↔ |f X - f Y| = |f Z - f W|)) ∧
       ∀ ω : ℝ, ω ∈ Omega → ∃ Z : P, Z ∈ ℓ ∧ f Z = ω :=
-  Pas.exists_real_coord (P := P) (L := L) ℓ
+  Pas.exists_real_coord_norm (P := P) (L := L) ℓ hO hE hOE
+
+theorem omega_points_space {Pl : Type*} [HasLines P L] [HasPlanes P Pl] [HasBetween P]
+    [HasSegCong P] [HasAngCong P] [SpaceCongruence P L Pl] [SpaceParallels P L Pl]
+    [Archimedes P L] (α0 : Pl) (ℓ : L) {O E : P} (hO : O ∈ ℓ) (hE : E ∈ ℓ) (hOE : O ≠ E) :
+    ∃ f : P → ℝ, f O = 0 ∧ f E = 1 ∧ (∀ Z W : P, Z ∈ ℓ → W ∈ ℓ → f Z = f W → Z = W) ∧
+      (∀ A B C : P, A ∈ ℓ → B ∈ ℓ → C ∈ ℓ → Between A B C →
+        (f A < f B ∧ f B < f C) ∨ (f C < f B ∧ f B < f A)) ∧
+      (∀ X Y Z W : P, X ∈ ℓ → Y ∈ ℓ → Z ∈ ℓ → W ∈ ℓ → X ≠ Y → Z ≠ W →
+        (SegCong X Y Z W ↔ |f X - f Y| = |f Z - f W|)) ∧
+      ∀ ω : ℝ, ω ∈ Omega → ∃ Z : P, Z ∈ ℓ ∧ f Z = ω :=
+  exists_real_coord_space (L := L) α0 ℓ hO hE hOE
 
 /-!
 ## [s17.depends] Whether every real number corresponds to a point depends on the geometry
@@ -919,6 +1121,8 @@ of `s17.reals`. So the axioms I–V do not decide the question.
 -/
 
 theorem real_points_depend :
+    PlaneGeometry (Coord OmegaField 2) (CoordLine OmegaField 2) ∧
+    PlaneGeometry (Coord ℝ 2) (CoordLine ℝ 2) ∧
     (∀ (ℓ : CoordLine OmegaField 2) (f : Coord OmegaField 2 → ℝ),
       ¬∀ ω : ℝ, ∃ Z : Coord OmegaField 2, Z ∈ ℓ ∧ f Z = ω) ∧
     (∃ (ℓ : CoordLine ℝ 2) (f : Coord ℝ 2 → ℝ),
@@ -926,6 +1130,7 @@ theorem real_points_depend :
       (∀ A B C : Coord ℝ 2, A ∈ ℓ → B ∈ ℓ → C ∈ ℓ → Between A B C →
         (f A < f B ∧ f B < f C) ∨ (f C < f B ∧ f B < f A)) ∧
       ∀ ω : ℝ, ∃ Z : Coord ℝ 2, Z ∈ ℓ ∧ f Z = ω) := by
+  refine ⟨omega_planeGeometry, real_planeGeometry, ?_⟩
   constructor
   · intro ℓ f h
     have hc : Countable (Coord OmegaField 2) :=
@@ -959,20 +1164,35 @@ theorem real_points_depend :
 **Lean reading.** "Upon any straight line … to every system of three real numbers" conflates two
 statements: on a line a point corresponds to every real number, and in space a point corresponds to
 every triple of real numbers. `IdealElementsClaim`: every space geometry with I–V having a plane
-has an extension (`SpaceEmbedding`: the old relations are those induced) into the analytic geometry
-of space over `ℝ` (`Coord ℝ 3`, which satisfies I–V, `real_spaceGeometry`). Not proved here: it
-needs the co-ordinates of space (`s17.space`) and the identification of the congruences with the
-euclidean distance and angle of `ℝ³`. What is proved for a plane is the embedding of the field of
-segments into `ℝ` (`s17.reals`, `s17.omega`).
+(in `Type`) extends to the analytic geometry of space over `ℝ` (`Coord ℝ 3`, which satisfies I–V,
+`real_spaceGeometry`): there are injective maps of the points, lines and planes into those of
+`Coord ℝ 3` preserving and reflecting incidence, betweenness, the congruence of (genuine) segments
+and the congruence of (genuine) angles. The congruences are compared only on genuine segments
+(`A ≠ B`) and genuine angles (non-collinear triples): on degenerate tuples their values are junk
+(unconstrained by the axioms, see Basic.lean), and asking for an extension in the sense of
+`SpaceEmbedding` (all tuples) into the *fixed* model `Coord ℝ 3` would make the claim false for a
+trivial reason: a geometry identical to `Coord ℝ 3` except that it declares `AA ≡ BC` for all points
+satisfies the same axioms, and no injective map can reflect that relation into `Coord ℝ 3`, where
+`AA ≡ BC` forces `B = C`. Not proved here: it needs the co-ordinates of space (`s17.space`) and the
+identification of the congruences with the euclidean distance and angle of `ℝ³`. What is proved is
+the embedding of the field of segments into `ℝ` for every line (`s17.reals`, `s17.omega`, plane and
+space) and the plane co-ordinates of every plane of space (`plane_coordinates_space'`).
 
 **Status.** stated (open here)
 -/
 
 /-- **Hilbert's claim** (§ 17): every archimedean geometry of space extends to the analytic geometry
-of space over `ℝ`. -/
+of space over `ℝ` (the congruences compared on genuine segments and angles). -/
 def IdealElementsClaim : Prop :=
   ∀ (P : Type) (L : Type) (Pl : Type) [HasLines P L] [HasPlanes P Pl] [HasBetween P]
     [HasSegCong P] [HasAngCong P], SpaceGeometry P L Pl → Nonempty Pl →
-    Nonempty (SpaceEmbedding P L Pl (Coord ℝ 3) (CoordLine ℝ 3) (CoordPlane ℝ 3))
+    ∃ (pt : P → Coord ℝ 3) (line : L → CoordLine ℝ 3) (plane : Pl → CoordPlane ℝ 3),
+      Function.Injective pt ∧ Function.Injective line ∧ Function.Injective plane ∧
+      (∀ (A : P) (a : L), pt A ∈ line a ↔ A ∈ a) ∧
+      (∀ (A : P) (α : Pl), pt A ∈ plane α ↔ A ∈ α) ∧
+      (∀ A B C : P, Between (pt A) (pt B) (pt C) ↔ Between A B C) ∧
+      (∀ A B C D : P, A ≠ B → C ≠ D → (SegCong (pt A) (pt B) (pt C) (pt D) ↔ SegCong A B C D)) ∧
+      (∀ A O B A' O' B' : P, ¬Collinear (Line := L) A O B → ¬Collinear (Line := L) A' O' B' →
+        (AngCong (pt A) (pt O) (pt B) (pt A') (pt O') (pt B') ↔ AngCong A O B A' O' B'))
 
 end HilbertFoundations

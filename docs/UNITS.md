@@ -5,13 +5,12 @@ Do not edit by hand.
 
 | Status | Units |
 |---|---|
-| proved | 142 |
-| definition | 99 |
-| remark | 46 |
-| proved (reading) | 39 |
+| proved | 174 |
+| definition | 106 |
+| remark | 60 |
+| proved (reading) | 41 |
 | stated (open here) | 28 |
-| proved (corrected) | 19 |
-| TODO | 9 |
+| proved (corrected) | 21 |
 
 | Unit | Where | Hilbert (opening words) | Status | Lean declarations |
 |---|---|---|---|---|
@@ -192,38 +191,86 @@ Do not edit by hand.
 | [`s15.less`](../HilbertFoundations/Proportion.lean) | § 15 | The segments $a$ and $b$ are said to be smaller than c, … | definition | `SegLt`, `segLt_iff` |
 | [`s15.mul_assoc`](../HilbertFoundations/Proportion.lean) | § 15 | In order to show that the *associative* law \[ a(bc)=(ab)c \] holds … | proved | `hilbertProd_assoc` |
 | [`s15.mul_comm`](../HilbertFoundations/Proportion.lean) | § 15 | We shall now demonstrate that, for this definition of the multiplication of … | proved | `hilbertProd_comm` |
-| [`s15.product`](../HilbertFoundations/Proportion.lean) | § 15 | In order to define geometrically the product of two segments $a$ and … | definition | `hilbertProd_def`, `hp_iff`, `hilbertProd_iff'`, `seg_of_len`, `hilbertProd_exists`, `hilbertProd_unique` |
+| [`s15.product`](../HilbertFoundations/Proportion.lean) | § 15 | In order to define geometrically the product of two segments $a$ and … | definition | `hilbertProd_def`, `hilbertProd_construction`, `hp_iff`, `hilbertProd_iff'`, `seg_of_len`, `hilbertProd_exists`, `hilbertProd_unique` |
 | [`s15.quotient`](../HilbertFoundations/Proportion.lean) | § 15 | If $b$ and $c$ are any two arbitrary segments, there is always … | proved | `hilbertProd_quotient`, `hilbertProd_quotient_unique` |
 | [`s15.sum`](../HilbertFoundations/Proportion.lean) | § 15 | If $A, B, C$ are three points of a straight line and … | definition | `segSum_def`, `segSum_exists'`, `segSum_unique'` |
 | [`s16.free_of_archimedes`](../HilbertFoundations/Proportion.lean) | § 16 | By aid of the preceding algebra of segments, we can establish Euclid's … | remark | — |
 | [`s16.fundamental`](../HilbertFoundations/Proportion.lean) | § 16 | From the theorem just demonstrated, we can easily deduce the fundamental theorem … | remark | — |
+| [`s16.incircle`](../HilbertFoundations/Proportion.lean) | § 16 | Let us now return to the general case. In each of the … | proved | `incircle` |
 | [`s16.proportion`](../HilbertFoundations/Proportion.lean) | § 16 | If $a,b,a',b'$ are any four segments whatever, the proportion \[ a:b=a':b' \] … | definition | `SegProportion`, `segProportion_iff` |
 | [`s16.similar`](../HilbertFoundations/Proportion.lean) | § 16 | Definition. Two triangles are called *similar* when the corresponding angles are congruent. | definition | `Similar` |
-| [`s16.special_case`](../HilbertFoundations/Proportion.lean) | § 16 | Proof. We shall first consider the special case where the angle included … | proved | `theorem22_special` |
+| [`s16.special_case`](../HilbertFoundations/Proportion.lean) | § 16 | Proof. We shall first consider the special case where the angle included … | proved | `theorem22_special'`, `theorem22_special` |
 | [`th.22`](../HilbertFoundations/Proportion.lean) | § 16 | If $a,b$ and $a',b'$ are homologous sides of two similar triangles, we … | proved | `theorem22` |
 | [`th.23`](../HilbertFoundations/Proportion.lean) | § 16 | If two parallel lines cut from the sides of an arbitrary angle … | proved (corrected) | `theorem23`, `theorem23_converse` |
 | [`s17.analytic`](../HilbertFoundations/Proportion.lean) | § 17 | The remaining parts of geometry may now be developed by the usual … | remark | — |
-| [`s17.coordinates`](../HilbertFoundations/Proportion.lean) | § 17 | In a plane $\alpha$, we now take two straight lines cutting each … | proved | `coordinates_bijective`, `perpendicular_coordinate` |
+| [`s17.coordinates`](../HilbertFoundations/Proportion.lean) | § 17 | In a plane $\alpha$, we now take two straight lines cutting each … | proved | `coordinates_bijective`, `perpendicular_coordinate`, `perpendicular_coordinate_y`, `coordinates_perpendiculars` |
 | [`s17.depends`](../HilbertFoundations/Proportion.lean) | § 17 | Whether to every real number there corresponds a point cannot in general … | proved | `real_points_depend` |
 | [`s17.ideal`](../HilbertFoundations/Proportion.lean) | § 17 | However, it is always possible to generalize the original system of points, … | stated (open here) | `IdealElementsClaim` |
 | [`s17.line_origin`](../HilbertFoundations/Proportion.lean) | § 17 | Let $l$ be a straight line in the plane $\alpha$, such that … | proved | `line_through_origin_eq` |
 | [`s17.linear`](../HilbertFoundations/Proportion.lean) | § 17 | From these considerations, we may easily conclude, independently of the axiom of … | proved | `lines_are_linear`, `linear_eqs_are_lines` |
 | [`s17.no_archimedes`](../HilbertFoundations/Proportion.lean) | § 17 | So far in this chapter, we have made absolutely no use of … | remark | — |
-| [`s17.omega`](../HilbertFoundations/Proportion.lean) | § 17 | From the development given in § 9, p. \pageref{folio27}, it is evident, … | proved | `omega_points` |
+| [`s17.omega`](../HilbertFoundations/Proportion.lean) | § 17 | From the development given in § 9, p. \pageref{folio27}, it is evident, … | proved | `omega_points`, `omega_points_space` |
 | [`s17.parallel_line`](../HilbertFoundations/Proportion.lean) | § 17 | If $l'$ is a straight line parallel to $l$ and cutting off … | proved | `parallel_line_eq'` |
 | [`s17.particular`](../HilbertFoundations/Proportion.lean) | § 17 | We call special attention to the following particular propositions: We have always … | proved | `signed_particular` |
-| [`s17.reals`](../HilbertFoundations/Proportion.lean) | § 17 | If now we assume the validity of this axiom, we can arrange … | proved (reading) | `exists_real_correspondence`, `archimedean_segments` |
+| [`s17.reals`](../HilbertFoundations/Proportion.lean) | § 17 | If now we assume the validity of this axiom, we can arrange … | proved (reading) | `exists_real_correspondence`, `exists_real_correspondence_space`, `real_correspondence_midpoint`, `archimedean_segments` |
 | [`s17.signed`](../HilbertFoundations/Proportion.lean) | § 17 | To the system of segments already discussed, let us now add a … | proved (reading) | `signed_segments_laws` |
-| [`s17.space`](../HilbertFoundations/Proportion.lean) | § 17 | The corresponding results for the geometry of space may be easily deduced. | stated (open here) | `SpaceCoordinatesClaim` |
-| [`th.24`](../HilbertFoundations/Areas.lean) | § 18 | If each of two polygons $P_1$ and $P_2$ is of equal area … | TODO | — |
-| [`th.25`](../HilbertFoundations/Areas.lean) | § 19 | Two parallelograms having equal bases and equal altitudes are also of equal … | TODO | — |
-| [`th.26`](../HilbertFoundations/Areas.lean) | § 19 | Any triangle $ABC$ is always of equal area to a certain parallelogram … | TODO | — |
-| [`th.27`](../HilbertFoundations/Areas.lean) | § 19 | Two triangles having equal bases and equal altitudes have also equal content. | TODO | — |
-| [`th.28`](../HilbertFoundations/Areas.lean) | § 19 | If two triangles have equal content and equal bases, they have also … | TODO | — |
-| [`th.29`](../HilbertFoundations/Areas.lean) | § 20 | If a triangle $\Delta$ is decomposed by means of arbitrary straight lines … | TODO | — |
-| [`th.30`](../HilbertFoundations/Areas.lean) | § 21 | Two polygons of equal content have always equal measures of area. Conversely, … | TODO | — |
-| [`th.31`](../HilbertFoundations/Areas.lean) | § 21 | If we decompose a rectangle into several triangles by means of straight … | TODO | — |
-| [`th.32`](../HilbertFoundations/Desargues.lean) | § 22 | (Desargues's theorem.) When two triangles are so situated in a plane that … | TODO | — |
+| [`s17.space`](../HilbertFoundations/Proportion.lean) | § 17 | The corresponding results for the geometry of space may be easily deduced. | stated (open here) | `SpaceCoordinatesClaim`, `plane_coordinates_space'` |
+| [`s18.basis`](../HilbertFoundations/Areas.lean) | § 18 | We shall base the investigations of the present chapter upon the same … | remark | — |
+| [`s18.combine`](../HilbertFoundations/Areas.lean) | § 18 | From these definitions, it follows at once that by combining polygons having … | proved | `equalArea_combine` |
+| [`s18.decomposition`](../HilbertFoundations/Areas.lean) | § 18 | If we join two points of a polygon $P$ by any arbitrary … | definition | `IsDecomposition`, `IsPolyRegion`, `Composed` |
+| [`s18.equal_area`](../HilbertFoundations/Areas.lean) | § 18 | Definition. Two polygons are said to be of *equal area* when they … | definition | `EqualArea` |
+| [`s18.equal_content`](../HilbertFoundations/Areas.lean) | § 18 | Definition. Two polygons are said to be of *equal content* when it … | definition | `EqualContent`, `Areas.img`, `Areas.preimg`, `Areas.img_iff`, `Areas.img_preimg`, `Areas.img_triRegion`, `disjoint_triInterior_iff`, `isDecomposition_iff`, `map_co_unco`, `isDecomposition_of_decS`, `isPolygon_iff`, `composed_iff`, `forall₂_imp_mem`, `equalArea_iff`, `KEqArea.congr`, `KComposed.congr3`, `equalContent_iff`, `isDecomposition_single'`, `nil_of_no_axes` |
+| [`s18.euclid`](../HilbertFoundations/Areas.lean) | § 18 | The theory of proportion as developed in \S§ 13–17 together with the … | remark | — |
+| [`s18.gerard`](../HilbertFoundations/Areas.lean) | § 18 | [Note: In connection with the theory of areas, we desire to call … | remark | — |
+| [`s18.pascal`](../HilbertFoundations/Areas.lean) | § 18 | Since, by the development given in the last chapter, pp. \pageref{folio37}–\pageref{folio56}, the … | remark | — |
+| [`s18.subtract`](../HilbertFoundations/Areas.lean) | § 18 | However, if from polygons having equal area we take polygons having equal … | proved | `equalContent_of_subtract` |
+| [`s18.terms`](../HilbertFoundations/Areas.lean) | § 18 | We define, in the usual manner, the terms: *rectangle*, *base* and *height … | definition | `IsFoot`, `IsParallelogram`, `ParRegion`, `IsRectangle`, `foot`, `Areas.img_union`, `kmeasure_tri`, `exists_foot`, `len_mul_foot`, `parallelogram_iff`, `parallelogram_decomposition`, `midpoint_of_co`, `abs_det_of_right`, `img_parRegion`, `sqd_eq_of_segCong`, `ne_of_isFoot`, `axes_of_isFoot` |
+| [`th.24`](../HilbertFoundations/Areas.lean) | § 18 | If each of two polygons $P_1$ and $P_2$ is of equal area … | proved | `theorem24_area`, `theorem24_content` |
+| [`s19.all_equal`](../HilbertFoundations/Areas.lean) | § 19 | In the further development of the theory of area, we meet, however, … | remark | — |
+| [`s19.archimedes_equal_area`](../HilbertFoundations/Areas.lean) | § 19 | It is usual to show that two triangles having equal bases and … | proved | `ArchimedesEqualAreaClaim`, `archimedes_equal_area`, `archimedesEqualAreaClaim` |
+| [`s19.euclid_axiom`](../HilbertFoundations/Areas.lean) | § 19 | This fundamental theorem is to be found in the first book of … | remark | — |
+| [`s19.pythagoras`](../HilbertFoundations/Areas.lean) | § 19 | The remaining propositions of elementary geometry concerning the equal content of polygons, … | proved | `IsSquare`, `square_kmeasure`, `pythagoras_content` |
+| [`s19.rectangle_question`](../HilbertFoundations/Areas.lean) | § 19 | Furthermore, the more general question also arises as to whether two rectangles … | remark | — |
+| [`s19.usual_demonstration`](../HilbertFoundations/Areas.lean) | § 19 | It is usual to show that two triangles having equal bases and … | proved | `len_eq_of_sqd`, `nonarch_triangles`, `len_self'`, `nonarchimedean_example` |
+| [`s19.without_archimedes`](../HilbertFoundations/Areas.lean) | § 19 | It is now possible to establish the above theorem and hence the … | remark | — |
+| [`th.25`](../HilbertFoundations/Areas.lean) | § 19 | Two parallelograms having equal bases and equal altitudes are also of equal … | proved | `theorem25` |
+| [`th.26`](../HilbertFoundations/Areas.lean) | § 19 | Any triangle $ABC$ is always of equal area to a certain parallelogram … | proved | `theorem26` |
+| [`th.27`](../HilbertFoundations/Areas.lean) | § 19 | From theorems 25 and 26, we have at once, by aid of … | proved | `equalContent_of_equalArea`, `equalContent_symm`, `triRegion_rot_eq`, `th26_base`, `theorem27` |
+| [`th.28`](../HilbertFoundations/Areas.lean) | § 19 | If two triangles have equal content and equal bases, they have also … | proved | `theorem28` |
+| [`s20.base_altitude`](../HilbertFoundations/Areas.lean) | § 20 | Definition. If in a triangle $ABC$, having the sides $a$, $b$, $c$, … | proved | `base_altitude_product` |
+| [`s20.equal_area_measure`](../HilbertFoundations/Areas.lean) | § 20 | From this we obtain, by aid of theorem 29, the result that … | proved | `equalArea_measure` |
+| [`s20.equal_content_measure`](../HilbertFoundations/Areas.lean) | § 20 | Furthermore, if $P$ and $Q$ are two polygons of equal content, then … | proved | `equalContent_measure` |
+| [`s20.measure`](../HilbertFoundations/Areas.lean) | § 20 | The half of this product of the base and the altitude of … | definition | `triMeasure`, `triMeasure_eq_of_foot`, `triMeasure_eq`, `triMeasure_rot`, `triMeasure_pos` |
+| [`s20.polygon_measure`](../HilbertFoundations/Areas.lean) | § 20 | Definition. If we define the measure of area $F(P)$ of a polygon … | proved | `polyMeasure`, `sum_triMeasure`, `polyMeasure_eq`, `polyMeasure_eq_kmeasure` |
+| [`s20.theorem28_proof`](../HilbertFoundations/Areas.lean) | § 20 | From this last statement, we obtain immediately the proof of theorem 28. … | remark | — |
+| [`s20.transversal`](../HilbertFoundations/Areas.lean) | § 20 | A segment joining a vertex of a triangle with a point of … | proved | `img_triRegion_rot`, `transversal_decomposition`, `TransDecomp` |
+| [`s20.transversal_additive`](../HilbertFoundations/Areas.lean) | § 20 | Proof. From the distributive law of our algebra of segments, it follows … | proved | `transversal_measure`, `transDecomp_measure` |
+| [`s20.transversal_series`](../HilbertFoundations/Areas.lean) | § 20 | In fact, it is at once evident that any decomposition of a … | proved | `TransversalSeriesClaim`, `transDecomp_of_KTD`, `transversalSeriesClaim`, `isPolygon_tri`, `equalContent_of_measure`, `polyMeasure_tri`, `triMeasure_right` |
+| [`th.29`](../HilbertFoundations/Areas.lean) | § 20 | If a triangle $\Delta$ is decomposed by means of arbitrary straight lines … | proved | `theorem29` |
+| [`s21.comparison`](../HilbertFoundations/Areas.lean) | § 21 | Of two polygons $P$ and $Q$, we call $P$ the smaller or … | proved | `SmallerContent`, `content_exclusive`, `content_trichotomy`, `smaller_content_of_subset`, `not_all_equal_content` |
+| [`s21.converse_pascal`](../HilbertFoundations/Areas.lean) | § 21 | We may, by the aid of theorems 27 and 28, easily establish … | proved (reading) | `converse_pascal` |
+| [`s21.cornerstone`](../HilbertFoundations/Areas.lean) | § 21 | In the demonstration of theorems 28, 29, and 30, we have employed … | remark | — |
+| [`s21.not_sufficient`](../HilbertFoundations/Areas.lean) | § 21 | However, when we disregard the axiom of Archimedes, this theorem (31) is … | remark | — |
+| [`s21.polygon_triangle`](../HilbertFoundations/Areas.lean) | § 21 | Moreover, let us suppose $P$ to be any polygon having the measure … | proved (corrected) | `polygon_triangle`, `polygon_triangle_as_printed_false` |
+| [`s21.rectangles`](../HilbertFoundations/Areas.lean) | § 21 | In particular, if two rectangles are of equal content and have one … | proved | `parallelogram_sides`, `rectangles_equal_content` |
+| [`s21.right_triangles`](../HilbertFoundations/Areas.lean) | § 21 | In order to prove the converse, let us consider two triangles $ABC$ … | proved | — |
+| [`s21.schur_killing_stolz`](../HilbertFoundations/Areas.lean) | § 21 | This theorem has been demonstrated by F. Schur [Note: *Sitzungsberichte der Dorpater … | remark | — |
+| [`s21.triangles`](../HilbertFoundations/Areas.lean) | § 21 | Take now any arbitrary triangle having the base $g$ and the altitude … | proved | `triangles_equal_content`, `isRightAngle_of_rays`, `right_triangles_equal_content`, `right_triangle_of_triangle`, `polyMeasure_pos`, `len_of_co` |
+| [`th.30`](../HilbertFoundations/Areas.lean) | § 21 | Two polygons of equal content have always equal measures of area. Conversely, … | proved | `theorem30`, `triMeasure_of_cong`, `rectangle_measure` |
+| [`th.31`](../HilbertFoundations/Areas.lean) | § 21 | If we decompose a rectangle into several triangles by means of straight … | proved | `sum_eq_of_forall₂`, `theorem31_polygon`, `theorem31` |
+| [`s22.conclusion`](../HilbertFoundations/Desargues.lean) | § 22 | Now, the validity of Desargues's theorem is, according to the above considerations, … | proved | `desargues_from_space`, `generalDesargues_of_congruence` |
+| [`s22.converse`](../HilbertFoundations/Desargues.lean) | § 22 | Conversely, if two triangles are so situated in a plane that the … | proved (corrected) | `theorem32_converse`, `theorem32_converse_literal_false` |
+| [`s22.coordinates`](../HilbertFoundations/Desargues.lean) | § 22 | Now, as has already been established in § 17, there may be … | proved | `segment_coordinates` |
+| [`s22.desargues_general`](../HilbertFoundations/Desargues.lean) | § 22 | Upon the basis of the axioms of groups I–III, it is well … | proved | `GeneralDesargues`, `space_generalDesargues` |
+| [`s22.necessary`](../HilbertFoundations/Desargues.lean) | § 22 | As we have already mentioned, theorem 32 is a consequence of the … | proved | `theorem32_of_space`, `necessary_condition` |
+| [`s22.part_of_space`](../HilbertFoundations/Desargues.lean) | § 22 | In order to show clearly the significance of these axioms of space, … | definition | `PartOfSpace` |
+| [`s22.plane_part`](../HilbertFoundations/Desargues.lean) | § 22 | Since we obtain again the original plane geometry by putting $z=0$, we … | proved | `plane_is_part`, `partOfSpace_of_congruence` |
+| [`s22.setting`](../HilbertFoundations/Desargues.lean) | § 22 | Let us assume, as in \S§ 13–21, pp. \pageref{folio37}–\pageref{folio70}, that we have … | remark | — |
+| [`s22.space_axioms`](../HilbertFoundations/Desargues.lean) | § 22 | Of the axioms given in \S§ 1–8, pp. \pageref{folio1}–\pageref{folio26}, those of groups … | remark | — |
+| [`s22.space_model`](../HilbertFoundations/Desargues.lean) | § 22 | We can, therefore, by means of this domain of numbers, construct a … | proved | `segment_space`, `segment_space_planes`, `segment_space_lines`, `segment_space_between`, `segment_space_sides_plane`, `segment_space_sides_line` |
+| [`s22.special_case`](../HilbertFoundations/Desargues.lean) | § 22 | Let us assume in particular that the straight line, upon which are … | definition | `desarguesTheorem_iff` |
+| [`s22.via_theorem23`](../HilbertFoundations/Desargues.lean) | § 22 | It will be seen that the result just stated may also be … | proved (reading) | `desargues_via_theorem23` |
+| [`th.32`](../HilbertFoundations/Desargues.lean) | § 22 | (Desargues's theorem.) When two triangles are so situated in a plane that … | proved | `theorem32_both`, `theorem32` |
 | [`s23.angle_congruence`](../HilbertFoundations/NonDesargues.lean) | § 23 | Finally, we need a convention concerning the congruence of angles. So long … | definition | `s23_angCong_iff`, `s23_angM_ordinary` |
 | [`s23.broken_lines`](../HilbertFoundations/NonDesargues.lean) | § 23 | We will now construct a new plane geometry in the following manner. … | proved (reading) | `moulton_planeOrder_parallels` |
 | [`s23.circle_PQF`](../HilbertFoundations/NonDesargues.lean) | § 23 | However, when any straight line $g$ of the $(xy)$-plane cuts the ellipse, … | proved | `s23_circle_PQF` |
@@ -232,7 +279,7 @@ Do not edit by hand.
 | [`s23.fig40_hilbert`](../HilbertFoundations/NonDesargues.lean) | § 23 | In order to see that Desargues's theorem does not hold for our … | proved (corrected) | `s23_fig40_xaxis`, `s23_fig40_hilbert` |
 | [`s23.max_intercept`](../HilbertFoundations/NonDesargues.lean) | § 23 | The greatest possible value of this expression occurs for $b = \frac{1}{2}$ … | proved | `s23_max_intercept` |
 | [`s23.no_four_point_circle`](../HilbertFoundations/NonDesargues.lean) | § 23 | Consider all of the circles which cut the ellipse in four real … | proved (reading) | `s23_no_four_point_circle`, `s23_circleStar_factor` |
-| [`s23.not_part_of_space`](../HilbertFoundations/NonDesargues.lean) | § 23 | This new geometry serves at the same time as an example of … | proved | `PartOfSpace`, `SpaceDesargues`, `moulton_not_partOfSpace_of`, `spaceDesargues_holds`, `desarguesParallel_of_partOfSpace`, `moulton_not_partOfSpace` |
+| [`s23.not_part_of_space`](../HilbertFoundations/NonDesargues.lean) | § 23 | This new geometry serves at the same time as an example of … | proved | `IsPartOfSpace`, `SpaceDesargues`, `moulton_not_partOfSpace_of`, `spaceDesargues_holds`, `desarguesParallel_of_partOfSpace`, `moulton_not_partOfSpace` |
 | [`s23.segment_congruence`](../HilbertFoundations/NonDesargues.lean) | § 23 | Moreover, we will call two segments $AB$ and $A'B'$ congruent in this … | definition | `s23_segCong_iff`, `s23_segLen_ordinary` |
 | [`s23.symmetric_tangent`](../HilbertFoundations/NonDesargues.lean) | § 23 | The desired farthest point will accordingly be found among those points of … | proved | `s23_symmetric_tangent` |
 | [`s23.tangent_circle`](../HilbertFoundations/NonDesargues.lean) | § 23 | Select in the ordinary plane geometry … any two straight lines perpendicular … | proved | `s23_tangent_circle` |

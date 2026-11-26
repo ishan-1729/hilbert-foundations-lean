@@ -3,6 +3,10 @@ import HilbertFoundations.Order
 import HilbertFoundations.Congruence
 import HilbertFoundations.Analytic
 import HilbertFoundations.Independence
+import HilbertFoundations.Pascal
+import HilbertFoundations.Proportion
+import HilbertFoundations.Areas
+import HilbertFoundations.Desargues
 import HilbertFoundations.NonDesargues
 import HilbertFoundations.DesarguesAlgebra
 import HilbertFoundations.NonPascal
@@ -12,9 +16,6 @@ import HilbertFoundations.Commentary
 /-!
 # Hilbert, *The Foundations of Geometry*, in Lean
 
-Root module (built by `lake build`, imported by `scripts/AxiomsAudit.lean`).
-
-Work in progress: the chapters on Pascal's theorem, proportion, plane areas and Desargues's theorem
-from the axioms of congruence (§§ 14–22: `Pascal`, `Proportion`, `Areas`, `Desargues`) are still
-being formalized and are added here once they compile.
+Root module (built by `lake build`, imported by `scripts/AxiomsAudit.lean`): the axioms and every
+chapter, in the order of the book, then the introduction, conclusion and appendix (`Commentary`).
 -/

@@ -29,9 +29,9 @@ set_option linter.unusedSectionVars false
 
 namespace HilbertFoundations
 
-namespace Pas
-
 universe u v w
+
+namespace Pas
 
 section Distance
 
@@ -280,7 +280,7 @@ theorem exists_line_through_of_mem [SpaceConnection P L Pl] {α : Pl} {X : P} (h
   obtain ⟨A, B, C, D, h⟩ := SpaceConnection.ax_I7_space (Point := P) (Line := L) (Plane := Pl)
   have hW : ∃ W : P, W ≠ X := by
     by_contra hno
-    push_neg at hno
+    push Not at hno
     exact h ⟨α, by rw [hno A]; exact hX, by rw [hno B]; exact hX, by rw [hno C]; exact hX,
       by rw [hno D]; exact hX⟩
   obtain ⟨W, hW⟩ := hW
@@ -288,12 +288,12 @@ theorem exists_line_through_of_mem [SpaceConnection P L Pl] {α : Pl} {X : P} (h
   exact ⟨l, hl⟩
 
 /-- In a geometry of space having a plane, every line lies in a plane. -/
-theorem exists_plane_of_line [SpaceConnection P L Pl] (α0 : Pl) (ℓ : L) :
+theorem exists_plane_through_line [SpaceConnection P L Pl] (α0 : Pl) (ℓ : L) :
     ∃ α : Pl, LiesInPlane (Point := P) ℓ α := by
   obtain ⟨X, Y, Z, -, -, -, hn⟩ := SpaceConnection.ax_I7_plane (Point := P) (Line := L) α0
   have hW : ∃ W : P, W ∉ ℓ := by
     by_contra hno
-    push_neg at hno
+    push Not at hno
     exact hn ⟨ℓ, hno X, hno Y, hno Z⟩
   obtain ⟨W, hW⟩ := hW
   obtain ⟨α, hα, -⟩ := exists_plane_line_point (Pl := Pl) hW
@@ -311,16 +311,16 @@ theorem exists_real_coord_space [hC : SpaceCongruence P L Pl] [hP : SpaceParalle
         (SegCong X Y Z W ↔ |f X - f Y| = |f Z - f W|)) ∧
       ∀ ω : ℝ, ω ∈ Omega → ∃ Z : P, Z ∈ ℓ ∧ f Z = ω := by
   classical
-  obtain ⟨α, hℓα⟩ := exists_plane_of_line (L := L) α0 ℓ
-  haveI := planeCongruence (L := L) (h := hC) α
-  haveI := planeArchimedes (L := L) α
+  obtain ⟨α, hℓα⟩ := exists_plane_through_line (P := P) (L := L) α0 ℓ
+  have := planeCongruence (P := P) (L := L) (Pl := Pl) (h := hC) α
+  have := planeArchimedes (P := P) (L := L) (Pl := Pl) α
   obtain ⟨f, f0, f1, finj, fbet, fcong, fom⟩ :=
     Pas.exists_real_coord_norm (P := {A : P // A ∈ α}) (L := {a : L // LiesInPlane (Point := P) a α})
       ⟨ℓ, hℓα⟩ (O := ⟨O, hℓα O hO⟩) (E := ⟨E, hℓα E hE⟩) hO hE
       (fun e => hOE (congrArg Subtype.val e))
   let F : P → ℝ := fun Z => if h : Z ∈ α then f ⟨Z, h⟩ else 0
   have hF : ∀ Z (h : Z ∈ ℓ), F Z = f ⟨Z, hℓα Z h⟩ := fun Z h => by
-    simp only [F, dif_pos (hℓα Z h)]
+    simp [F, hℓα Z h]
   refine ⟨F, by rw [hF O hO]; exact f0, by rw [hF E hE]; exact f1, fun Z W hZ hW h => ?_,
     fun A B C hA hB hC hb => ?_, fun X Y Z W hX hY hZ hW hXY hZW => ?_, fun ω hω => ?_⟩
   · rw [hF Z hZ, hF W hW] at h
@@ -343,7 +343,7 @@ theorem plane_coordinates_space [hC : SpaceCongruence P L Pl] [hP : SpaceParalle
         ∀ Z : {A : P // A ∈ α}, (Z : P) ∈ a ↔ p * (f Z).1 + q * (f Z).2 + r = 0) ∧
       (∀ p q r : K, (p ≠ 0 ∨ q ≠ 0) → ∃ a : L, LiesInPlane (Point := P) a α ∧
         ∀ Z : {A : P // A ∈ α}, (Z : P) ∈ a ↔ p * (f Z).1 + q * (f Z).2 + r = 0) := by
-  haveI := planeCongruence (L := L) (h := hC) α
+  have := planeCongruence (P := P) (L := L) (Pl := Pl) (h := hC) α
   obtain ⟨X, Y, Z, hX, hY, -, hn⟩ := SpaceConnection.ax_I7_plane (Point := P) (Line := L) α
   have hXY : X ≠ Y := (ne_of_not_collinear (L := L) hn (exists_line_through_of_mem (L := L) hY)).1
   obtain ⟨ax, -, -⟩ := Pas.exists_axes (P := {A : P // A ∈ α})
