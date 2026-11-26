@@ -53,3 +53,7 @@ example : Conclusion.SemiEuclideanGeometryExists := Conclusion.semiEuclideanGeom
 example : Conclusion.NonLegendrianGeometryExists := Conclusion.nonLegendrianGeometryExists
 example : Conclusion.LegendreNeedsArchimedes := Conclusion.legendreNeedsArchimedes
 example : ¬Appendix.AppendixMainTheorem := Appendix.not_appendixMainTheorem
+
+/-! ## `app.jordan_theorem` (`JordanCurveClose.lean`) -/
+
+example : Appendix.JordanCurveTheorem := Appendix.jordanCurveTheorem

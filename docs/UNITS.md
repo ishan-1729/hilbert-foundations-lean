@@ -5,12 +5,12 @@ Do not edit by hand.
 
 | Status | Units |
 |---|---|
-| proved | 187 |
+| proved | 188 |
 | definition | 106 |
 | remark | 60 |
 | proved (reading) | 41 |
 | proved (corrected) | 22 |
-| stated (open here) | 14 |
+| stated (open here) | 13 |
 
 | Unit | Where | Hilbert (opening words) | Status | Lean declarations |
 |---|---|---|---|---|
@@ -429,7 +429,7 @@ Do not edit by hand.
 | [`app.displacement`](../HilbertFoundations/Commentary.lean) | Appendix | We will define a *displacement* as a reversible, single-valued transformation of a … | definition | `WindsAround`, `SensePreserving`, `IsDisplacement`, `Geometry`, `IsRotationAbout` |
 | [`app.invariant_subgroup`](../HilbertFoundations/Commentary.lean) | Appendix | If we wish to obtain only the euclidean geometry, it is necessary … | stated (open here) | `HasInvariantSubgroup`, `AppendixEuclideanTheorem`, `euclideanPlane_hasInvariantSubgroup` |
 | [`app.jordan_curve`](../HilbertFoundations/Commentary.lean) | Appendix | We establish the following convention, namely: We will understand by *number-plane* the … | definition | `IsJordanArc`, `IsJordanRegion`, `IsJordanRegion.isOpen`, `circleCurve`, `circleCurve_isClosedJordanCurve`, `range_circleCurve`, `connectedComponentIn_sphere_compl`, `isJordanRegion_ball` |
-| [`app.jordan_theorem`](../HilbertFoundations/Commentary.lean) | Appendix | My method of proof is entirely different from Lie's method. I make … | stated (open here) | `IsClosedJordanCurve`, `IsClosedJordanCurve.isCompact_range`, `JordanCurveTheorem` |
+| [`app.jordan_theorem`](../HilbertFoundations/Commentary.lean) | Appendix | My method of proof is entirely different from Lie's method. I make … | proved | `IsClosedJordanCurve`, `IsClosedJordanCurve.isCompact_range`, `JordanCurveTheorem` |
 | [`app.lie`](../HilbertFoundations/Commentary.lean) | Appendix | The investigations by Riemann and Helmholtz of the foundations of geometry led … | remark | — |
 | [`app.main_theorem`](../HilbertFoundations/Commentary.lean) | Appendix | I now prove the following proposition: A geometry in which axioms I–III … | stated (open here) | `windsAround_mul`, `windsAround_mul_iff`, `motion`, `motion_apply`, `ne_zero_of_norm_eq_one`, `isPlane_univ`, `eucD`, `isDisplacement_of_mem_eucD`, `euclideanPlane`, `euclideanPlane_axiomIGroup`, `euclideanPlane_axiomI`, `unitPt`, `one_sub_mul_I_ne_zero`, `norm_unitPt`, `unitPt_injective`, `euclideanPlane_axiomII`, `conj_mul_motion`, `invariant_eq_of_nearlyBrought`, `exists_rot`, `euclideanPlane_axiomIII`, `appendix_axioms_consistent`, `IsEuclideanGeometry`, `IsHyperbolicGeometry`, `AppendixMainTheorem`, `euclideanPlane_isEuclidean` |
 | [`app.middle`](../HilbertFoundations/Commentary.lean) | Appendix | Our further important objective point is to define the idea of the … | stated (open here) | `IsSemiRotation`, `IsMiddle`, `AtMostOneMiddle`, `euclideanPlane_semiRotation`, `euclideanPlane_middle`, `euclideanPlane_atMostOneMiddle` |

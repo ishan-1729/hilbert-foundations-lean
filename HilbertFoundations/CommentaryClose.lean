@@ -46,8 +46,13 @@ This file proves units of `Commentary.lean` that are only stated there.
   `IsHyperbolicGeometry`), and `Appendix.atMostOneMiddle_of_twoFixedPoints` reduces `app.middle` to
   `app.two_fixed_points` (if a displacement with two fixed points is the identity, a segment has at
   most one middle).
-* `app.true_line`, `app.true_circle_jordan`, `app.invariant_subgroup`, `app.jordan_theorem`,
-  `concl.angle_sum`, `concl.pseudo_geometry` — still open, nothing new.
+* `app.jordan_theorem` — **proved**, in another file: `Appendix.jordanCurveTheorem :
+  JordanCurveTheorem` in `JordanCurveClose.lean`. The Jordan curve theorem itself is that of the
+  library `JordanPick`, a copy of files of the repository <https://github.com/rkirov/jordan_pick>
+  by Rado Kirov, under the Apache License 2.0 (see `JordanPick/README.md`); `JordanCurveClose.lean`
+  transports it to the statement of the unit.
+* `app.true_line`, `app.true_circle_jordan`, `app.invariant_subgroup`, `concl.angle_sum`,
+  `concl.pseudo_geometry` — still open, nothing new.
 -/
 
 namespace HilbertFoundations

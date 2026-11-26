@@ -24,12 +24,14 @@ Covers `introduction`, `conclusion` and `appendix` of `data/foundations.json`.
   open here); the case without parallels, which with Hilbert's axioms of order is vacuous (Euclid
   I 27 gives parallels), proved in corrected form; the misprinted table.
 * **Appendix** (namespace `HilbertFoundations.Appendix`). Hilbert's foundation of plane geometry on a
-  group of displacements: the number plane `ℂ`, Jordan curves and regions, the plane, displacements
-  (the sense of traversal through winding numbers), axioms I–III, the three particular cases of
-  axiom III (proved from it), the euclidean plane with its proper motions as a model of axioms I–III
-  (so that they are compatible), and the main theorem and the steps of its proof as `Prop`s (open
-  here), each of them verified in the euclidean plane; the steps that follow from the axioms
-  directly (closedness of the true circles, transitivity of the rotations on them) are proved.
+  group of displacements: the number plane `ℂ`, Jordan curves and regions, Jordan's theorem (stated
+  here; proved in `JordanCurveClose.lean` from the library `JordanPick`, a copy of files of another
+  project), the plane, displacements (the sense of traversal through winding numbers), axioms
+  I–III, the three particular cases of axiom III (proved from it), the euclidean plane with its
+  proper motions as a model of axioms I–III (so that they are compatible), and the main theorem
+  and the steps of its proof as `Prop`s (open here), each of them verified in the euclidean plane;
+  the steps that follow from the axioms directly (closedness of the true circles, transitivity of
+  the rotations on them) are proved.
   As stated, the main theorem fails for the empty plane; the statement for a plane with a point is
   open, and four steps of its proof are shown to follow from it (`CommentaryCloseAux7.lean`,
   `CommentaryClose.lean`).
@@ -1221,12 +1223,25 @@ from double points is `IsClosedJordanCurve γ`: `γ : ℝ → ℂ` continuous, o
 on `[0, 1)` (a continuous injective image of a circle; the curve is `range γ`, compact by
 `IsClosedJordanCurve.isCompact_range`). `JordanCurveTheorem`: the complement of the curve is the
 union of a bounded and an unbounded connected component (the inner and the outer region), each
-having the curve as its frontier. This is the Jordan curve theorem, which Mathlib does not contain;
-it is stated and not proved. The rest of the appendix does not depend on it: Jordan regions are
-defined as bounded components (`IsJordanRegion`), and the only curves used are round circles, whose
-inner region is computed directly (`connectedComponentIn_sphere_compl`).
+having the curve as its frontier. This is the Jordan curve theorem. It is proved in
+`JordanCurveClose.lean`: `jordanCurveTheorem : JordanCurveTheorem`.
 
-**Status.** stated (open here)
+The proof of the Jordan curve theorem is not a proof of this project. It is that of the library
+`JordanPick` (directory `JordanPick/`): four files of the repository
+<https://github.com/rkirov/jordan_pick> by Rado Kirov, under the Apache License 2.0, copied without
+change (see `JordanPick/README.md`). They prove the theorem by Maehara's method, from the Brouwer
+fixed point theorem, for a continuous injective map of the unit circle of
+`EuclideanSpace ℝ (Fin 2)`. What `JordanCurveClose.lean` contributes is the transport to the
+statement of this unit. A curve of period `1` is a continuous injective map of that circle, through
+the additive circle `AddCircle 1` (`IsClosedJordanCurve.exists_sphere_map`). The components of the
+complement, their boundedness and their frontiers are carried along a linear isometry of `ℂ` onto
+`EuclideanSpace ℝ (Fin 2)` (`jordanCurveTheorem_of_isometry`).
+
+The rest of the appendix does not depend on the theorem: Jordan regions are defined as bounded
+components (`IsJordanRegion`), and the only curves used are round circles, whose inner region is
+computed directly (`connectedComponentIn_sphere_compl`).
+
+**Status.** proved
 -/
 
 /-- A **closed Jordan curve**: `γ` continuous, of period `1`, injective on `[0, 1)`. -/
@@ -1687,9 +1702,11 @@ there being no bijection of the empty set onto the number plane or onto the disc
 Hilbert means adds that the plane has a point: `AppendixMainTheoremNonempty` (hypothesis
 `G.S.Nonempty`). Four steps of its proof (units `app.two_fixed_points`, `app.transitive`,
 `app.middle`, `app.rotation_group`) are shown to follow from it (`steps_of_main` in
-`CommentaryClose.lean`). Still missing: `AppendixMainTheoremNonempty` itself, that is, Hilbert's
-memoir, which uses the Jordan curve theorem and a point-set topology of the plane that Mathlib does
-not contain.
+`CommentaryClose.lean`). Still missing: `AppendixMainTheoremNonempty` itself, that is, the argument
+of Hilbert's memoir. The Jordan curve theorem, which the memoir uses, is available
+(`jordanCurveTheorem` in `JordanCurveClose.lean`, unit `app.jordan_theorem`). The argument of the
+memoir itself, on the point sets of the plane formed by the true circles and the true straight
+lines (outlined in the following units), is not formalized.
 
 **Status.** stated (open here)
 -/
@@ -2214,7 +2231,9 @@ Still missing: a proof from axioms I–III themselves. The statement quantifies 
 satisfying I–III, so the computations in the two models do not prove it, and
 `AppendixMainTheoremNonempty` is open; in Hilbert's memoir it is a step of the proof, resting on the
 true circles being closed Jordan curves (unit `app.true_circle_jordan`) and on the Jordan curve
-theorem, which Mathlib does not contain.
+theorem. The Jordan curve theorem is available (`jordanCurveTheorem` in `JordanCurveClose.lean`,
+unit `app.jordan_theorem`). That the true circles are closed Jordan curves is not proved, and
+Hilbert's derivation of this step from the two is not formalized.
 
 **Status.** stated (open here)
 -/
@@ -2267,8 +2286,10 @@ whose displacements form a group (`transitive_of_isHyperbolic`, by the maps
 `DisplacementsTransitive` follows from the main theorem for a plane with a point
 (`displacementsTransitive_of_main`, from `AppendixMainTheoremNonempty`, unit `app.main_theorem`).
 Still missing: a proof from axioms I–III themselves; `AppendixMainTheoremNonempty` is open, and in
-Hilbert's memoir the transitivity comes after the true circles are shown to be closed Jordan curves,
-which needs the Jordan curve theorem and a topology of the plane that Mathlib does not contain.
+Hilbert's memoir the transitivity comes after the true circles are shown to be closed Jordan curves
+(unit `app.true_circle_jordan`, open). That step uses the Jordan curve theorem, which is available
+(`jordanCurveTheorem` in `JordanCurveClose.lean`, unit `app.jordan_theorem`), and an argument on
+the point sets of the plane that is not formalized.
 
 **Status.** stated (open here)
 -/

@@ -4,7 +4,7 @@ David Hilbert's *The Foundations of Geometry*, in E. J. Townsend's authorized En
 
 Townsend translated the first German edition (*Grundlagen der Geometrie*, 1899) together with the additions Hilbert made for the French edition. The axiom system formalized here is the one of this edition, which is not that of the later ones: II 4 is the four-point axiom, IV 6 concludes the congruence of both remaining angles, and the Axiom of Completeness is a remark of § 8, added for the French edition.
 
-Every axiom, definition, theorem and claim of the book is a *unit*: the Introduction, the seven chapters (§§ 1–39), the Conclusion and the Appendix give 430 units. Each unit quotes the text, says how it is read in Lean, and is followed by the declarations that state and prove it. Where the text is false or imprecise as printed, the unit says what is wrong and the corrected statement is proved. Fourteen units are stated as `Prop`s and not proved; they are listed [below](#what-is-not-proved) with what is missing.
+Every axiom, definition, theorem and claim of the book is a *unit*: the Introduction, the seven chapters (§§ 1–39), the Conclusion and the Appendix give 430 units. Each unit quotes the text, says how it is read in Lean, and is followed by the declarations that state and prove it. Where the text is false or imprecise as printed, the unit says what is wrong and the corrected statement is proved. Thirteen units are stated as `Prop`s and not proved; they are listed [below](#what-is-not-proved) with what is missing.
 
 ## Highlights
 
@@ -19,6 +19,7 @@ Every axiom, definition, theorem and claim of the book is a *unit*: the Introduc
 - **Constructions (Chapter VII).** In [`Constructions.lean`](HilbertFoundations/Constructions.lean), `theorem40` shows, in the coordinate plane over an ordered Pythagorean field, that the constructions by the axioms can be carried out by straight-edge and transferer of segments, and `theorem41` that, when the frame `(0,0)`, `(1,0)`, `(0,1)` is among the given points, a point is so constructible if and only if its co-ordinates lie in the domain `Ω(R)`; `compass_not_rt` gives a compass construction that is not of this kind. Theorem 43 is `theorem43` in [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean), proved in the stronger form `theorem43_polynomial` (the denominator is `1`) and without Theorem 42; Hilbert's own derivation from Theorem 42 is formalized as the implication `theorem42_imp_theorem43`. The same file proves that the regular polygons constructible with the compass and the circles of Malfatti are constructible by straight-edge and transferer (`regularPolygonsClaim`, `malfattiClaim`).
 - **The Axiom of Completeness.** `completenessGivesBolzano` and `completenessGivesReals` in [`CompletenessClose.lean`](HilbertFoundations/CompletenessClose.lean): a geometry of space with groups I–V and `SpaceComplete` has Bolzano's property, and the points of a segment correspond in order to the real numbers.
 - **Dehn's geometries (Conclusion).** [`CommentaryClose.lean`](HilbertFoundations/CommentaryClose.lean) constructs the semi-euclidean geometry (the finite part of the plane over `Ω(t)`, `semiEuclideanGeometryExists`) and the non-legendrian geometry (the part of an elliptic plane over the hyperreal numbers infinitely near to a point, `nonLegendrianGeometryExists`), and deduces `legendreNeedsArchimedes`.
+- **Jordan's curve theorem (Appendix).** Hilbert quotes "the theorem of C. Jordan" without proof; the unit `app.jordan_theorem` states it for the closed curves `γ : ℝ → ℂ` of period 1 without double points (`JordanCurveTheorem`). The proof of the Jordan curve theorem is not a proof of this project: it is the formalization of Maehara's proof, from the Brouwer fixed point theorem, in the repository [rkirov/jordan_pick](https://github.com/rkirov/jordan_pick) by Rado Kirov (Apache License 2.0), four files of which are copied without change into [`JordanPick/`](JordanPick/README.md). This project contributes the transport to the statement of the unit, `jordanCurveTheorem` in [`JordanCurveClose.lean`](HilbertFoundations/JordanCurveClose.lean).
 
 ## Status
 
@@ -26,12 +27,12 @@ Every unit is a block `## [id] Title` in one of the fourteen chapter files, with
 
 | Status | Units |
 |---|---|
-| proved: the statement, read as in the Lean reading, is formalized at full strength and proved | 187 |
+| proved: the statement, read as in the Lean reading, is formalized at full strength and proved | 188 |
 | proved (reading): Hilbert's words admit more than one precise reading; the Lean reading says which one is formalized and why | 41 |
 | proved (corrected): false or imprecise as printed; the corrected statement is proved, and the Lean reading says what is wrong | 22 |
 | definition: a definition or an axiom | 106 |
 | remark: prose without mathematical content to prove | 60 |
-| stated (open here): formalized as a `Prop`; only the partial results named in the Lean reading are proved | 14 |
+| stated (open here): formalized as a `Prop`; only the partial results named in the Lean reading are proved | 13 |
 | **total** | **430** |
 
 - No declaration uses `sorry`: an open unit is a definition of a `Prop`, never a theorem with an incomplete proof. `scripts/AxiomsAudit.lean` checks that every declaration of the namespace `HilbertFoundations` depends only on Lean's standard axioms `propext`, `Classical.choice` and `Quot.sound`.
@@ -58,7 +59,7 @@ The other units with this status are `th.4`, `s9.sqrt`, `s23.conventions_valid`,
 
 ## What is not proved
 
-Fourteen units have the status `stated (open here)`. Each is a `Prop` with its partial results proved; the unit block says precisely what is missing.
+Thirteen units have the status `stated (open here)`. Each is a `Prop` with its partial results proved; the unit block says precisely what is missing.
 
 **Sums of squares and the criterion of § 39** (three units in [`Constructions.lean`](HilbertFoundations/Constructions.lean); partial results in [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean)):
 - `th.42`, Theorem 42 (`Theorem42`): every totally positive number of a number field is a sum of four squares of the field. Proved: the case `ℚ` (`theorem42_rat`) and the theorem without the bound on the number of squares (`theorem42_sum_of_squares`). Missing: the bound four, which is equivalent to the isotropy of the forms `x₁² + x₂² + x₃² + x₄² - α x₅²` over number fields (`theorem42_iff_isotropic`), an instance of the Hasse–Minkowski theorem; mathlib does not have it.
@@ -69,8 +70,7 @@ Fourteen units have the status `stated (open here)`. Each is a `Prop` with its p
 - `concl.pseudo_geometry` (`PseudoGeometryTheorem`): on a plane satisfying I, II, IV, the points off a line `t` carry a euclidean pseudo-geometry in which `t` is the line at infinity. The ideal elements are not constructed, so only the consequences for the real points are stated. Not proved.
 - `concl.angle_sum` (`AngleSumTheorem`): if one triangle has angle sum greater than, equal to, or less than two right angles, so has every triangle. The three comparisons are defined from the primitive notions and agree with Theorem 20 in planes satisfying I–IV (`angleSumEqTwoRight_of_parallels`). Missing: the theorem itself, which needs a part of neutral geometry (addition of angles, the exterior angle theorem, Saccheri quadrilaterals) that is not developed here.
 
-**The Appendix** (nine units in [`Commentary.lean`](HilbertFoundations/Commentary.lean)). The Appendix is a summary of Hilbert's memoir on the foundation of plane geometry on a group of displacements (*Math. Ann.* 56, 1902); it outlines the proof without carrying it out. Its definitions and its axioms I–III are formalized, and the euclidean plane with its proper motions is proved to satisfy them (`appendix_axioms_consistent`). The statements are open:
-- `app.jordan_theorem` (`JordanCurveTheorem`): the Jordan curve theorem, which mathlib does not contain. The rest of the Appendix does not depend on it.
+**The Appendix** (eight units in [`Commentary.lean`](HilbertFoundations/Commentary.lean)). The Appendix is a summary of Hilbert's memoir on the foundation of plane geometry on a group of displacements (*Math. Ann.* 56, 1902); it outlines the proof without carrying it out. Its definitions and its axioms I–III are formalized, and the euclidean plane with its proper motions is proved to satisfy them (`appendix_axioms_consistent`). The Jordan curve theorem, which the memoir uses, is proved (unit `app.jordan_theorem`, `jordanCurveTheorem`, with the copied library [`JordanPick/`](JordanPick/README.md)); the definitions of the Appendix do not depend on it. What is open is the main theorem, the steps of Hilbert's argument and the theorem on the invariant sub-group:
 - `app.main_theorem` (`AppendixMainTheorem`): a geometry satisfying axioms I–III is the euclidean or the Bolyai–Lobachevskian plane. As formalized the statement is false for the empty plane (`not_appendixMainTheorem`); the statement for a plane with a point, `AppendixMainTheoremNonempty`, is open. It is the content of the memoir. Proved: the euclidean plane is euclidean in the sense of the theorem (`euclideanPlane_isEuclidean`).
 - `app.true_circle_jordan` (`TrueCirclesAreJordan`): every true circle is a closed Jordan curve. Proved: a true circle is closed in the plane (`trueCircle_closed`).
 - `app.rotation_group` (`RotationsOfTrueCircle`): the rotations about `M` act on a true circle about `M` as the rotations of the ordinary circle. Proved: these rotations are transitive on the circle (`trueCircle_transitive`, from axiom I in its group reading).
@@ -125,7 +125,7 @@ The unit ids are `ax.I1`, …, `ax.V`, `ax.completeness` for the axioms, `th.1`,
 | Conclusion | [`Commentary.lean`](HilbertFoundations/Commentary.lean) | 15 |
 | Appendix | [`Commentary.lean`](HilbertFoundations/Commentary.lean) | 21 |
 
-Six further files contain no unit blocks. They prove statements that a chapter file states as a `Prop`, because the proof uses later chapters or is long:
+Seven further files contain no unit blocks. They prove statements that a chapter file states as a `Prop`, because the proof uses later chapters, is long, or (for `JordanCurveClose.lean`) uses the copied library `JordanPick`:
 
 | File | Units it proves | Main declarations |
 |---|---|---|
@@ -135,11 +135,14 @@ Six further files contain no unit blocks. They prove statements that a chapter f
 | [`CoordinatesClose.lean`](HilbertFoundations/CoordinatesClose.lean) | `s17.space`, `s17.ideal`, `s30.any_dimension` | `spaceCoordinatesClaim`, `idealElementsClaim`, `anyDimensionClaim` |
 | [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean) | `th.43`, `s39.regular_polygons`, `s39.malfatti`; partial results for `th.42`, `th.44`, `s38.two_variables` | `theorem43`, `regularPolygonsClaim`, `malfattiClaim`, `theorem44_one_parameter` |
 | [`CommentaryClose.lean`](HilbertFoundations/CommentaryClose.lean) | `concl.semi_euclidean`, `concl.non_legendrian`, `concl.legendre_archimedes`; partial results for the Appendix | `semiEuclideanGeometryExists`, `nonLegendrianGeometryExists`, `legendreNeedsArchimedes`, `steps_of_main` |
+| [`JordanCurveClose.lean`](HilbertFoundations/JordanCurveClose.lean) | `app.jordan_theorem`, from the Jordan curve theorem of the copied library `JordanPick` | `jordanCurveTheorem`, `IsClosedJordanCurve.exists_sphere_map`, `jordanCurveTheorem_of_isometry` |
+
+The directory [`JordanPick/`](JordanPick/) is not part of the formalization of the book and was not written for this repository. It holds four Lean files copied without change from <https://github.com/rkirov/jordan_pick> (Rado Kirov, Apache License 2.0, commit `7905cd4`): a proof of the Jordan curve theorem by Maehara's method, with the Brouwer fixed point theorem for the plane. The files are built as a second library of the package, `JordanPick`, and are used only by `JordanCurveClose.lean`. [`JordanPick/README.md`](JordanPick/README.md) gives the source, the commit, the checksums of the files and what differs from the upstream repository; see also [docs/SOURCES.md](docs/SOURCES.md).
 
 ## Layout
 
 ```
-HilbertFoundations.lean                  root: imports the fourteen chapter files and the six closing files
+HilbertFoundations.lean                  root: imports the fourteen chapter files and the seven closing files
 HilbertFoundations/Basic.lean            primitive notions, the axioms as Props and classes, conventions, status vocabulary
 HilbertFoundations/Order.lean            §§ 2–5: connection, order, parallels
 HilbertFoundations/Congruence.lean       §§ 6–7: congruence
@@ -155,9 +158,13 @@ HilbertFoundations/NonPascal.lean        §§ 31–35: Pascal's theorem and comm
 HilbertFoundations/Constructions.lean    §§ 36–39: constructions by straight-edge and transferer
 HilbertFoundations/Commentary.lean       Introduction, Conclusion, Appendix
 HilbertFoundations/OrderPolygon.lean, CongruenceClose.lean, CompletenessClose.lean,
-  CoordinatesClose.lean, ConstructionsClose.lean, CommentaryClose.lean
+  CoordinatesClose.lean, ConstructionsClose.lean, CommentaryClose.lean, JordanCurveClose.lean
                                          proofs of statements that the chapter files state (table above)
 HilbertFoundations/<Name>Aux*.lean       105 helper modules of the files above
+JordanPick/JordanCurve.lean, JordanPick/JordanCurve/{Arcs,Brouwer,Counting}.lean
+                                         third-party code, copied without change from rkirov/jordan_pick (Rado Kirov,
+                                         Apache License 2.0): the Jordan curve theorem, used by JordanCurveClose.lean
+JordanPick/README.md                     source, commit, licence and checksums of the copied files
 data/foundations.json                    the text, extracted from the Gutenberg LaTeX source
 docs/UNITS.md                            generated unit map
 docs/FAITHFULNESS.md                     how the text is read: conventions, readings, corrections, what is not formalized
@@ -185,10 +192,10 @@ lake env lean scripts/ClosingProofs.lean # the closing files prove the units as 
 python3 scripts/unit_table.py --check    # regenerate docs/UNITS.md and check statuses
 ```
 
-- `scripts/AxiomsAudit.lean` imports the root module and reports an error for every declaration of the namespace `HilbertFoundations` that depends on an axiom other than `propext`, `Classical.choice` and `Quot.sound`; a `sorry` would appear as `sorryAx`.
-- `scripts/ClosingProofs.lean` checks, for every unit whose statement is a `Prop` of a chapter file proved in one of the six closing files, that the closing theorem has exactly that `Prop` as its type; for `th.18` and `app.main_theorem` it checks the refutations of the statements as printed.
+- `scripts/AxiomsAudit.lean` imports the root module and reports an error for every declaration of the namespace `HilbertFoundations` that depends on an axiom other than `propext`, `Classical.choice` and `Quot.sound`; a `sorry` would appear as `sorryAx`. The axioms are collected through everything a declaration depends on, so the declarations of the copied library `JordanPick` (namespace `JordanCurve`) that `jordanCurveTheorem` uses are covered through it; the audit does not examine the other declarations of that library.
+- `scripts/ClosingProofs.lean` checks, for every unit whose statement is a `Prop` of a chapter file proved in one of the seven closing files, that the closing theorem has exactly that `Prop` as its type; for `th.18` and `app.main_theorem` it checks the refutations of the statements as printed.
 - `scripts/unit_table.py` rewrites `docs/UNITS.md` from the unit blocks. With `--check` it fails if a unit has no status or a placeholder status, if a labelled axiom or theorem of `data/foundations.json` has no unit, if a unit id occurs twice, or if a unit whose status begins with `proved` is followed by a declaration containing `sorry`.
-- The CI workflow runs `lake build`, the audit and the unit map check, and fails if `docs/UNITS.md` differs from the generated file.
+- The CI workflow runs `lake build`, the audit, `scripts/ClosingProofs.lean` and the unit map check, and fails if `docs/UNITS.md` differs from the generated file.
 - `python3 scripts/check.py HilbertFoundations/Order.lean` checks one file: it builds the project modules the file imports and then runs `lake env lean` on it. `--slots N` (default 3) bounds the number of Lean processes when several checks run at once, and `--no-deps` skips the build of the imports.
 
 `lake build` builds several files in parallel. If memory is short, build a few modules at a time, for instance `lake build HilbertFoundations.Order`, then `lake build HilbertFoundations.Congruence HilbertFoundations.Analytic`.
@@ -200,4 +207,5 @@ Lean checks that a statement is proved, not that it is the statement Hilbert mad
 ## License
 
 - Lean code and documentation: [Apache License 2.0](LICENSE).
+- The four Lean files in `JordanPick/` are copied, without change, from <https://github.com/rkirov/jordan_pick>, which is under the Apache License 2.0, the licence of this repository. Their copyright belongs to their author, Rado Kirov, not to this project; see [`JordanPick/README.md`](JordanPick/README.md).
 - Quotations from Townsend's translation in the Lean files and in `data/` are from the 1902 translation (in the Project Gutenberg transcription), which is in the public domain in the USA; see [docs/SOURCES.md](docs/SOURCES.md).
