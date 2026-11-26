@@ -43,10 +43,12 @@ case distinctions in their proofs.
 * definitions: `CongruentSeries`, `AreSupplementary`, `AreVertical`, `IsRightAngle`, `TriCong`,
   `AngLt`, `IsAcute`, `IsObtuse`, `AnglesSumTwoRight`, `Theorem14AsPrinted`,
   `Theorem14AsPrintedSpace`, `IsFigure`, `IsPlaneFigure`, `CongruentFigures`,
-  `Theorem18AsPrinted` (false), `Theorem18Statement`, `SpaceCongruenceGivesTheorem18` (open),
+  `Theorem18AsPrinted` (false), `Theorem18Statement` (proved in `CongruenceClose.lean` for every
+  space geometry having a plane), `SpaceCongruenceGivesTheorem18` (false as stated, because of the
+  geometry without planes; the corrected claim is proved in `CongruenceClose.lean`),
   `Circle`, `CircleIn`,
   `CircleThroughThree`, `InscribedAnglesCongruent`, `InscribedQuadrilateral`,
-  `CirclePropertiesClaim` (open);
+  `CirclePropertiesClaim` (proved in `CongruenceClose.lean`);
 * § 6: `IV3_reading`, `IV3_reading_open`, `angle_regions`, `angle_regions_space`,
   `interior_wellDefined`, `interior_wellDefined_space`, `exterior_wellDefined`,
   `triangle_angle_contains_interior`, `triangle_angle_contains_interior_space`;
@@ -1401,31 +1403,63 @@ point `Q` (Hilbert's `P`) is not a point of the first figure, and the extended f
 **As printed the uniqueness clause is false.** It asks for four non-coplanar points in the
 *extended* figure `(A, B, C, …, P)`; but if `(A, B, C, …)` is a triangle and `P` a point off its
 plane, then `P'` and its mirror image in the plane of `A'B'C'` both work (in Theorem 17 the
-corresponding condition is, correctly, on the given figures). `Theorem18AsPrinted` is the statement as printed, and
-`theorem18_as_printed_false` refutes it in every space geometry with groups I, II, IV having a
-plane: for two points `Q ≠ R` of a plane `β`, a point `Q₁` of `β` and two points `Q₂`, `R₂` of
-another plane through `QR`, on different sides of `QR`, all equidistant from `Q` and `R`
-(`Frame.bisector`), the figure `(Q₁, Q₂, R₂)` (congruent to itself) extends by `Q` and also by `R`
-(`congruentFigures_snoc`), and `Q₁, Q₂, R₂, Q` are not in one plane.
+corresponding condition is, correctly, on the given figures). `Theorem18AsPrinted` is the
+statement as printed, and `theorem18_as_printed_false` refutes it in every space geometry with
+groups I, II, IV having a plane: for two points `Q ≠ R` of a plane `β`, a point `Q₁` of `β` and
+two points `Q₂`, `R₂` of another plane through `QR`, on different sides of `QR`, all equidistant
+from `Q` and `R` (`Frame.bisector`), the figure `(Q₁, Q₂, R₂)` (congruent to itself) extends by
+`Q` and also by `R` (`congruentFigures_snoc`), and `Q₁, Q₂, R₂, Q` are not in one plane.
 
 **Corrected statement** (`Theorem18Statement`): existence as printed, and uniqueness when the
-given figure `(A, B, C, …)` contains four points not in a plane; `SpaceCongruenceGivesTheorem18`
-is the claim for every space geometry with groups I, II, IV. **The corrected theorem is not proved
-here** (Hilbert gives no proof). Proved partial results: (1) the planar case,
-`theorem18_planar` (existence for a plane figure and `P` in its plane, `P'` in the plane of the
-second figure: Theorem 17 in space) and `theorem18_unique_of_coplanar` (for any figure, if `P` lies
-in a plane with three non-collinear points of the first figure, `P'` is unique in all of space;
-by `congruentFigures_coplanar_space` and `Frame.eq_of_equidistant`); (2) the refutation above. The general existence needs the elements of solid geometry from groups I, II,
-IV: the perpendicular to a plane through a point, Euclid's XI 4 (a line perpendicular to two lines
-of a plane through its foot is perpendicular to every line of the plane through it), the plane of
-the points equidistant from two points (for the uniqueness), and a case analysis on the position
-of `P` and of the figure points with respect to the plane of three non-collinear points of the
-figure. This development (comparable in length to all of Theorems 10–17) is not formalized; the
-statement is recorded as a `Prop`. A subtlety of this edition: with the literal reading of I 7
-(Basic.lean), a single line with no planes is a space geometry, in which four points are "not in a
-common plane" vacuously; there all points are collinear and the claim reduces to the linear case.
+given figure `(A, B, C, …)` contains four points not in a plane. It is proved in
+`CongruenceClose.lean`: by `theorem18`, every space geometry with groups I, II, IV having a plane
+satisfies `Theorem18Statement`. Hilbert gives no proof.
 
-**Status.** stated (open here)
+**The geometry without planes.** `Theorem18Statement` does not require its four points `f i`,
+`f j`, `f k`, `f m` to be distinct, and with the literal reading of I 7 (Basic.lean) a single line
+with no planes is a space geometry, in which any four points, even one point taken four times, are
+"not in a common plane" vacuously. Therefore the claim `SpaceCongruenceGivesTheorem18` (every
+space geometry with groups I, II, IV satisfies `Theorem18Statement`) is false as stated:
+`spaceCongruenceGivesTheorem18_false` in `CongruenceClose.lean`, by `linePt_not_theorem18`
+(`CongruenceCloseAux4.lean`): on the rational line without planes (`LinePt`) the figure consisting
+of the point `0` extends by the point `1` both to `(0, 1)` and to `(0, -1)`. Where a plane exists,
+four points not in a plane are distinct (`ne_of_not_coplanar`) and the defect does not arise. The
+statement that holds without any hypothesis on the geometry is `Theorem18Distinct`: existence as
+printed, and uniqueness when the given figure contains four *distinct* points not in a plane.
+`theorem18_distinct` proves it in every space geometry with groups I, II, IV
+(`spaceCongruenceGivesTheorem18Distinct` proves the corresponding claim
+`SpaceCongruenceGivesTheorem18Distinct` for all such geometries), and where a plane
+exists it is equivalent to `Theorem18Statement` (`theorem18Statement_iff_distinct`). A weaker
+variant, `Theorem18Corrected` (uniqueness when the figure contains three points not in a straight
+line and a fourth point not in a plane with them), holds likewise in every such geometry
+(`theorem18_corrected`, `theorem18Corrected_of_distinct`).
+
+**Proof** (helper modules `CongruenceCloseAux.lean`–`CongruenceCloseAux4.lean` and
+`CongruenceCloseAux6.lean`), without perpendiculars to planes. Existence where a plane exists
+(`theorem18_exists`): if the figure lies on a line, Theorem 17 in planes through the lines of the
+two figures. Otherwise three non-collinear points of the figure span a plane `α` with a
+distance-preserving map `φ` into the plane of the corresponding points (`Frame.plane_iso`, by
+Theorem 17), and `P'` is `φ P` if `P ∈ α`; if not, `P'` is the image of `P` in a "tetrahedral
+frame" (`Tet`: the map `φ`, a point `D` off `α` and a point `D'` having the distances of `D` from
+the images of all points of `α`), namely the frame of a fourth point of the figure off `α`
+(`Tet.extend`, `Tet.rigid`) or, if the figure lies in `α`, any frame of `φ` (`exists_tet`). In
+such a frame every point off `α` lies in a plane through `D` that meets `α` in a line, and its
+image is found in that plane by Theorem 17 again; the tool throughout is that a set of points
+having prescribed distances from given points is closed under joining lines (the congruence
+theorems). Uniqueness (`theorem18_unique`): `Tet.unique`, and `theorem18_unique_of_coplanar` for
+`P ∈ α`. Without planes all points lie on one line: existence is Theorem 17 on a line
+(`theorem18_exists_noPlane`; `theorem18_exists_all` combines the two cases), and a point of a line
+is determined by its distances from two distinct points of it (`theorem18_unique_noPlane`).
+
+The partial results of this file are the special cases in which `P` lies in a plane with points
+of the figure; as cases of Theorem 18 they are now subsumed: the planar case `theorem18_planar`
+(existence for a plane figure and `P` in its plane, with `P'` moreover in the plane of the second
+figure: Theorem 17 in space) and `theorem18_unique_of_coplanar` (for any figure, if `P` lies in a
+plane with three non-collinear points of the first figure, `P'` is unique in all of space, also
+when the figure has no point off that plane; by `congruentFigures_coplanar_space` and
+`Frame.eq_of_equidistant`), which is used in the proof of `theorem18_unique`.
+
+**Status.** proved (corrected)
 -/
 
 /-- **Theorem 18 as printed**: uniqueness when the *extended* figure has four points not in a
@@ -1507,7 +1541,10 @@ def Theorem18Statement (P : Type u) {L : Type v} {Pl : Type w} [HasLines P L] [H
         CongruentFigures (L := L) (Fin.snoc f Q : Fin (n + 1) → P) (Fin.snoc g Q'') → Q' = Q'')
 
 /-- **Hilbert's claim** (Theorem 18, corrected): every space geometry with groups I, II, IV
-satisfies it. Not proved here. -/
+satisfies it. False as stated, because of the space geometry without planes
+(`spaceCongruenceGivesTheorem18_false` in `CongruenceClose.lean`); true for the geometries having a
+plane (`theorem18`) and, with the four points required to be distinct, for all
+(`theorem18_distinct`). -/
 def SpaceCongruenceGivesTheorem18 : Prop :=
   ∀ (P : Type u) (L : Type v) (Pl : Type w) [HasLines P L] [HasPlanes P Pl] [HasBetween P]
     [HasSegCong P] [HasAngCong P], SpaceCongruence P L Pl → Theorem18Statement (L := L) (Pl := Pl) P
@@ -1577,7 +1614,8 @@ theorem theorem18_unique_of_coplanar [HasLines P L] [HasPlanes P Pl] [HasBetween
 
 > This theorem contains an important result; namely, that all the facts concerning space which have reference to congruence, that is to say, to displacements in space, are (by the addition of the axioms of groups I and II) exclusively the consequences of the six linear and plane axioms mentioned above. Hence, it is not necessary to assume the axiom of parallels in order to establish these facts.
 
-**Lean reading.** A remark on Theorem 18 (stated, not proved here). What is checked in this file:
+**Lean reading.** A remark on Theorem 18 (proved in corrected form in `CongruenceClose.lean`,
+from groups I, II, IV alone). What is checked in this file:
 none of the results of §§ 6–7 up to Theorem 18 assumes the axiom of parallels (the classes used are
 `SpaceCongruence` / `PlaneCongruence`, without `SpaceParallels` / `PlaneParallels`); group III enters
 only in Theorems 19, 20. "Displacements" (motions) are not defined in this edition; the remark is
@@ -1800,23 +1838,39 @@ as statements about a plane geometry: `CircleThroughThree` (for non-collinear `A
 a centre `M`, distinct from the three points, with `MA ≡ MB ≡ MC`), `InscribedAnglesCongruent` (if
 `A`, `B`, `C`, `D` lie on a circle with centre `M`, none of them being `M`, and `C`, `D` lie on the
 same side of `AB`, i.e. in the same segment of the circle, then `∠ACB ≡ ∠ADB`; the points must
-differ from `M` since congruences of degenerate segments `MM` are junk), `InscribedQuadrilateral` (if `C`, `D` lie on different sides of `AB`, the opposite
-angles `∠ACB`, `∠ADB` of the inscribed quadrilateral `ACBD` sum to two right angles: laid side by
-side they fill a straight angle), and `CirclePropertiesClaim` is Hilbert's claim for every plane
-geometry with groups I–IV. Hilbert gives no proof ("can be easily deduced"). **Proved here: the
-circle through three points**, `circleThroughThree` (plane) and `circleThroughThree_space` (the centre
-in the plane of the three points), by `Frame.circumcenter`: on each side of `AB` an isosceles apex
-(`Frame.apex`, by laying off the base angle and the crossbar theorem); the line of two apexes passes
-through the midpoint of `AB` at a right angle and all its points are equidistant from `A`, `B`
-(`Frame.equidistant_of_mem`); the perpendicular bisectors of `AB` and `BC` meet, for otherwise the
-line `AB` would meet the second one (uniqueness of parallels) at a right angle (Theorem 19), and `AB`,
-`BC`, both perpendicular to it, would be parallel (Theorems 15 and 19, converse) although they meet
-in `B`. **Not proved here**: the inscribed angles and the inscribed quadrilateral, which need the
-angle sums of triangles (Theorem 20) combined with isosceles triangles in each configuration of the
-centre with respect to the inscribed angle, a development not undertaken here; and "the known
-properties of the circle" in general are not formalized.
+differ from `M` since congruences of degenerate segments `MM` are junk), `InscribedQuadrilateral`
+(if `C`, `D` lie on different sides of `AB`, the opposite angles `∠ACB`, `∠ADB` of the inscribed
+quadrilateral `ACBD` sum to two right angles: laid side by side they fill a straight angle), and
+`CirclePropertiesClaim` is Hilbert's claim for every plane geometry with groups I–IV. Hilbert
+gives no proof ("can be easily deduced"). The claim is proved exactly as stated:
+`circlePropertiesClaim` in `CongruenceClose.lean`, from the three parts that follow. The unit is
+read as these three named properties; no further property of the circle is stated.
 
-**Status.** stated (open here)
+**The circle through three points** (this file): `circleThroughThree` (plane) and
+`circleThroughThree_space` (the centre in the plane of the three points), by `Frame.circumcenter`:
+on each side of `AB` an isosceles apex (`Frame.apex`, by laying off the base angle and the crossbar
+theorem); the line of two apexes passes through the midpoint of `AB` at a right angle and all its
+points are equidistant from `A`, `B` (`Frame.equidistant_of_mem`); the perpendicular bisectors of
+`AB` and `BC` meet, for otherwise the line `AB` would meet the second one (uniqueness of
+parallels) at a right angle (Theorem 19), and `AB`, `BC`, both perpendicular to it, would be
+parallel (Theorems 15 and 19, converse) although they meet in `B`.
+
+**The inscribed angles and the inscribed quadrilateral** (`inscribedAnglesCongruent`,
+`inscribedQuadrilateral` in `CongruenceClose.lean`) are proved analytically (helper module
+`CongruenceCloseAux5.lean`), in rectangular co-ordinates over the field of segments built for
+Pascal's theorem (helper modules of `Pascal.lean`, which use no property of circles). There the
+square of a length is the sum of the squares of the differences of the co-ordinates
+(`Pas.len_sq_coord`), the cosine of `∠ACB` multiplied by the lengths of `CA`, `CB` is the scalar
+product of `A - C`, `B - C` (`Pas.cos_formula`), angles with the same cosine are congruent
+(`Pas.angCong_of_cosA`), and for points `C`, `D` on the same side (on different sides) of `AB` the
+determinants `Pas.crs` of `B - A` with `C - A` and with `D - A` have the same sign (different
+signs) (`Pas.crs_same`, `Pas.crs_opp`). For four points `A`, `B`, `C`, `D` of a circle the scalar
+products and the determinants at `C` and at `D` are proportional, so that the cosines of `∠ACB`,
+`∠ADB` are equal when the determinants have the same sign and opposite when they have different
+signs (`Pas.inscribed_cos`). In the first case the angles are congruent; in the second `∠ADB` is
+congruent to the supplement of `∠ACB` (the angle `∠BCW` with `C` between `A` and `W`).
+
+**Status.** proved
 -/
 
 /-- Through three non-collinear points passes a circle. -/
@@ -1840,14 +1894,15 @@ def InscribedQuadrilateral (P : Type u) {L : Type v} [HasLines P L] [HasBetween 
       AngCong A C B X O Y ∧ AngCong A D B Y O W
 
 /-- **Hilbert's claim** (§ 7): with groups I–IV of plane geometry, the circle has these properties.
-Not proved here. -/
+Proved: `circlePropertiesClaim` in `CongruenceClose.lean`. -/
 def CirclePropertiesClaim : Prop :=
   ∀ (P : Type u) (L : Type v) [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P],
     PlaneCongruence P L → PlaneParallels P L →
       CircleThroughThree (L := L) P ∧ InscribedAnglesCongruent (L := L) P ∧
         InscribedQuadrilateral (L := L) P
 
-/-- **Proved part: a circle through any three non-collinear points** (plane geometry, groups I–IV). -/
+/-- **First part of `CirclePropertiesClaim`: a circle through any three non-collinear points**
+(plane geometry, groups I–IV). -/
 theorem circleThroughThree [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngCong P]
     [PlaneCongruence P L] [PlaneParallels P L] : CircleThroughThree (L := L) P := by
   intro A B C hAB h
@@ -1856,7 +1911,7 @@ theorem circleThroughThree [HasLines P L] [HasBetween P] [HasSegCong P] [HasAngC
     (parUnique_plane hl) trivial trivial trivial h
   exact ⟨M, hMA, hMB, hMC, h1, h2⟩
 
-/-- **Proved part: a circle through any three non-collinear points** (space geometry, groups I–IV):
+/-- **The circle through any three non-collinear points in space** (space geometry, groups I–IV):
 its centre lies in the plane of the three points. -/
 theorem circleThroughThree_space [HasLines P L] [HasPlanes P Pl] [HasBetween P] [HasSegCong P]
     [HasAngCong P] [SpaceCongruence P L Pl] [SpaceParallels P L Pl] {A B C : P}

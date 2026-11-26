@@ -33,6 +33,10 @@ plane). The helper modules:
   that Hilbert's proof of Theorem 22 presupposes).
 * `ProportionAux6.lean`: Hilbert's product construction succeeds in every right angle.
 
+The two claims on space of § 17, `SpaceCoordinatesClaim` (unit `s17.space`) and `IdealElementsClaim`
+(unit `s17.ideal`), are stated here and proved in `CoordinatesClose.lean`, which imports this file
+(`spaceCoordinatesClaim`, `idealElementsClaim`).
+
 The field of segments `Pas.G ax` (positive and negative segments of an axis, `PascalAux5.lean`) is
 built from Hilbert's own multiplication; its commutativity and associativity come from the
 commutation of the rotations (see Pascal.lean), and they are the content of Pascal's theorem.
@@ -920,19 +924,32 @@ for a space geometry with I–IV (`SpaceCongruence`, `SpaceParallels`) having a 
 ordered field `K` and a bijection of the points onto `K³` under which the planes are exactly the
 solution sets of the linear equations `a x + b y + c z + d = 0`, `(a, b, c) ≠ 0` (both directions).
 (A plane is needed: by the literal reading of I 7 a single line without planes satisfies the space
-axioms.) **Proved here** (`plane_coordinates_space`): the plane part transfers to space, i.e. every
-plane `α` of a geometry of space with I–IV carries rectangular co-ordinates over an ordered field in
-which the lines of `α` are exactly the solution sets of the linear equations in `x, y`; the proof
-restricts the geometry of space to `α` (groups I, II, III from Order.lean, IV from
-IndependenceAux3.lean) and applies `lines_are_linear`, `linear_eqs_are_lines`. **Not proved here**:
-the co-ordinates of space themselves, which need a third axis perpendicular to a plane and the
-theory of perpendicular lines and planes in space (not developed by Hilbert, nor in this project).
+axioms.) Proved as `spaceCoordinatesClaim` in `CoordinatesClose.lean`, which imports this file
+(helper modules `CoordinatesCloseAux.lean`, `CoordinatesCloseAux2.lean`,
+`CoordinatesCloseAux3.lean`). No third axis perpendicular to a plane is used, nor any theory of
+perpendicular lines and planes in space (not developed by Hilbert). A plane `α` of the geometry has
+rectangular co-ordinates over its field of segments `K = Pas.G ax`, in which its lines are the
+lines of `K²` (`Pas.exists_line_eq` for the restriction of the geometry to `α`). They are extended
+to space by the parallel projections `p₁`, `p₂` of space onto `α` along two lines through a point of
+`α`: a point `X` receives the two co-ordinates of `p₁ X` and the number `h X` for which, in the
+co-ordinates of `α`, `p₂ X = p₁ X + h X • u`, where `u` is the direction of the trace in `α` of the
+plane of the two lines. Under this bijection the lines and the planes of space are exactly the lines
+and the planes of `K³` (`SpaceCoord.exists_space_coords`, which uses groups I–III only), and the
+planes of `K³` are exactly the solution sets of the linear equations (`SpaceCoord.affPlane_eq`,
+`SpaceCoord.exists_affPlane_of_eq`); together these give `SpaceCoord.space_coordinates`, of which
+`spaceCoordinatesClaim` is a restatement. The plane part proved in this file remains
+(`plane_coordinates_space'`, from `plane_coordinates_space` of ProportionAux4.lean): every plane `α`
+of a geometry of space with I–IV carries rectangular co-ordinates over an ordered field in which the
+lines of `α` are exactly the solution sets of the linear equations in `x, y`; the proof restricts
+the geometry of space to `α` (groups I, II, III from Order.lean, IV from IndependenceAux3.lean) and
+applies `lines_are_linear`, `linear_eqs_are_lines`. It is the case of a single plane, from whose
+co-ordinates the proof of `spaceCoordinatesClaim` starts.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- **Hilbert's claim** (§ 17): co-ordinates in space, the planes being exactly the solution sets
-of the linear equations. -/
+of the linear equations. Proved as `spaceCoordinatesClaim` in `CoordinatesClose.lean`. -/
 def SpaceCoordinatesClaim : Prop :=
   ∀ (P : Type u) (L : Type v) (Pl : Type u) [HasLines P L] [HasPlanes P Pl] [HasBetween P]
     [HasSegCong P] [HasAngCong P], SpaceCongruence P L Pl → SpaceParallels P L Pl → Nonempty Pl →
@@ -943,7 +960,7 @@ def SpaceCoordinatesClaim : Prop :=
       (∀ a b c d : K, (a ≠ 0 ∨ b ≠ 0 ∨ c ≠ 0) → ∃ α : Pl,
         ∀ Z : P, Z ∈ α ↔ a * (f Z).1 + b * (f Z).2.1 + c * (f Z).2.2 + d = 0)
 
-/-- **Proved part**: every plane of a geometry of space with I–IV has rectangular co-ordinates in
+/-- **The plane part**: every plane of a geometry of space with I–IV has rectangular co-ordinates in
 which its lines are exactly the solution sets of the linear equations. -/
 theorem plane_coordinates_space' {P : Type u} {L : Type v} {Pl : Type*} [HasLines P L]
     [HasPlanes P Pl] [HasBetween P] [HasSegCong P] [HasAngCong P] [SpaceCongruence P L Pl]
@@ -1173,16 +1190,32 @@ and the congruence of (genuine) angles. The congruences are compared only on gen
 `SpaceEmbedding` (all tuples) into the *fixed* model `Coord ℝ 3` would make the claim false for a
 trivial reason: a geometry identical to `Coord ℝ 3` except that it declares `AA ≡ BC` for all points
 satisfies the same axioms, and no injective map can reflect that relation into `Coord ℝ 3`, where
-`AA ≡ BC` forces `B = C`. Not proved here: it needs the co-ordinates of space (`s17.space`) and the
-identification of the congruences with the euclidean distance and angle of `ℝ³`. What is proved is
-the embedding of the field of segments into `ℝ` for every line (`s17.reals`, `s17.omega`, plane and
-space) and the plane co-ordinates of every plane of space (`plane_coordinates_space'`).
+`AA ≡ BC` forces `B = C`. Proved as `idealElementsClaim` in `CoordinatesClose.lean`, which imports
+this file (helper modules `CoordinatesCloseAux4.lean`, `CoordinatesCloseAux5.lean`,
+`CoordinatesCloseAux6.lean`). With Archimedes's axiom the congruences are identified with the
+euclidean distance and angle in the co-ordinates of `s17.space`, without solid geometry (no
+perpendiculars to planes). The length of a segment of space is measured in the field of segments
+`K` of one plane `α` (`SpaceCoord.slen`). In every plane it is proportional to the length of that
+plane, because an additive positive map between archimedean ordered fields is linear
+(`SpaceCoord.additive_pos_eq_mul`, `SpaceCoord.slen_plane`); it is invariant under the translations
+of the co-ordinates (`SpaceCoord.clen_translate`), homogeneous on lines (`SpaceCoord.cnorm_smul`),
+and its square satisfies the theorem of Pythagoras on the axes of every plane
+(`SpaceCoord.slen_pyth`), hence is a quadratic form on every plane and so a quadratic form
+(`SpaceCoord.quad_three`). A linear change of co-ordinates makes it `x² + y² + z²`
+(`SpaceCoord.exists_metric_coords`). The congruence of angles is determined by the congruence of
+segments (Theorems 10 and 16, `SpaceCoord.angCong_iff_exists`), so it is the congruence of angles
+of the coordinate space as well (`SpaceCoord.psi_angCong_iff`). Finally `K`, being archimedean, is
+embedded into `ℝ` (mathlib's `Real.nonemptyOrderRingHom`), which gives `SpaceCoord.ideal_elements`,
+of which `idealElementsClaim` is a restatement. The results of this file on a single line or plane
+remain: the embedding of the field of segments into `ℝ` for every line (`s17.reals`, `s17.omega`,
+plane and space) and the plane co-ordinates of every plane of space (`plane_coordinates_space'`).
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- **Hilbert's claim** (§ 17): every archimedean geometry of space extends to the analytic geometry
-of space over `ℝ` (the congruences compared on genuine segments and angles). -/
+of space over `ℝ` (the congruences compared on genuine segments and angles). Proved as
+`idealElementsClaim` in `CoordinatesClose.lean`. -/
 def IdealElementsClaim : Prop :=
   ∀ (P : Type) (L : Type) (Pl : Type) [HasLines P L] [HasPlanes P Pl] [HasBetween P]
     [HasSegCong P] [HasAngCong P], SpaceGeometry P L Pl → Nonempty Pl →

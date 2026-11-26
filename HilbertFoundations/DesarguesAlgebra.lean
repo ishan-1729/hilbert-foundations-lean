@@ -1219,21 +1219,35 @@ read as the coordinate geometry `AffPt K (Fin n → K)` over a linearly ordered 
 (`n ≥ 3`). `AnyDimensionClaim` states: every space geometry with I, II, III and at least one plane
 embeds, for every `n ≥ 3`, into such a geometry, injectively on points, with betweenness preserved
 and reflected and every line and plane mapped onto the points of an affine subspace of dimension 1,
-resp. 2, that it meets. The proof would coordinatize the space (each plane is desarguesian; the
-segments of one plane coordinatize the whole space through a point off the plane), which is not done
-here. Proved partial results: (1) the first step and the claim "the theorem of Desargues is a
-consequence of the axioms I, II, III" of § 29: `planes_of_space_desarguesian` — every plane of a
-space geometry satisfying I and III, with its points and its lines, satisfies Desargues's theorem;
-(2) the last step: `coordinate_space_any_dimension` — the coordinate space `K³` over any ordered skew
-field (in particular the space of § 29 over a desarguesian number system) is a part of `Kⁿ` for every
-`n ≥ 3` in the sense of `AnyDimensionClaim`. The missing middle step is the coordinatization of an
-arbitrary space geometry with I, II, III by the segments of one of its planes.
+resp. 2, that it meets. The claim is proved as stated: `anyDimensionClaim` in
+`CoordinatesClose.lean`, a later file, since the proof uses the present one (helper modules
+`CoordinatesCloseAux.lean`, `CoordinatesCloseAux2.lean`, `CoordinatesCloseAux3.lean`). The proof
+coordinatizes the space by the segments of one of its planes. A plane `α` of the space is
+desarguesian (`planes_of_space_desarguesian` below), so by §§ 24–28 its points form the vector space
+`Vec F` of dimension 2 over `K = (DesAlg.Seg F)ᵐᵒᵖ`, its lines being the affine lines
+(`mem_ln_iff_smul`) and its betweenness that of the vector space (`between_iff_param`).
+`SpaceCoord.exists_space_coords` extends such co-ordinates of a plane to the whole space, using
+I, II, III only: two parallel projections of the space onto `α`, along two lines through a point of
+`α`, give every point co-ordinates in `Vec F × K`; this is a bijection under which the lines and the
+planes of the space are exactly the affine lines and planes, and betweenness corresponds because
+parallel projection preserves it. The result is `SpaceCoord.exists_skew_coords`: the space is the
+coordinate space of a vector space of dimension 3 over an ordered skew field. A basis of that vector
+space and the injective linear map `DesAlg.ext3` of `K³` into `Kⁿ` then give the claim
+(`SpaceCoord.embed_linear`, `SpaceCoord.any_dimension`). The two results proved in this file remain:
+(1) the first step of the proof and the claim "the theorem of Desargues is a consequence of the
+axioms I, II, III" of § 29: `planes_of_space_desarguesian` — every plane of a space geometry
+satisfying I and III, with its points and its lines, satisfies Desargues's theorem; (2) the last
+step: `coordinate_space_any_dimension` — the coordinate space `K³` over any ordered skew field (in
+particular the space of § 29 over a desarguesian number system) is a part of `Kⁿ` for every `n ≥ 3`
+in the sense of `AnyDimensionClaim`: the general claim in the case of the coordinate spaces, with
+the skew field `K` itself.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- **Hilbert's claim** (§ 30): every space geometry with I, II, III is part of a coordinate
-geometry of any dimension `n ≥ 3` over an ordered skew field. Not proved here. -/
+geometry of any dimension `n ≥ 3` over an ordered skew field. Stated here; proved in
+`CoordinatesClose.lean` (`anyDimensionClaim`). -/
 def AnyDimensionClaim : Prop :=
   ∀ (P L Pl : Type) [HasLines P L] [HasPlanes P Pl] [HasBetween P],
     SpaceOrder P L Pl → SpaceParallels P L Pl → Nonempty Pl →

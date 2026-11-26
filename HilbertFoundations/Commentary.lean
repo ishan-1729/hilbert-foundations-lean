@@ -19,9 +19,10 @@ Covers `introduction`, `conclusion` and `appendix` of `data/foundations.json`.
   "consequently"; the comparison of the angle sum of a triangle with two right angles, defined from
   the primitive notions, which agree with Theorem 20 in euclidean planes; Dehn's theorems (the angle
   sum theorem, the non-legendrian and the semi-euclidean geometry, the pseudo-geometry) stated as
-  `Prop`s, open here, with their stated consequences proved; the case without parallels, which with
-  Hilbert's axioms of order is vacuous (Euclid I 27 gives parallels), proved in corrected form; the
-  misprinted table.
+  `Prop`s, with their stated consequences proved (the two geometries are constructed, and their
+  existence proved, in `CommentaryClose.lean`; the angle sum theorem and the pseudo-geometry are
+  open here); the case without parallels, which with Hilbert's axioms of order is vacuous (Euclid
+  I 27 gives parallels), proved in corrected form; the misprinted table.
 * **Appendix** (namespace `HilbertFoundations.Appendix`). Hilbert's foundation of plane geometry on a
   group of displacements: the number plane `ℂ`, Jordan curves and regions, the plane, displacements
   (the sense of traversal through winding numbers), axioms I–III, the three particular cases of
@@ -29,6 +30,9 @@ Covers `introduction`, `conclusion` and `appendix` of `data/foundations.json`.
   (so that they are compatible), and the main theorem and the steps of its proof as `Prop`s (open
   here), each of them verified in the euclidean plane; the steps that follow from the axioms
   directly (closedness of the true circles, transitivity of the rotations on them) are proved.
+  As stated, the main theorem fails for the empty plane; the statement for a plane with a point is
+  open, and four steps of its proof are shown to follow from it (`CommentaryCloseAux7.lean`,
+  `CommentaryClose.lean`).
 -/
 
 namespace HilbertFoundations
@@ -745,10 +749,24 @@ many lines not meeting it. Part (a) is `NonLegendrianGeometryExists`: some plane
 I, II, IV (`PlaneCongruence`) has infinitely many parallels and every triangle of it has angle sum
 greater than two right angles. "All the theorems of Riemann's geometry are valid" is not formalized
 beyond the angle sum. Part (b) is `SemiEuclideanGeometryExists` (unit `concl.semi_euclidean`).
-Dehn's model is the "finite" part of an elliptic geometry over a non-archimedean Pythagorean field;
-building it with groups I, II, IV verified (and the angle sums computed) is not done here.
 
-**Status.** stated (open here)
+Part (a) is proved: `nonLegendrianGeometryExists` in `CommentaryClose.lean`, with Dehn's model, the
+part of an elliptic plane infinitely near to a point, over a non-archimedean ordered field in which
+the non-negative elements have square roots (the hyperreal numbers). In the gnomonic chart its
+points are the pairs of infinitesimal numbers and its lines the straight lines of the coordinate
+plane that meet this part, with the incidence and the order of that plane (`Elliptic.EPt`,
+`Elliptic.ELn`, a `ConvexPart` of the plane; `CommentaryCloseAux.lean`, `CommentaryCloseAux4.lean`).
+Segments are congruent when the cosines `Elliptic.cs` of their elliptic lengths agree, angles when
+the cosines `Elliptic.kc` of their elliptic measures agree (`CommentaryCloseAux3.lean`). Groups I,
+II, IV are `Elliptic.planeCongruence`, and the infinitely many parallels
+`Elliptic.infinitelyManyParallels`: the lines in question meet the given line outside the
+infinitesimal part (`CommentaryCloseAux5.lean`). The angle sum is `Elliptic.angleSumGt`
+(`CommentaryCloseAux6.lean`): `∠A` is laid off at `C` on the prolongation of `AC`, which gives `Y`;
+if `Y` is not interior to the exterior angle `∠XCB` the first alternative of `AngleSumGtTwoRight`
+holds, and otherwise `∠YCB`, laid off at `B` on `BC`, falls inside `∠CBA`, by an identity whose
+right side, the spherical excess, is positive (`Elliptic.excess_pos`).
+
+**Status.** proved
 -/
 
 /-- Through every point outside a line pass infinitely many lines not meeting it. -/
@@ -771,18 +789,21 @@ def NonLegendrianGeometryExists : Prop :=
 **Lean reading.** `LegendreNeedsArchimedes`: it is not true that in every plane satisfying groups I,
 II, IV no triangle has angle sum greater than two right angles. "It follows at once" is proved:
 `legendreNeedsArchimedes_of_nonLegendrian` (a non-legendrian geometry has a triangle, by I 7, and its
-angle sum exceeds two right angles). The existence of the non-legendrian geometry is open here
-(`concl.non_legendrian`), hence so is the conclusion. The last clause ("Legendre made use of
+angle sum exceeds two right angles). The non-legendrian geometry exists
+(`nonLegendrianGeometryExists` in `CommentaryClose.lean`, unit `concl.non_legendrian`: the part of
+an elliptic plane over the hyperreal numbers infinitely near to a point), so the conclusion is
+proved: `legendreNeedsArchimedes` in `CommentaryClose.lean`. The last clause ("Legendre made use of
 continuity in his demonstration") presupposes that Legendre's theorem does hold once Archimedes's
 axiom is added (the Saccheri–Legendre theorem): `LegendreTheorem`, in every plane satisfying groups
 I, II, IV and V no triangle has angle sum greater than two right angles. It is a classical theorem
-whose proof (doubling of angles, Archimedes's axiom for angles) needs the addition of angles that the
-project does not develop; open here. Its consequence, used in the next unit ("as in the case of the
-non-legendrian geometry, it is clear that … is a non-archimedean geometry"), is proved:
-`nonLegendrian_not_axiomV`, a plane satisfying I, II, IV in which every triangle has angle sum
-greater than two right angles does not satisfy Archimedes's axiom.
+whose proof (doubling of angles, Archimedes's axiom for angles) needs the addition of angles that
+the project does not develop; it is stated only, and `legendreNeedsArchimedes` does not use it. Its
+consequence, used in the next unit ("as in the case of the non-legendrian geometry, it is clear
+that … is a non-archimedean geometry"), is proved from it: `nonLegendrian_not_axiomV`, given
+`LegendreTheorem`, a plane satisfying I, II, IV in which every triangle has angle sum greater than
+two right angles does not satisfy Archimedes's axiom.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- **Legendre's theorem cannot be proved without the axiom of Archimedes**: groups I, II, IV do not
@@ -838,20 +859,30 @@ the three listed propositions, groups I, II, IV and that proposition do not impl
 (`AxiomIII`). It follows from the existence of the geometry: `parallelsNotReplaceable_of_semiEuclidean`
 (infinitely many parallels contradict the uniqueness in Euclid's axiom,
 `not_axiomIII_of_infinitelyManyParallels`). "It is clear that the semi-euclidean geometry is a
-non-archimedean geometry" rests on the classical theorem that with Archimedes's axiom an angle sum of
-two right angles in every triangle gives Euclid's axiom (`ArchimedesAngleSumGivesParallels`, open
-here, like `LegendreTheorem` in the previous unit); from it the claim is proved:
-`semiEuclidean_not_axiomV`.
+non-archimedean geometry" would follow, for every such geometry, from the classical theorem that
+with Archimedes's axiom an angle sum of two right angles in every triangle gives Euclid's axiom
+(`ArchimedesAngleSumGivesParallels`, stated only, like `LegendreTheorem` in the previous unit; the
+implication is `semiEuclidean_not_axiomV`). That theorem is not needed: the clause is proved
+directly for the geometry constructed (`semiEuclidean_not_archimedean`, next paragraph).
 
-Dehn's model is the finite part of the euclidean plane over a non-archimedean Pythagorean field such
-as `Ω(t)` (the points whose coordinates are bounded by natural numbers, with the lines meeting that
-region): the lines through a finite point whose slopes differ infinitesimally (relative to its
-distance) from that of a given line meet it only at infinite distance. Building that model, with all
-of groups I, II, IV verified inside the finite part and the angle sums, similar triangles and
-perpendiculars computed there, is a feasible but long development that is not done here, so the
-existence statement (and with it `ParallelsNotReplaceable`) remains open.
+The existence is proved in `CommentaryClose.lean`: `semiEuclideanGeometryExists`, and with it
+`parallelsNotReplaceable`. The geometry is Dehn's model, the finite part of the euclidean plane over
+the non-archimedean Pythagorean field `Ω(t)`: the points whose coordinates are bounded by natural
+numbers, with the lines meeting that region (`FinitePart.finPart`, `CommentaryCloseAux2.lean`). It
+is a case of the restriction of a plane to a convex part (`ConvexPart`, `CommentaryCloseAux.lean`),
+in which groups I, II, IV hold when they hold in the plane and segments laid off from points of the
+part stay in it (`ConvexPart.planeCongruence`, `FinitePart.finPart_layOffClosed`). Infinitely many
+parallels (`FinitePart.finPart_infinitelyManyParallels`): the lines through a finite point whose
+slopes differ infinitesimally (relative to its distance) from that of a given line meet it only at
+infinite distance. The angle sum transfers from the plane, where it is
+`angleSumEqTwoRight_of_parallels` (`FinitePart.finPart_angleSum`); the similar triangles are those
+with vertices `(0,0), (1,0), (0,1)` and `(0,0), (2,0), (0,2)` (`FinitePart.finPart_similar`); the
+perpendiculars are computed in coordinates (`FinitePart.finPart_equalPerp`). The geometry is
+non-archimedean: `semiEuclidean_not_archimedean`, from `FinitePart.finPart_not_axiomV` (the
+multiples of the segment from `(0,0)` to `(1/t,0)` never reach `(1,0)`); all the properties
+together are `semiEuclideanGeometryExists_nonArchimedean`.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 section SemiEuclidean
@@ -1104,8 +1135,10 @@ groups I, II, IV always give parallels; Riemann's geometry needs Dehn's axioms o
 `concl.no_parallels`); in the middle column, every triangle of a plane satisfying groups I–IV has angle
 sum two right angles (`angleSumEqTwoRight_of_parallels`, unit `concl.angle_sum`). The two
 "impossible" entries of the middle column also need the exclusiveness of the three cases, which is
-not proved here; the third column is open (`concl.non_legendrian`, `concl.semi_euclidean`; the
-geometry of Lobachevsky is not constructed in this file).
+not proved here; in the third column the non-legendrian and the semi-euclidean geometry exist
+(`nonLegendrianGeometryExists`, `semiEuclideanGeometryExists` in `CommentaryClose.lean`, units
+`concl.non_legendrian`, `concl.semi_euclidean`), and the geometry of Lobachevsky is not constructed
+in this file.
 
 **Status.** remark
 -/
@@ -1627,8 +1660,9 @@ the Bolyai–Lobachevskian plane). "Is the geometry" is read as an isomorphism o
 and III is euclidean or hyperbolic. Not proved here: Hilbert's proof (*Math. Ann.* 56, 1902) is a
 long paper using the point-set topology of the plane, the Jordan curve theorem and the construction
 of the true straight lines outlined in the following units; this is far beyond the present
-development (and the exact formal statement, which depends on our formalization of "sense of
-traversal" and "domain", is not verified here). Partial results proved:
+development. The formal statement, which depends on the formalization of "sense of traversal" and
+"domain", is false as it stands, for the empty plane, and has to be read for a plane with a point
+(last paragraph). Partial results proved:
 
 * the theorem is not vacuous, and axioms I–III are compatible: the euclidean plane is a geometry of
   this kind (`appendix_axioms_consistent`). `euclideanPlane`: `S = ℂ` (`isPlane_univ`), `D` the proper
@@ -1644,6 +1678,18 @@ traversal" and "domain", is not verified here). Partial results proved:
 
 That Poincaré's disc with its proper motions satisfies axioms I–III is not proved here (the sense
 preservation of these maps needs the homotopy invariance of winding numbers).
+
+Partial results (`CommentaryCloseAux7.lean`): as stated, `AppendixMainTheorem` is false, for a
+degenerate reason (`not_appendixMainTheorem`). The empty set of points is a plane in the sense of
+`IsPlane` (`isPlane_empty`), and with the identity as only displacement (`emptyGeometry`) it
+satisfies axioms I–III vacuously (`emptyGeometry_axioms`); it is neither euclidean nor hyperbolic,
+there being no bijection of the empty set onto the number plane or onto the disc. The statement
+Hilbert means adds that the plane has a point: `AppendixMainTheoremNonempty` (hypothesis
+`G.S.Nonempty`). Four steps of its proof (units `app.two_fixed_points`, `app.transitive`,
+`app.middle`, `app.rotation_group`) are shown to follow from it (`steps_of_main` in
+`CommentaryClose.lean`). Still missing: `AppendixMainTheoremNonempty` itself, that is, Hilbert's
+memoir, which uses the Jordan curve theorem and a point-set topology of the plane that Mathlib does
+not contain.
 
 **Status.** stated (open here)
 -/
@@ -1883,7 +1929,9 @@ def IsHyperbolicGeometry (G : Geometry) : Prop :=
       ∀ X, (φ (f X) : ℂ) = c * ((φ X : ℂ) - a) / (1 - starRingEnd ℂ a * φ X)
 
 /-- **Hilbert's theorem** (appendix): a geometry satisfying axioms I–III is the euclidean or the
-Bolyai–Lobachevskian geometry. Not proved here. -/
+Bolyai–Lobachevskian geometry. Not proved here; as stated it fails for the empty plane
+(`not_appendixMainTheorem` in `CommentaryCloseAux7.lean`), and the statement for a plane with a
+point is `AppendixMainTheoremNonempty` there. -/
 def AppendixMainTheorem : Prop :=
   ∀ G : Geometry, AxiomIGroup G → AxiomII G → AxiomIII G →
     IsEuclideanGeometry G ∨ IsHyperbolicGeometry G
@@ -2039,6 +2087,18 @@ reading (`trueCircle_transitive`); property (1) follows from the proposition
 `1`). Property (3), continuity of the group, is not formalized. In the euclidean plane the
 proposition holds with `φ X = (X - M)/(A - M)` (`euclideanPlane_rotationsOfTrueCircle`).
 
+Partial results (`CommentaryCloseAux7.lean`): the proposition holds in every geometry that is
+euclidean in the sense of `IsEuclideanGeometry` (`rotationsOfTrueCircle_of_isEuclidean`) and in
+every geometry that is hyperbolic in the sense of `IsHyperbolicGeometry` and whose displacements
+form a group (`rotationsOfTrueCircle_of_isHyperbolic`: after the displacement carrying `M` into the
+centre of the disc, the rotations about `M` are the maps `z ↦ c z`, `|c| = 1`). Hence
+`RotationsOfTrueCircle` follows from the main theorem for a plane with a point
+(`rotationsOfTrueCircle_of_main`, from `AppendixMainTheoremNonempty`, unit `app.main_theorem`).
+Still missing: a proof from axioms I–III themselves, that is, that the true circle is a closed
+Jordan curve (unit `app.true_circle_jordan`) and the determination of the continuous groups acting
+transitively on it in which only the identity has a fixed point; `AppendixMainTheoremNonempty` is
+open.
+
 **Status.** stated (open here)
 -/
 
@@ -2141,8 +2201,20 @@ theorem euclideanPlane_rotationsOfTrueCircle (M A : euclideanPlane.S) (hAM : A �
 fixing two distinct points is the identity. Not proved here. The first law of the quotation (aside
 from the identity no rotation about `M` fixes every point of a true circle about `M`) follows from it:
 `rotation_fixing_trueCircle_eq_refl` (such a rotation fixes `M` and the point `A` of the circle).
-Partial result: the theorem is true in the euclidean plane (`euclideanPlane_twoFixedPoints`: `a A + b = A`, `a B + b = B` force `a = 1`,
-`b = 0`).
+Partial result: the theorem is true in the euclidean plane (`euclideanPlane_twoFixedPoints`:
+`a A + b = A`, `a B + b = B` force `a = 1`, `b = 0`).
+
+Partial results (`CommentaryCloseAux7.lean`): the theorem holds in every geometry that is euclidean
+or hyperbolic in the sense of `IsEuclideanGeometry`, `IsHyperbolicGeometry`
+(`twoFixedPoints_of_isEuclidean`, `twoFixedPoints_of_isHyperbolic`: a motion `z ↦ a z + b`, or a
+conformal automorphism `z ↦ c (z - a) / (1 - conj(a) z)` of the disc, with two fixed points is the
+identity). Hence `TwoFixedPointsIdentity` follows from the main theorem for a plane with a point
+(`twoFixedPointsIdentity_of_main`, from `AppendixMainTheoremNonempty`, unit `app.main_theorem`).
+Still missing: a proof from axioms I–III themselves. The statement quantifies over every geometry
+satisfying I–III, so the computations in the two models do not prove it, and
+`AppendixMainTheoremNonempty` is open; in Hilbert's memoir it is a step of the proof, resting on the
+true circles being closed Jordan curves (unit `app.true_circle_jordan`) and on the Jordan curve
+theorem, which Mathlib does not contain.
 
 **Status.** stated (open here)
 -/
@@ -2187,6 +2259,17 @@ theorem euclideanPlane_twoFixedPoints (f : Equiv.Perm euclideanPlane.S) (hf : f 
 points some displacement carries the first into the second. Not proved here. Partial result: true in
 the euclidean plane, by a translation (`euclideanPlane_transitive`).
 
+Partial results (`CommentaryCloseAux7.lean`): the displacements are transitive in every geometry
+that is euclidean in the sense of `IsEuclideanGeometry` (`transitive_of_isEuclidean`, by a
+translation) and in every geometry that is hyperbolic in the sense of `IsHyperbolicGeometry` and
+whose displacements form a group (`transitive_of_isHyperbolic`, by the maps
+`z ↦ (z - a) / (1 - conj(a) z)`, `mobPerm`, which carry `a` into the centre of the disc). Hence
+`DisplacementsTransitive` follows from the main theorem for a plane with a point
+(`displacementsTransitive_of_main`, from `AppendixMainTheoremNonempty`, unit `app.main_theorem`).
+Still missing: a proof from axioms I–III themselves; `AppendixMainTheoremNonempty` is open, and in
+Hilbert's memoir the transitivity comes after the true circles are shown to be closed Jordan curves,
+which needs the Jordan curve theorem and a topology of the plane that Mathlib does not contain.
+
 **Status.** stated (open here)
 -/
 
@@ -2213,6 +2296,13 @@ segments ("smaller") that the summary does not define, and is not stated. Not pr
 result: in the euclidean plane the semi-rotations are the half-turns `z ↦ 2M - z`
 (`euclideanPlane_semiRotation`), so the middle of `AB` is `(A + B)/2` (`euclideanPlane_middle`,
 `euclideanPlane_atMostOneMiddle`).
+
+Partial results (`CommentaryCloseAux7.lean`): `AtMostOneMiddle` follows from
+`TwoFixedPointsIdentity` (`atMostOneMiddle_of_twoFixedPoints`: the composite of two semi-rotations
+carrying `A` into `B` fixes `A` and `B`, so the two coincide, and a semi-rotation, not being the
+identity, fixes only its centre), and hence from the main theorem for a plane with a point
+(`atMostOneMiddle_of_main`, from `AppendixMainTheoremNonempty`, unit `app.main_theorem`). Still
+missing: `TwoFixedPointsIdentity` (unit `app.two_fixed_points`), which is open.
 
 **Status.** stated (open here)
 -/

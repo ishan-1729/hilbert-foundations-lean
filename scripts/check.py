@@ -94,11 +94,6 @@ def main() -> int:
     ap.add_argument('--slots', type=int, default=3)
     ap.add_argument('--no-deps', action='store_true')
     a = ap.parse_args()
-    ready = ROOT / '.lake' / 'packages_ready'
-    if not ready.exists():
-        print('waiting for the mathlib packages to finish copying …', flush=True)
-        while not ready.exists():
-            time.sleep(10)
     rc = 0
     for f in a.files:
         path = Path(f) if Path(f).is_absolute() else ROOT / f

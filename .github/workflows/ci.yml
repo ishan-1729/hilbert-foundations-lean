@@ -17,6 +17,9 @@ jobs:
       - name: Axiom audit (no sorry, only standard axioms)
         run: lake env lean scripts/AxiomsAudit.lean
 
+      - name: Statements proved outside their chapter file are proved as stated
+        run: lake env lean scripts/ClosingProofs.lean
+
       - name: Unit map is complete and honest
         run: |
           python3 scripts/unit_table.py --check

@@ -33,6 +33,11 @@ Sections of Hilbert's text covered here (full text in `data/foundations.json`):
 * `ConstructionsAux10.lean`: Hilbert's reduction of Theorem 44 to the generalization of
   Theorem 43 (`Theorem43For R`), for any number of parameters.
 
+The units `th.43`, `s39.regular_polygons` and `s39.malfatti` are stated in this file and proved in
+`ConstructionsClose.lean`, which imports it (`theorem43`, `regularPolygonsClaim`, `malfattiClaim`);
+the partial results on the units `th.42`, `th.44` and `s38.two_variables`, which stay open, are
+also there.
+
 ## The setting
 
 Hilbert's constructions take place in a plane satisfying the axioms I–V. The constructions are
@@ -41,9 +46,10 @@ the elementary constructions (problems 1–5) is proved from the axioms (units `
 `s36.problem5`). The comparison of the two kinds of construction (Theorems 40, 41, 44) is carried
 out, as Hilbert does in § 37, in the coordinate plane `Coord K 2` over an ordered field `K`
 (Pythagorean where laying off segments requires it): this is the model of § 9 (with `K = Ω` or
-`ℝ`), and by Hilbert's Chapters III and V every plane satisfying I–V is such a coordinate plane;
-that coordinatization is not formalized in this project, so the analytic theorems are statements
-about the coordinate planes.
+`ℝ`), and by Hilbert's Chapters III and V every plane satisfying I–V is such a coordinate plane.
+The co-ordinates of § 17 are formalized (Proportion.lean, units `s17.*`), but the constructions
+are not transferred along them, so the analytic theorems are statements about the coordinate
+planes.
 -/
 
 namespace HilbertFoundations
@@ -376,7 +382,7 @@ lines") are replaced by constructed points: problems 2 and 4 come with a point o
 given point of problem 2, one of the three non-collinear points of the angle of problem 4), and
 that is all the construction needs. The
 theorem is proved for the coordinate planes, not for an abstract plane satisfying I–V; the
-transfer would need the coordinatization of Chapters III and V, not formalized in this project.
+transfer along the co-ordinates of § 17 (units `s17.*` of Proportion.lean) is not carried out.
 
 **Status.** proved (reading)
 -/
@@ -864,6 +870,21 @@ containing `√-1` (`theorem42_of_sq_eq_neg_one`: `α = ((α+1)/2)² + (i(α-1)/
 (a nonzero sum of four squares is totally positive, `totallyPositive_of_sum_sq`). The use Hilbert
 makes of it in Theorem 43 is formalized as `negOneSumSq_of_theorem42`.
 
+Partial results (`ConstructionsClose.lean`): the qualitative theorem, without a bound on the number
+of squares — in a number field every totally positive number is a sum of squares
+(`theorem42_sum_of_squares`: for `α = a(θ)` in `k = ℚ(θ)` and `p` the minimal polynomial of `θ`,
+the polynomial `a + c p² (1 + a²)` never becomes negative for a suitable rational `c > 0`, hence is
+a sum of squares of polynomials by Theorem 43 in the form `theorem43_polynomial`, and its value at
+`θ` is `α`). Consequently Theorem 42 is equivalent to "in every number field a sum of squares is a
+sum of four squares" (`theorem42_iff_pythagoras_number_le_four`), and to the isotropy over `k` of
+the forms `x₁² + x₂² + x₃² + x₄² - α x₅²` for every number field `k` and every totally positive
+`α ∈ k` (`theorem42_iff_isotropic`, with `four_squares_of_isotropic`). The conclusion of
+Theorem 42 holds for every number of a field of characteristic `0` in which `-1` is a sum of three
+squares (`theorem42_of_neg_one_three_squares`; with three squares when `-1` is a sum of two,
+`theorem42_of_neg_one_two_squares`). Still missing: the bound of four squares, i.e. the isotropy
+of these forms, which is an instance of the Hasse–Minkowski theorem over number fields and is not
+in mathlib.
+
 **Status.** stated (open here)
 -/
 
@@ -893,16 +914,28 @@ statement to formalize. It is not used elsewhere here.
 > Let, $f(x)$ be an integral rational function of $x$ whose coefficients are rational numbers and which never becomes negative for any real value of $x$. Then $f(x)$ can always be represented as the quotient of two sums of squares of which the bases are all integral rational functions of $x$ with rational coefficients.
 
 **Lean reading.** `Theorem43`: for every `f ∈ ℚ[x]` with `f(x) ≥ 0` for all real `x` (`PSD f`),
-there are sums of squares `N`, `D ≠ 0` in `ℚ[x]` with `f · D = N` (`RepQSOS f`). **Hilbert's proof
-is formalized in full** (`theorem42_imp_theorem43`): by induction on the degree, with the
-reducible case (an irreducible factor with a real root divides `f` twice, units
-`s38.factor_cases`) and the irreducible case (`-1` is a sum of four squares in `ℚ(θ)` by
-Theorem 42, unit `s38.reduction`). Theorem 43 itself is true (Landau 1906: a definite polynomial
-over `ℚ` is even a sum of eight squares; Pourchet: five), but both proofs need arithmetic beyond
-this project, and Theorem 42 is open here; so Theorem 43 is proved only conditionally, and
-unconditionally for degree `≤ 2` (`theorem43_natDegree_le_two`: `4a f = (2ax + b)² + (4ac - b²)`).
+there are sums of squares `N`, `D ≠ 0` in `ℚ[x]` with `f · D = N` (`RepQSOS f`). Proved in
+`ConstructionsClose.lean` (`theorem43`), without Theorem 42 and in the stronger form
+`theorem43_polynomial` (`psd_isSumSq` in `ConstructionsCloseAux.lean`): a definite polynomial with
+rational coefficients is a sum of squares of *polynomials* with rational coefficients, so that the
+denominator `D` is `1` (Landau 1906 proved this with eight squares, Pourchet with five; the number
+of squares is not bounded in `theorem43_polynomial`). The proof: if `f` has a real root, the
+minimal polynomial of the root divides `f` twice (unit `s38.factor_cases`), which reduces the
+degree. Otherwise `f > 0` on `ℝ`, of degree `2m`, and `f ≥ c (1 + x² + … + x^{2m})` for some
+`c > 0` (`real_pos_lower_bound`). For a rational `0 < ε < c`, `f - ε (1 + x² + … + x^{2m})` is
+`g² + h²` with real polynomials `g`, `h` (`real_psd_two_sq`, by the fundamental theorem of
+algebra). Replacing the coefficients of `g`, `h` by rational approximations leaves a remainder in
+`ℚ[x]` whose even coefficients dominate the odd ones; it is a sum of squares with positive rational
+weights (`isSumSq_of_dominant`), and positive rational numbers are sums of four squares (Lagrange).
 
-**Status.** stated (open here)
+**Hilbert's own proof is formalized in full** as an implication (`theorem42_imp_theorem43`): by
+induction on the degree, with the reducible case (an irreducible factor with a real root divides
+`f` twice, units `s38.factor_cases`) and the irreducible case (`-1` is a sum of four squares in
+`ℚ(θ)` by Theorem 42, unit `s38.reduction`). Theorem 42 is open here (unit `th.42`), so that route
+is conditional; `theorem43` does not use it. The case of degree `≤ 2`
+(`theorem43_natDegree_le_two`: `4a f = (2ax + b)² + (4ac - b²)`) is a special case now subsumed.
+
+**Status.** proved
 -/
 
 theorem theorem43_from_theorem42 (h42 : Theorem42) : Theorem43 :=
@@ -1044,10 +1077,19 @@ theorem negOneSumSq_from_theorem42 (h42 : Theorem42) : NegOneSumSq :=
 > It would be perhaps difficult to formulate and to demonstrate the corresponding proposition for integral functions of two or more variables. However, I will here merely remark that I have demonstrated in an entirely different manner the possibility of representing any “definite” integral rational function of two variables as the quotient of sums of squares of integral functions, upon the hypothesis that the functions represented may have as coefficients not only rational but *any* real numbers.
 
 **Lean reading.** `TwoVariableClaim`: every polynomial `f ∈ ℝ[x, y]` with `f ≥ 0` on `ℝ²` is a
-quotient `N / D` of sums of squares in `ℝ[x, y]` (`f · D = N`, `D ≠ 0`). This is Hilbert's theorem of
-1893 (Acta Math. 17); its proof (via ternary quartic forms) is far beyond this project. Only the
-trivial converse is proved: such a quotient is nonnegative wherever `D` does not vanish
+quotient `N / D` of sums of squares in `ℝ[x, y]` (`f · D = N`, `D ≠ 0`). This is Hilbert's theorem
+of 1893 (Acta Math. 17); its proof (via ternary quartic forms) is far beyond this project. Proved
+in this file: the trivial converse, such a quotient is nonnegative wherever `D` does not vanish
 (`TwoVariableClaim_converse`).
+
+Partial results (`ConstructionsClose.lean`): the claim for a polynomial of degree at most two in
+the variable `y` (`twoVariableClaim_quadratic`). If `f = P(x) y² + Q(x) y + R(x) ≥ 0` on `ℝ²`,
+then `P ≥ 0` and `4PR - Q² ≥ 0` on `ℝ`, both are sums of two squares of real polynomials, and
+`4 P f = (2 P y + Q)² + (4 P R - Q²)`; the denominator `4P` is in general not constant. Still
+missing: `TwoVariableClaim` itself, Hilbert's theorem of 1893 for polynomials of arbitrary degree.
+It needs either Hilbert's argument on ternary forms (theory of algebraic curves) or Artin's
+theorem over `ℝ(x, y)` (orderings of fields and their specialization to real points), neither of
+which is in mathlib.
 
 **Status.** stated (open here)
 -/
@@ -1098,11 +1140,36 @@ as a reduction (`theorem44For_of_theorem43For`, `theorem44_from_theorem43For`): 
 follows from `Theorem43For R` — every number of `R` that is nonnegative for all real values of the
 parameters is a quotient of two sums of squares in `R` — which for `R = ℚ` is Lagrange's theorem
 (`theorem43For_rat`). For one parameter, `Theorem43For ℚ(p)` is Theorem 43 for rational functions
-(open here, unit `th.43`); for several parameters it is Hilbert's seventeenth problem (Artin 1927),
-which Hilbert himself leaves open (unit `s39.general_case`). So the sufficiency with parameters
-remains open here. The minimality of `n` is not needed in the statement: for a minimal `n` the
-tower field is the field generated over `R` by the coordinates of the desired points (degree
-`2^n`), so "all numbers of the tower lie in `Ω(R)`" is "the desired points are constructible".
+(proved, see below); for several parameters it is Hilbert's seventeenth problem (Artin 1927),
+which Hilbert himself leaves open (unit `s39.general_case`). So the sufficiency remains open here
+beyond the case of a single parameter. The minimality of `n` is not needed in the statement: for a
+minimal `n` the tower field is the field generated over `R` by the coordinates of the desired
+points (degree `2^n`), so "all numbers of the tower lie in `Ω(R)`" is "the desired points are
+constructible".
+
+Partial results (`ConstructionsClose.lean`): the case that Hilbert demonstrates, the coordinates of
+the given points being rational functions with rational coefficients of a single parameter `p` —
+`theorem44_one_parameter`: `Theorem44For ℚ(S)` for every real `p` and every finite set `S` of
+numbers of `ℚ(p)`; in particular `theorem44_single_parameter` (`R = ℚ(p)`) and, without parameter,
+`theorem44_algebraic` (given points with algebraic coordinates). The proof is the reduction above
+with `Theorem43For ℚ(p)`: for `p` transcendental (`theorem43_rational_functions`) the real
+embeddings of `ℚ(p)` are the substitutions `p ↦ c`, `c` transcendental; a number `N(p)/D(p)`
+nonnegative under all of them gives a polynomial `N D` that never becomes negative (the
+transcendental numbers are dense in `ℝ`), a sum of squares by Theorem 43 (`theorem43`). For `p`
+algebraic, `ℚ(p)` is a number field and its totally positive numbers are sums of squares
+(`theorem42_sum_of_squares`). The domain `ℚ(S) ⊆ ℚ(p)` is `ℚ(q)` for a single `q` by Lüroth's
+theorem; the real values of the parameter are then those of `q`, which may be more than the values
+`q(p)` for real `p` (`abs_notMem_pythClosure_sq`: `|p| ∉ Ω(ℚ(p²))` for `p` transcendental).
+Moreover the reduction is an equivalence: `Theorem44For R ↔ Theorem43For R` for every `R`
+(`theorem44For_iff`), and `Theorem44 ↔ ∀ S, Theorem43For ℚ(S)`
+(`theorem44_iff_generalized_theorem43`). Still missing: `Theorem43For R` (every number of `R` that
+is nonnegative under all embeddings of `R` into `ℝ` is a quotient of two sums of squares of numbers
+of `R`) for the domains `R` generated by finitely many real numbers that are not contained in a
+field `ℚ(p)` and do not consist of algebraic numbers: two or more independent parameters, or
+coordinates that are algebraic, not rational, functions of one parameter. This is Artin's
+solution of Hilbert's seventeenth problem with rational coefficients. It needs the Artin–Schreier
+theory of orderings and the specialization of an ordering of a function field to a real point
+(Artin–Lang), neither of which is in mathlib.
 
 **Status.** stated (open here)
 -/
@@ -1284,7 +1351,9 @@ tower inside `Ω(R)`, the square root of such a number lies in `Ω(R)` (unit `s3
 which gives the sufficiency in Theorem 44 from `Theorem43For R` (`tower_sufficient_over`).
 Unconditionally without parameters (`tower_remark`, `R = ℚ`, Lagrange's theorem in place of
 Theorem 43; `tower_sufficient`: the tower lies in `Ω`). For one parameter `Theorem43For ℚ(p)` is
-open here (unit `th.43`), so there the remark is proved only relative to it.
+proved in `ConstructionsClose.lean` (`theorem43_rational_functions` for `p` transcendental, from
+Theorem 43; `theorem43For_of_algebraic` in `ConstructionsCloseAux5.lean` for `p` algebraic), so
+there the remark holds unconditionally; see unit `th.44`.
 
 **Status.** proved (reading)
 -/
@@ -1319,7 +1388,10 @@ generated by finitely many real numbers (any number of parameters) follows from 
 for every such `R`, the generalization of Theorem 43 to functions of several parameters (and to
 algebraic coefficients). That generalization is Hilbert's seventeenth problem (every definite
 rational function of several variables is a sum of squares of rational functions), solved by
-Artin in 1927 — not formalized here, so `Theorem44` stays open.
+Artin in 1927 — not formalized here, so `Theorem44` stays open. The converse dependence is proved
+in `ConstructionsClose.lean` (`theorem44_iff_generalized_theorem43`): the general case of
+Theorem 44 is equivalent to that generalization. For a single parameter the generalization follows
+from Theorem 43 itself, and Theorem 44 is proved (`theorem44_one_parameter`, unit `th.44`).
 
 **Status.** proved (reading)
 -/
@@ -1339,12 +1411,20 @@ theorem general_case (h : ∀ S : Finset ℝ, Theorem43For (Subfield.closure (S 
 (`cos (2π/n)` lies in the closure `EuclidClosure` of `ℚ` under the field operations and square
 roots of nonnegative numbers), then its vertices `(cos 2πk/n, sin 2πk/n)` have coordinates in `Ω`,
 i.e. are constructible from the frame by straight-edge and transferer (unit `s37.omega_geometry`).
-The general proof needs the Galois theory of the cyclotomic fields (the real subfield of `ℚ(ζₙ)` is
-totally real with a `2`-group as Galois group, so it is a tower to which Theorem 44 applies), which is
-beyond this project. Proved: the cases `n = 3, 4, 5, 6, 8, 10` (`regular_polygons_small`; for the
-pentagon `sin(π/5) = √(((√5 - 1)/4)² + (1/2)²)`).
+Proved in `ConstructionsClose.lean` (`regularPolygonsClaim`), by a form of Hilbert's criterion
+without parameters, not by the Galois theory of the cyclotomic fields. A number constructible with
+the compass lies in a tower of square roots over `ℚ` (`euclidClosure_tower`). Every totally real
+number of such a tower lies in `Ω` (`tower_totReal_mem_omega` in `ConstructionsCloseAux3.lean`; in
+the form `euclidClosure_totReal_mem_omega`), by induction on the tower: for `x = r + s √a` the trace
+`2r` and the number `s² a` are totally real, `s² a` is totally nonnegative, hence a sum of squares
+of numbers of `ℚ(s² a) ⊆ Ω` (the argument of the qualitative Theorem 42, unit `th.42`), and
+`x = r ± √(s² a)`. The number `cos (2π/N)` is totally real: its conjugates satisfy the Chebyshev
+equation `T_N(z) = 1`, whose complex solutions are the real numbers `cos (2πj/N)`. Two bisections
+of the angle give `cos (2π/4n)` in a tower, and `N = 4n` gives `cos (2πk/n)` and `sin (2πk/n)` in
+`Ω`. The cases `n = 3, 4, 5, 6, 8, 10` proved in this file (`regular_polygons_small`; for the
+pentagon `sin(π/5) = √(((√5 - 1)/4)² + (1/2)²)`) are special cases now subsumed.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- The numbers constructible with the compass (and straight-edge): closure of `ℚ` under the
@@ -1379,14 +1459,21 @@ to the two sides through one vertex and to the other two circles. `MalfattiClaim
 triangle `ABC` of the real plane there are such circles (centers inside the triangle, tangency to
 a side as distance to its line, `((Q - P) × (O - P))² = r²|PQ|²`, external tangency of two circles
 as `|OᵢOⱼ| = rᵢ + rⱼ`) whose centers are constructible by straight-edge and transferer from the
-frame and the vertices. Hilbert gives no proof. A proof would verify the classical closed form of
-the Malfatti radii (in terms of the inradius, the semiperimeter and the distances from the
-incenter to the vertices, all in `Ω(R)`) against these conditions; that algebra is not done here.
-Proved: the claim for the equilateral triangle `(0,0)`, `(1,0)`, `(1/2, √3/2)` (`malfatti_equilateral`:
-radii `(√3 - 1)/4`, centers `((3 - √3)/4, (√3 - 1)/4)`, `((1 + √3)/4, (√3 - 1)/4)`, `(1/2, 1/2)`,
-all with coordinates in `Ω`).
+frame and the vertices. Hilbert gives no proof. Proved in `ConstructionsClose.lean`
+(`malfattiClaim`; the algebra is in `ConstructionsCloseAux4.lean`) for every triangle, by the
+classical closed form. With the inradius `r`, the semiperimeter `s`, the tangent lengths
+`x = s - a`, `y = s - b`, `z = s - c` and the distances `d`, `e`, `f` from the incenter `I` to the
+vertices, the circle in the angle `A` has center `A + (t₁/x)(I - A)` and radius `(t₁/x) r`, where
+`t₁ = (s + d - r - e - f)/2`; cyclically for `B`, `C`. Here `0 < t₁ < x`, and the contact of two
+of the circles is the identity `4 z t₁ t₂ = s (r + f - z)²`, which follows from
+`d e z = r (x + y) f` and Heron's formula `r² s = x y z` (`malfatti_scalar`). All these numbers
+arise from the coordinates of the vertices by the rational operations and square roots of sums of
+two squares, so the centers are constructible by Theorem 41. The claim for the equilateral
+triangle `(0,0)`, `(1,0)`, `(1/2, √3/2)` proved in this file (`malfatti_equilateral`: radii
+`(√3 - 1)/4`, centers `((3 - √3)/4, (√3 - 1)/4)`, `((1 + √3)/4, (√3 - 1)/4)`, `(1/2, 1/2)`, all
+with coordinates in `Ω`) is a special case now subsumed.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- `O` lies strictly inside the triangle `ABC`. -/

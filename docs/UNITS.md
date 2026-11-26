@@ -5,12 +5,12 @@ Do not edit by hand.
 
 | Status | Units |
 |---|---|
-| proved | 174 |
+| proved | 187 |
 | definition | 106 |
 | remark | 60 |
 | proved (reading) | 41 |
-| stated (open here) | 28 |
-| proved (corrected) | 21 |
+| proved (corrected) | 22 |
+| stated (open here) | 14 |
 
 | Unit | Where | Hilbert (opening words) | Status | Lean declarations |
 |---|---|---|---|---|
@@ -58,7 +58,7 @@ Do not edit by hand.
 | [`th.3`](../HilbertFoundations/Order.lean) | § 4 | Between any two points of a straight line, there always exists an … | proved | `theorem3` |
 | [`th.4`](../HilbertFoundations/Order.lean) | § 4 | If we have given any finite number of points situated upon a … | proved (corrected) | `IsArrangement`, `theorem4`, `theorem4_degenerate` |
 | [`th.5`](../HilbertFoundations/Order.lean) | § 4 | Every straight line $a$, which lies in a plane $\alpha$, divides the … | proved | `SeparatesInto`, `SeparatesInto.unique`, `theorem5_sides`, `theorem5`, `sides_of_line_iff`, `theorem5_space_sides`, `theorem5_space` |
-| [`th.6`](../HilbertFoundations/Order.lean) | § 4 | Every simple polygon, whose vertices all lie in a plane $\alpha$, divides … | stated (open here) | `DividesLikePolygon`, `PolygonTheorem`, `TriangleLines`, `TriPts`, `TriInside`, `TriBeyond`, `fin3_cases`, `fin3_add11`, `fin3_add12`, `fin3_add21`, `fin3_add22`, `fin3_ne1`, `fin3_ne2`, `fin3_ne12`, `sameSide_of_between_mem`, `sameSide_of_between`, `TriangleLines.mem_of_ne`, `TriangleLines.lines_ne`, `TriangleLines.vertex_ne`, `TriangleLines.eq_vertex`, `TriangleLines.between_of_mem`, `TriangleLines.mem_line_of_side`, `TriangleLines.not_mem_inside`, `TriangleLines.not_mem_beyond`, `TriangleLines.mem_beyond`, `TriangleLines.beyond_convex`, `TriangleLines.inside_convex`, `TriangleLines.beyond_inter`, `TriangleLines.exit`, `TriangleLines.inside_nonempty`, `TriangleLines.crossbar`, `TriangleLines.no_line_inside`, `TriangleLines.exists_line_outside`, `join_of_convex`, `join_of_convex₂`, `TriangleLines.brokenLine_meets`, `TriangleLines.divides`, `finRotate_three`, `polygonPoints_three`, `IsSimplePolygon.exists_triangleLines`, `theorem6_triangle`, `theorem6_triangle_space` |
+| [`th.6`](../HilbertFoundations/Order.lean) | § 4 | Every simple polygon, whose vertices all lie in a plane $\alpha$, divides … | proved | `DividesLikePolygon`, `PolygonTheorem`, `TriangleLines`, `TriPts`, `TriInside`, `TriBeyond`, `fin3_cases`, `fin3_add11`, `fin3_add12`, `fin3_add21`, `fin3_add22`, `fin3_ne1`, `fin3_ne2`, `fin3_ne12`, `sameSide_of_between_mem`, `sameSide_of_between`, `TriangleLines.mem_of_ne`, `TriangleLines.lines_ne`, `TriangleLines.vertex_ne`, `TriangleLines.eq_vertex`, `TriangleLines.between_of_mem`, `TriangleLines.mem_line_of_side`, `TriangleLines.not_mem_inside`, `TriangleLines.not_mem_beyond`, `TriangleLines.mem_beyond`, `TriangleLines.beyond_convex`, `TriangleLines.inside_convex`, `TriangleLines.beyond_inter`, `TriangleLines.exit`, `TriangleLines.inside_nonempty`, `TriangleLines.crossbar`, `TriangleLines.no_line_inside`, `TriangleLines.exists_line_outside`, `join_of_convex`, `join_of_convex₂`, `TriangleLines.brokenLine_meets`, `TriangleLines.divides`, `finRotate_three`, `polygonPoints_three`, `IsSimplePolygon.exists_triangleLines`, `theorem6_triangle`, `theorem6_triangle_space` |
 | [`th.7`](../HilbertFoundations/Order.lean) | § 4 | Every plane $\alpha$ divides the remaining points of space into two regions … | proved | `SameSidePlane`, `OppositeSidesPlane`, `mem_plane_of_between`, `section_line`, `sameSidePlane_trans`, `oppPlane_of_sameSidePlane_opp`, `sameSidePlane_of_opp_opp`, `theorem7_sides`, `theorem7` |
 | [`ax.III`](../HilbertFoundations/Basic.lean) | § 5 | *In a plane $\alpha$ there can be drawn through any point $A$, … | definition | `AxiomIII`, `AxiomIIISpace` |
 | [`s5.plane_axiom`](../HilbertFoundations/Basic.lean) | § 5 | The axiom of parallels is a *plane axiom*. | remark | `Parallel`, `ParallelIn`, `PlaneParallels`, `SpaceParallels`, `exists_unique_parallel` |
@@ -85,7 +85,7 @@ Do not edit by hand.
 | [`s7.acute_obtuse`](../HilbertFoundations/Congruence.lean) | § 7 | We can now introduce, in accordance with common usage, the terms “*acute … | definition | `AngLt`, `IsAcute`, `IsObtuse`, `isAcute_wellDefined`, `isAcute_wellDefined_space`, `isObtuse_wellDefined`, `isObtuse_wellDefined_space` |
 | [`s7.angcong_symm`](../HilbertFoundations/Congruence.lean) | § 7 | Let the angle $(h,k)$ be congruent to the angle $(h',k')$. Since, according … | proved | `angCong_symmetric`, `angCong_transitive` |
 | [`s7.circle`](../HilbertFoundations/Congruence.lean) | § 7 | Definitions. If $M$ is an arbitrary point in the plane $a$, the … | definition | `Circle`, `CircleIn`, `circle_segCong`, `mem_circle_of_segCong` |
-| [`s7.circle_properties`](../HilbertFoundations/Congruence.lean) | § 7 | From this definition can be easily deduced, with the help of the … | stated (open here) | `CircleThroughThree`, `InscribedAnglesCongruent`, `InscribedQuadrilateral`, `CirclePropertiesClaim`, `circleThroughThree`, `circleThroughThree_space` |
+| [`s7.circle_properties`](../HilbertFoundations/Congruence.lean) | § 7 | From this definition can be easily deduced, with the help of the … | proved | `CircleThroughThree`, `InscribedAnglesCongruent`, `InscribedQuadrilateral`, `CirclePropertiesClaim`, `circleThroughThree`, `circleThroughThree_space` |
 | [`s7.congruent_figures`](../HilbertFoundations/Congruence.lean) | § 7 | Two figures are said to be *congruent* if their points can be … | definition | `CongruentFigures`, `congruentFigures_symm` |
 | [`s7.congruent_series`](../HilbertFoundations/Congruence.lean) | § 7 | Let $A$, $B$, $C$, $D,\ldots,$ $K$, $L$ and $A'$, $B'$, $C'$, $D',\ldots,$ … | definition | `CongruentSeries` |
 | [`s7.congruent_triangles`](../HilbertFoundations/Congruence.lean) | § 7 | Two triangles $ABC$ and $A'B'C'$ are said to be *congruent* to one … | definition | `TriCong` |
@@ -107,17 +107,17 @@ Do not edit by hand.
 | [`th.15`](../HilbertFoundations/Congruence.lean) | § 7 | All right angles are congruent to one another. | proved | `theorem15`, `theorem15_space` |
 | [`th.16`](../HilbertFoundations/Congruence.lean) | § 7 | (Third theorem of congruence for triangles.) If two triangles have the three … | proved | `theorem16`, `theorem16_space` |
 | [`th.17`](../HilbertFoundations/Congruence.lean) | § 7 | If $(A, B, C,\ldots)$ and $(A', B', C',\ldots)$ are congruent plane figures … | proved | `congruentFigures_snoc`, `theorem17`, `theorem17_unique_gen`, `theorem17_unique`, `theorem17_space`, `theorem17_unique_space` |
-| [`th.18`](../HilbertFoundations/Congruence.lean) | § 7 | If $(A, B, C, \ldots)$ and $(A', B', C',\ldots=$ are congruent figures … | stated (open here) | `Theorem18AsPrinted`, `theorem18_as_printed_false`, `Theorem18Statement`, `SpaceCongruenceGivesTheorem18`, `theorem18_planar`, `theorem18_unique_of_coplanar` |
+| [`th.18`](../HilbertFoundations/Congruence.lean) | § 7 | If $(A, B, C, \ldots)$ and $(A', B', C',\ldots=$ are congruent figures … | proved (corrected) | `Theorem18AsPrinted`, `theorem18_as_printed_false`, `Theorem18Statement`, `SpaceCongruenceGivesTheorem18`, `theorem18_planar`, `theorem18_unique_of_coplanar` |
 | [`th.19`](../HilbertFoundations/Congruence.lean) | § 7 | If two parallel lines are cut by a third straight line, the … | proved | `theorem19_alternate`, `theorem19_corresponding`, `theorem19_alternate_space`, `theorem19_corresponding_space` |
 | [`th.20`](../HilbertFoundations/Congruence.lean) | § 7 | The sum of the angles of a triangle is two right angles. | proved | `AnglesSumTwoRight`, `straight_angle_two_right`, `theorem20`, `theorem20_space` |
 | [`th.9`](../HilbertFoundations/Congruence.lean) | § 7 | If the first of two congruent series of points $A$, $B$, $C$, … | proved | `theorem9` |
 | [`ax.V`](../HilbertFoundations/Basic.lean) | § 8 | *Let $A_1$ be any point upon a straight line between the arbitrarily … | definition | `AxiomV` |
 | [`ax.completeness`](../HilbertFoundations/Basic.lean) | § 8 | [Note: See Hilbert, “Ueber den Zahlenbegriff,” *Berichte der deutschen Mathematiker-Vereinigung*, 1900.] *(Vollständigkeit): … | definition | `PlaneEmbedding`, `SpaceEmbedding`, `PlaneComplete`, `SpaceComplete`, `PlaneEmbedding.id` |
-| [`s8.bolzano`](../HilbertFoundations/Basic.lean) | § 8 | This axiom gives us nothing directly concerning the existence of limiting points, … | stated (open here) | `IsCondensationPointOn`, `BolzanoProperty`, `CompletenessGivesBolzano` |
+| [`s8.bolzano`](../HilbertFoundations/Basic.lean) | § 8 | This axiom gives us nothing directly concerning the existence of limiting points, … | proved | `IsCondensationPointOn`, `BolzanoProperty`, `CompletenessGivesBolzano` |
 | [`s8.completeness_remark`](../HilbertFoundations/Basic.lean) | § 8 | Remark. [Note: Added by Professor Hilbert in the French translation.—*Tr.*] To the … | remark | — |
 | [`s8.equality`](../HilbertFoundations/Basic.lean) | § 8 | This axiom makes possible the introduction into geometry of the idea of … | definition | `ArchimedesWith` |
 | [`s8.linear`](../HilbertFoundations/Basic.lean) | § 8 | The axiom of Archimedes is a *linear* axiom. | remark | `Archimedes`, `PlaneGeometry`, `SpaceGeometry` |
-| [`s8.real_numbers`](../HilbertFoundations/Basic.lean) | § 8 | From a theoretical point of view, the value of this axiom is … | stated (open here) | `SegmentRealCorrespondence`, `CompletenessGivesReals` |
+| [`s8.real_numbers`](../HilbertFoundations/Basic.lean) | § 8 | From a theoretical point of view, the value of this axiom is … | proved | `SegmentRealCorrespondence`, `CompletenessGivesReals` |
 | [`s9.archimedes`](../HilbertFoundations/Analytic.lean) | § 9 | The same is true of the axiom of Archimedes. | proved | `OmegaField.instArchimedean`, `omega_archimedes` |
 | [`s9.congruence`](../HilbertFoundations/Analytic.lean) | § 9 | … it follows that, under the conventions which we have made, the … | proved (reading) | `omega_planeCongruence`, `planeCongruence_of_isPythagorean`, `Coord.segCong_iff_exists_motion`, `crossProd2`, `mul_eq_mul_of_sign_of_sq`, `ip_mul_ip_two`, `rot_formula`, `inv_mul_eq_of_eq_mul`, `exists_motion_aux`, `angCong_iff_exists_motion` |
 | [`s9.connection_parallels`](../HilbertFoundations/Analytic.lean) | § 9 | Then, as one readily sees, axioms I, 1–2 and III are fulfilled. | proved | `omega_planeParallels`, `planeParallels_coord` |
@@ -205,7 +205,7 @@ Do not edit by hand.
 | [`s17.analytic`](../HilbertFoundations/Proportion.lean) | § 17 | The remaining parts of geometry may now be developed by the usual … | remark | — |
 | [`s17.coordinates`](../HilbertFoundations/Proportion.lean) | § 17 | In a plane $\alpha$, we now take two straight lines cutting each … | proved | `coordinates_bijective`, `perpendicular_coordinate`, `perpendicular_coordinate_y`, `coordinates_perpendiculars` |
 | [`s17.depends`](../HilbertFoundations/Proportion.lean) | § 17 | Whether to every real number there corresponds a point cannot in general … | proved | `real_points_depend` |
-| [`s17.ideal`](../HilbertFoundations/Proportion.lean) | § 17 | However, it is always possible to generalize the original system of points, … | stated (open here) | `IdealElementsClaim` |
+| [`s17.ideal`](../HilbertFoundations/Proportion.lean) | § 17 | However, it is always possible to generalize the original system of points, … | proved | `IdealElementsClaim` |
 | [`s17.line_origin`](../HilbertFoundations/Proportion.lean) | § 17 | Let $l$ be a straight line in the plane $\alpha$, such that … | proved | `line_through_origin_eq` |
 | [`s17.linear`](../HilbertFoundations/Proportion.lean) | § 17 | From these considerations, we may easily conclude, independently of the axiom of … | proved | `lines_are_linear`, `linear_eqs_are_lines` |
 | [`s17.no_archimedes`](../HilbertFoundations/Proportion.lean) | § 17 | So far in this chapter, we have made absolutely no use of … | remark | — |
@@ -214,7 +214,7 @@ Do not edit by hand.
 | [`s17.particular`](../HilbertFoundations/Proportion.lean) | § 17 | We call special attention to the following particular propositions: We have always … | proved | `signed_particular` |
 | [`s17.reals`](../HilbertFoundations/Proportion.lean) | § 17 | If now we assume the validity of this axiom, we can arrange … | proved (reading) | `exists_real_correspondence`, `exists_real_correspondence_space`, `real_correspondence_midpoint`, `archimedean_segments` |
 | [`s17.signed`](../HilbertFoundations/Proportion.lean) | § 17 | To the system of segments already discussed, let us now add a … | proved (reading) | `signed_segments_laws` |
-| [`s17.space`](../HilbertFoundations/Proportion.lean) | § 17 | The corresponding results for the geometry of space may be easily deduced. | stated (open here) | `SpaceCoordinatesClaim`, `plane_coordinates_space'` |
+| [`s17.space`](../HilbertFoundations/Proportion.lean) | § 17 | The corresponding results for the geometry of space may be easily deduced. | proved | `SpaceCoordinatesClaim`, `plane_coordinates_space'` |
 | [`s18.basis`](../HilbertFoundations/Areas.lean) | § 18 | We shall base the investigations of the present chapter upon the same … | remark | — |
 | [`s18.combine`](../HilbertFoundations/Areas.lean) | § 18 | From these definitions, it follows at once that by combining polygons having … | proved | `equalArea_combine` |
 | [`s18.decomposition`](../HilbertFoundations/Areas.lean) | § 18 | If we join two points of a polygon $P$ by any arbitrary … | definition | `IsDecomposition`, `IsPolyRegion`, `Composed` |
@@ -319,7 +319,7 @@ Do not edit by hand.
 | [`s29.model`](../HilbertFoundations/DesarguesAlgebra.lean) | § 29 | In order to show this, let us consider any system of three … | definition | `equation_proportional`, `hilbert_plane_equation`, `plane_is_equation`, `hilbert_line`, `line_is_hilbert_line` |
 | [`s29.space`](../HilbertFoundations/DesarguesAlgebra.lean) | § 29 | Suppose we have given a desarguesian number system $D$. Such a system … | proved | `dns_trivial_of_zero_eq_one`, `dns_space` |
 | [`s30.algebra`](../HilbertFoundations/DesarguesAlgebra.lean) | § 30 | If, in a plane geometry, axioms I, 1–2, II, III are all … | proved | `algebra_of_desarguesian` |
-| [`s30.any_dimension`](../HilbertFoundations/DesarguesAlgebra.lean) | § 30 | The results obtained so far put us now in the position to … | stated (open here) | `AnyDimensionClaim`, `planes_of_space_desarguesian`, `coordinate_space_any_dimension` |
+| [`s30.any_dimension`](../HilbertFoundations/DesarguesAlgebra.lean) | § 30 | The results obtained so far put us now in the position to … | proved | `AnyDimensionClaim`, `planes_of_space_desarguesian`, `coordinate_space_any_dimension` |
 | [`s30.degenerate`](../HilbertFoundations/DesarguesAlgebra.lean) | § 30 | If, in a plane geometry, axioms I, 1–2, II, III are all … | proved | `degenerate_counterexample` |
 | [`s30.elimination`](../HilbertFoundations/DesarguesAlgebra.lean) | § 30 | The theorem of Desargues may be characterized for plane geometry as being, … | remark | — |
 | [`s30.first_part`](../HilbertFoundations/DesarguesAlgebra.lean) | § 30 | If, in a plane geometry, axioms I, 1–2, II, III are all … | proved | `first_part_of_second` |
@@ -397,14 +397,14 @@ Do not edit by hand.
 | [`s38.totally_positive`](../HilbertFoundations/Constructions.lean) | § 38 | Definition. Let $k$ be an arbitrary number field and let $m$ be … | definition | `totallyPositive_of_no_real` |
 | [`s38.two_variables`](../HilbertFoundations/Constructions.lean) | § 38 | It would be perhaps difficult to formulate and to demonstrate the corresponding … | stated (open here) | `TwoVariableClaim`, `isSumSq_eval_nonneg`, `TwoVariableClaim_converse` |
 | [`th.42`](../HilbertFoundations/Constructions.lean) | § 38 | Every totally positive number in $k$ may be represented as the sum … | stated (open here) | `theorem42_for_rat` |
-| [`th.43`](../HilbertFoundations/Constructions.lean) | § 38 | Let, $f(x)$ be an integral rational function of $x$ whose coefficients are … | stated (open here) | `theorem43_from_theorem42`, `theorem43_degree_le_two` |
+| [`th.43`](../HilbertFoundations/Constructions.lean) | § 38 | Let, $f(x)$ be an integral rational function of $x$ whose coefficients are … | proved | `theorem43_from_theorem42`, `theorem43_degree_le_two` |
 | [`s39.apollonius`](../HilbertFoundations/Constructions.lean) | § 39 | This is, however, not the case with the contact problems of Appolonius. | proved (reading) | `apollonius_case` |
 | [`s39.first_radicand`](../HilbertFoundations/Constructions.lean) | § 39 | In order to show that it is also sufficient, let us assume … | proved | `first_radicand` |
 | [`s39.general_case`](../HilbertFoundations/Constructions.lean) | § 39 | The truth of theorem 44 for the general case depends upon whether … | proved (reading) | `general_case` |
-| [`s39.malfatti`](../HilbertFoundations/Constructions.lean) | § 39 | Concerning the other known problems of construction in the elementary geometry, we … | stated (open here) | `InTriangle`, `TangentToLine`, `MalfattiFor`, `MalfattiClaim`, `RulerTransferer.mono`, `malfatti_equilateral` |
+| [`s39.malfatti`](../HilbertFoundations/Constructions.lean) | § 39 | Concerning the other known problems of construction in the elementary geometry, we … | proved | `InTriangle`, `TangentToLine`, `MalfattiFor`, `MalfattiClaim`, `RulerTransferer.mono`, `malfatti_equilateral` |
 | [`s39.necessary`](../HilbertFoundations/Constructions.lean) | § 39 | Proof. We shall demonstrate this proposition merely for the case where the … | proved | `condition_necessary`, `condition_necessary_rat` |
 | [`s39.quadratic`](../HilbertFoundations/Constructions.lean) | § 39 | This function $f_2$ can never be negative for any real arbitrary value … | proved | `quadratic_relation` |
-| [`s39.regular_polygons`](../HilbertFoundations/Constructions.lean) | § 39 | As an example of the application of theorem 44, we may consider … | stated (open here) | `EuclidClosure`, `RegularPolygonsClaim`, `regular_polygons_small` |
+| [`s39.regular_polygons`](../HilbertFoundations/Constructions.lean) | § 39 | As an example of the application of theorem 44, we may consider … | proved | `EuclidClosure`, `RegularPolygonsClaim`, `regular_polygons_small` |
 | [`s39.remark`](../HilbertFoundations/Constructions.lean) | § 39 | Just as with the expression $f_2$, any other rational function $\phi_2(p, \sqrt{f_1})$ … | proved (reading) | `tower_remark`, `tower_remark_over`, `tower_sufficient_over`, `tower_sufficient` |
 | [`s39.sum_of_squares`](../HilbertFoundations/Constructions.lean) | § 39 | Moreover, the formul{\ae} \begin{eqnarray*} \sqrt{a^2 + b^2 + c^2} & = & … | proved | `sqrt_sum_three_sq`, `sqrt_sum_sq_mem` |
 | [`th.44`](../HilbertFoundations/Constructions.lean) | § 39 | Suppose we have given a problem in geometrical construction, which is of … | stated (open here) | `theorem44_def`, `ratField_eq_closure_empty`, `towerFieldOver_rat`, `validTowerOver_rat`, `realTowerOver_rat`, `pythClosure_rat_iff`, `theorem44_from_theorem43For`, `theorem44_without_parameters` |
@@ -414,14 +414,14 @@ Do not edit by hand.
 | [`concl.euclidean_only`](../HilbertFoundations/Commentary.lean) | Conclusion | The preceding work treats essentially of the problems of the euclidean geometry … | remark | — |
 | [`concl.impossibility`](../HilbertFoundations/Commentary.lean) | Conclusion | Thus, in the modern mathematics, the question of the impossibility of solution … | remark | — |
 | [`concl.legendre`](../HilbertFoundations/Commentary.lean) | Conclusion | The case where the sum of the angles is equal to two … | remark | — |
-| [`concl.legendre_archimedes`](../HilbertFoundations/Commentary.lean) | Conclusion | From the existence of this non-legendrian geometry, it follows at once that … | stated (open here) | `LegendreNeedsArchimedes`, `legendreNeedsArchimedes_of_nonLegendrian`, `LegendreTheorem`, `nonLegendrian_not_axiomV` |
+| [`concl.legendre_archimedes`](../HilbertFoundations/Commentary.lean) | Conclusion | From the existence of this non-legendrian geometry, it follows at once that … | proved | `LegendreNeedsArchimedes`, `legendreNeedsArchimedes_of_nonLegendrian`, `LegendreTheorem`, `nonLegendrian_not_axiomV` |
 | [`concl.lie`](../HilbertFoundations/Commentary.lean) | Conclusion | We have thus excluded from our study the important question as to … | remark | — |
 | [`concl.no_parallels`](../HilbertFoundations/Commentary.lean) | Conclusion | Upon the hypothesis that there exists no parallel, it follows that the … | proved (corrected) | `NoParallels`, `NoParallelsTheorem`, `NoParallelsTheoremCorrected`, `exists_parallel`, `not_noParallels`, `OnePt`, `NoLine`, `onePt_eq`, `onePt_not_collinear`, `onePt_planeCongruence`, `not_noParallelsTheorem`, `noParallelsTheoremCorrected` |
-| [`concl.non_legendrian`](../HilbertFoundations/Commentary.lean) | Conclusion | Upon the hypothesis that through a given point we may draw an … | stated (open here) | `InfinitelyManyParallels`, `NonLegendrianGeometryExists` |
+| [`concl.non_legendrian`](../HilbertFoundations/Commentary.lean) | Conclusion | Upon the hypothesis that through a given point we may draw an … | proved | `InfinitelyManyParallels`, `NonLegendrianGeometryExists` |
 | [`concl.principle`](../HilbertFoundations/Commentary.lean) | Conclusion | However, as I have already remarked, the present work is rather a … | remark | — |
 | [`concl.pseudo_geometry`](../HilbertFoundations/Commentary.lean) | Conclusion | Upon the basis of the axioms of connection, order, and congruence, that … | stated (open here) | `PseudoGeometryTheorem` |
 | [`concl.purity`](../HilbertFoundations/Commentary.lean) | Conclusion | This fundamental principle, which we ought to bear in mind when we … | remark | — |
-| [`concl.semi_euclidean`](../HilbertFoundations/Commentary.lean) | Conclusion | For the demonstration of case (*b*), Mr. Dehn constructs a geometry where … | stated (open here) | `ExistSimilarTriangles`, `EqualPerpendicularsCollinear`, `SemiEuclideanGeometryExists`, `ParallelsNotReplaceable`, `not_axiomIII_of_infinitelyManyParallels`, `parallelsNotReplaceable_of_semiEuclidean`, `ArchimedesAngleSumGivesParallels`, `semiEuclidean_not_axiomV` |
+| [`concl.semi_euclidean`](../HilbertFoundations/Commentary.lean) | Conclusion | For the demonstration of case (*b*), Mr. Dehn constructs a geometry where … | proved | `ExistSimilarTriangles`, `EqualPerpendicularsCollinear`, `SemiEuclideanGeometryExists`, `ParallelsNotReplaceable`, `not_axiomIII_of_infinitelyManyParallels`, `parallelsNotReplaceable_of_semiEuclidean`, `ArchimedesAngleSumGivesParallels`, `semiEuclidean_not_axiomV` |
 | [`concl.table`](../HilbertFoundations/Commentary.lean) | Conclusion | We may combine the preceding results in the following table. … {\tiny … | remark | — |
 | [`app.axiom1`](../HilbertFoundations/Commentary.lean) | Appendix | *If two displacements are followed out one after the other, then the … | definition | `AxiomI`, `AxiomIGroup` |
 | [`app.axiom2`](../HilbertFoundations/Commentary.lean) | Appendix | *If $A$ and $M$ are two arbitrary points distinct from each other, … | definition | `AxiomII`, `TrueCircle`, `axiomII_iff_trueCircle` |

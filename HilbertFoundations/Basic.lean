@@ -106,8 +106,8 @@ III–VI are plane geometries. Both are modelled:
   make sense in a plane (every line has two points; there are three non-collinear points).
 * A space geometry is *not* a plane geometry, but each of its planes is: the points and lines of a
   plane `α` (the subtypes `{A // A ∈ α}` and `{a // LiesInPlane a α}`) satisfy the plane classes.
-  This restriction is to be constructed in a later file, which then transfers plane theorems to
-  every plane of space.
+  This restriction is constructed in later files where it is needed (for example
+  `DesAlg.restrictPlaneInSpace`), which then transfer plane theorems to the planes of space.
 
 ## Status vocabulary
 
@@ -1779,11 +1779,23 @@ of `S` other than `P` (`IsCondensationPointOn A B S P`; neighbourhoods are taken
 not in the plane). "For all sets" must be "for all *infinite* sets" (a finite set has no point of
 condensation), so `BolzanoProperty` asks it for infinite `S ⊆ Seg A B`. The claim is
 `CompletenessGivesBolzano`: every space geometry satisfying `SpaceComplete` has `BolzanoProperty`.
-It is true (with I–V, completeness makes the geometry isomorphic to the Cartesian space over `ℝ`;
-a gap in a line could be filled by extending the coordinate field), but the proof needs the
-coordinatization of Chapters III and V; it is stated here and not proved.
+The proof needs the coordinatization of Chapters III and V, so it is not in this file: the claim is
+proved as `completenessGivesBolzano` in `CompletenessClose.lean`. A space geometry with I–V is
+embedded into the analytic geometry `Coord ℝ 3` (`CC.PreEmb`, the congruences being compared on
+genuine segments and angles only): by rectangular co-ordinates taken from the archimedean field of
+segments of a plane if the system has a plane (`CC.exists_preEmb`), and by Hölder's real
+co-ordinate of the line if it has no plane but two distinct points (`CC.exists_preEmb_line`; I–V
+do not exclude this case, in which all points lie on one line). The copy of `Coord ℝ 3` in the
+universes of the system, with its congruences changed on the degenerate tuples so as to agree with
+those of the system, is an extension satisfying I–V, so `SpaceComplete` makes the embedding onto
+(`CC.PreEmb.surjective_of_complete`); a system with two distinct points, as `A ≠ B` in the claim,
+is thus carried bijectively onto `Coord ℝ 3`, betweenness corresponding to betweenness
+(`CC.exists_bijective_emb`). A line is then parametrised by `ℝ` (`CC.line_param`), and the claim is
+the theorem of Bolzano–Weierstrass on `[0, 1]` (`CC.bolzano_of_bijective`). The hypotheses are
+satisfiable: `Coord ℝ 3` satisfies I–V (`real_spaceGeometry`, Analytic.lean) and `SpaceComplete`
+(`CC.spaceComplete_coord_real`), which gives the instance `bolzano_coord_real`.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 section GroupVConsequences
@@ -1804,7 +1816,7 @@ def BolzanoProperty (Point : Type u) {Line : Type v} [HasLines Point Line] [HasB
     ∃ P : Point, IsCondensationPointOn A B S P
 
 /-- **Hilbert's claim** (§ 8): the Axiom of Completeness, with groups I–V, gives Bolzano's
-theorem. Not proved here. -/
+theorem. Proved as `completenessGivesBolzano` in `CompletenessClose.lean`. -/
 def CompletenessGivesBolzano : Prop :=
   ∀ (P : Type u) (L : Type v) (Pl : Type w) [HasLines P L] [HasPlanes P Pl] [HasBetween P]
     [HasSegCong P] [HasAngCong P], SpaceGeometry P L Pl → SpaceComplete P L Pl → BolzanoProperty P
@@ -1819,11 +1831,20 @@ def CompletenessGivesBolzano : Prop :=
 **Lean reading.** The correspondence is read as order-preserving (otherwise it would be a mere
 statement about cardinalities, which is not what Hilbert means): `SegmentRealCorrespondence` asks,
 for `A ≠ B`, for a bijection `f` from the points of the segment `AB` onto `ℝ` with `Between A X Y ↔
-f X < f Y` (the order of the segment seen from `A`). The claim is `CompletenessGivesReals`, stated
-and not proved, for the same reason as `s8.bolzano`. The last sentence is respected: no other file
-assumes `PlaneComplete` or `SpaceComplete` unless its unit says so.
+f X < f Y` (the order of the segment seen from `A`). The claim is `CompletenessGivesReals`; like
+`s8.bolzano` it needs the coordinatization of Chapters III and V, and it is proved as
+`completenessGivesReals` in `CompletenessClose.lean`. By the Axiom of Completeness the geometry is
+carried bijectively onto the analytic geometry `Coord ℝ 3`, betweenness corresponding to
+betweenness (`CC.exists_bijective_emb`, by the embedding described in `s8.bolzano`), so the line
+`AB` has a real parameter `g` with `g 0 = A`, `g 1 = B`, in which betweenness is the order of `ℝ`
+(`CC.line_param`). The segment `AB` then corresponds to the interval `(0, 1)`, which is
+order-isomorphic to `ℝ` (`CC.reals_of_bijective`). The statement is not vacuous: `Coord ℝ 3`
+satisfies I–V (`real_spaceGeometry`, Analytic.lean) and `SpaceComplete`
+(`CC.spaceComplete_coord_real`), which gives the instance `segmentRealCorrespondence_coord_real`.
+The last sentence is respected: no other file assumes `PlaneComplete` or `SpaceComplete` unless its
+unit says so.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- The points of every segment `AB` correspond one-to-one and in order to the real numbers. -/
@@ -1832,7 +1853,8 @@ def SegmentRealCorrespondence (Point : Type u) [HasBetween Point] : Prop :=
     ∃ f : Seg A B ≃ ℝ, ∀ X Y : Seg A B, Between A (X : Point) Y ↔ f X < f Y
 
 /-- **Hilbert's claim** (§ 8): the Axiom of Completeness, with groups I–V, gives the
-correspondence between the points of a segment and the real numbers. Not proved here. -/
+correspondence between the points of a segment and the real numbers. Proved as
+`completenessGivesReals` in `CompletenessClose.lean`. -/
 def CompletenessGivesReals : Prop :=
   ∀ (P : Type u) (L : Type v) (Pl : Type w) [HasLines P L] [HasPlanes P Pl] [HasBetween P]
     [HasSegCong P] [HasAngCong P], SpaceGeometry P L Pl → SpaceComplete P L Pl →

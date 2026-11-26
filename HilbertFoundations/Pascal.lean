@@ -307,7 +307,7 @@ theorem exists_line_at_angle' [HasLines P L] [HasBetween P] [HasSegCong P] [HasA
 **Lean reading.** A second proof of Theorem 21 (proved above by another route). Its steps (1*)–(6*)
 use "a well known property of circles": a quadrilateral `CBD'A'` with `∠OCA' ≡ ∠OD'B` is
 inscribed in a circle, and conversely the angles of inscribed quadrilaterals — the properties of the
-circle that § 7 asserts and Congruence.lean leaves open (`s7.circle_properties`). The construction
+circle that § 7 asserts (`s7.circle_properties`, proved in `CongruenceClose.lean`). The construction
 it starts from is unit `s14.angle_line`. The proof is not formalized; the theorem it proves is
 `theorem21`. Hilbert's closing remark (the case `D' ∈ {A', B', C'}`) concerns this proof only.
 

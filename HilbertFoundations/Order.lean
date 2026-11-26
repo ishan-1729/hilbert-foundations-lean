@@ -44,7 +44,8 @@ The helper module `OrderAux.lean` (no units) contains the infrastructure:
   `OrderCore.opp_of_sameSide_opp`, `OrderCore.sameSide_of_opp_opp` (plane) and the `OrderSpace`
   versions (a plane of space);
 * `BrokenLinePoints`, `IsBrokenLine`, `IsPolygon`, `PolygonPoints`, `IsSimplePolygon`,
-  `DividesLikePolygon`, `PolygonTheorem` (open), `theorem6_triangle`, `theorem6_triangle_space`,
+  `DividesLikePolygon`, `PolygonTheorem` (the statement; proved as `polygonTheorem` in
+  `OrderPolygon.lean`), `theorem6_triangle`, `theorem6_triangle_space`,
   and for triangles `TriangleLines`, `TriPts`, `TriInside`, `TriBeyond` with the lemmas
   `TriangleLines.exit`, `TriangleLines.crossbar`, `TriangleLines.divides`; the side lemmas
   `sameSide_of_between_mem`, `sameSide_of_between`;
@@ -1090,22 +1091,41 @@ restriction): the broken lines are those of the plane. The assumptions are group
 (`PlaneOrder`), as Hilbert says ("with the aid of theorem 5").
 
 The general statement is the Jordan curve theorem for polygons in ordered geometry. Hilbert gives
-no proof ("without serious difficulty"); a proof (O. Veblen, *Trans. AMS* 5, 1904) needs a parity
-count of the crossings of the sides with segments or rays and the construction of broken lines
-running alongside the polygon, a long development that is not formalized here. **Proved here: the
-case of triangles**, `theorem6_triangle` (in any plane of space: `theorem6_triangle_space`). For a
-triangle the interior is the intersection of the sides of the three side lines that contain the
-opposite vertices (`TriInside`; it is convex, so two interior points are joined by a segment);
-every point that is neither interior nor on the triangle lies beyond a side line (`TriBeyond`),
-these three half-planes are convex and meet pairwise, so two exterior points are joined by at most
-two segments; a broken line from an interior to an exterior point meets the triangle by the exit
-lemma `TriangleLines.exit` (the segment from an interior point to a non-interior point contains a
-point of the triangle, by induction on the number of side lines separating the two points); the
-line through the points beyond a vertex on the two adjacent side lines lies outside
-(`TriangleLines.exists_line_outside`), and no line lies inside (`TriangleLines.no_line_inside`, by
-the crossbar theorem and Pasch's axiom).
+no proof ("without serious difficulty"); a proof was given by O. Veblen (*Trans. AMS* 5, 1904).
+The theorem is proved in `OrderPolygon.lean` from groups I and II only:
+`polygonTheorem : PolygonTheorem P` in every plane geometry `PlaneOrder P L`, and
+`theorem6_space` for the simple polygons whose vertices lie in a plane `α` of a space geometry
+(in the plane geometry of `α`). The proof (helper modules `OrderPolygonAux.lean` …
+`OrderPolygonAux4.lean`, namespace `PolyJordan`) is a parity count of the crossings of the sides
+with segments, together with the construction of broken lines running alongside the polygon. All
+vertices lie on one side of some line `ℓ0` (`exists_line_sameSide`). The parity `par v ℓ0 X` of a
+point `X` off the polygon is the number, mod 2, of sides crossed by a segment from `X` to a point
+of `ℓ0` in general position; it does not depend on that point (`cr_indep`, by counting the
+crossings of the polygon with a triangle, `tri_parity`). The parity is constant along every
+segment that does not meet the polygon (`par_eq_of_step`), it takes both values (`exists_jump`),
+and it is `0` on every line that does not meet the polygon (`par_zero_of_line`). The interior is
+the set of the points off the polygon of parity `1`, the exterior the set of those of parity `0`
+(`PolyJordan.Simple.divides`): a broken line joining an interior and an exterior point meets the
+polygon, `ℓ0` lies in the exterior, and no line lies in the interior. Two points off the polygon
+of the same parity are joined by a broken line that does not meet the polygon (`two_classes`,
+`Conn.exists_brokenLine`): every point off the polygon sees a point of the polygon (`first_hit`),
+and walking round the polygon (`good_side`, `vertex_good`, with the sweep lemma `sweep`) joins it
+to one of two fixed points `N₁`, `N₂` on either side of the side `v n v 0`.
 
-**Status.** stated (open here)
+**The case of triangles** is proved in this file by a direct argument, `theorem6_triangle` (in any
+plane of space: `theorem6_triangle_space`); it is a special case, now subsumed by
+`polygonTheorem`. For a triangle the interior is the intersection of the sides of the three side
+lines that contain the opposite vertices (`TriInside`; it is convex, so two interior points are
+joined by a segment); every point that is neither interior nor on the triangle lies beyond a side
+line (`TriBeyond`), these three half-planes are convex and meet pairwise, so two exterior points
+are joined by at most two segments; a broken line from an interior to an exterior point meets the
+triangle by the exit lemma `TriangleLines.exit` (the segment from an interior point to a
+non-interior point contains a point of the triangle, by induction on the number of side lines
+separating the two points); the line through the points beyond a vertex on the two adjacent side
+lines lies outside (`TriangleLines.exists_line_outside`), and no line lies inside
+(`TriangleLines.no_line_inside`, by the crossbar theorem and Pasch's axiom).
+
+**Status.** proved
 -/
 
 /-- **The conclusion of Theorem 6** for the set `S` of the points of a polygon (plane geometry). -/
@@ -1119,8 +1139,8 @@ def DividesLikePolygon [HasLines P L] [HasBetween P] (S : Set P) : Prop :=
       w (Fin.last n) = B' ∧ Disjoint (BrokenLinePoints w) S) ∧
     (∃ l : L, ∀ X : P, X ∈ l → X ∈ E) ∧ ¬∃ l : L, ∀ X : P, X ∈ l → X ∈ I
 
-/-- **Theorem 6** as a statement (open here in general): every simple polygon divides the plane
-into an interior and an exterior. -/
+/-- **Theorem 6** as a statement (proved as `polygonTheorem` in `OrderPolygon.lean`): every
+simple polygon divides the plane into an interior and an exterior. -/
 def PolygonTheorem (P : Type u) {L : Type v} [HasLines P L] [HasBetween P] : Prop :=
   ∀ (k : ℕ) (v : Fin k → P), IsSimplePolygon v → DividesLikePolygon (L := L) (PolygonPoints v)
 
