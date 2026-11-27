@@ -191,7 +191,7 @@ upper end is realistic.
 
 **Source.** J. Hjelmslev, "Neue Begründung der ebenen Geometrie", *Math. Ann.* 64 (1907),
 is public domain and is the source for the lemmas the study could not reconstruct (R1).
-Its OCR text is `resume/sources/Hjelmslev-1907.txt` (section 7 says how to fetch it again). A
+Its OCR text is `resume/sources/Hjelmslev-1907.txt` (section 7 says where it comes from). A
 section-by-section reconstruction of it was started but not finished: its directory
 (`plans/sources/` in the working directory where the work was done) was created but no file was
 written into it, so nothing of it is here. The next step is to write that
@@ -429,28 +429,46 @@ temporary branch and CI.
 - `resume/sources/Anhang-III.txt`
 - `resume/sources/Anhang-IV.txt`
 - `resume/sources/Hjelmslev-1907.txt`
+- `resume/sources/full/grunddergeovon00hilbrich_djvu.txt`
+- `resume/sources/full/sim_mathematische-annalen_1907_64_djvu.txt`
 - `resume/tools/leanc.py`
 - `resume/tools/strip_cmp.py`
 - `resume/tools/tc_modules.py`
 
 
-**Sources** (OCR text of public-domain works, kept here because they are small):
+**Sources** (OCR text of works published in 1903 and 1907):
 - `resume/sources/Anhang-III.txt` and `Anhang-IV.txt`: D. Hilbert, *Grundlagen der Geometrie*,
   2nd ed., Teubner, Leipzig, 1903, Anhang III and Anhang IV; lines 6270–7075 and 7076–9212 of
   the full OCR text.
 - `resume/sources/Hjelmslev-1907.txt`: J. Hjelmslev, "Neue Begründung der ebenen Geometrie",
   *Math. Ann.* 64 (1907); lines 32115–33900 of the OCR text of the volume.
+- `resume/sources/full/grunddergeovon00hilbrich_djvu.txt`: the full OCR text of the 1903 edition
+  of the *Grundlagen*, as served by the Internet Archive.
+- `resume/sources/full/sim_mathematische-annalen_1907_64_djvu.txt`: the full OCR text of
+  *Mathematische Annalen* 64 (1907), as served by the Internet Archive.
 
-The two full-volume files are not copied. To fetch them and cut the excerpts again:
+The excerpts are cut from the two full-volume files as follows (run from the root of the
+repository; a checkout with CRLF line ends gives CRLF excerpts):
 
 ```
-mkdir -p .lake-local/src/hilbert1903 .lake-local/src/mathann64
-curl -L -o .lake-local/src/hilbert1903/grunddergeovon00hilbrich_djvu.txt \
-  https://archive.org/download/grunddergeovon00hilbrich/grunddergeovon00hilbrich_djvu.txt
-curl -L -o .lake-local/src/mathann64/sim_mathematische-annalen_1907_64_djvu.txt \
-  https://archive.org/download/sim_mathematische-annalen_1907_64/sim_mathematische-annalen_1907_64_djvu.txt
-sed -n '6270,7075p' .lake-local/src/hilbert1903/grunddergeovon00hilbrich_djvu.txt > Anhang-III.txt
-sed -n '7076,9212p' .lake-local/src/hilbert1903/grunddergeovon00hilbrich_djvu.txt > Anhang-IV.txt
-sed -n '32115,33900p' .lake-local/src/mathann64/sim_mathematische-annalen_1907_64_djvu.txt \
+sed -n '6270,7075p' resume/sources/full/grunddergeovon00hilbrich_djvu.txt > Anhang-III.txt
+sed -n '7076,9212p' resume/sources/full/grunddergeovon00hilbrich_djvu.txt > Anhang-IV.txt
+sed -n '32115,33900p' resume/sources/full/sim_mathematische-annalen_1907_64_djvu.txt \
   > Hjelmslev-1907.txt
 ```
+
+The two full-volume files come from:
+
+```
+https://archive.org/download/grunddergeovon00hilbrich/grunddergeovon00hilbrich_djvu.txt
+https://archive.org/download/sim_mathematische-annalen_1907_64/sim_mathematische-annalen_1907_64_djvu.txt
+```
+
+The text of the book itself (Townsend's translation, Project Gutenberg #17384, `17384-t.tex`) is
+not copied here; `docs/SOURCES.md` says where to fetch it.
+
+**Write-ups for the mathlib contributions.** The notes for the contributions to mathlib that came
+out of the two formalizations (for each pull request the title, the description and the review
+points, and an explanation of every declaration) are on the temporary branch `mathlib-prs` of this
+repository, in the directory `mathlib-prs/`. That branch has no common history with `main` and is
+to be deleted once all the pull requests are open; its `README.md` says how.
