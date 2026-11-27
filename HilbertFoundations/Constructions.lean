@@ -37,8 +37,9 @@ The units `th.43`, `s39.regular_polygons` and `s39.malfatti` are stated in this 
 `ConstructionsClose.lean`, which imports it (`theorem43`, `regularPolygonsClaim`, `malfattiClaim`);
 the partial results on the unit `th.44`, which stays open, and on `s38.two_variables` are also
 there. The unit `s38.two_variables` is stated in this file and proved in
-`TwoVariablesClose.lean` (`twoVariableClaim`), from Artin's theorem as proved in the package
-`hilbert17`, which is a dependency of the package and is not copied here.
+`TwoVariablesClose.lean` (`twoVariableClaim`), from Artin's theorem as proved in the library
+`Hilbert17`, a copy of files of another project (directory `Hilbert17/`), which is not part of
+this project.
 The unit `th.42` is stated in this file and proved in `Theorem42Close.lean` (`theorem42`), from
 the Hasse–Minkowski theorem of the Tau Ceti library, which is a dependency of the package and is
 not part of this project; the results on Theorem 42 that do not use that theorem are in
@@ -1111,14 +1112,15 @@ of 1893 (Acta Math. 17). Proved in `TwoVariablesClose.lean`, which imports this 
 `twoVariableClaim : TwoVariableClaim`. Hilbert's own proof, by the theory of ternary forms, is not
 formalized. The statement is the case of two variables of Artin's theorem of 1927 (the solution of
 Hilbert's seventeenth problem), and that theorem is not proved in this project: it is taken from
-the package `hilbert17`, a dependency (a branch of a fork of the repository
-<https://github.com/pd4st8hb95-hub/hilbert17-lean>, none of whose code is copied here), which
-proves it with the Tau Ceti library. The header of `TwoVariablesClose.lean` says what is taken
-from where. What this project proves is the passage from Artin's theorem for `n = 2` to the
-statement above.
+the library `Hilbert17` (directory `Hilbert17/`): 18 files of the repository
+<https://github.com/pd4st8hb95-hub/hilbert17-lean>, copied with the changes that the toolchain of
+this project requires (see `Hilbert17/README.md`; they are not under the licence of this
+repository). They prove the theorem with the Tau Ceti library. The header of
+`TwoVariablesClose.lean` says what is taken from where. What this project proves is the passage
+from Artin's theorem for `n = 2` to the statement above.
 
 Proved in this file: the trivial converse, such a quotient is nonnegative wherever `D` does not
-vanish (`TwoVariableClaim_converse`). Proved in `ConstructionsClose.lean`, without the dependency:
+vanish (`TwoVariableClaim_converse`). Proved in `ConstructionsClose.lean`, without that library:
 the claim for a polynomial of degree at most two in the variable `y`
 (`twoVariableClaim_quadratic`). If `f = P(x) y² + Q(x) y + R(x) ≥ 0` on `ℝ²`, then `P ≥ 0` and
 `4PR - Q² ≥ 0` on `ℝ`, both are sums of two squares of real polynomials, and

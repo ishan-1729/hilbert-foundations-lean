@@ -36,6 +36,6 @@ conclusion (`CommentaryClose`), Jordan's curve theorem (`JordanCurveClose`, from
 the library `JordanPick`, a copy of files of another project: see `JordanPick/README.md`),
 Theorem 42 (`Theorem42Close`, from the Hasse–Minkowski theorem of the library Tau Ceti, a
 dependency of this package), and Hilbert's theorem on the definite functions of two variables
-(`TwoVariablesClose`, from the proof of Artin's theorem in the package `hilbert17`, also a
-dependency).
+(`TwoVariablesClose`, from the proof of Artin's theorem in the library `Hilbert17`, a copy of
+files of another project: see `Hilbert17/README.md`).
 -/

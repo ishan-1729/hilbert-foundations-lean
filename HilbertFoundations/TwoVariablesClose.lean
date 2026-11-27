@@ -1,5 +1,5 @@
 import HilbertFoundations.ConstructionsClose
-import RealClosureTransfer
+import Hilbert17.RealClosureTransfer
 
 /-!
 # § 38: definite functions of two variables
@@ -16,16 +16,16 @@ of two variables of Artin's theorem of 1927 (the solution of Hilbert's seventeen
 polynomial in any number of variables with real coefficients that takes no negative value is a sum
 of squares of rational functions. That theorem is taken from two sources.
 
-* The package `hilbert17`, a dependency of this project (`lakefile.toml`), none of whose code is
-  copied here: the branch `lean-v4.36-tauceti` of the fork
-  <https://github.com/ishan-1729/hilbert17-lean> of the repository
-  <https://github.com/pd4st8hb95-hub/hilbert17-lean>, pinned to the commit
-  `a1a089e7e5080a2a27f0e95bf7b0e760f62ed4e5`. The proof is the work of the author of that
-  repository; the branch adapts it to the toolchain of this project, and its file `PORT-NOTES.md`
-  lists every change. The upstream repository keeps the Apache License 2.0 for the third-party
+* The library `Hilbert17`, the 18 Lean files of the directory `Hilbert17/` of this repository,
+  built as a library of the package (`lakefile.toml`). They are files of the repository
+  <https://github.com/pd4st8hb95-hub/hilbert17-lean>, commit
+  `19cd90e0a2c0f5c0e034ee54d06f5e129561ee59`, copied with the changes that the toolchain of this
+  project requires; `Hilbert17/README.md` lists every change. The proof is the work of the author
+  of that repository. The upstream repository keeps the Apache License 2.0 for the third-party
   material it attributes and states that it assigns no project-wide licence to its own
-  contributions; that is why its files are not copied into this repository. The statement used is
-  that of the module `RealClosureTransfer`,
+  contributions, so the copied files are not under the licence of this repository: they are
+  reproduced with attribution so that the formalization builds. The statement used is that of the
+  module `Hilbert17.RealClosureTransfer`,
 
   `Hilbert17Transfer.hilbert17RealCleared_candidate : Hilbert17Target.Hilbert17RealCleared`,
 
@@ -42,7 +42,7 @@ of squares of rational functions. That theorem is taken from two sources.
 
 * The Tau Ceti library (<https://github.com/TauCetiProject/TauCeti>, Apache License 2.0, pinned in
   `lakefile.toml` to the commit `aa3cfad1274c06cff25f2b58848498b3c3f68d0f`), a dependency of this
-  project, none of whose code is copied here. The files of `hilbert17` take from it: the real
+  project, none of whose code is copied here. The files of `Hilbert17/` take from it: the real
   closure of an ordered field (`TauCeti.RealClosure.exists_realClosure`); the extension of a
   preordering of a field to an ordering (`Subsemiring.IsPreordering.exists_linearOrder`); and, for
   polynomials in one variable over a real closed field, the count of roots and the Tarski query by
@@ -54,7 +54,7 @@ of squares of rational functions. That theorem is taken from two sources.
 
 ## What this file contributes
 
-Only the passage from the statement of `hilbert17` to the form of `TwoVariableClaim`: for `n = 2`,
+Only the passage from the statement of `Hilbert17` to the form of `TwoVariableClaim`: for `n = 2`,
 from `q ≠ 0` and `q² f = ∑ pᵢ²`, the denominator `D := q²` and the numerator `N := ∑ pᵢ²` are sums
 of squares, `D ≠ 0`, and `f · D = N`.
 -/
@@ -64,7 +64,7 @@ namespace HilbertFoundations
 /-- **Hilbert's theorem on the definite functions of two variables** (unit `s38.two_variables`):
 a polynomial in two variables with real coefficients that takes no negative value is a quotient of
 two sums of squares of polynomials. It is the case `n = 2` of Artin's theorem as proved in the
-package `hilbert17` (see the header of this file). -/
+copied library `Hilbert17` (see the header of this file). -/
 theorem twoVariableClaim : TwoVariableClaim := by
   intro f hf
   obtain ⟨m, q, p, hq, h⟩ := Hilbert17Transfer.hilbert17RealCleared_candidate 2 f hf

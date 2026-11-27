@@ -35,7 +35,7 @@ and proves, towards the unit `th.44`, which stays open, and the unit `s38.two_va
   of which is in mathlib; `Theorem44` stays unproved.
 * **`s38.two_variables`**: Hilbert's theorem of 1893 for a polynomial of degree at most two in one
   of the variables (`twoVariableClaim_quadratic`). The theorem itself is proved in
-  `TwoVariablesClose.lean`, from Artin's theorem as proved in the dependency `hilbert17`.
+  `TwoVariablesClose.lean`, from Artin's theorem as proved in the copied library `Hilbert17`.
 
 It also contains the results on the unit **`th.42`** (Theorem 42) that do not need the
 Hasse–Minkowski theorem. Theorem 42 itself is proved in `Theorem42Close.lean`, which imports this
