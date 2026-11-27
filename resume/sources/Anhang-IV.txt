@@ -1,0 +1,2137 @@
+Anhang  IV. 
+
+Über  die  Grundlagen  der  Geometrie1). 
+
+Die  Untersuchungen  von  JRiemann  und  Heimholte  über  die  Grund- 
+lagen der  Geometrie  veranlaßten  Lie,  das  Problem  der  axiomatischen 
+Behandlung  der  Geometrie  unter  Voranstellung  des  Gruppenbegriffes  in 
+Angriff  zu  nehmen,  und  führten  diesen  scharfsinnigen  Mathematiker  zu 
+einem  System  von  Axiomen,  von  denen  er  mittels  seiner  Theorie  der 
+Transformationsgruppen  nachwies,  daß  sie  zum  Aufbau  der  Geometrie 
+hinreichend  sind2). 
+
+Nun  hat  Lie  bei  Begründung  seiner  Theorie  der  Transformations- 
+gruppen stets  die  Annahme  gemacht,  daß  die  die  Gruppe  definierenden 
+Funktionen  differenziert  werden  können,  und  daher  bleibt  in  den  -Lieschen 
+Entwickelungen  unerörtert,  ob  die  Annahme  der  Differenzierbarkeit  bei 
+der  Frage  nach  den  Axiomen  der  Geometrie  tatsächlich  unvermeidlich  ist 
+oder  ob  die  Differenzierbarkeit  der  betreffenden  Funktionen  nicht  vielmehr 
+als  eine  Folge  des  Gruppenbegriffs  und  der  übrigen  geometrischen  Axiome 
+erscheint.  Auch  ist  Lie  zufolge  seines  Verfahrens  genötigt,  ausdrücklich 
+das  Axiom  aufzustellen,  daß  die  Gruppe  der  Bewegungen  von  infinitesi- 
+malen Transformationen  erzeugt  sei.  Diese  Forderungen,  sowie  wesent- 
+liche Bestandteile  der  übrigen  von  Lie  zu  Grunde  gelegten  Axiome  be- 
+züglich der  Natur  der  die  Punkte  in  gleicher  Entfernung  definierenden 
+Gleichung  lassen  sich  rein  geometrisch  nur  auf  recht  gezwungene  und 
+komplizierte  Weise  zum  Ausdruck  bringen  und  scheinen  überdies  nur 
+durch  die  von  Lie  benutzte  analytische  Methode,  nicht  durch  das  Problem 
+selbst  bedingt. 
+
+Ich  habe  daher  im  folgenden  für  die  ebene  Geometrie  ein  System 
+von  Axiomen  aufzustellen  gesucht,  welches,  ebenfalls  auf  dem  Begriff  der 
+Gruppe  beruhend,  nur  einfache  und  geometrisch  übersichtliche  Forderungen 
+enthält  und  insbesondere  die  Differenzierbarkeit  der  die  Bewegung  ver- 
+mittelnden Funktionen  keineswegs  voraussetzt.  Die  Axiome  des  von  mir 
+aufgestellten  Systems  sind  als  spezielle  Bestandteile  in  den  Lieschen 
+Axiomen  enthalten  oder,  wie  ich  glaube,  aus  ihnen  sofort  ableitbar. 
+
+Meine  Beweisführung  ist  völlig  von  der  Methode  Lies  verschieden: 
+ich  operiere  vornehmlich  mit  den  von  G.  Cantor  ausgebildeten  Begriffen 
+der  Theorie  der  Punktmengen  und  benutze  den  Satz  von  C.  Jordan,  wonach 
+
+
+1)  Zur  Kennzeichnung  der  nachfolgenden  Begründungsweise  der  Geometrie  im 
+Vergleich  mit  dem  in  meiner  Festschrift  befolgten  Verfahren  sehe  man  die  am  Schluß 
+dieser  Abhandlung  gemachte  Bemerkung  (S.  162). 
+
+2)  Lie-Engel,  Theorie  der  Transformationsgruppen  Bd.  3  Abteilung  5. 
+
+
+122  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+jede  ebene  stetig  geschlossene  Kurve  ohne  Doppelpunkte  die  Ebene  in 
+ein  inneres  und  ein  äußeres  Gebiet  teilt. 
+
+Gewiß  sind  auch  in  dem  von  mir  aufgestellten  System  noch  einzelne 
+Bestandteile  entbehrlich;  doch  habe  ich  von  einer  weiteren  Untersuchung 
+dieses  Umstandes  abgesehen  aus  Rücksicht  auf  die  einfache  Fassung  der 
+Axiome  und  vor  allem,  weil  ich  eine  verhältnismäßig  zu  komplizierte  und 
+geometrisch  nicht  übersichtliche  Beweisführung  vermeiden  wollte. 
+
+Ich  behandle  im  folgenden  die  Axiome  nur  für  die  Ebene,  obwohl 
+ich  meine,  daß  ein  analoges  Axiomensystem  für  den  Raum  aufgestellt 
+werden  kann,  das  den  Aufbau  der  räumlichen  Geometrie  in  analoger  Weise 
+ermöglicht  *). 
+
+Wir  schicken  einige  Erklärungen  voran. 
+
+Erklärungen.  Wir  verstehen  unter  der  Zahlenebene  die  gewöhnliche 
+Ebene  mit  einem  rechtwinkligen  Koordinatensystem  x,  y. 
+
+Eine  doppelpunktlose  und  einschließlich  ihrer  Endpunkte  stetige  Kurve 
+in  dieser  Zahlenebene  heiße  eine  Jordansche  Kurve.  Ist  eine  Jordansche 
+Kurve  geschlossen,  so  heiße  das  Innere  des  von  derselben  begrenzten 
+Gebietes  der  Zahlenebene  ein  Jordansclies  Gebiet. 
+
+Der  leichteren  Darstellung  und  Faßlichkeit  wegen  will  ich  in  der 
+vorliegenden  Untersuchung  die  Definition  der  Ebene  enger  fassen,  als  es 
+meine    Beweisführung    erfordert2),    ich    will    nämlich    annehmen,    daß    es 
+
+
+1)  Durch  die  nachfolgende  Untersuchung  wird  zugleich,  wie  ich  glaube,  eine 
+allgemeine  die  Gruppentheorie  betreffende  Frage,  die  ich  in  meinem  Vortrag  „Mathe- 
+matische Probleme",  Göttinger  Nachrichten  1900,  S.  17  aufgeworfen  habe,  für  den 
+speziellen  Fall  der  Gruppe  der  Bewegungen  in  der  Ebene  beantwortet. 
+
+2)  Betreffs  der  weiteren  Fassung  des  Begriffes  der  Ebene  vergleiche  man  meine 
+Note  über  die  Grundlagen  der  Geometrie  in  den  Göttinger  Nachrichten  1902.  Ich 
+habe  daselbst  die  folgende  allgemeinere  Definition  der  Ebene  aufgestellt: 
+
+Die  Ebene  ist  ein  System  von  Dingen,  welche  Punkte  heißen.  Jeder  Punkt  A 
+bestimmt  gewisse  Teilsysteme  von  Punkten,  zu  denen  er  selbst  gehört  und  welche  Um- 
+gebungen des  Punktes  A  heißen. 
+
+Die  Punkte  einer  Umgebung  lassen  sich  stets  umkehrbar  eindeutig  auf  die  Punkte 
+eines  gewissen  Jordanschen  Gebietes  in  der  Zahlenebene  abbilden.  Das  Jordansche  Ge- 
+biet wird  ein  Bild  jener  Umgebung  genannt. 
+
+Jedes  in  einem  Bilde  enthaltene  Jordansche  Gebiet,  innerhalb  dessen  der  Punkt  A 
+liegt,  ist  wiederum  ein  Bild  einer  Umgebung  von  A.  Liegen  verschiedene  Bilder  einer 
+Umgebung  vor,  so  ist  die  dadurch  vermittelte  umkehrbar  eindeutige  Transformation  der 
+betreffenden  Jordanschen  Gebiete  aufeinander  eine  stetige. 
+
+Ist  B  irgend  ein  Punkt  in  einer  Umgebung  von  A,  so  ist  diese  Umgebung  auch 
+zugleich  eine   Umgebung  von  B. 
+
+Zu  irgend  zieei  Umgebungen  eines  Punktes  A  gibt  es  stets  eine  solche  Umgebung 
+des  Punktes  A,  die  beiden  Umgebungen  gemeinsam  ist. 
+
+Wenn  A  und  B  irgend  zwei  Punkte  unserer  Ebene  sind,  so  gibt  es  stets  eine 
+Umgebung  von  A,  die  zugleich  den  Punkt  B  enthält. 
+
+
+Anhang  TV:    Grundlagen  der  Geometrie.  123 
+
+möglich  ist,  die  sämtlichen  Punkte  unserer  Geometrie  zugleich  auf  die  im 
+Endlichen  gelegenen  Punkte  der  Zahlenebene  oder  auf  ein  bestimmtes 
+Teilsystem  derselben  umkehrbar  eindeutig  abzubilden,  so  daß  dann  jeder 
+Punkt  unserer  Geometrie  durch  ein  bestimmtes  Zahlenpaar  x,  y  charakte- 
+risiert ist.  Wir  formulieren  diese  Fassung  des  Begriffes  der  Ebene  wie  folgt: 
+
+Definition  der  Ebene.  Die  Ebene  ist  ein  System  von  Dingen,  die  Punkte 
+heißen,  und  die  sich  umkehrbar  eindeutig  auf  die  im  Endlichen  gelegenen 
+Punkte  der  Zahlenebene  oder  auf  ein  gewisses  Teilsystem  derselben  abbilden 
+lassen;  diese  Punkte  der  Zahlenebene  (d.  h.  die  Bildpunkte)  werden  auch 
+zugleich  zur  Bezeichnung  der  Punkte  unserer  Ebene  selbst  venvandt. 
+
+Zu  jedem  Punkte  A  unserer  Ebene  gibt  es  in  der  Zahlenebene  Jor- 
+dansche  Gebiete,  in  denen  der  Bildpunkt  von  A  liegt  und  deren  sämtliche 
+Punkte  ebenfalls  Punkte  unserer  Ebene  darstellen.  Diese  Jordanschen  Ge- 
+biete heißen  Umgebungen  des  Punktes  A. 
+
+Jedes  in  einer  Umgebung  von  A  enthaltene  Jordansche  Gebiet,  innerhalb 
+dessen  der  Punkt  A  (Bildpunkt  von  A)  liegt,  ist  wiederum  eine  Umgebung  von  A. 
+
+Ist  B  irgend  ein  Punkt  in  einer  Umgebung  von  A,  so  ist  diese  Um- 
+gebung auch  zugleich  eine  Umgebung  von  B. 
+
+Wenn  A  und  B  irgend  zwei  Punkte  unserer  Ebene  sind,  so  gibt  es 
+stets  eine  Umgebung  von  A,  die  zugleich  den  Punkt  B  enthält. 
+
+
+Wir  werden  die  Bewegung  als  eine  umkehrbar  eindeutige  Transfor- 
+mation unserer  Ebene  in  sich  definieren.  Offenbar  lassen  sich  von  vorn- 
+herein zwei  Arten  von  umkehrbar  eindeutigen  stetigen  Transformationen 
+der  Zahlenebene  in  sich  unterscheiden.  Nehmen  wir  nämlich  irgend  eine 
+geschlossene  Jordansche  Kurve  in  der  Zahlenebene  an  und  denken  uns 
+dieselbe  in  einem  bestimmten  Sinn  durchlaufen,  so  geht  dieselbe  bei  einer 
+solchen  Transformation  wiederum  in  eine  geschlossene  Jordansche  Kurve 
+über,  die  in  einem  gewissen  Sinne  umlaufen  wird.  Wir  wollen  nun  in 
+der  gegenwärtigen  Untersuchung  annehmen,  daß  dieser  Umlaufssinn  der- 
+selbe  ist,  wie  für  die    ursprüngliche    Jordansche    Kurve,    wenn  wir  eine 
+
+
+Diese  Forderungen  enthalten,  wie  mir  scheint,  für  den  Fall  zweier  Dimensionen 
+die  scharfe  Definition  des  Begriffes,  den  Riemann  und  Helmholtz  als  „mehrfach  aus- 
+gedehnte Mannigfaltigkeit"  und  Lie  als  „Zahlenmannigfaltigkeit"  bezeichneten  und 
+ihren  gesamten  Untersuchungen  zu  Grunde  legten.  Auch  bieten  sie  die  Grundlage 
+für  eine  strenge  axiomatische  Behandlung  der  Analysis  situs. 
+
+Indem  wir  die  obige  engere  Definition  der  Ebene  annehmen,  wird  offenbar  die 
+elliptische  Geometrie  von  vornherein  ausgeschlossen,  da  sich  deren  Punkte  nicht  in 
+einer  mit  unseren  Axiomen  verträglichen  Weise  auf  die  im  Endlichen  gelegenen 
+Punkte  der  Zahlenebene  abbilden  lassen.  Es  ist  jedoch  nicht  schwer,  die  Abänderungen 
+zu  erkennen,  die  in  unserer  Beweisführung  nötig  sind,  wenn  man  die  weitere  Fassung 
+des  Begriffes  der  Ebene  zu  Grunde  legt. 
+
+
+124  Anhang  IV:    Grandlagen  der  Geometrie. 
+
+Transformation  der  Zahlenebene  in  sich  anwenden,  welche  eine  Bewegung 
+definiert.  Diese  Annahme1)  bedingt  folgende  Fassung  des  Begriffes  der 
+Bewegung: 
+
+Definition  der  Bewegung.  Eine  Bewegung  ist  eine  umkehrbar  eindeutige 
+stetige  Transformation  der  Bildpunkte  der  Zahlenebene  in  sich  von  der  Art,  daß 
+dabei  der  Umlaufssinn  einer  geschlossenen  Jordanschen  Kurve  stets  derselbe  bleibt. 
+
+Eine  Bewegung,  bei  welcher  ein  Punkt  M  ungeändert  bleibt,  heißt  eine 
+Drehung  um  den  Punkt  M. 
+
+
+Nach  Festlegung  des  Begriffes  „Ebene"  und  „Bewegung"  stellen  wir 
+folgende  drei  Axiome  auf: 
+
+Axiom  I.  Werden  zwei  Beivegungen  hintereinander  ausgeführt,  so  ist 
+die  dann  entstehende  Transformation  unserer  Ebene  in  sich  wiederum  eine 
+Bewegung. 
+
+Wir  sagen  kurz: 
+
+Axiom  I.    Die  Bewegungen  bilden  eine  Gruppe. 
+
+
+Axiom  IL  Wenn  A  und  M  beliebige  voneinander  verschiedene  Punkte 
+der  Ebene  sind,  so  kann  man  den  Punkt  A  durch  Drehung  um  M  stets  in 
+unendlich  viele  verschiedene  Lagen  bringen. 
+
+Nennen  wir  die  Gesamtheit  derjenigen  Punkte,  die  durch  die  sämt- 
+lichen Drehungen  um  M  aus  einem  von  M  verschiedenen  Punkte  ent- 
+stehen, einen  wahren  Kreis  in  unserer  ebenen  Geometrie,  so  können  wir 
+die  Aussage  des  Axioms  II  auch  so  fassen: 
+
+Axiom  IL    Jeder  wahre  Kreis  besteht  aus  unendlich  vielen  Punkten. 
+
+
+Dem  letzten  Axiom  schicken  wir  eine  Erklärung  voraus. 
+
+Erklärung.  Es  sei  AB  ein  bestimmtes  Punktepaar  in  unserer 
+Geometrie;  mit  den  nämlichen  Buchstaben  mögen  auch  die  Bilder  dieses 
+Punktepaares  in  der  Zahlenebene  bezeichnet  werden.  Wir  grenzen  um 
+die  Punkte  A  und  B  in  der  Zahlenebene  je  eine  Umgebung  a  bez.  ß  ab. 
+Wenn  ein  Punkt  A*  in  die  Umgebung  a  und  zugleich  ein  Punkt  B*  in 
+die  Umgebung  ß  fällt,  so  sagen  wir:  das  Punktepaar  A*B*  liegt  in  der 
+Umgebung  aß  von  AB.     Die  Aussage,  daß  diese  Umgebung  aß   beliebig 
+
+
+1)  Bei  Lie  ist  diese  Annahme  in  der  Forderung  enthalten,  daß  die  Gruppe  der 
+Bewegungen  durch  infinitesimale  Transformationen  erzeugt  sei.  Die  entgegengesetzte 
+Annahme  (d.  h.  die  Annahme  der  Möglichkeit  von  Umlegungen)  würde  wesentlich  die 
+Beweisführung  erleichtern,  insofern  alsdann  die  „wahre  Gerade"  unmittelbar  als  der 
+Ort  derjenigen  Punkte  definiert  werden  kann,  welche  bei  einer  den  Umlaufssinn 
+ändernden  Transformation  (Umlegung)  fest  bleiben. 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  125 
+
+klein  sei,  soll  bedeuten,  daß  a  eine  beliebig  kleine  Umgebung  von  A  und 
+zugleich  ß  eine  beliebig  kleine  Umgebung  von  B  ist. 
+
+Es  sei  ABC  ein  bestimmtes  Punktetripel  in  unserer  Geometrie;  mit 
+den  nämlichen  Buchstaben  mögen  auch  die  Bilder  dieses  Punktetripels 
+in  der  Zahlenebene  bezeichnet  werden.  Wir  grenzen  um  die  Punkte  A,  B,  C 
+in  der  Zahlenebene  je  eine  Umgebung  a  bez.  ß  bez.  y  ab.  Wenn  ein 
+Punkt  A*  in  die  Umgebung  a  und  zugleich  ein  Punkt  B*  in  die  Um- 
+gebung ß  und  ein  Punkt  C*  in  die  Umgebung  y  fällt,  so  sagen  wir:  das 
+Punktetripel  A*B*C*  liegt  in  der  Umgebung  aßy  von  ABC.  Die  Aus- 
+sage, daß  diese  Umgebung  aßy  beliebig  klein  sei,  soll  bedeuten,  daß  a 
+ein  beliebig  kleine  Umgebung  von  A  und  zugleich  ß  eine  beliebig  kleine 
+Umgebung  von  B  und  y  eine  beliebig  kleine  Umgebung  von  C  ist. 
+
+Beim  Gebrauch  der  Worte  „Punktepaar"  und  „Punktetripel"  wird 
+nicht  angenommen,  daß  die  Punkte  des  Punktepaares  oder  des  Punkte- 
+tripels voneinander  verschieden  sind. 
+
+Axiom  III.  Wenn  es  Bewegungen  gibt,  durch  welche  Punktetripel  in  be- 
+liebiger Nähe  des  Punktetripels  ABC  in  beliebige  Nähe  des  Punktetripels 
+A'BC  übergeführt  werden  können,  so  gibt  es  stets  auch  eine  solche  Bewegung, 
+durch  welche  das  Punktetripel  ABC  genau  in  das  Punktetripel  A'BC 
+übergeht1). 
+
+Die  Aussage  dieses  Axioms  wollen  wir  kurz  so  ausdrücken: 
+
+Axiom  III.    Die  Bewegungen  bilden  ein  abgeschlossenes  System. 
+
+Wenn  wir  in  Axiom  III  gewisse  Punkte  der  Punktetripel  zusammen- 
+fallen lassen,  so  ergeben  sich  leicht  einige  spezielle  Fälle  des  Axioms  III, 
+die  wir  noch  besonders  hervorheben,  wie  folgt: 
+
+Wenn  es  Drehungen  um  einen  Punkt  M  gibt,  durch  welche  Punkte- 
+paare in  beliebiger  Nähe  des  Punktepaares  AB  in  beliebige  Nähe  des 
+Punktepaares  AB'  übergeführt  werden  können,  so  gibt  es  stets  auch  eine 
+solche  Drehung  um  M,  durch  welche  das  Punktepaar  AB  genau  in  das 
+Punktepaar  AB'  übergeht. 
+
+Wenn  es  Bewegungen  gibt,  durch  welche  Punktepaare  in  beliebiger 
+Nähe  des  Punktepaares  AB  in  beliebige  Nähe  des  Punktepaares  AB' 
+übergeführt  werden  können,  so  gibt  es  stets  auch  eine  solche  Be- 
+wegung, durch  welche  das  Punktepaar  AB  genau  in  das  Punktepaar  AB 
+übergeht. 
+
+Wenn  es  Drehungen  um  den  Punkt  M  gibt,  durch  welche  Punkte 
+in  beliebiger  Nähe  des  Punktes  A  in  beliebige  Nähe  von  A'  übergeführt 
+
+
+1)  Es  genügt  Axiom  III  für  genügend  kleine  Umgebungen  als  erfüllt  anzunehmen, 
+wie  es  ähnlich  auch  bei  Lie  geschieht;  meine  Beweisführung  läßt  sich  so  abändern, 
+daß  nur  diese  engere  Annahme  darin  benutzt  wird. 
+
+
+126  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+werden  können,  so  gibt  es  stets  auch  eine  solche  Drehung  um  M,  durch 
+welche  A  genau  in  AI  übergeht. 
+
+Diesen  letzten  Spezialfall  des  Axioms  III  werde  ich  bei  der  nach- 
+folgenden Beweisführung  oftmals  in  der  Weise  anwenden,  daß  für  A  der 
+Punkt  M  eintritt1). 
+
+Ich  beweise  nun  folgende  Behauptung: 
+
+Eine  ebene  Geometrie,  in  welcher  die  Axiome  I — III  erfüllt 
+sind,  ist  entweder  die  Euklidische  oder  die  Bolyai-Lob atschefslcy- 
+sche  ebene  Geometrie. 
+
+Wollen  wir  allein  die  Euklidische  Geometrie  erhalten,  so  haben  wir 
+nur  nötig,  bei  Axiom  I  den  Zusatz  zu  machen,  daß  die  Gruppe  der  Be- 
+wegungen eine  invariante  Untergruppe  besitzen  soll.  Dieser  Zusatz  ver- 
+tritt die  Stelle  des  Parallelenaxioms. 
+
+
+Den  Gedankengang  meiner  Beweisführung  möchte  ich  kurz  wie  folgt 
+skizzieren : 
+
+In  der  Umgebung  irgend  eines  Punktes  M  wird  durch  ein  besonderes 
+Verfahren  ein  gewisses  Punktgebilde  Jck  und  auf  diesem  ein  gewisser  Punkt 
+konstruiert  (§  1 — §  2)  und  dann  der  wahre  Kreis  x  durch  K  um  M 
+der  Untersuchung  unterworfen  (§  3).  Es  ergibt  sich,  daß  der  wahre 
+Kreis  x  eine  abgeschlossene  und  in  sich  dichte,  d.  h.  eine  perfekte  Punkt- 
+menge ist. 
+
+Das  nächste  Ziel  unserer  Ent Wickelungen  besteht  darin,  zu  zeigen, 
+daß  der  wahre  Kreis  x  eine  geschlossene  Jordansche  Kurve  ist2).  Dies 
+gelingt,  indem  wir  zunächst  die  Möglichkeit  einer  Anordnung  der  Punkte 
+des  wahren  Kreises  x  erkennen  (§  4 — §  5),  hieraus  eine  umkehrbar  ein- 
+deutige Abbildung  der  Punkte  von  x  auf  die  Punkte  eines  gewöhnlichen 
+Kreises  schließen  (§  6 — §  7)  und  endlich  beweisen,  daß  diese  Abbildung 
+notwendig  eine  stetige  sein  muß  (§  8).  Nunmehr  ergibt  sich  auch,  daß 
+das  ursprünglich  konstruierte  Punktgebilde  Ick  mit  dem  wahren  Kreise  x 
+identisch  ist  (§  9).  Weiter  gilt  der  Satz,  daß  jeder  wahre  Kreis  inner- 
+halb x  ebenfalls  eine  geschlossene  Jordansche  Kurve  ist  (§  10 — §  12). 
+
+
+1)  Eine  Folgerung,  die  ich  im  mündlichen  Vortrage  in  der  Festsitzung  zur 
+Jubelfeier  der  Ges.  d.  Wiss.  zu  Göttingen  1901  als  besonderes  Axiom  aufgeführt  habe, 
+ist  diese:  „Irgend  zwei  Punkte  können  durch  Bewegung  niemals  in  beliebige  Nähe 
+zu  einander  geraten."  Es  wäre  zu  untersuchen,  inwieweit  bez.  mit  welchen  Forde- 
+rungen zusammen  diese  Forderung  das  oben  aufgestellte  Axiom  HE  zu  ersetzen 
+im  stände  ist. 
+
+2)  Vgl.  hierzu  die  ein  ähnliches  Ziel  verfolgende  interessante  Note  von  A.  Schönflies : 
+„Über  einen  grundlegenden  Satz  der  Analysis  Situs"  Göttinger  Nachrichten.  1902. 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  127 
+
+Wir  wenden  uns  nun  zur  Untersuchung  der  Gruppe  der  Transforma- 
+tionen, die  bei  den  Drehungen  der  Ebene  um  M  der  wahre  Kreis  x 
+in  sich  erfährt  (§  13).  Diese  Gruppe  besitzt  folgende  Eigenschaften: 
+1)  Jede  Drehung  um  M,  die  einen  Punkt  von  x  festläßt;  läßt  alle  Punkte 
+desselben  fest  (§  14).  2)  Es  gibt  stets  eine  Drehung  um  M,  die  irgend 
+einen  gegebenen  Punkt  von  x  in  irgend  einen  anderen  Punkt  von  x  über- 
+führt (§  15).  3)  Die  Gruppe  der  Drehungen  um  M  ist  eine  stetige  (§  16). 
+Diese  drei  Eigenschaften  bestimmen  vollständig  den  Bau  der  Gruppe  der 
+Transformationen,  die  allen  Drehungen  des  wahren  Kreises  in  sich  ent- 
+sprechen. Wir  stellen  nämlich  den  folgenden  Satz  auf:  Die  Gruppe  aller 
+Transformationen  des  wahren  Kreises  x  in  sich,  die  Drehungen  um  M  sind, 
+ist  holoedrisch  isomorph  mit  der  Gruppe  der  gewöhnlichen  Drehungen 
+des  gewöhnlichen  Kreises  in  sich  (§  17 — §  18). 
+
+Nunmehr  untersuchen  wir  die  Gruppe  der  Transformationen  aller  Punkte 
+unserer  Ebene  bei  Drehungen  um  M.  Es  gilt  der  Satz,  daß  es  außer 
+der  Identität  keine  Drehung  der  Ebene  um  M  gibt,  welche  jeden  Punkt 
+eines  wahren  Kreises  fi  festläßt  (§  19).  Wir  erkennen  jetzt,  daß  jeder  wahre 
+Kreis  eine  geschlossene  Jordansche  Kurve  ist,  und  gewinnen  Formeln  für 
+die  Transformationen  jener  Gruppe  aller  Drehungen  um  M  (§  20 — §  21). 
+Endlich  folgen  leicht  die  Sätze:  Wenn  irgend  zwei  Punkte  bei  einer  Be- 
+wegung der  Ebene  festbleiben,  so  bleiben  alle  Punkte  fest,  d.  h.  die  Be- 
+wegung ist  die  Identität.  Jeder  Punkt  der  Ebene  läßt  sich  durch  eine 
+geeignete  Bewegung  in  jeden  anderen  Punkt  der  Ebene  überführen  (§  22). 
+
+Unser  wichtigstes  weiteres  Ziel  besteht  darin,  den  Begriff  der  wahren 
+Geraden  in  unserer  Geometrie  zu  definieren  und  die  für  den  Aufbau  der 
+Geometrie  notwendigen  Eigenschaften  dieses  Begriffes  zu  entwickeln.  Zu- 
+nächst werden  die  Begriffe  Halbdrehung  und  Mitte  einer  Strecke  definiert 
+(§  23).  Eine  Strecke  hat  höchstens  eine  Mitte  (§  24)  und  wenn  man  von 
+einer  Strecke  ihre  Mitte  kennt,  so  folgt,  daß  auch  jede  kleinere  Strecke 
+eine  Mitte  besitzt  (§  25— §  26). 
+
+Um  die  Lage  der  Streckenmitten  zu  beurteilen,  haben  wir  einige 
+Sätze  über  sich  berührende  wahre  Kreise  nötig,  und  zwar  kommt  es  vor 
+allem  darauf  an,  zwei  zueinander  kongruente  Kreise  zu  konstruieren,  die 
+sich  einander  von  außen  in  einem  und  nur  in  einem  Punkte  berühren 
+(§  27).  Wir  leiten  ferner  einen  allgemeinen  Satz  über  Kreise,  die  sich 
+von  innen  berühren,  ab  (§  28)  und  sodann  einen  Satz  über  den  besonderen 
+Fall,  daß  der  von  innen  berührende  Kreis  durch  den  Mittelpunkt  des  be- 
+rührten Kreises  geht  (§  29). 
+
+Nunmehr  wird  eine  bestimmte  genügend  kleine  Strecke  als  Einheits- 
+strecke zu  Grunde  gelegt  und  aus  dieser  durch  fortgesetzte  Halbierung 
+und  Halbdrehung  ein  System  von  Punkten  von  der  Art  konstruiert,   daß 
+
+
+128  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+jedem  Punkte  dieses  Systems  eine  bestimmte  Zahl  a  zugeordnet  erscheint, 
+die  rational  ist  und  nur  eine  Potenz  von  2  als  Nenner  hat  (§  30).  Nach 
+Aufstellung  eines  Gesetzes  über  diese  Zuordnung  (§  31)  werden  die  Punkte 
+des  gewonnenen  Punktsystems  untereinander  angeordnet,  wobei  die  früheren 
+Sätze  über  sich  berührende  Kreise  zur  Geltung  kommen  (§  32).  Jetzt 
+gelingt  der  Nachweis,  daß  die  den  Zahlen  \,  \,  ^,  •  ■  •  entsprechenden 
+Punkte  gegen  den  Punkt  0  konvergieren  (§  33).  Dieser  Satz  wird  schritt- 
+weise verallgemeinert,  bis  wir  schließlich  erkennen,  daß  eine  jede  Punkt- 
+reihe unseres  Systems  konvergiert,  sobald  die  entsprechende  Zahlenreihe 
+konvergiert  (§  34 — §  35). 
+
+Nach  diesen  Vorbereitungen  gelingt  die  Definition  der  wahren  Ge- 
+raden als  eines  Systems  von  Punkten,  die  aus  zwei  zu  Grunde  gelegten 
+Punkten  entstehen,  wenn  man  fortgesetzt  die  Mitten  nimmt,  Halb- 
+drehungen ausführt  und  die  Häufungsstellen  aller  erhaltenen  Punkte  hin- 
+zufügt (§  36).  Sodann  können  wir  beweisen,  daß  die  wahre  Gerade  eine 
+stetige  Kurve  ist  (§  37),  keinen  Doppelpunkt  besitzt  (§  38)  und  mit  irgend 
+einer  anderen  wahren  Geraden  höchstens  einen  Punkt  gemein  hat  (§  39). 
+Es  ergibt  sich  ferner,  daß  die  wahre  Gerade  jeden  um  einen  ihrer  Punkte 
+gelegten  Kreis  schneidet,  und  hieraus  folgt,  daß  man  irgend  zwei  beliebige 
+Punkte  der  Ebene  stets  durch  eine  wahre  Gerade  verbinden  kann  (§  40). 
+Auch  erkennen  wir  in  unserer  Geometrie  die  Kongruenzsätze  als  gültig, 
+wobei  sich  jedoch  zwei  Dreiecke  nur  dann  als  kongruent  erweisen,  wenn 
+für  sie  auch  der  Umlaufssinn  der  gleiche  ist  (§  41). 
+
+Hinsichtlich  der  Lage  des  Systems  aller  wahren  Geraden  gegenein- 
+ander sind  zwei  Fälle  zu  unterscheiden,  je  nachdem  das  Parallelenaxiom 
+gültig  ist  oder  durch  jeden  Punkt  zu  einer  gegebenen  Geraden  zwei  Gerade 
+existieren,  die  die  schneidenden  Geraden  von  den  nicht  schneidenden  Ge- 
+raden abgrenzen.  Im  ersteren  Falle  gelangen  wir  zur  Euklidischen,  im 
+letzteren  zur  Bolyai-Lobatschefskyschen  Geometrie  (§  42). 
+
+
+Es  sei  M  irgend  ein  Punkt  in  unserer  Geometrie  und  zugleich  der 
+Bildpunkt  in  der  Zahlenebene  x,  y.  Unser  nächstes  Zielest  dann,  um  M 
+gewisse  Punktgebilde  zu  konstruieren,  die  sich  schließlich  als  die  wahren 
+Kreise  um  M  herausstellen  werden. 
+
+Wir  schlagen  in  der  Zahlenebene  um  M  einen  „Zahlenkreis",  d.  h.  einen 
+Kreis  &  im  Sinne  der  gewöhnlichen  Maßbestimmung,  so  klein,  daß  sämt- 
+liche Punkte  innerhalb  und  auf  diesem  Kreise  $  ebenfalls  Bildpunkte  sind 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  129 
+
+und  es  auch  Punkte  außerhalb  ®  gibt.  Dann  gibt  es  gewiß  einen  zu  ® 
+konzentrischen  Kreis  f  innerhalb  ®  von  der  Art,  daß  sämtliche  Bildpunkte 
+innerhalb  dieses  Kreises  t  bei  beliebigen  Drehungen  um  M  innerhalb  des 
+Kreises  ®  bleiben. 
+
+Um  dies  zu  beweisen,  betrachten  wir  in  der  Zahlenebene  eine  unend- 
+liche Reihe  von  konzentrischen  Zahlenkreisen  f1;  f2,  f3,  . . .  mit  abnehmenden 
+und  gegen  0  konvergierenden  Radien  und  nehmen  dann  im  Gegensatz  zur 
+Behauptung  in  jedem  dieser  Kreise  einen  Bildpunkt  von  der  Art  an,  daß 
+derselbe  bei  einer  gewissen  Drehung  um  M  an  eine  außerhalb  des  Kreises 
+®  gelegene  Stelle  kommt  oder  auf  die  Peripherie  des  Kreises  $  rückt:  es 
+sei  A{  ein  solcher  im  Kreise  f{  gelegener  Bildpunkt,  der  bei  der  Drehung 
+Af  in  eine  außerhalb  des  Kreises  $  oder  auf  demselben  gelegene  Stelle  über- 
+geht. Wir  denken  uns  dann  von  M  nach  jedem  Punkte  Ai  den  Radius  ri 
+des  betreffenden  Zahlenkreises  f,-  gezogen  und  fassen  die  Kurve  yi  ins  Auge, 
+in  welche  der  Radius  r4  bei  der  Drehung  A^  übergeht.  Da  diese  Kurve  yt 
+vom  Punkte  M  nach  einer  gewissen  Stelle  außerhalb  oder  auf  dem  Kreise 
+®  läuft,  so  muß  sie  notwendig  die  Peripherie  des  Kreises  ®  treffen;  es 
+sei  Bt  einer  dieser  Treffpunkte  und  B  eine  Verdichtungsstelle  der  Treff- 
+punkte B1}  B2,  B3,  .  .  .  .  Nun  sei  allgemein  C{  derjenige  Punkt  auf  dem 
+Radius  rv  der  bei  der  Drehung  A^  in  B{  übergeht.  Da  die  Punkte 
+(7«,  Off  C%J . . .  gegen  M  konvergieren,  so  gibt  es  nach  Axiom  III  eine 
+Drehung  um  M,  bei  welcher  der  auf  der  Peripherie  des  Kreises  Ä  gelegene 
+Punkt  B  in  den  Punkt  M  übergeht.  Dies  widerspricht  dem  vorhin  defi- 
+nierten Begriff  der  Bewegung. 
+
+§  2. 
+Wie  bereits  in  §  1  festgesetzt,  sei  ?  ein  Zahlenkreis  innerhalb  ®,  der 
+die  Bedingungen  des  dort  bewiesenen  Satzes  erfüllt,  so%  daß  sämtliche  Bild- 
+punkte innerhalb  !  bei  den  Drehungen  um  M  innerhalb  ®  bleiben;  ferner 
+sei  k  ein  Zahlenkreis  innerhalb  ?,  dessen  sämtliche  Punkte  bei  den  Dre- 
+hungen um  M  innerhalb  !  bleiben.  Dann  bezeichnen  wir  kurz  diejenigen 
+Punkte  der  Zahlenebene,  die  bei  irgend  einer  Drehung  um  M  aus  Punkten 
+innerhalb  oder  auf  h  entstehen,  als  bedeckt  und  diejenigen  Punkte,  die  bei 
+keiner  Drehung  um  M  aus  Punkten  innerhalb  oder  auf  Je  entstehen,  als 
+unbedeckt.  Aus  Axiom  III  folgt  sofort,  daß  die  bedeckten  Punkte  eine 
+abgeschlossene  Punktmenge  bilden.  Ferner  sei  A  ein  bestimmter  Punkt 
+außerhalb  ft,  welcher  Bildpunkt  für  einen  Punkt  unserer  Geometrie  ist. 
+Wenn  sich  nun  ein  unbedeckter  Punkt  Ä  durch  eine  Jordansche  Kurve, 
+die  aus  lauter  unbedeckten  Punkten  besteht,  mit  A  verbinden  läßt,  so 
+heiße  Ä  außerhalb  kk  gelegen.  Insbesondere  sind  alle  Punkte  außerhalb 
+des  Zahlenkreises  f  gewiß  außerhalb  kk  gelegene  Punkte.    Jeder  bedeckte 
+
+Hubert,  Grundlagen  der  Geometrie.  9 
+
+
+130 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie. 
+
+
+Punkt,  zu  dem  in  beliebig  kleiner  Umgebung  sich  Punkte  außerhalb  kk 
+befinden,  heiße  ein  Punkt  auf  kk,  Die  Punkte  auf  kk  bilden  eine  abge- 
+schlossene Punktmenge.  Diejenigen  Punkte  J,  die  weder  Punkte  außerhalb 
+kk  noch  Punkte  auf  kk  sind,  sollen  Punkte  innerhalb  kk  heißen.  Insbe- 
+sondere sind  also  alle  bedeckten  Punkte,  zu  welchen  nicht  in  beliebiger 
+Nähe  unbedeckte  Punkte  liegen,  wie  z.  B.  der  Punkt  M  und  die  Punkte 
+innerhalb  k,  sicher  innerhalb  kk  gelegen. 
+
+
+§  3. 
+
+Indem  wir  bedenken,  daß,  wie  f  bestimmt  war,  A  bei  den  Drehungen 
+um  M  niemals  in  das  Innere  von  f  hineingelangt,  erkennen  wir,  daß  bei 
+einer  jeden  Drehung  um  M  die  Punkte  außerhalb  kk  wieder  in  Punkte 
+außerhalb  kk,  ferner  die  Punkte  auf  kk  wieder  in  Punkte  auf  kk  und 
+die  Punkte  innerhalb  kk  wiederum  in  Punkte  innerhalb  kk  übersrehen. 
+
+Jeder  Punkt  auf  kk  ist  nach  unserer  Festsetzung  ein  bedeckter  Punkt, 
+und  da  wir  wissen,  daß  die  Punkte  innerhalb  k  auch  innerhalb  kk  liegen, 
+so  schließen  wir  hieraus  folgende  Tatsache: 
+
+Zu  jedem  Punkte  K  auf  kk  gibt  es  gewiß  eine  Drehung  A  um  M, 
+durch  welche  ein  auf  der  Peripherie  von  k  gelegener  Punkt  K'  nach  K 
+
+9t 
+
+
+gelangt.  Der  Radius  MK'  des  Zahlenkreises  k  liefert  nach  der  Drehung 
+A  um  M  eine  Jordansche  Kurve,  welche  M  mit  dem  Punkte  K  auf  kk 
+verbindet  und  die  sonst  ganz  innerhalb  kk  verläuft. 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  131 
+
+Zugleich  sehen  wir,  daß  mindestens  ein  Punkt  der  Peripherie  des 
+Zahlenkreises  k,  nämlich  gewiß  der  Punkt  K',  auf  kk  liegt. 
+
+Wir  verbinden  den  außerhalb  kk  gelegenen  Punkt  A  durch  irgend 
+eine  Jordansche  Kurve  mit  M  und  bezeichnen  jetzt  mit  K  denjenigen 
+Punkt  dieser  Jordanschen  Kurve,  der  auf  kk  liegt  und  von  der  Art  ist,  daß 
+alle  auf  der  Jordanschen  Kurve  zwischen  K  und  A  gelegenen  Punkte 
+außerhalb  kk  liegen.  Sodann  fassen  wir  das  System  aller  aus  K  durch 
+Drehungen  um  M  hervorgehenden  Punkte,  d.  h.  den  wahren  Kreis  x  um 
+M  durch  K  ins  Auge.  Die  Punkte  dieses  wahren  Kreises  sind  sämtlich 
+Punkte  auf  kk. 
+
+Nach  Axiom  II  enthält  x  unendlich  viele  Punkte.  Ist  K*  eine  Ver- 
+dichtungsstelle von  Punkten  des  wahren  Kreises  x,  so  gehört  diese  wegen 
+Axiom  III  ebenfalls  zum  wahren  Kreise  x.  Bezeichnet  Kx  irgend  einen 
+Punkt  des  wahren  Kreises  x,  so  folgt,  wenn  wir  diejenige  Drehung  um  M 
+ausführen,  welche  K*  in  K±  überführt  daß  auch  Kx  eine  Verdichtungs- 
+stelle von  Punkten  des  wahren  Kreises  x  ist.    Wir  erhalten  somit  den  Satz: 
+
+Der  wahre  Kreis  x  ist  eine  abgeschlossene  und  in  sich  dichte  d.  h.  eine 
+perfekte  Punktmenge. 
+
+§4. 
+
+Das  wichtigste  Ziel  der  nächstfolgenden  Entwickelungen  besteht  darin, 
+zu  zeigen,  daß  der  wahre  Kreis  x  eine  geschlossene  Jordansche  Kurve  ist. 
+Es  wird  sich  ferner  herausstellen,  daß  der  wahre  Kreis  x  mit  den  Punkten 
+auf  kk  übereinstimmt. 
+
+Zunächst  beweisen  wir,  daß  irgend  zwei  Punkte  K1}  K2  des  wahren 
+Kreises  x  sich  stets  untereinander  sowohl  durch  eine  Jordansche  Kurve  ver- 
+binden lassen,  die  abgesehen  von  den  Endpunkten  ganz  innerhalb  kk  verläuft, 
+als  durch  eine  solche  Jordansche  Kurve,  die  abgesehen  von  den  Endpunkten 
+ganz  außerhalb  kk  verläuft. 
+
+In  der  Tat,  ziehen  wir  entsprechend  den  obigen  Ausführungen  die 
+Jordanschen  Kurven  MKX  und  MK2,  welche  innerhalb  kk  den  Mittel- 
+punkt M  mit  Kt  bezüglich  K2  verbinden,  und  bestimmen  auf  der  Kurve 
+MKX  von  M  ausgehend  den  letzten  auf  MK2  gelegenen  Punkt  P,  so 
+bildet  das  Stück  PKX  der  ersteren  Jordanschen  Kurve  zusammen  mit  dem 
+Stück  PK2  der  letzteren  Jordanschen  Kurve  eine  Verbindungskurve  von 
+der  zuerst  verlangten  Art. 
+
+Andererseits  fassen  wir  die  Drehungen  um  M  ins  Auge,  bei  denen 
+K  in  Kt  bezüglich  in  K2  übergeht;  die  Punkte  At  bez.  A2,  die  dabei  aus 
+A  entstehen,  sind  nach  §  3  Punkte  außerhalb  kk  und  lassen  sich  daher  außer- 
+halb kk  mit  A  verbinden.    Aus  diesen  Verbindungskurven  und  denjenigen 
+
+Jordanschen  Kurven,  die  bei  jenen  Drehungen  aus  der  in  §  3  konstruierten 
+
+9* 
+
+
+132  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+Jordanschen    Kurve    AK  entstehen,   können   wir   leicht   eine   Jordansche 
+Kurve  zwischen  Kx  und  K2  zusammensetzen,  die  ganz  außerhalb  hh  verläuft. 
+
+§5. 
+
+Der  eben  gefundene  Satz  setzt  uns  in  den  Stand,  die  Punkte  des 
+wahren  Kreises  x  in  bestimmter  Weise  anzuordnen. 
+
+Es  seien  Kx,  K2,  2T3,  Z"4  irgend  vier  verschiedene  Punkte  des  wahren 
+Kreises  x.  Wir  verbinden  die  Punkte  KXK2  einerseits  durch  eine  Jordansche 
+Kurve,  die  ganz  (d.  h.  zwischen  Kx  und  K2)  innerhalb  hh  verläuft,  und 
+andererseits  durch  eine  solche,  die  ganz  außerhalb  hh  verläuft.  Da  diese 
+beiden  Verbindungskurven  einschließlich  ihrer  Endpunkte  Kx ,  K2  stetig  sind, 
+so  bilden  sie  zusammen  eine  geschlossene  Jordansche  Kurve.  Eine  in  dieser 
+Weise  aus  Kx ,  K2  hergestellte  Kurve  wollen  wir  stets  mit  Kx  K2  bezeichnen. 
+Die  ganze  Zahlenebene  zerfällt  dann,  abgesehen  von  KXK2  selbst,  nach  dem 
+bekannten  Jordanschen  Satze  in  zwei  Gebiete,  nämlich  das  Innere  und  das 
+Äußere  dieser  Kurve  KXK2.  Betreffs  der  Lage  der  Punkte  K3,  K±  sind  nun 
+zwei  Fälle  möglich:  erstens  die  Punkte K^^K^  werden  durch  die  Kurve  KXK2 
+nicht  getrennt,  d.h.  sie  liegen  beide  innerhalb  oder  beide  außerhalb  derselben; 
+zweitens  die  Punkte  KZy  Kx  werden  durch  die  Kurve  KXK2  getrennt,  d.  h. 
+es  liegt  Ks  innerhalb  und  JQ  außerhalb  der  Kurve  K±K2  oder  umgekehrt. 
+
+Verbinden  wir  die  Punkte  Kx ,  K2  irgend  wie  anders  durch  einen  inner- 
+halb hh  und  einen  außerhalb  Ich  verlaufenden  Weg,  so  erkennen  wir  leicht, 
+daß  hinsichtlich  der  Lage  der  Punkte  K3,  K±  zu  der  neu  entstehenden 
+geschlossenen  Jordanschen  Kurve  KXK2  gewiß  derselbe  Fall  eintritt,  wie 
+vorhin.  In  der  Tat,  liegt  beispielsweise  der  erste  Fall  vor,  und  befinden 
+sich  K3,  K±  beide  im  Innern  von  KXK2,  so  verbinde  man  Ks  und  ÜT4 
+durch  einen  innerhalb  hh  verlaufenden  Weg  W.  Sollte  derselbe  aus  dem 
+Inneren  der  geschlossenen  Kurve  KXK2  heraustreten,  so  müßte  er  im  wei- 
+teren Verlauf  doch  schließlich  wieder  in  dieses  Innere  zurückführen;  es 
+ist  daher  gewiß  möglich,  den  außerhalb  KXK2  verlaufenden  Teil  dieses 
+Weges  W  durch  einen  nahe  an  dem  betreffenden  Stücke  von  KXK2  ver- 
+laufenden Weg  zu  ersetzen,  welcher  ganz  innerhalb  hh  und  zugleich  inner- 
+halb KXK2  verläuft,  so  daß  dadurch  ein  Verbindungsweg  W*  zwischen 
+K3  und  iT4  entsteht,  welcher  ebenfalls  ganz  innerhalb  hh  und  innerhalb 
+Kx  K2  verläuft.  Setzen  wir  aus  dem  innerhalb  hh  liegenden  Teil  der  Kurve 
+KXK2   und  dem  außerhalb  hh  liegenden  Teil  der  Kurve  KXK2  eine  neue 
+
+
+geschlossene  Jordansche  Kurve  KXK2  zusammen,  so  ist  W*  offenbar  ein 
+Weg,  welcher  K3  und  JBT4  innerhalb   dieser  neuen  Kurve  verbindet,  ohne 
+
+die  Kurve  KXK2   zu   durchsetzen,   d.  h.  K3  und  K±  werden   durch  KXK2 
+gewiß    nicht    getrennt.     Hieraus    folgt   nach   entsprechender   Konstruktion 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  133 
+
+
+außerhalb  kk,  daß  K3  und  Z"4  auch  durch  die  Kurve  KtK2  nicht  getrennt 
+werden.  Wir  dürfen  daher  im  ersten  Falle  schlechthin  sagen:  Das  Punkte- 
+paar K3,  K±  wird  durch  das  Punktepaar  Klt  K2  nicht  getrennt.  Dann  aber 
+folgt  auch  im  zweiten  Falle,  daß  wir  schlechthin  sagen  dürfen:  Das  Punkte- 
+paar K3,  K±  wird  durch  das  Punktepaar  Kx,  K2  getrennt. 
+
+Wir  führen  nun  irgend  eine  Drehung  um  M  aus,  durch  welche  die 
+Punkte  K1}K2,KS,  KA  in  Kx',  K2,  K3,  K[  übergehen.  Bedenken  wir,  daß 
+die  Drehung  nach  der  Definition  eine  stetige  und  eindeutige  umkehrbare 
+Transformation  der  Zahlenebene  ist  und  die  Punkte  innerhalb  kk  in  Punkte 
+innerhalb  kk,  die  Punkte  außerhalb  kk  in  Punkte  außerhalb  Tili  überführt, 
+so  folgt,  daß  die  Punktepaare  Kx',  K2  und  K3,  K[  voneinander  getrennt 
+oder  nicht  getrennt  liegen,  je  nachdem  die  Punktepaare  Kl}  K2  und  K3,  K± 
+sich  einander  trennen  oder  nicht,  d.  h.  die  gegenseitige  Lage  der  Punkte- 
+paare  K1}  K2  und  K3,  K±  bleibt  bei  einer  beliebigen  Drehung  um  M  un- 
+verändert. 
+
+Wir  leiten  in  ähnlicher  Weise  auch  die  Sätze  ab,  die  den  übrigen  bekannten 
+Tatsachen  hinsichtlich  der  gegenseitigen  Lage  der  Punktepaare  auf  der  Peri- 
+pherie  eines  gewöhnlichen  Zahlenkreises  entsprechen,  nämlich   die  Sätze: 
+
+Wenn  Kx,  K2  durch  K3,  K±  getrennt  werden,  so  werden  auch  K3,  K± 
+durch  Kt,  K2  getrennt.  Wenn  Kx,  K±  durch  K2,  K5  und  K2,  K±  durch 
+K3,  Kr>  getrennt  werden,  so  ivird  auch  KlyK±  durch  K3,  K5  getrennt. 
+
+Dadurch  sind  wir  zu  dem  folgenden  Ergebnis  gelangt: 
+
+Die  Punkte  des  wahren  Kreises  x  sind  cyklisch,  d.  h.  mit  Bücksicht 
+auf  die  gegenseitige  Trennung  von  Punktepaaren  wie  die  Punkte  eines  ge- 
+wöhnlichen Zahlenkreises  angeordnet.  Diese  Anordnung  ist  gegenüber  den 
+Drehungen  um  den  Mittelpunkt  M  des  wahren  Kreises  x  invariant. 
+
+§  6- 
+
+Eine  weitere  wichtige  Eigenschaft  des  wahren  Kreises  x  sprechen  wir 
+wie  folgt  aus: 
+
+Zu  irgend  einem  Punktepaar  des  wahren  Kreises  x  gibt  es  stets  ein 
+Punktepaar  dieses  Kreises  x,  welches  jenes  Punktepaar  trennt. 
+
+Wir  bezeichnen  mit  Kx  einen  fest  gewählten  Punkt  des  wahren 
+Kreises  x  und  wollen  dann  von  irgend  drei  anderen  Punkten  Kt,  K2,  K3 
+des  wahren  Kreises  x  sagen,  es  liege  K2  zwischen  Kt  und  K3  bez.  nicht 
+zwischen  Kx  und  K3,  je  nachdem  das  Punktepaar  Kl}  K3  durch  das 
+Punktepaar  K2,  Km   getrennt  oder  nicht  getrennt  wird. 
+
+Wir  nehmen  im  Gegensatz  zu  der  obigen  Behauptung  an,  es  seien 
+K  und  K'  zwei  Punkte  des  wahren  Kreises  x,  die  durch  kein  Punktepaar 
+getrennt  werden;  dann  folgt  nach  unserer  Festsetzung  gewiß  auch,  daß 
+zwischen  denselben  kein  Punkt  von  x  liegt.    Ferner  dürfen  wir  annehmen, 
+
+
+134  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+es  gäbe  einen  Punkt  K±  von  der  Art,  daß  das  Punktepaar  K1}  K  durch 
+das  Punktepaar  K,  Kx  getrennt  wird;  anderenfalls  nämlich  denken  wir 
+uns  in  der  folgenden  Ent Wickelung  die  Rollen  der  Punkte  K  und  K'  mit- 
+einander vertauscht.  Sodann  wählen  wir  eine  unendliche  Reihe  jR  von 
+Punkten  des  wahren  Kreises  x,  die  gegen  den  Punkt  K  konvergieren,  und 
+verbinden  Kt  mit  K'  sowohl  durch  eine  innerhalb  kk  verlaufende  Kurve, 
+wie  durch  eine  außerhalb  kk  verlaufende  Kurve.  Durch  Zusammensetzung 
+dieser  beiden  Kurven  erhalten  wir  eine  geschlossene  Jordansche  Kurve 
+KXK',  welche  Kx  von  K  trennt  und  daher  notwendig  auch  von  unendlich 
+vielen  Punkten  der  gegen  K  konvergenten  Punktreihe  B  trennen  muß. 
+Es  sei  K2  einer  dieser  Punkte  der  Reihe  B.  Da  K%  zwischen  Kt  und  K' 
+liegt  und  nicht  zwischen  K  und  K'  liegen  darf,  so  liegt  K2  notwendig 
+zwischen  Kt  und  K.  Nunmehr  verbinden  wir  analog  K2  mit  K'  durch 
+eine  geschlossene  Jordansche  Kurve  K2K'  und  gelangen  ebenso  zu  einem 
+Punkte  Ks  der  Reihe  B,  der  zwischen  K3  und  K  liegt  u.  s.  f.  Auf  diese 
+Weise  erhalten  wir  eine  unendliche  Beihe  von  Punkten  K1}  K2,  K3,  .  .  . 
+von  denen  jeder  Punkt  zwischen  dem  vorangehenden  und  K  gelegen  ist,  und 
+die  gegen  den  Punkt  K  konvergieren. 
+
+Wir  führen  jetzt  eine  Drehung  um  M  aus,  bei  welcher  K  in  einen 
+der  Punkte  Kx,  K2,  K3,  .  .  . ,  etwa  in  Kt  übergeht.  Der  Punkt  K'  gehe 
+bei  dieser  Drehung  in  den  Punkt  K[  über.  Da  unserer  Annahme  zufolge 
+K  und  K'  durch  kein  Punktepaar  getrennt  werden,  so  ist  das  gleiche  mit 
+dem  Punktepaar  Ki}  JT/  der  Fall.  Infolgedessen  muß  K'{  entweder  mit 
+Ki_x  oder  mit  Ki  +  1  zusammenfallen  oder  zwischen  Ki^ml  und  Ki  +  1  liegen; 
+in  jedem  Falle  liegt  also  K{  zwischen  Ki-2  und  Ki+2,  so  daß  auch  die 
+unendliche  Reihe  von  Punkten  K1}  K3',  K6,  K^ ',  K9,  KX1,  .  .  .  gewiß  von 
+der  Beschaffenheit  ist,  daß  jeder  Punkt  dieser  Reihe  zwischen  dem  voran- 
+gehenden Punkte  und  dem  Punkte  K  gelegen  ist. 
+
+Wir  wollen  nun  zeigen,  daß  auch  die  Punkte  K3,  K/,  K[ly  . . .  gegen 
+den  Punkt  K  konvergieren  müssen.  In  der  Tat,  würden  die  Punkte 
+Kg'f  K7',  Kxl,  .  .  .  einen  von  K  verschiedenen  Punkt  Q  zur  Verdichtungs- 
+stelle haben,  so  wähle  man  aus  ihnen  einen  Punkt  Kt'  aus.  Da 
+Ki\.i,  K{ +8,  Ki'+n,  ■  ■  ■  sämtlich  zwischen  K{  und  K  liegen,  so  gibt  es  eine 
+geschlossene  Jordansche  Kurve  K[K,  die  den  Punkt  K^  von  den  Punkten 
+Ki  +  i,  K{+8,  Ki'+i2,  .  .  .  und  daher  auch  von  Q  trennt,  d.  h.  Q  liegt  not- 
+wendig zwischen  K[  und  K.  Wegen  der  Anordnung  der  Punkte  Ki  zu  den 
+Punkten  K[  folgt  hieraus,  daß  Q  auch  zwischen  den  sämtlichen  Punkten 
+Klf  Kb,  K(J,  .  .  .  einerseits  und  K  andererseits  liegt.  Die  geschlossene 
+Jordansche  Kurve  QK^  müßte  mithin  sämtliche  Punkte  Klt  K0,  K9,  .  .  . 
+von  K  trennen;  dann  könnten  aber  die  Punkte  K1}  K5,  K9,  ...  nicht 
+gegen  K  konvergieren,  wie  es  sein  sollte. 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  135 
+
+Nunmehr  betrachten  wir  die  gegen  K  konvergierenden  Punkte  K3, 
+K1}  Kn,  .  .  .  und  die  Punkte  K3',  ÜT7',  K[XJ .  .  . ,  die  nach  dem  eben  Be- 
+wiesenen ebenfalls  gegen  K  konvergieren.  Da  mittels  einer  Drehung  um 
+M  der  Punkt  K  in  K{  und  zugleich  K'  in  K[  übergeht,  so  müßte  es 
+nach  Axiom  III  auch  eine  Drehung  geben,  welche  K  und  zugleich  K'  in 
+die  gemeinsame  Konvergenzstelle  K  überführt.  Dies  ist  aber  ein  Wider- 
+spruch gegen  die  Definition  der  Drehung.  Somit  ist  durch  Widerlegung 
+unserer  Annahme  der  zu  Anfang  dieses  §  6  aufgestellte  Satz  vollständig 
+bewiesen. 
+
+§  7. 
+
+Mit  Rücksicht  auf  die  Festsetzungen  zu  Beginn  des  §  6  fassen  wir 
+den  wahren  Kreis  x  unter  Ausschluß  des  Punktes  K^  als  eine  geordnete 
+Punktmenge  im  Sinne  Gantors  auf:  dann  besitzt  diese  PunMmenge  den 
+Ordnungstypus  des  Linearkontinuums. 
+
+Zum  Beweise  hierfür  bestimmen  wir  zunächst  eine  abzählbare  Menge  S 
+von  Punkten  des  wahren  Kreises  x,  deren  Verdichtungsstellen  den  wahren 
+Kreis  x  selbst  ausmachen.  Eine  solche  Menge  S  besitzt  nach  Cantor1)  den 
+Ordnungstypus  des  Systems  aller  rationalen  Zahlen  in  ihrer  natürlichen 
+Rangordnung,  d.  h.  es  ist  möglich,  den  Punkten  des  Systems  S  derart 
+die  rationalen  Zahlen  zuzuordnen,  daß,  wenn  A,  B,  C  irgend  drei  Punkte 
+in  S  sind,  von  denen  B  zwischen  A  und  G  liegt,  von  den  drei  zugeord- 
+neten rationalen  Zahlen  a,  b,  c  allemal  die  Zahl  b  ihrem  Werte  nach 
+zwischen  a  und  c  liegt. 
+
+Es  sei  nun  K  irgend  ein  Punkt  des  wahren  Kreises  x,  welcher  nicht 
+dem  System  S  angehört;  sind  dann  A,  B  Punkte  von  S,  so  nennen  wir 
+A,  B  auf  verschiedenen  Seiten  oder  auf  derselben  Seite  von  K  gelegen, 
+je  nachdem  K  zwischen  A  und  B  oder  nicht  zwischen  A  und  B  liegt. 
+Übertragen  wir  diese  Festsetzung  von  den  Punkten  des  Systems  S  auf 
+die  denselben  zugeordneten  rationalen  Zahlen,  so  erhalten  wir  unter  Ver- 
+mittelung  des  Punktes  K  einen  bestimmten  Schnitt  im  Sinne  Bedekinds 
+durch  das  System  der  rationalen  Zahlen:  wir  ordnen  dem  Punkte  K  die 
+durch  diesen  Schnitt  definierte  irrationale  Zahl  zu. 
+
+Es  kann  nicht  zwei  verschiedene  Punkte  K  und  K'  auf  x  geben,  denen 
+die  gleiche  irrationale  Zahl  zugeordnet  erscheint.  In  der  Tat,  konstruieren 
+wir  eine  geschlossene  Jordansche  Kurve  KK'  und  sei  H  irgend  ein 
+zwischen  K  und  K'  und  folglich  innerhalb  KK'  gelegener  Punkt  von  x, 
+so  muß  es,  da  H  eine  Verdichtungsstelle  von  Punkten  des  Systems  S  ist, 
+
+
+1)  Beiträge  zur  Begründung  der  transfiniten  Mengenlehre,  Math.  Annalen  Bd.  46, 
+§  9;  hinsichtlich  der  weiteren  Schluß  weise  des  Textes  vergleiche  man  insbesondere  §11. 
+
+
+136  Anhang  IV:    Grandlagen  der  Geometrie. 
+
+gewiß  auch  einen  Punkt  A  in  S  geben,  der  innerhalb  KK'  und  daher 
+auch  zwischen  K  und  K'  liegt.  Die  zu  A  gehörige  rationale  Zahl  a 
+bedingt  daher  jedenfalls  eine  "Verschiedenheit  der  Schnitte,  die  unter  Ver- 
+inittelung  der  Punkte  K  und  K'  entstanden  sind. 
+
+Wir  wollen  endlich  zeigen,  daß  es  auch  umgekehrt  zu  jeder  irratio- 
+nalen Zahl  a  einen  Punkt  K  auf  x  gibt,  dem  diese  zugeordnet  erscheint. 
+Zu  dem  Zwecke  sei  ax,a2,a3,...  eine  Reihe  zunehmender  und  bl}  b2,  b3, . . . 
+eine  Reihe  abnehmender  Zahlen,  deren  jede  gegen  a  konvergiert.  Man 
+konstruiere  die  diesen  Zahlen  zugehörigen  Punkte  Ax,  A2,  A3,  .  .  .  bez. 
+B1}  B2,  B3,  ...  und  bezeichne  mit  K  irgend  eine  Verdichtungsstelle  dieser 
+
+Punkte  A1,A2,A3,...,Bl,B2,B3, Der  Punkt  K  gehört  dann  notwendig 
+
+der  Zahl  a  zu.  Denn  wenn  wir  allgemein  eine  geschlossene  Jordansche 
+Kurve  AiBi  konstruieren,  so  liegen  die  Punkte  Ai  +  l,  Ai+2,  Ai  +  3,  .  .., 
+•^i  +  i?  ^i  +  2?  ^i  +  3>  •  •  •  und  folglich  auch  der  Verdichtungspunkt  K  inner- 
+halb AiJBi  d.  h.  zwischen  den  Punkten  Ai}  B{.  Der  unter  Vermittelung 
+von  K  entstehende  Schnitt  ist  mithin  kein  anderer  als  derjenige,  der  die 
+Zahl  a  bestimmt. 
+
+Betrachten  wir  nun  die  Punkte  auf  der  Peripherie  eines  gewöhnlichen 
+Zahlenkreises  mit  dem  Radius  1  und  ordnen  einem  dieser  Punkte  das 
+Zeichen  +  oo  und  den  Punkt  Km  zu,  den  übrigen  Punkten  dagegen  in 
+stetiger  Folge  die  sämtlichen  reellen  Zahlen  und  diesen  wiederum  die  ent- 
+sprechenden Punkte  des  wahren  Kreises  x,  so  gelangen  wir  zu  folgendem 
+Resultat:  Die  Punkte  des  wahren  Kreises  x  lassen  sich  unter  Erhaltung 
+ihrer  Anordnung  umkehrbar  eindeutig  auf  die  Punkte  der  Peripherie  eines 
+gewöhnlichen  Zahlenkreises  mit  dem  Radius  1  abbilden. 
+
+§  8. 
+
+Um  das  in  §  4  bezeichnete  Ziel  zu  erreichen,  bleibt  nur  noch  die 
+Stetigkeit  der  gewonnenen  Abbildung,  d.  h.  die  Lückenlosigkeit  des  wahren 
+Kreises  x  zu  zeigen  übrig.  Zu  dem  Zwecke  denken  wir  uns  die  Punkte 
+des  wahren  Kreises  x  durch  die  Koordinaten  x,  y  der  Zahlenebene  und 
+andererseits  die  Punkte  des  Zahlenkreises  mit  dem  Radius  1  durch  den 
+Bogen  t  von  einem  festen  Anfangspunkte  an  bestimmt:  dann  haben  wir 
+zu  beweisen,  daß  x,  y  stetige  Funktionen  von  t  sind. 
+
+Es  seien  nun  tlf  t2,  t3,  .  .  .  irgend  eine  Reihe  gegen  <*  konvergierender 
+entweder  sämtlich  wachsender  oder  sämtlich  abnehmender  Werte  und 
+KL,  K2,  K3,  .  .  .  seien  bez.  die  diesen  Parameterwerten  zugeordneten  Punkte 
+des  wahren  Kreises  x,  während  der  Wert  t*  einem  Punkte  K*  auf  x  ent- 
+sprechen möge.  Es  sei  ferner  Q  eine  Verdichtungsstelle  der  Punkte 
+K1}  K2,  K3,  . . .  .  Konstruieren  wir  allgemein  eine  geschlossene  Jordansche 
+Kurve  K{K*,  so  liegen  notwendig  die  Punkte  Ki  +  1,  Ki  +  2,  Ki  +  3>  .  .  .  und 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  137 
+
+folglich  auch  deren  Verdichtungsstelle  Q  innerhalb  KtK*  d.  h.  es  liegt 
+auch  der  Punkt  Q  zwischen  K{  und  K*;  demnach  muß  sich  auch  der  zu 
+Q  gehörige  Wert  des  Parameters  t  allgemein  zwischen  tt  und  t*  befinden. 
+Der  letztere  Widerspruch  löst  sich  nur,  wenn  Q  und  K*  zusammenfällt; 
+mithin  konvergieren  die  Punkte  K1}  K2,  K3,  .  .  .  gegen  den  Punkt  K*. 
+Damit  ist  die  Stetigkeit  der  Funktion  x,  y  vom  Parameter  t  völlig  be- 
+wiesen und  es  folgt  eine  Tatsache,  die  wir  in  §  4  als  das  erste  wichtige 
+Ziel  unserer  Entwickelung  hingestellt  haben,  nämlich  der  folgende  Satz: 
+Der  wahre  Kreis  x  ist  in  der  Zahlenebene  eine  geschlossene  Jordanschc 
+
+Kurve. 
+
+§9. 
+
+Wir  wissen,  daß  die  Punkte  des  wahren  Kreises  x  sämtlich  zu  den 
+Punkten  auf  kk  gehören;  es  wird  sich  auch  zeigen,  daß  letztere  Punkte 
+sämtlich  auf  x  liegen,  so  daß  der  weitergehende  Satz  gilt: 
+
+Der  wahre  Kreis  x  ist  identisch  mit  den  Punkten  auf  kk;  die  inner- 
+halb x  liegenden  Punkte  sind  zugleich  die  Punkte  innerhalb  kk  und  die 
+außerhalb  x  liegenden  Punkte  sind  zugleich  die  Punkte  außerhalb  kk. 
+
+Um  diesen  Satz  zu  erkennen,  zeigen  wir  zunächst,  daß  der  Punkt  M, 
+der  „Mittelpunkt"  des  wahren  Kreises  x,  mit  jedem  Punkte  J  innerhalb  x 
+durch  eine  stetige  Kurve  verbunden  werden  kann,  ohne  daß  dabei  der 
+wahre  Kreis  x  überschritten  wird. 
+
+In  der  Tat,  ziehen  wir  durch  J  irgend  eine  gewöhnliche  Gerade  in 
+der  Zahlenebene,  eine  sogenannte  „Zahlengerade",  so  seien  Kx  und  K2  die 
+ersten  Punkte  dieser  Zahlengeraden,  die  auf  x  liegen,  nach  den  beiden 
+Richtungen  hin  von  J  aus  gerechnet.  Da  Kx  und  K2  auch  Punkte  auf 
+kk  sind,  so  können  sie  mit  M  durch  je  eine  Jordansche  Kurve  MKX  bez. 
+MK2  verbunden  werden,  die  ganz  innerhalb  kk  verlaufen  und  daher  gewiß 
+nicht  den  wahren  Kreis  x  überschreiten.  Trifft  eine  dieser  Jordanschen 
+Kurven  das  Geradenstück  KtK2  etwa  im  Punkte  B,  so  bildet  das  Kurven- 
+stück MB  mit  dem  Geradenstück  JB  zusammen  den  gesuchten  Verbin- 
+dungsweg. Im  entgegengesetzten  Falle  bilden  MKt  und  MK2  zusammen 
+mit  dem  Geradenstück  KtK2  eine  geschlossene  Jordansche  Kurve  y.  Da 
+diese  Kurve  y  ganz  innerhalb  des  Zahlenkreises  !  (§  1)  liegt,  so  läßt  sich 
+der  außerhalb  des  Zahlenkreises  Ä  gelegene  Punkt  A  gewiß  nicht  mit  einem 
+Punkte  innerhalb  y  verbinden,  ohne  daß  dabei  ein  Punkt  der  Kurve  y 
+überschritten  wird.  Die  Kurve  y  besteht  nun  aus  Punkten  innerhalb  kk, 
+aus  Punkten  auf  kk  und  aus  Punkten  innerhalb  x.  Da  die  letzteren  Punkte 
+von  A  aus  nur  durch  Überschreitung  eines  Punktes  auf  x,  der  ebenfalls 
+ein  Punkt  auf  kk  ist,  erreicht  werden  kann,  so  liegt  das  ganze  innerhalb  y 
+gelegene  Gebiet  notwendig  auch  innerhalb  kk,  Verbinden  wir  also  M 
+mit  J  durch  einen  stetigen  innerhalb  y  verlaufenden  Weg,  so  überschreitet 
+
+
+138  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+dieser  Weg  den  wahren  Kreis  x  sicher  nicht  und  ist  mithin  von  der  ge- 
+wünschten Art. 
+
+Wir  schließen  daraus  zunächst,  daß  M  innerhalb  x  liegt,  d.  h.  der 
+Mittelpunkt  M  des  wahren  Kreises  x  liegt  innerhalb  desselben. 
+
+Da  ferner  jeder  Punkt  auf  kk  mit  M  durch  eine  Jordansche  Kurve 
+verbunden  werden  kann,  die,  von  den  Endpunkten  abgesehen,  ganz  inner- 
+halb kk  verläuft  und  also  x  gewiß  nicht  trifft,  so  liegt  jeder  Punkt  auf  kk 
+notwendig  auf  x  oder  innerhalb  x.  Gäbe  es  einen  Punkt  P  auf  kk,  der 
+innerhalb  x  liegt,  so  könnte  der  außerhalb  ®  gelegene  Punkt  A  nicht  mit 
+Punkten  in  beliebiger  Nähe  von  P  verbunden  werden,  ohne  daß  dabei  ein 
+Punkt  von  x  überschritten  wird;  da  aber  jeder  Punkt  von  x  zu  den  be- 
+deckten gehört,  so  könnte  P  nicht  ein  Punkt  auf  kk  sein;  dies  ist  ein 
+Widerspruch.  Alle  Punkte  auf  kk  liegen  also  zugleich  auf  x,  womit  die 
+obige  Behauptung  völlig  erwiesen  ist. 
+
+§  10. 
+
+Das  Punktgebilde  kk  ist  in  §  2  durch  eine  gewisse  Konstruktion  aus 
+dem  Zahlenkreise  k  hervorgegangen.  Da  der  Zahlenkreis  k,  wie  in  §  3 
+gezeigt  worden  ist,  mindestens  einen  Punkt  auf  kk  enthält  und  im  übrigen 
+ganz  auf  oder  innerhalb  kk  liegt  und  die  Punkte  auf  kk  nach  §  9  nichts 
+anderes  als  der  wahre  Kreis  x  sind,  so  haben  wir  in  der  obigen  Konstruk- 
+tion zugleich  ein  Mittel,  um  aus  dem  Zahlenkreise  k  einen  wahren  Kreis  x 
+zu  konstruieren,  welcher  eine  geschlossene  Jordansche  Kurve  ist  und  den 
+Zahlenkreis  k  umschließt,  diesen  von  außen  berührend;  hier  und  im 
+folgenden  sagen  wir  von  zwei  Jordanschen  Kurven,  wenn  die  eine  die 
+andere  im  Inneren  enthält  und  mit  ihr  wenigstens  einen  Punkt  gemein  hat, 
+daß  die  erste  die  zweite  von  außen,  diese  aber  jene  von  innen  berührt. 
+
+Durch  eine  geringe  Abänderung  des  früheren  Verfahrens,  nämlich 
+durch  eine  Vertauschung  der  Rollen,  die  den  Punkten  innerhalb  und 
+außerhalb  Jb  zugeteilt  worden  sind,  können  wir  aus  dem  Zahlenkreise  k 
+noch  einen  anderen  wahren  Kreis  konstruieren:  wir  bezeichnen  jetzt  diejenigen 
+Punkte  der  Zahlenebene,  die  bei  irgend  einer  Drehung  um  M  aus  Punkten 
+außerhalb  oder  auf  k  entstehen,  als  bedeckt;  alle  anderen  Punkte  dagegen 
+als  unbedeckt.  Wenn  nun  ein  unbedeckter  Punkt  sich  durch  eine  Jordansche 
+Kurve,  die  aus  lauter  unbedeckten  Punkten  besteht,  mit  M  verbinden  läßt, 
+so  heiße  dieser  Punkt  innerhalb  kkk.  Die  Grenzpunkte  dieser  Punkte 
+innerhalb  kkk  heißen  Punkte  auf  kkk  und  alle  übrigen  Punkte  heißen 
+außerhalb  kkk.  Wir  zeigen  dann  ähnlich  wie  in  §  3 — §  9,  daß  die  Punkte 
+auf  kkk  einen  wahren  Kreis  um  M  bilden,  der  eine  geschlossene  Jordansche 
+Kurve  ist,  den  Mittelpunkt  M  umschließt  und  innerhalb  des  Zahlenkreises  k 
+verläuft,  diesen  von  innen  berührend. 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  139 
+
+§   11. 
+
+An  Stelle  des  Zahlenkreises  k  kann  man  nun  eine  beliebige  geschlossene 
+innerhalb  k  verlaufende  Jordans  che  Kurve  z  wählen,  die  den  Punkt  M  im 
+Innern  enthält:  durch  Anwendung  der  nämlichen  Konstruktion  erhalten  wir 
+dann  zu  dieser  Kurve  z  sotvohl  einen  bestimmten  sie  umschließenden  wahren 
+Kreis  um  M,  der  eine  geschlossene  Jordansche  Kurve  ist  und  z  von  außen 
+berührt,  als  auch  einen  bestimmten  innerhalb  z  verlaufenden  wahren  Kreis 
+um  M,  der  eine  geschlossene  Jordansche  Kurve  ist  und  z  von  innen  berührt. 
+
+Wir  bemerken  noch,  daß  jeder  solche  aus  einer  Jordanschen  Kurve  z 
+konstruierte  wahre  Kreis  auch  aus  einem  Zahlenkreise  erzeugt  werden  kann: 
+man  braucht  nur  denjenigen  Zahlenkreis  zu  wählen,  der  innerhalb  des  vor- 
+gelegten wahren  Kreises  ihn  von  innen  berührend  verläuft  bez.  ihn  von 
+außen  berührend  umschließt;  denn  zwei  wahre  Kreise,  die  geschlossene 
+Jordansche  Kurven  sind  und  denselben  Zahlenkreis  sei  es  beide  umschließend, 
+sei  es  beide  ganz  innerhalb  verlaufend  berühren,  müßten  gewiß  einen  Punkt 
+gemein  haben  und  wären  folglich  überhaupt  miteinander  identisch. 
+
+§  12. 
+
+Nunmehr  können  wir  ohne  erhebliche  Schwierigkeit  die  wichtige 
+Tatsache  beweisen,  daß  jeder  durch  irgend  einen  Punkt  P  innerhalb  x 
+gehende  wahre  Kreis  um  M  ebenso  wie  die  in  §  11  konstruierten  wahren 
+Kreise  eine  geschlossene  Jordansche  Kurve  ist,  die  M  im  Innern  enthält. 
+
+Zum  Beweise  fassen  wir  einerseits  alle  wahren  Kreise  um  M  ins 
+Auge,  die  geschlossene  Jordansche  Kurven  sind  und  P  ausschließen:  sie 
+mögen  wahre  Kreise  erster  Art  heißen;  und  andererseits  alle  diejenigen, 
+die  geschlossene  Jordansche  Kurven  sind  und  P  einschließen:  sie  mögen 
+wahre  Kreise  zweiter  Art  heißen. 
+
+Wir  denken  uns  zunächst  aus  jedem  Zahlenkreise  mit  dem  Mittel- 
+punkt M  den  umschließenden  wahren  Kreis  erzeugt  und  fassen  dann  die- 
+jenigen Zahlenkreise  ins  Auge,  aus  denen  wahre  Kreise  entspringen,  die 
+erster  Art  sind.  Sodann  suchen  wir  für  diese  Zahlenkreise  den  Grenz- 
+kreis g,  d.  h.  den  kleinsten  Zahlenkreis,  der  sie  sämtlich  enthält.  Alle 
+Zahlenkreise,  die  kleiner  als  g  sind,  liefern  dann  wahre  Kreise  erster  Art. 
+Der  aus  dem  Zahlenkreise  g  entspringende  wahre  Kreis  y  müßte,  wenn  er 
+nicht  durch  P  geht,  diesen  Punkt  ebenfalls  ausschließen.  Denn  läge  P  inner- 
+halb y,  so  ziehe  man  eine  ganz  innerhalb  y  verlaufende,  die  Punkte  M  und 
+P  umschließende  geschlossene  Jordansche  Kurve  und  erzeuge  aus  dieser 
+den  wahren  Kreis,  der  sie  umschließt.  Dieser  wahre  Kreis  ließe  sich,  da 
+er  ja  gewiß  in  das  Innere  des  Zahlenkreises  g  hineintritt,  durch  einen 
+Zahlenkreis  erzeugen,  der  kleiner  als  g  ist;  er  umschließt  ferner  den  Punkt 
+
+
+140  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+P,  was  nicht  möglich  ist.  Da,  wie  erwähnt,  alle  wahren  Kreise  um  M, 
+die  geschlossene  Jordansche  Kurven  sind,  auch  aus  Zahlenkreisen  um  M 
+entspringen,  so  ist  offenbar  der  aus  g  entspringende  wahre  Kreis  ein 
+solcher  Kreis  erster  Art,  welcher  alle  anderen  wahren  Kreise  erster  Art 
+umschließt. 
+
+Indem  wir  andererseits  aus  jedem  Zahlenkreise  mit  dem  Mittelpunkt 
+M  denjenigen  wahren  Kreis  erzeugt  denken,  der  jenen  Zahlenkreis  aus- 
+schließt, beweisen  wir  auf  ähnlichem  Wege  die  Existenz  eines  wahren 
+Kreises  zweiter  Art,  welcher  von  allen  anderen  wahren  Kreisen  zweiter  Art 
+umschlossen  wird. 
+
+Würden  nun  die  gefundenen  wahren  Grenzkreise  beide  nicht  durch 
+P  gehen,  so  könnte  man  eine  Jordansche  Kurve  in  dem  zwischen  ihnen 
+gelegenen  ringförmigen  Gebiete  ziehen,  welche  sicher  durch  unser  Verfahren 
+einen  wahren  Kreis  liefern  würde,  der  eine  geschlossene  Jordansche  Kurve, 
+aber  weder  von  der  ersten  noch  von  der  zweiten  Art  wäre;  dies  ist  ein 
+Widerspruch  und  damit  haben  wir  die  zu  Anfang  von  §  12  aufgestellte 
+Behauptung  bewiesen. 
+
+§  13. 
+
+Nachdem  wir  im  vorstehenden  die  wichtigsten  Eigenschaften  der 
+wahren  Kreise  um  M  gefunden  haben,  die  durch  Punkte  innerhalb  % 
+laufen,  wenden  wir  uns  nun  zur  Untersuchung  der  Gruppe  aller  Bewegungen, 
+die  hei  den  Drehungen  der  Ebene  um  M  der  wahre  Kreis  %  in  sich 
+erfährt. 
+
+Es  seien  den  Entwickelungen  in  §  8  gemäß  die  Punkte  des  wahren 
+Kreises  x  auf  die  Punkte  t  der  Peripherie  eines  Zahlenkreises  mit  dem 
+Radius  1  unter  Erhaltung  ihrer  Anordnung  abgebildet:  dann  entspricht 
+einer  jeden  Drehung  A  unserer  Ebene  um  M  eine  bestimmte  umkehrbar 
+eindeutige  stetige  Transformation  der  Punkte  t  des  Einheitskreises  in 
+sich,  da  ja  nach  §  5  bei  einer  Drehung  die  Anordnung  der  Punkte  auf 
+dem  wahren  Kreise  und  daher  mit  Rücksicht  auf  §  7  auch  die  Anordnung 
+der  Parameterwerte  t  ungeändert  bleibt.  Diese  Transformation  läßt  sich 
+durch  eine  Formel  von  der  Gestalt 
+
+t'=A(t) 
+darstellen,  wo  A(f)  eine  stetige  Funktion  ist,  die  mit  wachsendem  t  ent- 
+weder   stets    wächst    oder    stets    abnimmt    und    die    bei  Vermehrung    des 
+Arguments  t  um  2  %  sich  ebenfalls  um  den  Betrag  2jt  ändert. 
+
+Diejenigen  Funktionen  A(T),  die  bei  wachsendem  Argument  t  ab- 
+nehmen, entsprechen  Transformationen,  die  den  Umlaufssinn  auf  dem 
+wahren  Kreise  ändern,  und  da  zufolge  unserer  Fassung  des  Begriffes  der 
+Bewegung  bei  einer  Bewegung  der  Umlaufssinn  stets  derselbe  bleiben  soll, 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  141 
+
+so  ergibt  sich,  daß  die  Funktion  A(t)  bei  wachsendem  Argument  t  stets 
+wachsen  muß. 
+
+§  14. 
+
+Wir  fragen  zunächst,  ob  es  in  dieser  Gruppe  aller  Drehungen  um  M 
+eine  Drehung  geben  kann,  bei  welcher  ein  Punkt  A  des  wahren  Kreises  x 
+ungeändert  bleibt.  Es  sei  t  =  a  der  Parameterwert  für  einen  solchen 
+Punkt  A  und  dieser  bleibe  bei  der  eigentlichen  Drehung  A  fest,  die  durch 
+die  Formel 
+
+t'=  A(i) 
+
+dargestellt  wird.  Ferner  sei  B  irgend  ein  Punkt  des  wahren  Kreises  mit 
+dem  Parameterwert  t  =  b,  der  bei  der  Drehung  A  seine  Lage  verändere; 
+wir  machen   etwa  die  Annahme  b  <  a,  worin  keine  Einschränkung  liegt. 
+
+Sowohl  A(t)  als  auch  die  umgekehrte  Funktion  A-1(£)  sind  von  der 
+Art,  daß  sie  bei  zunehmendem  Argument  zunehmen.  Wegen  A(a)  =  a 
+schließen  wir  hieraus  der  Reihe  nach,  daß  sämtliche  Größen,  die  durch 
+die  symbolischen  Potenzen 
+
+A(b),  AA(6)  -  A\b),  A3(6), . . .,  A"1^),  A~\b),  A~\b), . . . 
+dargestellt  werden,   unterhalb  a  liegen.     Nun  bilden,  falls  A(b)  >  b  aus- 
+fällt, die  Größen 
+
+A{b),A\b),A\b),... 
+
+eine  Reihe  beständig  zunehmender  Werte;  im  Falle  A(b)  <  b  gilt  das 
+gleiche  von  der  Größenreihe 
+
+A-\b),A-*(b),A-*(b),.... 
+Aus  diesen  Tatsachen  entnehmen  wir,  daß  im  ersteren  Falle  die  direkten 
+Wiederholungen  der  Drehung  A  auf  b  angewandt,  im  letzteren  die  symbo- 
+lischen Potenzen  von  A(fo)  mit  negativen  Exponenten  sich  einem  Grenzwert// 
+nähern  müssen,  der  zwischen  a  und  b  liegt  oder  mit  a  übereinstimmt.  Ent- 
+spricht der  Grenzzahl  g  etwa  der  Punkt  G  auf  dem  wahren  Kreise  x,  so 
+bilden  die  Potenzen  von  A  mit  positiven  bez.  negativen  Exponenten  Be- 
+wegungen, so  daß  durch  sie  der  Punkt  B  schließlich  in  beliebige  Nähe  von  G 
+übergeht  und  zugleich  durch  sie  Punkte  in  beliebig  kleiner  Umgebung  von  G 
+in  beliebig  kleiner  Umgebung  von  G  bleiben.  Nach  Axiom  III  müßte  es  dem- 
+nach eine  Bewegung  geben,  welche  B  in  G  überführt  und  zugleich  G  unge- 
+ändert läßt;  dies  widerspräche  dem  Begriffe  der  Bewegung.  Es  ist  demnach 
+die  Drehung  A,  welche  den  Punkt  A  festläßt,  notwendig  eine  solche,  die  alle 
+Punkte  des  Kreises  %  festläßt,  d.  h.  für  diesen  Kreis  die  Identität  ist. 
+
+§  15. 
+Aus  der  Definition  des  wahren  Kreises  leuchtet  unmittelbar  die  folgende 
+Tatsache  ein: 
+
+
+142  Anhang  IV :    Grundlagen  der  Geometrie. 
+
+Es  gibt  stets  eine  Drehung  um  M,  welche  den  beliebig  gegebenen  Punkt  0 
+des  wahren  Kreises  x  in  einen  anderen  beliebig  gegebenen  Punkt  S  desselben 
+überführt. 
+
+§  16. 
+
+Wir  leiten  jetzt  eine  weitere  Eigenschaft  für  die  Gruppe  der  Be- 
+wegungen eines  wahren  Kreises  in  sich  ab. 
+
+Es  seien  0,  S,  T,  Z  vier  solche  Punkte  auf  dem  wahren  Kreise  x,  daß 
+diejenige  Drehung  um  M,  vermöge  welcher  0  in  S  übergeht,  den  Punkt 
+T  nach  Z  bewegt,  so  daß  die  Lage  von  Z  eindeutig  durch  die  Punkte 
+0,  S,  T  mitbestimmt  ist.  Halten  wir  0  fest  und  bewegen  S  und  T  auf 
+dem  wahren  Kreise,  so  erfolgt  bei  stetiger  Änderung  von  S  und  T  auch  die 
+Änderung  von  Z  stetig. 
+
+Um  dies  zu  beweisen,  wählen  wir  eine  unendliche  Reihe  von  Punkten 
+Sx,  S2,  S3,  .  .  .  ,  die  gegen  den  Punkt  S  konvergieren,  und  eine  unendliche 
+Reihe  von  Punkten  Tlf  T2,  T3,  .  .  .,  die  gegen  den  Punkt  T  konvergieren. 
+Die  Drehungen  um  M,  vermöge  deren  0  in  8U  S2,  S3,  .  .  .  übergeht,  be- 
+zeichnen wir  bez.  mit  A1?  A2,  A3, .  .  .  und  die  durch  diese  Drehungen  bez. 
+aus  T1,T2,T3,  ...  entspringenden  Punkte  seien  Zx,  Z2,  Z3,  . . . ;  dann  haben 
+wir  zu  zeigen,  daß  die  Punkte  Z1}  Z2,  Z3,  .  .  .  gegen  Z  konvergieren.    Es 
+
+sei  Z*  eine  Verdichtungsstelle  der  Punkte  Zlf  Z2f  Z3, Nach  Axiom  III 
+
+gibt  es  dann  eine  Drehung  um  M,  vermöge  deren  0  in  S  und  zugleich 
+T  in  Z*  übergeht.  Hierdurch  erweist  sich  aber  Z*  als  eindeutig  bestimmt 
+und  mit  Z  identisch. 
+
+§  17. 
+In  §  14 — §  16  haben  wir  erkannt,  daß  die  Gruppe   aller  Drehungen 
+des  wahren  Kreises  %  in  sich  die  folgenden  Eigenschaften  besitzt: 
+
+1.  Es  gibt  außer  der  Identität  keine  Drehung  um  M,  welche  einen 
+Punkt  des  wahren  Kreises  x  festläßt. 
+
+2.  Wenn  0,  S  irgend  zwei  beliebige  Punkte  des  wahren  Kreises  % 
+sind,  so  gibt  es  gewiß  eine  Drehung  um  M,  welche  0  in  S  überführt. 
+
+3.  Bei  einer  Drehung  um  M,  die  0  nach  S  bewegt,  gehe  zugleich 
+T  in  Z  über;  der  somit  durch  0,  S,  T  eindeutig  bestimmte  Punkt  Z 
+erfährt  auf  x  eine  stetige  Änderung,  wenn  S  und  T  auf  x  stetig  ihre 
+Lage  ändern. 
+
+Diese  drei  Eigenschaften  bestimmen  vollständig  den  Bau  der  Gruppe 
+der  Transformationen  A(£),  die  den  Bewegungen  des  wahren  Kreises  in 
+sich  entsprechen.     Wir  stellen  nämlich  den  folgenden  Satz  auf: 
+
+Die  Gruppe  aller  Bewegungen  des  wahren  Kreises  %  in  sich,  die  Drehungen 
+um  M  sind,  ist  holoedrisch -isomorph  mit  der  Gruppe  der  gewöhnlichen 
+Drehungen  des  Zahleneinheitskreises  um  M  in  sich. 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  143 
+
+§  18. 
+
+Wenn  wir  uns  diejenige  Drehung  um  M,  die  den  Punkt  0  des  wahren 
+Kreises  %  mit  dem  Parameterwert  0  in  den  Punkt  S  mit  dem  Parameter- 
+wert s  überführt,  durch  die  Transformationsformel 
+
+f'-  A(t,s) 
+dargestellt  denken,  wobei  wir  den  Funktionswert  A(t,Ö)  =  t  nehmen,  so 
+erkennen  wir  auf  Grund  der  gefundenen  Eigenschaften  der  Drehungs- 
+gruppe, daß  die  Funktion  A(t,  s)  eindeutig  und  stetig  für  alle  Werte  der 
+beiden  V eränderlichen  t,  s  ist.  Auch  folgt,  da  s  bis  auf  Vielfache  von  2  % 
+eindeutig  durch  zwei  zusammengehörige  Werte  t  und  t'  bestimmt  ist,  daß 
+die  Funktion  A(t,  s)  bei  konstantem  t  mit  wachsendem  s  nur  entweder 
+beständig  wächst  oder  abnimmt,  und  da  sie  für  t  =  0  in  s  übergeht,  so 
+tritt  notwendig  der  erstere  Fall  ein.     Nun  ist 
+
+A{t,t)>A{0,t),    A(ö,9-*;     (*>o) 
+
+und  wegen 
+
+A(2jt,  s)  =  2x  +  A(0,  s)  =  2x  +  s 
+folgt 
+
+A(2ar,  2x)  =  4jt. 
+
+Mithin  hat  die  Funktion  A  (t}  t)  (>  t)  der  einen  Veränderlichen  t  die  Eigen- 
+schaft, beständig  von  0  bis  4ji  zu  wachsen,  während  das  Argument  t  von 
+0  bis  2it  wächst.  Aus  diesem  Umstände  schließen  wir  sofort  folgende 
+Tatsache: 
+
+Wenn  irgend  eine  positive  Zahl  t' <L2it  vorgelegt  ist,  so  gibt  es 
+stets  eine  und  nur  eine  positive  Zahl  t,  so  daß 
+
+A{t,t)  =  f 
+wird;  es  ist  t  <  t '.    Der  Parameterwert  t  liefert  einen  Punkt  des  wahren 
+Kreises  von  der  Art,  daß  bei  einer  gewissen  Drehung  um  M  der  Punkt 
+t  =  0  sich  nach  t  und  zugleich  der  Punkt  t  nach  t'  bewegt. 
+
+Wir  bezeichnen  nun  denjenigen  Wert  von  t,  für  welchen 
+
+A(t,  t)  =  2% 
+wird,  mit  9>(J),  denjenigen,  für  welchen 
+
+wird,  mit  <p\^),  denjenigen,  für  welchen 
+
+A(M)  =  9>(^f) 
+wird,  mit  <p(ös)>  '  '  ''i  ferner  setzen  wir  allgemein 
+
+
+144  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+wo  2  a  eine  gerade  ganze  Zahl  bedeutet  und  n  eine  ganze  Zahl  ^>  1  ist, 
+und  ferner  setzen  wir 
+
+9>(0)  =  0,     cp(l)  =  2x. 
+Damit  ist  die  Funktion  qp   für  alle  rationalen  Argumente,  deren  Nenner 
+eine  Potenz  von  2  ist,  widerspruchslos  definiert. 
+
+Ist  nun  6  ein  beliebiges  positives  Argument  <  1 ,  so  entwickeln  wir 
+6  in  einen  Dualbruch  von  der  Form 
+
+u         2   T  22  T  23    '  * 
+
+wo  0U  eS}  0ti  .>  .  lauter  Ziffern  0,  1  bedeuten.     Da  die  Zahlen  der  Reihe 
+
+gewiß  niemals  abnehmen  und  sämtlich  ^y>(l)  bleiben,  so  nähern  sie  sich 
+einem  Grenzwert;  diesen  bezeichnen  wir  mit  (p{p).  Die  Funktion  <p(<j) 
+ist  eine  Funktion,  die  mit  wachsendem  Argument  stets  wächst;  wir  wollen 
+beweisen,  daß  sie  auch  stetig  ist.    In  der  Tat,  wäre  sie  an  einer  Stelle 
+
+ff  =  y  +  2Sf  +  2*  +  "'==jL    ?~'L    —#-> 
+
+\2n  2    T  2*  T  " .  '  T  2V 
+
+nicht  stetig,  so  müßten  die  beiden  Grenzwerte 
+
+L<p(^)     und      Ly(^±l) 
+
+n=  oo  n  =  oo 
+
+voneinander  verschieden  ausfallen  und  mithin  die  unendliche  Reihe  von 
+Punkten,  die  den  Parametern 
+
+«-»fr).  "-HW.  <'»(£)'•• 
+
+entsprechen,  gegen  einen  anderen  Punkt  konvergieren  als  die  unendliche 
+Reihe  von  Punkten,  die  den  Parametern 
+
+entsprechen.  Nun  führt  dieselbe  Drehung,  vermöge  deren  der  Punkt 
+t  =  (jp(  —J  in  den  Punkt  £  =  <)p(  -~- — )  übergeht,  auch  zugleich  den  Punkt 
+
+t==<p(-ä)  *n  ^en  Punkt  t  =  <p(-—i)   über,  und  da  die  Zahlen    <p  (--)  > 
+
+«p  (st)  »  V  (o» )  >  '  "  "  Deständig  abnehmen  und  die  diesen  Parameterwerten 
+entsprechenden  Punkte  daher  jedenfalls  gegen  eine  gewisse  Stelle  A  kon- 
+vergieren müssen,  so  konvergieren  mit  Rücksicht  auf  Axiom  III  einer  oft 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  145 
+
+angewandten  Scklußweise  zufolge  auch  die  vorhin  genannten  unendlichen 
+Reihen  von  Punkten  beide  gegen  denselben  Punkt. 
+
+Die  Funktion  <p(<?)  gestattet,  da  sie  stets  wächst  und  stetig  ist,  auch 
+eine  eindeutige  und  stetige  Umkehrung. 
+
+Die    Drehung    um    M,    durch    welche    der    Punkt    t  =  0    in    den 
+
+Punkt    t  =  cp  \~)   übergeht,    führt    zugleich    den    Punkt    t  =  qp  (-j-j-J    in 
+
+t  =  <P  ( -^  +  -£  )  über,  unter  om  irgend  eine  ganze  Zahl  verstanden.    Da  für 
+
+(a  \  / b        a  \ 
+
+—  I  gegen  <p  (ö)  und  zugleich  die  Zahlen  <p  I  ■—  +  -; ) 
+
+gegen  q>  ( -jjj  +  * )  konvergieren,  so  gibt  es  nach  Axiom  III  eine  Drehung, 
+
+welche  den  Punkt  t  =  0  nach  t  —  9  (<f)  und  zugleich  den  Punkt  £  =  <p  ( -~  j 
+
+nach  ^  =  9(-^  +  öj  bewegt,  d.  h.  es  ist 
+
+und,  da  (?  eine  stetige  Funktion  ist,  so  folgt  hieraus  allgemein  für  be- 
+liebige Parameter  werte  r,  6 
+
+A(<p(T),<p(a))  =  (p(r+  6). 
+
+Damit  ist  bewiesen,  daß,  wenn  wir  in  der  Transformationsformel 
+
+t  -  A  ft  s) 
+
+mittels  einer  gewissen  umkehrbar  eindeutigen  Funktion  <p  an  Stelle  von 
+t}  t'f  s  neue  Parameter  r,  t',  <j  gemäß 
+
+£  =  9>(t),       ^-f.(V),       s  =  y(ff) 
+einführen,   sich  die  Drehung  in  den  neuen  Parametern  durch  die  Formel 
+
+x  =  t  +  * 
+ausdrückt.     Dieser    Satz    lehrt   die  Richtigkeit  der   in  §  17   aufgestellten 
+Behauptung. 
+
+Wir  setzen  noch  an  Stelle  des  Parameters  6  den  Parameter  ra  =  2jrtf, 
+und  nennen  diesen  Parameterwert  &  den  Winkel  oder  die  Bogenlänge 
+zwischen  den  Punkten  0  (<5  —  0)  und  8  (d.  h.  <?)  auf  dem  wahren  Kreise  x; 
+die  Drehung,  bei  welcher  der  Punkt  0  (ö  =  0)  in  den  Punkt  8  (d.  h.  <y) 
+übergeht,  heiße  eine  Drehung  A  [co]  des  wahren  Kreises  x  in  sich  um  den 
+Winkel  co. 
+
+Hubert,  Grundlagen  der  Geometrie.  10 
+
+
+146  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+§  19. 
+
+Durch  diesen  Beweis  des  Satzes  in  §  17  haben  wir  die  Untersuchung 
+der  Drehungen  des  wahren  Kreises  x  in  sich  beendet.  Wegen  §  11  und 
+§  12  erkennen  wir,  daß  die  in  §  13 — §  18  für  den  wahren  Kreis  jc  an- 
+gewandten Schlußweisen  und  bewiesenen  Tatsachen  auch  für  alle  wahren 
+Kreise  um  M  gültig  sind,  die  innerhalb  ?c  liegen. 
+
+Wir  wenden  uns  nun  zu  der  Gruppe  der  Transformationen  aller  Punkte 
+bei  den  Drehungen  der  Ebene  um  den  festen  Punkt  M  und  beweisen  der 
+Reihe  nach  folgende  Sätze: 
+
+Es  sei  von  einem  wahren  Kreise  ft  um  M  bekannt,  daß  er  eine  ge- 
+schlossene Jordansche  Kurve  ist,  in  deren  Innerem  M  liegt:  dann  gibt  es 
+außer  der  Identität  keine  Drehung  der  Ebene  um  M,  welche  jeden  Punkt 
+des  wahren  Kreises  [i  festläßt. 
+
+Zum  Beweise  bezeichnen  wir  eine  Drehung  um  M,  die  jeden  Punkt 
+auf  yu  festläßt,  mit  M  und  nehmen  dann  erstens  im  Gegensatz  zur  Be- 
+hauptung an,  es  gäbe  auf  (i  einen  Punkt  A,  in  dessen  beliebiger  Nähe 
+Punkte  liegen,  die  ihre  Lage  bei  einer  Drehung  M  verändern.  Um  A 
+schlagen  wir,  was  nach  §  12  gewiß  möglich  ist,  einen  wahren  Kreis  a, 
+der  durch  einen  gegenüber  M  veränderlichen  Punkt  gehe  und  hinreichend 
+klein  ist,  so  daß  zufolge  der  obigen  Bemerkung  der  Satz  in  §  14  für  ihn 
+zutrifft.  Es  sei  B  ein  Schnittpunkt  dieses  Kreises  mit  ju.;  dann  charakte- 
+risiert sich  die  Bewegung  M  zugleich  als  eine  Drehung  des  Kreises  a  in  sich, 
+bei  der  B  festbleibt.  Bei  einer  solchen  Drehung  bleiben  aber  nach  §  14 
+alle  Punkte  auf  a  fest,  was  nicht  der  Fall  ist;  unsere  erstere  Annahme 
+erweist  sich  demnach  als  unzulässig. 
+
+Wir  konstruieren  nunmehr  ein  System  von  geschlossenen  Jordanschen 
+Kurven  um  M,  zu  denen  [i  gehört  und  von  denen  jede  die  andere  ent- 
+weder ganz  ein-  oder  ganz  umschließt,  so  daß  durch  jeden  Punkt  der 
+Zahlenebene  eine  und  nur  eine  Kurve  des  Systems  hindurchgeht.  Dann 
+nehmen  wir  zweitens  im  Gegensatz  zur  obigen  Behauptung  au,  es  sei  X 
+eine  Kurve  dieses  Systems  innerhalb  [i  bez.  außerhalb  ^,,  so  daß  alle  Punkte 
+in  dem  ringförmigen  Gebiete  zwischen  fi  und  X  bei  jeder  Drehung  M  fest- 
+bleiben, während  in  beliebiger  Nähe  der  Kurve  X  solche  Punkte  vorhanden 
+sind,  die  nicht  bei  jeder  Drehung  M  festbleiben. 
+
+Es  sei  A  ein  Punkt  auf  X,  in  dessen  beliebiger  Nähe  bei  M  bewegliche 
+Punkte  liegen;  dann  schlagen  wir  um  A  einen  wahren  Kreis,  der  durch 
+einen  dieser  beweglichen  Punkte  läuft  und  hinreichend  klein  ist,  so  daß 
+der  Satz  in  §  14  für  ihn  zutrifft.  Da  dieser  Kreis  bei  genügender  Klein- 
+heit jedenfalls  durch  einen  Teil  des  ringförmigen  bei  den  Bewegungen  M 
+festbleibenden    Gebietes    hindurchläuft,    so    charakterisiert    sich    die    Be- 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  147 
+
+wegung  M  zugleich  als  eine  Drehung  des  Kreises  a  in  sich,  bei  welcher 
+unendlich  viele  Punkte  von  a  festbleiben.  Bei  M  müßten  daher  nach  §  14 
+alle  Punkte  von  a  festbleiben,  was  nicht  der  Fall  ist.  Damit  ist  gezeigt, 
+daß  bei  den  Drehungen  M  alle  Punkte  der  Ebene  festbleiben. 
+
+§  20. 
+
+Wir  stellen  nun  folgende  wichtige  Behauptung  auf: 
+Jeder  wahre  Kreis  ist  eine  geschlossene  Jordansche  Kurve:  das  System 
+aller  wahren  Kreise  um  irgend  einen  Punkt  M  erfüllt  lückenlos  unsere 
+Ebene,  so  daß  jeder  wahre  Kreis  um  M  jeden  anderen  solchen  Kreis  ein- 
+oder  umschließt.  Die  sämtlichen  Drehungen  A  [eo]  unserer  Ebene  um  M 
+werden  durch  Transformationsformeln  von  der  Gestalt 
+
+x=f{x,y;<a),  y=g{x,y;co) 
+ausgedrückt;  darin  bedeuten  x,  y  bez.  x,  y  die  Koordinaten  in  der  Zahlen- 
+ebene und  f,  g  eindeutige  stetige  Funktionen  in  den  drei  Veränderlichen 
+x,  y,  a.  Ferner  haben  für  jeden  Punkt  x,  y  die  Funktionen  f,  g  hinsichtlich 
+des  Argumentes  co  die  Zahl  2%  zur  kleinsten  simultanen  Periode,  d.  h.  man 
+erhält  jeden  Punkt  des  wahren  Kreises  durch  den  Punkt  (x,  y)  je  einmal 
+und  nur  einmal,  wenn  man  a  die  Werte  von  0  bis  2  7t  durchlaufen  läßt. 
+Endlich  gilt  für  die  Zusammensetzung  zweier  Drehungen  um  die  Winkel  a,  a' 
+
+die  Formel 
+
+A[a>]A[ß/]  =  A[(o  +  <l. 
+
+§  21. 
+
+Zum  Beweise  der  aufgestellten  Behauptungen  fassen  wir  wiederum  zu- 
+nächst den  in  §  3 — §  18  untersuchten  wahren  Kreis  x  um  M  ins  Auge,  der 
+eine  geschlossene  Jordansche  Kurve  ist,  und  betrachten  die  Drehungen 
+dieses  wahren  Kreises  x  in  sich.  Nach  §  18  führen  wir  den  Winkel  co 
+ein,  so  daß  durch  die  Angabe  eines  Wertes  von  co  zwischen  0  und  2  a 
+eine  Bewegung  des  wahren  Kreises  x  in  sich  eindeutig  bestimmt  ist.  Nun 
+entspricht  aber  einer  jeden  Drehung  des  wahren  Kreises  x  in  sich  nur 
+eine  bestimmte  Drehung  der  Ebene  um  M,  da  ja  nach  §  19  bei  Fest- 
+haltung aller  Punkte  auf  x  überhaupt  alle  Punkte  der  Ebene  festbleiben. 
+Daraus  folgt,  daß  in  den  in  §  20  aufgestellten  Formeln  für  die  Drehung 
+der  Ebene  um  M  die  Funktionen  f,  g  für  alle  x,y}a  eindeutige  Funktionen 
+sind,  die  hinsichtlich  oo  die  Periode  2%  besitzen. 
+
+Wir  beweisen  nun,  daß  /',  g  stetige  Funktionen  in  x,  y,  eo  sind.  Zu 
+dem  Zwecke  sei  0  irgend  ein  Punkt  auf  x,  ferner  au  co2,  co3, . . .  eine 
+unendliche  Reihe  von  Werten,  die  gegen  einen  bestimmten  Wert  co 
+konvergieren,  und  Tlf  1\,  1\, .  .  .  eine  unendliche  Reihe  von  Punkten 
+unserer  Ebene,  die  gegen  irgend  einen  Punkt  T  konvergieren.    Diejenigen 
+
+10* 
+
+
+148  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+Punkte,  die  aus  0  bez.  bei  Anwendung  der  Drehungen  um  den  Winkel 
+<o1}  g>2,  «3,  .  .  .  hervorgehen,  bezeichnen  wir  mit  S1}  S2,  S3,  .  .  .  und  die 
+Punkte,  die  aus  Tlf  Tt)  Tlt . .  .  bez.  bei  den  Drehungen  co1}  co2,  a3,  .  .  .  ent- 
+stehen, mögen  Z17  Z2,  Z3)  .  .  .  heißen.  Endlich  mögen  die  Punkte,  die 
+aus  0  bez.  T  durch  eine  Drehung  um  den  Winkel  co  hervorgehen,  bez. 
+mit  8,  Z  bezeichnet  werden.  Es  kommt  darauf  an,  zu  zeigen,  daß  die 
+Punkte  Z1}  Z2,  Z3,  .  .  .  gegen  Z  konvergieren. 
+
+Da  die  Punkte  Tlf  Tit  T9J . . .  gegen  T  konvergieren,  so  können  wir 
+ein  Jordansches  Gebiet  G  bestimmen,  in  dessen  Innerem  die  sämtlichen 
+Punkte  M,  T,  T1}  T2,  T3,  .  .  .  liegen.  Auf  dieses  Jordansche  Gebiet  wenden 
+wir  dann  diejenige  Drehung  um  M  an,  welche  0  nach  S  bewegt.  Das 
+so  aus  G  entstehende  Jordansche  Gebiet  heiße  H;  dasselbe  enthält  gewiß 
+die  Punkte  M  und  Z.  Endlich  konstruieren  wir  eine  geschlossene 
+Jordansche  Kurve  a,  die  das  Gebiet  H  ganz  im  Inneren  enthält  d.  h. 
+umschließt,  ohne  daß  ein  Punkt  auf  H  liegt. 
+
+Wir  wollen  nun  beweisen,  daß  von  den  Punkten  Z1}  Z2,  Z3, .. .  gewiß 
+nur  eine  endliche  Anzahl  außerhalb  der  Kurve  a  liegen.  In  der  Tat, 
+würden  unendlich  viele  von  ihnen,  etwa  die  Punkte  Zi ,  Z{ ,  Z{ , .  .  .  außer- 
+halb a  liegen,  so  denke  man  sich  allgemein  M  mit  Tih  durch  eine 
+Jordansche  innerhalb  G  verlaufende  Kurve  yh  verbunden  und  dann  mit  yh 
+die  Drehung  um  den  Winkel  aih  ausgeführt.  Die  so  entstehende  Kurve 
+verbindet  M  mit  Zifi  und  schneidet  folglich  die  Kurve  a  gewiß  in  einem 
+Punkte,  etwa  jBa;  es  sei  Ah  der  Punkt  auf  yh,  der  bei  der  Drehung  um 
+den  Winkel  o,-A  in  Bh  übergeht.  Da  die  Punkte  A1}  A2,  Az, .  .  .  sämtlich 
+innerhalb  G  und  die  Punkte  Blf  J82,  B3,  .  .  .  sämtlich  auf  a  bleiben,  so 
+gibt  es  gewiß  eine  unendliche  Reihe  von  Indices  Äj,  \,  Ji3, . . .  von  der 
+Art,  daß  Ah  ,  A^  ,  Ah  ,  .  .  .  gegen  einen  Punkt  A  innerhalb  G  oder  auf 
+der  Grenze  von  G  und  zugleich  Bh  ,  BK,  Bh  ,  .  .  .  gegen  einen  Punkt  B 
+auf  a  konvergieren.  Nun  wissen  wir,  daß  die  Punkte  S1}  S2,  S3,  .  .  .  gegen 
+S  konvergieren;  mit  Rücksicht  auf  Axiom  III  müßte  es  demnach  eine 
+Drehung  um  M  geben,  die  0  nach  8  und  zugleich  A  nach  B  bewegt; 
+dies  ist  aber  nicht  möglich.  Denn  bei  dieser  Drehung  müßte  A  in  einen 
+Punkt  innerhalb  H  oder  auf  der  Grenze  von  H  übergehen;  dagegen 
+ist  B  ein  Punkt  auf  der  Kurve  a,  die  das  Gebiet  H  ganz  im  Inneren 
+enthält. 
+
+Damit  haben  wir  erkannt,  daß  das  Punktsystem  Zu  Z2,  Z3,  .  .  .  ganz 
+innerhalb  eines  gewissen  Jordanschen  Gebietes  liegen  muß. 
+
+Es  sei  nun  Z*  eine  Verdichtungsstelle  der  Punkte  Z1}  Z2>  Ztt . . . 
+Da  die  Punkte  8lf  S2,  83, .  .  .  gegen  S  konvergieren,  so  gibt  es  nach 
+Axiom  III  eine  Drehung  um  M,  bei  welcher  0  in  8  und  zugleich  T  in  Z* 
+übergeht.     Da  aber  bei  derjenigen  Drehung  um  M,  welche  0  in  8  über- 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  149 
+
+führt,  T  in  Z  übergehen  sollte,  so  folgt  wegen  der  vorhin  bewiesenen 
+Eindeutigkeit  der  Funktionen  f,  g  notwendig  Z*  =  Z,  d.  h.  die  Punkte 
+ZltZi}ZZf...  verdichten  sich  nur  an  einer  Stelle,  nämlich  an  der  Stelle  Z. 
+Damit  ist  die  Stetigkeit  der  Funktionen  f,  g  in  x,  y,  eo  bewiesen. 
+
+Wir  setzen  jetzt  in  f,  g  für  x,  y  die  Koordinaten  irgend  eines  Punktes  P 
+unserer  Ebene  ein,  der  innerhalb  oder  außerhalb  des  Kreises  %  liegt.  Die 
+dann  entstehenden  Funktionen  f(co),g(a)  in  der  Veränderlichen  co  allein 
+dürfen  nicht  beliebig  kleine  simultane  Perioden  haben.  Denn  da  sie  stetige 
+Funktionen  von  cd  sind,  so  wären  sie  in  diesem  Falle  Konstante;  dann 
+aber  würde  der  Punkt  P  bei  allen  Drehungen  der  Ebene  um  M  fest- 
+bleiben, was  Axiom  II  widerspräche.    Die  kleinste  simultane  Periode  jener 
+
+beiden  Funktionen  f(a),g  (to)  muß  demnach  von  der  Form  -  -  sein,  wo  n 
+
+eine  ganze  positive  Zahl  bedeutet.  Hieraus  folgt,  daß  der  durch  P  gehende 
+wahre  Kreis  erhalten  wird,  wenn  man  in  den  Formeln 
+
+2  7t 
+
+den  Wert  co  von  0  bis  —  laufen  läßt.     Diese  Kurve  ist  geschlossen  und 
+
+ohne  Doppelpunkte;  sie  stellt  daher  den  durch  P  gehenden  wahren 
+Kreis  um  M  dar.    Wenden  wir  nunmehr  auf  die  Ebene  eine  Drehung  um 
+
+2  7t 
+
+den  Winkel  —  an,  so  bleiben  dabei  alle  Punkte  dieses  durch  P  gelegten 
+
+wahren  Kreises  fest,  und  daher  müßten  nach  §  19  alle  Punkte  der  Ebene 
+festbleiben;  die  Punkte  auf  dem  wahren  Kreise  x  bleiben  aber  bei  jener 
+Drehung  nur  fest,  wenn  n  =  1  ist,  und  damit  haben  wir  die  Aussagen 
+des  in  §  20  aufgestellten  Satzes  in  allen  Teilen  bewiesen. 
+
+§  22. 
+
+Wir  erkennen  jetzt  leicht  auch  die  Richtigkeit  der  folgenden  Tatsachen: 
+
+Wenn  irgend  zwei  Punkte  bei  einer  Beivegung  der  Ebene  festbleiben, 
+so  bleiben  alle  Punkte  fest,  d.  h.  die  Bewegung  ist  die  Identität. 
+
+Jeder  Punkt  der  Ebene  läßt  sich  durch  eine  Bewegung  (d.  h.  zwei 
+Drehungen)  gewiß  in  jeden  anderen  Punkt  der  Ebene  überführen. 
+
+Die  erstere  Tatsache  folgt  sofort  mit  Rücksicht  auf  den  Satz  in  §  20; 
+die  letztere,  wenn  wir  um  jeden  der  Punkte  den  wahren  Kreis  durch  den 
+anderen  legen,  wobei  diese  Kreise  sich  notwendig  treffen  müssen. 
+
+§  23. 
+
+Unser  wichtigstes  weiteres  Ziel  besteht  darin,  den  Begriff  der  wahren 
+Geraden  in  unserer  Geometrie  einzuführen  und  die  für  den  Aufbau  der 
+Geometrie  notwendigen  Eigenschaften  dieses  Begriffes  zu  entwickeln. 
+
+
+150  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+Zu  dem  Zwecke  setzen  wir  zunächst  folgende  Benennungen  fest:  Wenn 
+A,  B  und  Ä,  B'  zwei  Paare  von  Bildpunkten  von  der  Art  sind,  daß  sich 
+vermöge  einer  Bewegung  A  in  Ä  und  zugleich  B  in  B'  überführen  läßt, 
+so  sagen  wir,  die  (wahre)  Strecke  AB  sei  kongruent  (in  Zeichen  =)  der 
+(wahren)  Strecke  A'B ' .  Ferner  nennen  wir  zwei  wahre  Kreise  kongruent, 
+wenn  es  eine  Bewegung  gibt,  welche  ihre  Mittelpunkte  und  zugleich  sie 
+selbst  ineinander  überführt. 
+
+Unter  einer  Halbdrehung  H  um  einen  Punkt  M  verstehen  wir  eine 
+Drehung  um  den  Winkel  %,  d.  h.  eine  Drehung,  die  noch  einmal  aus- 
+geführt die  Identität  ergibt.  Wenn  A,  B,  C  drei  Punkte  sind,  so  daß  A 
+bei  einer  Halbdrehung  um  B  in  C  und  demnach  auch  zugleich  C  bei 
+dieser  Halbdrehung  in  A  übergeht,  so  heiße  B  die  Mitte  der  Strecke  AC. 
+
+Wenn  C  ein  Punkt  innerhalb  bez.  außerhalb  des  um  A  durch  B 
+geschlagenen  wahren  Kreises  ist,  so  nennen  wir  die  Strecke  AC  kleiner 
+bez.  größer  als  die  Strecke  AB.  Um  in  analoger  Weise  die  Begriffe 
+„kleiner"  und  „größer"  für  beliebige  Strecken  bez.  für  beliebige  Kreise 
+zu  definieren,  führe  man  Bewegungen  aus,  vermöge  welcher  die  Anfangs- 
+punkte der  Strecken  bez.  die  Mittelpunkte  der  Kreise  in  den  nämlichen 
+Punkt  fallen. 
+
+§  24. 
+
+Eine  wahre  Strecke  AC  hat  höchstens  eine  Mitte;  gäbe  es  nämlich 
+für  AC  zwei  Mitten  und  bezeichnen  wir  die  Halbdrehungen  um  diese 
+Mitten  mit  Hx  und  H2,  so  würde  die  zusammengesetzte  Substitution 
+HxHt~l  eine  Bewegung  darstellen,  welche  jeden  der  Punkte  A  und  C 
+festließe,  und  somit  entnehmen  wir  nach  §  22,  indem  wir  symbolisch  die 
+Identität  mit  1  bezeichnen, 
+
+B1jy2-1  =  l     d.h.     Ht^H2- 
+mithin  stimmen  auch  die  Mitten  selbst  überein.    Insbesondere  folgern  wir 
+hieraus  die  weitere  Tatsache: 
+
+Wenn  zwei  Strecken  einander  kongruent  sind,  so  sind  auch  ihre 
+Hälften  einander  kongruent. 
+
+§  25. 
+
+Für  die  weiteren  Entwicklungen  brauchen  wir  folgenden  Hilfssatz: 
+Es  mögen  die  Punkte  Alf  A%,  A3,  .  .  .  gegen  den  Punkt  A  und  die 
+Punkte  Mx,  M2,  M3,  .  .  .  gegen  den  Punkt  M  konvergieren;  wenn  dann 
+allgemein  bei  Ausführung  der  Halbdrehung  um  M{  der  Punkt  A{  in  B{ 
+übergeht,  so  konvergieren  die  Punkte  Blf  B2,  B3,  .  .  .  ebenfalls  und  zwar 
+gegen  denjenigen  Punkt  B,  der  durch  die  Halbdrehung  um  M  aus  A 
+entsteht. 
+
+
+Anhang  IT:   Grundlagen  der  Geometrie.  151 
+
+Zunächst  läßt  sieh  gewiß  ein  Jordansehes  Gebiet  finden,  innerhalb 
+dessen  du  Punktsystem  2^,  i^,  B3, . . .  gelegen  ist  Davon  überzeugen 
+wir  uns  durch  das  nämliche  SehlnßTerfahren,  welches  in  §  21  auf  das 
+Punktsystem  Zx,  Z^,  Z%, . . .  angewandt  worden  ist 
+
+Wir  bezeichnen  nun  mit  B*  eine  Yerdiehtungsstelle  der  Punkte 
+B. .  Bi.  B>. . . .  Auf  Grund  des  Axioms  HE  muß  es  dann  eine  Bewegung 
+geben,  welche  die  Punkte  A,  31,  B*  bez.  in  die  Punkte  B*,  M,  A  über- 
+fuhrt; <L  h.  B*  gebt  ans  A  durch  die  Halbdrehung  um  31  herror.  Da 
+aber  aneh  B  ans  A  durch  die  Halbdrehung  um  31  hervorgeht,  so  folgt 
+B*  =  B  and  damit  ist  der  gewünschte  Nachweis  erbracht. 
+
+§26. 
+
+Es  sei  M  die  Mitte  einer  gewissen  Strecke  AB;  dann  wollen  wir 
+sagen,  daß  jede  Streckt  AC,  die  Meiner  als  AB  ist,  ebenfalls  eine 
+Wsn    v  kssH 
+
+Zu  dem  Zwecke  ziehen  wir  irgend  eine  stetige  Eurre  y  Ton  Abis  31 
+and  soeben  za  jedem  Punkte  3£  dieser  Eurre  y  den.  Punkt  B",  so  daß 
+31'  die  Mitte  ron  AB'  wird;  dam  ist  der  Ort  der  Punkte  B',  wie  wir 
+ans  dem  in  §  25  bewiesenem  Hflftwatre  schließen,  eine  stetige  Eurre  y. 
+Diese  Eurre  y  mündet  gewiß  in  A,  wenn  der  Punkt  31'  auf  der 
+Eurre  y  nach  A  hin  läuft  Denn  im  anderen  Falle  nehmen  wir  an,  es 
+sei  311.  31t,  2£,, . . .  eine  unendliche  Reihe  ron  Punkten  auf  y,  die  gegen 
+
+A  kontei gieren,  and  Blf  Br,  B$, die  entsprechenden  Punkte  auf  der 
+
+Eurre  /.  Würden  nun  B1,  Bif  B.. . . .  eine  ron  A  verschiedene  Ter- 
+dichtangssteDe  J*  besitzen,  so  entnehmen  wir  daraus,  daß  es  eine  Be- 
+wegung gibt,  welche  gen  ist  Punkte  in  beliebiger  Nähe  ron  A  in  be- 
+liebiger Nähe  ron  A*  läßt  und  zugleich  den  Punkt  A  in  beliebige  Sähe 
+ron  A*  bringt.  Dann  müßte  also  auf  Grund  des  Axioms  HI  bei  einer 
+gewissen  Bewegung  A  festbleiben  und  zugleich  in  J*  übergehen,  was 
+-:-— '-'.-/..: l   .-: 
+
+Da  nun  anserci  *-•■-■!■■■  zufolge  J.C  kleiner  als  AB  ist,  so  muß 
+der  um  A  durch  C  geschlagene  wahre  Kreis  die  A  mit  B  verbindende 
+stetige  Surre  7'  in  irgend  einem  Punkte  &  treffen.  Der  diesem  Punkte 
+...i.r.,l»..u  Punkt  Jf '  auf  y  ist  die  Mitte  der  wahren  Strecke  AB' 
+and  da  J^C  =  AB'  ist,  so  findet  man  durch  eine  geeignete  Drehung  um  A 
+aas  JT  aneh  die  gesuchte  Mitte  JF  ron  AC. 
+
+Da  die  Strecke  JLC  durch  ihre  Halbdrehung  am  ihre  Mitte  X  in 
+die  Strecke  CA  übergeht,  so  folgt  aus  unserem  eben  bewiesenen  Satze: 
+
+Die  Strecke  AC  ist  stets  der  Strecke  CA  kongruent  —  Torausgesetzt, 
+daß  die  Strecke  AC  kleiner  ab  die  bestimmte  am  Anfange  dieses  §  26  zu 
+Grande  gelegte  Strecke  AB  ist 
+
+
+152 
+
+
+Anhang  IY:    Grundlagen  der  Geometrie. 
+
+
+Zugleich  erkennen  wir,  daß,  wenn  die  Punkte  ClfC2,Cs,...  gegen 
+den  Punkt  A  konvergieren,  stets  auch  die  Mitten  Nlt  N2,  N3,  .  .  .  der 
+Strecken  bez.  AC1}  AC2,  ACS,  .  .  .  gegen  A  konvergieren. 
+
+§  27. 
+
+Für  unsere  weiteren  Entwicklungen  haben  wir  einige  Sätze  über  sich 
+berührende  wahre  Kreise  nötig  und  zwar  kommt  es  vor  allem  darauf  an, 
+zwei  zueinander  kongruente  Kreise  zu  konstruieren,  die  sich  einander  von 
+außen  in  einem  und  nur  in  einem  Punkte  oerühren. 
+
+Zu  dem  Zwecke  wählen  wir  einen  Kreis  x  so  klein,  daß  innerhalb 
+desselben   keine    Strecke    liegt,    die    der   bestimmten  in  §  26   zu   Grunde 
+
+gelegten  Strecke  AB 
+kongruent  wird;  der 
+Satz  in  §  20  zeigt, 
+daß  dies  gewiß  mög- 
+lich ist,  da  sich 
+sonst  die  Punkte  A 
+und  B  gleichzeitig 
+beliebig  nahe  an  M 
+bewegen  ließen.  So- 
+dann sei  x  ein  inner- 
+halb x  liegender 
+Kreis  um  denselben 
+Mittelpunkt  wie  x . 
+Wir  nehmen  nun  auf 
+dem  Kreise  x  irgend 
+zwei  Punkte  an  und 
+schlagen  um  diese 
+zueinander  kongru- 
+ente Kreise  a  und  ß 
+so  klein,  daß  irgend  zwei  Punkte  auf  x,  die  innerhalb  cc  liegen,  niemals 
+von  irgend  zwei  Punkten  auf  x,  die  innerhalb  ß  liegen,  im  Sinne 
+der  Anordnung  der  Punkte  auf  x  getrennt  liegen  können.  Außerdem 
+seien  die  Kreise  cc,  ß  so  klein  gewählt,  daß  sie  ganz  innerhalb  des 
+Kreises  x  liegen.  Dann  nehme  man  einen  Punkt  P'  an,  der  innerhalb  cc 
+und  außerhalb  x  liegt,  und  einen  Punkt  R'  an,  der  innerhalb  ß  und 
+innerhalb  x  liegt,  und  schlage  dann  um  P'  und  R'  zueinander  kongruente 
+Kreise  %  und  q  so  klein,  daß  %  ganz  innerhalb  cc  und  außerhalb  x  und 
+ferner  q  ganz  innerhalb  ß  und  innerhalb  x  fällt.  Nun  führe  man  eine 
+Drehung  um  den  Mittelpunkt  von  a  aus,  so  daß  der  Kreis  %'  in  einen 
+Kreis  %"  übergeht,  der  den  Kreis  x  von  außen  berührt:   die  Berührungs- 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  153 
+
+punkte  bilden  ein  Punktsystem,  welches  mit  S  bezeichnet  werden  möge. 
+Sodann  führe  man  eine  Drehung  um  den  Mittelpunkt  von  ß  aus,  so  daß 
+der  Kreis  q'  in  einen  Kreis  q  übergeht,  der  den  Kreis  x  von  innen  be- 
+rührt. Die  Berührungspunkte  bilden  ein  Punktsystem,  welches  mit  T 
+bezeichnet  werden  möge. 
+
+Da  wegen  der  Wahl  der  Kreise  a,  ß  keine  zwei  Punkte  des  Systems  S 
+durch  ein  Punktepaar  des  Systems  T  auf  x  getrennt  werden,  so  ist  es 
+gewiß  möglich,  durch  eine  Drehung  der  Ebene  um  den  Mittelpunkt  des 
+Kreises  x  einen  der  äußersten  Punkte  von  8  auf  x  mit  einem  der  äußersten 
+Punkte  von  T  auf  x  derartig  zur  Deckung  zu  bringen,  daß  die  übrigen 
+Punkte  von  S  in  Punkte  übergehen,  die  von  den  Punkten  des  Systems  T 
+durchweg  verschieden  sind.  Bei  dieser  Drehung  gelangt  der  Kreis  %"  mit 
+dem  Kreise  q  in  Berührung  in  der  Weise,  daß  der  Punkt  G,  in  dem  das 
+Zusammenfallen  stattfindet,  der  einzige  Berührungspunkt  wird.  Wir  be- 
+zeichnen den  Kreis  7t"  in  seiner  neuen  Lage  mit  %  und  die  Mittelpunkte 
+von  %  und  q  bez.  mit  P  und  B. 
+
+Wir  wollen  nun  beweisen,  daß  der  Berührungspunkt  C  notwendig 
+die  Mitte  zwischen  den  beiden  Mittelpunkten  P,  B  ist.  In  der  Tat, 
+wegen  unserer  Wahl  von  x  ist  die  Strecke  PB  notwendig  kleiner  als 
+die  bestimmte  Strecke  AB  und  besitzt  daher  nach  §  26  gewiß  eine 
+Mitte;  dieselbe  heiße  0*.  Dann  geht  jeder  der  beiden  Kreise  7t,  q  durch 
+eine  Halbdrehung  um  C*  in  den  anderen  über  und  daher  wird  aus  jedem 
+Punkte  des  einen  Kreises  ein  Punkt  des  andern.  Da  der  Punkt  C  beiden 
+Kreisen  7t,  q  gemeinsam  ist,  so  muß  er  bei  einer  solchen  Halbdrehung 
+ebenfalls  in  einen  den  Kreisen  %,  q  gemeinsamen  Punkt  übergehen,  er 
+muß  folglich  bei  dieser  Halbdrehung  ungeändert  bleiben  und  stimmt  mithin 
+notwendig  mit  dem  Punkte  C*  überein,  um  welchen  die  Halbdrehung 
+ausgeführt  wurde. 
+
+Aus  dem  eben  bewiesenen  Satze  erkennen  wir  zugleich  folgende 
+Tatsache : 
+
+Aus  dem  Kreise  %  entsteht  durch  Halbdrehung  um  den  Punkt  C  auf  % 
+der  Kreis  q  ,  der  %  in  C  von  außen'  berührt;  es  gibt  außer  q  keinen  anderen 
+Kreis,  der  mit  dem  Kreise  %  kongruent  ist  und  ihn  im  Punkte  C  und  nur 
+in  diesem  einen  Punkte  von  außen  berührt. 
+
+§  28. 
+
+Ferner  gilt  der  Satz: 
+
+Wenn  irgend  ein  Kreis  v  von  dem  Kreise  7t  umschlossen  und  berührt 
+wird,  so  findet  diese  Berührung  nur  in  einem  Punkte  statt. 
+
+Zum  Beweise  nehmen  wir  an,  es  seien  Q,  Q'  zwei  voneinander  ver- 
+schiedene Berührungspuukte  der  Kreise  t  und  %.     Dann  führen  wir  eine 
+
+
+154 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie. 
+
+
+Halbdrehung  um  Q'  aus;    durch    diese    geht    %   in    einen    Kreis   %'  über, 
+der  %  nur  im  Punkte  Q'  berührt,  und  i  geht  in  einen  Kreis  i    über,  der 
+
+innerhalb  ri  und  daher  gewiß  ganz  außerhalb  % 
+verläuft,  beide  Kreise  n,  %  nur  in  Q'  berüh- 
+rend. Führen  wir  jetzt  diejenige  Drehung 
+um  den  Mittelpunkt  des  Kreises  %  aus,  durch 
+welche  Q  in  Q'  übergeht,  so  entsteht  aus  i 
+ein  Kreis  i",  welcher  ganz  innerhalb  it  und 
+daher  gewiß  auch  außerhalb  i  liegt,  diesen 
+nur  in  Q'  berührend  Damit  haben  wir 
+zwei  Kreise  i,  i",  die  beide  den  kongruenten 
+Kreis li  in  Q'  und  nur  in  diesem  Punkte  von 
+außen  berühren,  und  dieser  Umstand  wider- 
+spricht dem  Satze  in  §  27. 
+Die  in  §  27  und  §  28  gefundenen  Tatsachen  bleiben  gültig,  wenn 
+wir  statt  %}  q  kleinere  Kreise  nehmen. 
+
+
+§  29. 
+Es  sei  P  der  Mittelpunkt  des  in  §  27  konstruierten  Kreises  %  und  Q 
+ein  Punkt  auf  %,  ferner  sei  0  ein  beliebiger  Punkt.  Dann  können  wir 
+unter  Heranziehung  der  Bemerkung  am  Schluß  von  §  26  und  wie  in  §  27 
+auf  Grund  des  Satzes  in  §  20  gewiß  einen  Punkt  E  in  solcher  Nähe 
+von  0  angeben,  daß  innerhalb  des  Kreises  l,  der  um  die  Mitte  M  der 
+Strecke  OE  durch  0  und  E  gelegt  wird,  keine  zu  PQ  kongruente  Strecke 
+existiert  und  das  gleiche  auch  für  jeden  Punkt  E'  und  den  entsprechenden 
+Kreis  t  gilt,  wenn  E'  noch  näher  als  E  an  dem  Punkte  0  gelegen  ist. 
+Alsdann  gilt  der  Satz: 
+
+Der  um  die  Mitte  M  {bez.  M')  von  OE  (bez.  OE')  durch  0  gelegte 
+Kreis  i  (bez.  t)  wird  von  dem  Kreise  um  0  durch  E  (bez.  E')  ganz  um- 
+schlossen und  nur  in  E  (bez.  E')  berührt. 
+
+Zum  Beweise  konstruieren  wir  zunächst 
+denjenigen  Kreis  co  um  0,  der  den  Kreis  i 
+umschließt  und  zugleich  berührt.  Dieser  Kreis  co 
+ist  notwendig  kleiner  als  der  Kreis  ?r;  denn 
+im  anderen  Falle  würde  der  um  0  gelegte 
+zu  7t  kongruente  Kreis  ins  Innere  des  Kreises  i 
+eintreten  und  dann  müßte  innerhalb  i  eine  zu 
+PQ  kongruente  Strecke  existieren,  was  nicht 
+der  Fall  sein  sollte.  Nach  dem  in  §  28  bewiesenen 
+Satze  kann  dieser  Kreis  co  mit  i  nur  einen  Berührungspunkt  haben;  derselbe 
+sei  Ev    Wäre  nun  22,  verschieden  von  E,  so  führe  man  um  M  diejenige 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  155 
+
+Drehung  aus,  durch  welche  E1  nach  0  gelangt;  bei  dieser  Drehung  ge- 
+langt dann  0  in  einen  Punkt  E2  des  Kreises  i,  der  von  E1  verschieden 
+sein  müßte.  Da  die  Strecke  OE1  der  Strecke  E20  und  also  auch  OE% 
+kongruent  wird,  so  müßte  E2  ebenfalls  ein  Punkt  des  Kreises  a  sein, 
+dies  widerspräche  dem  Umstände,  daß  E±  der  einzige  den  Kreisen  co  und  i 
+gemeinsame  Punkt  sein  sollte;  d.  h.  der  Kreis  to  läuft  durch  E  und 
+damit  ist  unsere  Behauptung  bewiesen. 
+
+§  30. 
+
+Bei  den  folgenden  Entwicklungen  legen  wir  die  zu  Beginn  des  §  29 
+konstruierte  Strecke  OE  zu  Grunde  und  erteilen  den  Punkten  0,  E  die 
+Zahlenwerte  0  bez.  1;  sodann  konstruieren  wir  die  Mitte  von  OE  und 
+erteilen  dieser  Mitte  den  Zahlenwert  \,  ferner  erteilen  wir  den  Mitten 
+der  Strecken  (0,  \)  bez.  (£,  1)  die  Werte  \  bez.  £  und  dann  den  Mitten 
+der  Strecke  (0,  \)  bez.  (*,*),  %  £),  (f ,  1)  die  Werte  |  bez.  |,  f,  f; 
+und  so  fort.  Ferner  führen  wir  mit  der  ganzen  Strecke  (0,  1)  um  den 
+Punkt  0  eine  Halbdrehung  aus  und  erteilen  allgemein  demjenigen  Punkte, 
+der  aus  dem  zur  Zahl  a  gehörigen  Punkte  hervorgeht,  den  Zahlen- 
+wert —  a;  sodann  führen  wir  um  den  Punkt  1  eine  Halbdrehung  aus 
+und  erteilen  allgemein  demjenigen  Punkte,  der  aus  dem  zur  Zahl  a  ge- 
+hörigen Punkte  hervorgeht,  den  Zahlenwert  2  —  a  und  so  fort  denken 
+wir  uns  abwechselnd  Halbdrehungen  um  0  und  um  E  ausgeführt  und 
+die  neu  entstehenden  Punkte  entsprechend  benannt,  bis  schließlich  jede 
+Zahl  a  einem  bestimmten  Punkte  zugeordnet  erscheint,  wenn  a  eine 
+rationale  Zahl  bedeutet,  deren  Nenner  eine  Potenz  von  2  ist. 
+
+§  31. 
+
+Wir  erkennen  durch  diese  Zuordnung  leicht  folgendes  Gesetz: 
+Durch   eine  Halbdrehung  um   den  zur  Zahl  a  gehörigen  Punkt  geht 
+jeder  Punkt  X  in  den  Punkt  2  a  —  x   über.     Wenn  wir  mithin  erst  eine 
+Halbdrehung  um  den  Punkt  0  =  0  und  dann  eine  solche  um  den  Punkt  a 
+ausführen,  so  wird  jeder  Punkt  x  in  den  Punkt  x  -\-  2  a  verwandelt. 
+
+§  32. 
+
+Um  die  Punkte,  denen  Zahlen  zugehören,  untereinander  anzuordnen 
+und  die  von  ihnen  begrenzten  Strecken  miteinander  zu  vergleichen,  be- 
+nutzen wir  den  in  §  29  aufgestellten  Satz  über  sich  berührende  Kreise 
+in  folgender  Weise: 
+
+Der  Kreis  um  den  Punkt  0  durch  den  Punkt  £  umschließt  ganz  den 
+Kreis  um  \  durch  £,    und  da  dieser  die  Kreise  um  •£  durch  f  =  \  und 
+
+
+156 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie. 
+
+
+um  |  durch  £  =  \  umschließt,    die  letzteren  wiederum    die  Kreise  um  ~ 
+durch    ^  =  |,    um    x|    durch  ^  =  i,    um   x|  durch   jf  =  f,    um  ^  durch 
+
+i|  =  4-,  u.  s.  f.,  so  erkennen  wir, 
+daß  die  Strecke  (0,  |-)  größer 
+als  alle  Strecken  (0,  a)  ist,  wenn 
+a  eine  positive  rationale  Zahl 
+bedeutet,  deren  Nenner  eine  Po- 
+tenz von  2  ist  und  deren  Wert 
+unterhalb  £  liegt. 
+
+Ferner  umschließt  der  Kreis 
+um  0  durch  \  den  Kreis  um  £ 
+durch  |  ==  \-  Der  zweite  um- 
+schlossene Kreis  umschließt  seiner- 
+seits die  Kreise  um  ~  durch 
+-Xg  und  um  -^  durch  ~,  diese 
+umschließen  wiederum  die  klei- 
+neren Kreise  um  ä|,  g|  bez.  3|,  ^  u.  s.  f.;  daraus  erkennen  wir,  daß  die 
+Strecke  (0,  \)  größer  ist  als  alle  Strecken  (0,  a),  wenn  a  eine  positive 
+rationale  Zahl  bedeutet,  deren  Nenner  eine  Potenz  von  2  ist  und  deren 
+Wert  unterhalb  \  liegt. 
+
+Weiter  betrachten  wir  den  Kreis  um  0  durch  £;  derselbe  umschließt 
+den  Kreis  um  ~  durch  j|  =  £  und  dieser  wiederum  umschließt  die  kleineren 
+Kreise  um  gj  durch  g|  u.  s.  f.;  daraus  erkennen  wir,  daß  die  Strecke  (0,  ^) 
+größer  als  alle  Strecken  (0,  a)  ist,  wenn  a  eine  positive  rationale  Zahl 
+bedeutet,  deren  Nenner  eine  Potenz  von  2  ist  und  deren  Wert  unter- 
+halb -J  liegt.  Durch  Fortsetzung  dieses  Schlußverfahrens  finden  wir  das 
+allgemeine  Resultat: 
+
+Ist  a  eine  positive  rationale  Zahl,  deren  Nenner  eine  Potenz  von  2  ist 
+und  deren  Wert  unterhalb  —  liegt,   so  ist  die  Strecke  (0,  a)   stets   Meiner 
+
+
+als  die  Strecke 
+
+
+(o,  £) 
+
+
+§  33. 
+
+Nunmehr  sind  wir  im  stände,  der  Reihe  nach  folgende  Hilfssätze 
+zu  beweisen: 
+
+Die  Punkte,  die  den  Zahlen  \,  \,  \,  x| . .  .  entsprechen,  konvergieren 
+gegen  den  Punkt  0. 
+
+Denn  im  entgegengesetzten  Falle  müßten,  da  die  Strecken  (0,  ^), 
+(9)  i)>  (0>  i);  (0;  a)j  •  •  •  beständig  kleiner  werden,  die  Punkte  -£,  \,  \t  ^, . . . 
+ihre  Verdichtungsstellen  auf  einem  bestimmten  wahren  Kreise  x  um  den 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  157 
+
+Punkt  0  haben.    Es  sei  etwa  -=-,-=->—,•••  eine  Reihe  von  Punkten,  die 
+
+2ni    2^     2  J 
+
+gegen  einen  Punkt  K  auf  k  konvergieren:  dann  mögen  die  Puukte 
+
+
+2«i  +  i '     2"1  +  i '     2Wa  +  * ' 
+im  Punkte  ÜT*  eine  Verdichtungsstelle  haben.     Aus   dem  Satze  im  §  25 
+geht  hervor,    daß   dann  K*  die  Mitte  der  Strecke  OK  sein   müßte;    dies 
+widerspricht  unter  Hinzuziehung  der  am   Schlüsse  von   §  21   gefundenen 
+Tatsache  dem  Umstände,  daß  K*  ebenfalls  auf  dem  Kreise  x  liegt. 
+
+§  34. 
+
+Es  mögen  at,  a2,  as, .  .  .  positive  rationale  Zahlen  bedeuten,  deren  Nenner 
+Potenzen  von  2  sind.  Wenn  dann  die  unendliche  Zahlenreihe  alfa2,a3, .  .  . 
+gegen  0  konvergiert,  so  konvergiert  auch  die  diesen  Zahlen  entsprechende 
+Punktreihe  gegen  den  Punkt  0. 
+
+Zum  Beweise  wählen  wir  die  ganzen  Exponenten  n1}  w2,  n3)  .  .  . 
+derart,  daß 
+
+1        2  l  2^  2n3 
+
+wird,  und  die  Reihe  — ,  —,  —  ,•  •  •  ebenfalls  gegen  0  konvergiert.  Da 
+zufolge  des  Satzes  in  §  32  allgemein  der  Punkt  a{  innerhalb  des  Kreises 
+um  0  durch  —  liegt    und  nach   dem  in  §  33  bewiesenen   Hilfssatze   die 
+
+Kreise  um  0  durch  — ,  — ,  — ,  •  •  •  gegen  0  konvergieren,  so  folgt  sofort 
+auch  die  zu  beweisende  Behauptung. 
+
+§  35. 
+
+Endlich  gilt  der  folgende  Satz: 
+
+Es  seien  ax,  a2,  a3)  .  .  .  eine  unendliche  Reihe  von  rationalen  Zahlen, 
+deren  Nenner  Potenzen  von  2  sind  und  die  gegen  irgend  eine  reelle  Zahl  a 
+konvergieren:  dann  konvergieren  die  entsprechenden  Punkte  a1}  «2,  a3, .  .  . 
+ebenfalls  gegen  einen  bestimmten  Punkt. 
+
+Zum  Beweise  nehmen  wir  das  Gegenteil  an:  es  seien  etwa  V  und  V" 
+zwei  voneinander  verschiedene  Verdichtungsstellen  der  Punkte  at,  a2,  a3,  . . . 
+und  zwar  mögen  die  Punkte  av,  av,  a3,,  .  .  .  gegen  V  und  av,,  a%„,  a3„,  . . . 
+gegen  V"  konvergieren.  Nach  den  Bemerkungen  in  §  31  gibt  es  für 
+jeden  Punkt  ak  eine  aus  zwei  Halbdrehungen  zusammengesetzte  Be- 
+wegung, die  allgemein  den  Punkt  a{,  in  den  Punkt  a{.  —  ak  und  zugleich 
+den  Punkt  ai„  in  den  Punkt  a{„  —  ak  überführt,  und  da  sowohl  die  Zahlen- 
+
+
+158  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+werte  av  —  ak  als  auch  die  Zahlenwerte  a^,  —  ak  mit  wachsenden  Indices 
+beliebig  nahe  an  0  kommen,  so  erkennen  wir  mit  Rücksicht  auf  den  Satz 
+in  §  34,  daß  es  Bewegungen  gibt,  die  einen  Punkt  in  beliebiger  Nähe 
+von  V  und  zugleich  einen  Punkt  in  beliebiger  Nähe  von  V"  in  beliebige 
+Nähe  des  Punktes  0  bringen.  Dies  ist  im  Hinblick  auf  Axiom  III  einer 
+oft  angewandten  Schlußweise  zufolge  nicht  möglich. 
+
+§  36. 
+
+Erteilen  wir  nun  dem  Punkte,  gegen  den  die  Punkte  a1}  a2,  a3,  .  .  . 
+konvergieren,  den  Zahlen  wert  a,  so  ist  damit  überhaupt  jedem  reellen 
+Zahlenwerte  ein  bestimmter  Punkt  unserer  Ebene  zugeordnet;  wir  nennen 
+das  System  aller  dieser  Punkte  eine  wahre  Gerade,  so  daß  also  unter  dieser 
+wahren  Geraden  dasjenige  System  von  Punkten  verstanden  wird,  die  aus  den 
+Punkten  0,  E  entstehen,  wenn  man  fortgesetzt  die  Mitten  nimmt,  Halb- 
+drehungen ausführt  und  die  Häufungsstellen  aller  erhaltenen  Punkte  hinzu- 
+fügt. Sämtliche  durch  Bewegung  aus  dieser  wahren  Geraden  entstellenden 
+Punktsysteme  heißen  wiederum  wahre  Gerade.  Die  wahre  Gerade  zerfällt 
+von  jedem  ihrer  Punkte  aus  in  zwei  Halbgerade. 
+
+§  37. 
+
+Mit  Benutzung  des  Hilfssatzes  in  §  25  erkennen  wir  leicht,  daß  bei 
+der  Halbdrehung  um  einen  beliebigen  Punkt  a  unserer  wahren  Geraden 
+allgemein  der  Punkt  x  in  den  Punkt  2a  —  x  übergeht;  bei  der  Aus- 
+führung zweier  Halbdrehungen  um  die  Punkte  0  und  a  geht  also  all- 
+gemein x  in  x  -\-  2  a  über. 
+
+Aus  dem  Satze  in  §  35  folgern  wir  leicht,  daß  auch  dann,  wenn 
+ait  a2,  a3,  .  .  .  beliebige  gegen  a  konvergente  Zahlen  sind,  die  entsprechen- 
+den Punkte  ax,a2,a3,  .  .  .  stets  gegen  den  entsprechenden  Punkt  a  kon- 
+vergieren; d.  h.  die  wahre  Gerade  ist  eine  stetige  Kurve. 
+
+§  38. 
+
+Versuchen  wir  die  Annahme,  daß  es  zwei  Zahlenwerte  a  und  b  gäbe, 
+die  auf  der  wahren  Geraden  den  nämlichen  Punkt  P  der  Ebene  darstellen. 
+
+Der  Punkt  a~t  ist  die  Mitte  der  Strecke  («,&);  derselbe  müßte  daher 
+mit  dem  Punkte  P  übereinstimmen.  Das  gleiche  müßte  dann  von  den 
+Mitten  den  Strecken  (a,  a"Z~  J  und  V~Z,  f  b)  d.  h.  den  Punkten  — ^- 
+und  — ^j —  gelten.  Indem  wir  fortgesetzt  die  Mitten  nehmen,  erkennen 
+wir,  daß  sämtliche  Punkte  — — - — — ,  wo  An)  Bn  positive  ganze   Zahlen 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  159 
+
+mit  der  Summe  2n  bedeuten,  mit  P  identisch  sein  müßten,  und  hieraus 
+folgt  nach  §  37,  daß  überhaupt  allen  zwischen  a  und  b  gelegenen  reellen 
+Zahlen  der  nämliche  Punkt  P  der  Geraden  entsprechen  müßte.  Dieser 
+Widerspruch  zeigt,  daß  die  wahre  Gerade  keinen  Doppelpunkt  besitzt. 
+Ebenso  erkennen  wir,  daß  die  wahre  Gerade  nicht  in  sich  selbst  zurück- 
+laufen kann. 
+
+§  39. 
+
+Zwei  Gerade  haben  höchstens  einen  Punkt  gemein. 
+
+In  der  Tat,  hätten  sie  die  zwei  Punkte  A  und  B  gemein  und  ent- 
+sprächen diesen  Punkten  auf  der  einen  Geraden  die  Zahlenwerte  a,  b  und 
+auf  der  andern  Geraden  die  Zahlenwerte  a,  b',  so  müßten  nach  §  24  auch 
+
+die  Mitten  — —  und  — y—  miteinander  übereinstimmen.  Indem  wir  fort- 
+gesetzt wie  in  §  38  die  Mitten  nehmen,  schließen  wir  in  ähnlicher  Weise, 
+daß  sämtliche  zwischen  a  und  b  bez.  a  und  b'  gelegenen  Punkte  auf 
+beiden  Geraden  und  mithin  diese  Geraden  selbst  miteinander  identisch  sind. 
+
+§  40. 
+
+Unsere  wahre  Gerade  schneidet  jeden  um  einen  ihrer  Punkte,  etwa  um 
+den  Punkt  0  gelegten  Kreis. 
+
+In  der  Tat,  bei  der  entgegengesetzten  Annahme  sind  nur  zwei  Fälle 
+möglich:  entweder  es  gibt  einen  bestimmten  Kreis  x  um  den  Punkt  0, 
+der  von  der  wahren  Geraden  g  noch  getroffen  wird,  während  die  den 
+Kreis  x  umschließenden  Kreise  um  0  von  g  nicht  mehr  getroffen  werden; 
+oder  es  gibt  einen  bestimmten  Kreis  x,  der  von  g  nicht  getroffen  wird, 
+während  alle  innerhalb  x  verlaufenden  Kreise  um  den  Punkt  0  von  g 
+getroffen  werden. 
+
+Da  die  Gerade  g  ihrer  Konstruktion  gemäß  über  jeden  ihrer  Punkte 
+hinaus  stets  fortgesetzt  werden  kann  und,  wie  in  §  38  gezeigt  worden  ist, 
+keinen  Doppelpunkt  besitzen  darf,  so  müßte  es  im  ersteren  Falle  gewiß 
+einen  innerhalb  x  verlaufenden  Kreis  um  den  Punkt  0  geben,  den  sie  auf 
+derselben  Seite  von  0  an  zwei  Stellen  A,  B  träfe,  wobei  B  auf  der  Fort- 
+setzung von  g  hinter  A  und  genügend  nahe  an  A  innerhalb  x  zu  nehmen 
+ist.  Führt  man  nun  eine  Drehung  um  den  Punkt  0  aus,  durch  welche  A 
+in  B  übergeht,  so  würde  dabei  unsere  Gerade  g  in  eine  andere  übergehen, 
+welche  g  außer  in  0  noch  in  B  schnitte;  dies  ist  dem  in  §  39  be- 
+wiesenen Satze  zufolge  unmöglich. 
+
+Im  zweiten  Falle  bezeichne  K  einen  Punkt  des  Kreises  x,  in  dessen 
+beliebige  Nähe  die  wahre  Gerade  g  gelangt.  Man  schlage  dann  um  K 
+einen  wahren  Kreis  jr*,  der  kleiner  als  x  ist  und  g  etwa  im  Punkte  M 
+treffe.     Sodann  schlage  man  um  M  einen  Kreis  %,  der  größer  als  tc*  und 
+
+
+160  Anhang  IV:    Grundlagen  der  Geometrie. 
+
+kleiner  als  %  ist.  Dieser  Kreis  n  enthält,  da  er  größer  als  n*  ist,  den 
+Punkt  K  im  Inneren,  und  da  er  kleiner  als  %  ist,  so  ergibt  unsere  An- 
+nahme in  Verbindung  mit  dem  vorhin  Bewiesenen,  daß  die  durch  M 
+gehende  Gerade  g  stetig  innerhalb  %  verläuft,  nach  der  einen  oder  anderen 
+Richtung  hin  verlängert  je  durch  einen  Punkt  auf  %  aus  dem  Kreise  it 
+heraustritt  und  dann  nicht  mehr  in  den  Kreis  tc  zurückläuft.  Da  die 
+Gerade  g  andererseits  dem  innerhalb  %  gelegenen  Punkte  K  beliebig  nahe 
+kommen  soll,  so  enthält  sie  notwendig  den  Punkt  K  selbst;  hierin  liegt 
+ein  Widerspruch  mit  unserer  gegenwärtigen  Annahme. 
+
+Da  das  System  aller  Kreise  um  einen  Punkt  die  ganze  Ebene 
+lückenlos  bedeckt,  so  folgt  zugleich  aus  dem  vorigen,  daß  irgend  zwei 
+Punkte  in  unserer  ebenen  Geometrie  stets  durch  eine  wahre  Gerade  ver- 
+bunden werden  können. 
+
+§  41. 
+
+Wir  haben  nun  zu  zeigen,  daß  die  Kongruenzaxiome  in  unserer  ebenen 
+Geometrie  gültig  sind. 
+
+Zu  dem  Zwecke  wählen  wir  einen  bestimmten  wahren  Kreis  x  aus 
+und  führen  für  die  Punkte  desselben  nach  §  18  die  Parameterdarstellung 
+durch  den  Winkel  o  ein:  dann  wird,  wenn  a  die  Werte  0  bis  2ic  erhält, 
+der  wahre  Kreis  in  einem  bestimmten  Sinne  durchlaufen.  Aus  dieser 
+Einführung  folgt  für  jeden  anderen  mit  %  kongruenten  Kreis  ebenfalls 
+ein  bestimmter  Umlaufssinn,  nämlich  derjenige,  der  sich  ergibt,  wenn 
+wir  den  Mittelpunkt  des  Kreises  ?c  nach  §  22  durch  zwei  hintereinander 
+angewandte  Drehungen  mit  dem  Mittelpunkt  des  vorgelegten  Kreises  zur 
+Deckung  bringen.  Da  es  im  Hinblick  auf  den  zu  Anfang  dieser  Ab- 
+handlung definierten  Begriff  der  Bewegung  nicht  möglich  ist,  den  ur- 
+sprünglichen Kreis  n  mit  sich  selbst  im  umgekehrten  Umlaufssinn  zur 
+Deckung  zu  bringen,  so  existiert  in  der  Tat  für  jeden  Kreis  ein  be- 
+stimmter Umlaufssinn. 
+
+Jetzt  nehmen  wir  zwei  von  einem  Punkte  M  ausgehende  Halbgeraden, 
+die  nicht  beide  zusammen  eine  wahre  Gerade  ausmachen,  schlagen  um  M 
+einen  zu  %  kongruenten  Kreis  und  fixieren  dasjenige  von  den  Halbgeraden 
+ausgeschnittene  Stück  dieses  Kreises,  welches  einem  unterhalb  der  Zahl  % 
+liegenden  Parameterintervall  entspricht.  Der  festgesetzte  Umlaufssinn  führt 
+dann  innerhalb  des  fixierten  Kreisbogenstückes  von  einer  der  beiden  Halb- 
+geraden zu  der  anderen  Halbgeraden:  wir  bezeichnen  die  erstere  Halb- 
+geraden als  den  rechten,  die  letztere  Halbgerade  als  den  linken  Schenkel 
+des  Winkels  zwischen  beiden  Halbgeraden,  während  das  Parameterintervall 
+(<  ■£)  selbst  das  Maß  für  diesen  Winkel  abgibt.     Aus  unserem  Begriffe 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  161 
+
+der  Bewegung  folgt  dann  der   erste  Kongruenzsatz  für  zwei  Dreiecke  in 
+folgender  Gestalt: 
+
+Wenn  für  zwei  Dreiecke  ABC  und  ÄB'C  die  Kongruenzen 
+AB  =  ÄB\  AC  =  ÄCr,      ^LBAC  =  ^B'ÄCr 
+gelten,  ivenn  ferner  AB  bez.  AB'  die  rechten,   AC  bez.  A'C  die  linken 
+Schenkel   der    Winkel   BAC  bez.   B'ÄC   sind,    so  gelten  stets  auch  die 
+Kongruenzen 
+
+^ABG  =  ^A'B'C'    und    ^AGB  =  ^iÄC'B'} 
+BC^B'C. 
+
+§  42. 
+
+Nachdem  in  §§  30 — 40  die  wahre  Gerade  definiert  und  ihre  Eigen- 
+schaften abgeleitet  worden  sind,   haben  wir  zwei  Fälle  zu  unterscheiden: 
+
+Erstens  nehmen  wir  an,  daß  es  durch  einen  Punkt  nur  eine  Gerade 
+gibt,  die  eine  gegebene  Gerade  nicht  schneidet  (Parallelenaxiom).  Für 
+unsere  Ebene  gelten  dann  die  sämtlichen  ebenen  Axiome,  die  ich  in 
+meiner  Festschrift  über  die  Grundlagen  der  Geometrie  (Kap.  I)  aufgestellt 
+habe,  nur  daß  das  Kongruenzaxiom  IV,  6  dort  in  der  yorhin  in  §  41 
+aufgestellten  engeren  Fassung  zu  nehmen  ist.  Auch  bei  dieser  engeren 
+Fassung  des  letzten  Kongruenzaxioms  folgt  mit  Notwendigkeit  die 
+Euklidische  ebene  Geometrie  (vgl.  Anhang  II  S.  92 — S.  95). 
+
+Zweitens  nehmen  wir  an,  daß  es  durch  jeden  Punkt  A  zwei  Halb- 
+gerade gibt,  die  nicht  zusammen  ein  und  dieselbe  Gerade  ausmachen, 
+und  die  eine  gegebene  Gerade  g  nicht  schneiden,  während  jede  in  dem 
+durch  sie  gebildeten  Winkelraum  gelegene  von  A  ausgehende  Halbgerade 
+die  Gerade  g  schneidet;  dabei  liege  A  außerhalb  g. 
+
+Mit  Hilfe  der  Stetigkeit  folgt  dann  leicht,  daß  auch  umgekehrt  zu 
+irgend  zwei  von  einem  Punkte  A  ausgehenden  Halbgeraden,  die  nicht  zu- 
+sammen ein  und  dieselbe  Gerade  ausmachen,  stets  eine  bestimmte  Gerade  g 
+gehört,  die  jene  beiden  Halbgeraden  nicht  schneidet,  dagegen  von  jeder 
+anderen  Halbgeraden  getroffen  wird,  die  von  A  ausgeht  und  in  dem 
+Winkelraum  zwischen  den  beiden  gegebenen  Halbgeraden  verläuft.  Unter 
+diesen  Umständen  folgt  dann  die  Bolyai-Lobatschefskysche  ebene  Geo- 
+metrie, auch  wenn  wir  das  Kongruenzaxiom  IV,  6  in  der  vorhin  auf- 
+gestellten engeren  Fassung  zu  Grunde  legen,  wie  sich  dies  mit  Hilfe 
+meiner  „Enden"- Rechnung1)  zeigen  läßt. 
+
+1)  Vgl.  meine  Abhandlung:  Neue  Begründung  der  Bolyai-Lobatschefskyschen 
+Geometrie,  Anhang  ÖL  Das  dort  eingeschlagene  Beweisverfahren  ist  für  den  gegen- 
+wärtigen Zweck  in  geeigneter  Weise  abzuändern,  so  daß  die  Stetigkeit  herangezogen, 
+dagegen   die  Anwendung  des   Satzes  von  der  Gleichheit  der  Basiswinkel  im  gleich- 
+
+Hilbert,  Grundlagen  der  Geometrie.  11 
+
+
+162  Anhang  V:  Flächen  von  konstanter  Gaußscher  Krümmung. 
+
+Zum  Schlüsse  möchte  ich  auf  den  charakteristischen  Unterschied  hin- 
+weisen, der  uns  entgegentritt,  wenn  wir  die  vorstehende  Begründung  der 
+Geometrie  mit  derjenigen  vergleichen,  die  ich  in  meiner  Festschrift  „Grund- 
+lagen der  Geometrie"  zu  geben  versucht  habe.  In  dieser  Festschrift  ist 
+eine  solche  Anordnung  der  Axiome  befolgt  worden,  wobei  die  Stetigkeit 
+hinter  allen  übrigen  Axiomen  an  letzter  Stelle  gefordert  wird,  so  daß 
+dann  naturgemäß  die  Frage  in  den  Vordergrund  tritt,  inwieweit  die  be- 
+kannten Sätze  und  Schlußweisen  der  elementaren  Geometrie  von  der 
+Forderung  der  Stetigkeit  unabhängig  sind.  In  der  vorstehenden  Unter- 
+suchung dagegen  wird  die  Stetigkeit  vor  allen  übrigen  Axiomen  an  erster 
+Stelle  durch  die  Definition  der  Ebene  und  der  Bewegung  gefordert,  so  daß 
+hier  vielmehr  die  wichtigste  Aufgabe  darin  bestand,  das  geringste  Maß 
+von  Forderungen  zu  ermitteln,  um  aus  demselben  unter  weitester  Be- 
+nutzung der  Stetigkeit  die  elementaren  Gebilde  der  Geometrie  (Kreis  und 
+Gerade)  und  ihre  zum  Aufbau  der  Geometrie  notwendigen  Eigenschaften 
+gewinnen  zu  können.  In  der  Tat  hat  die  vorstehende  Untersuchung  ge- 
+zeigt, daß  hierzu  die  in  den  obigen  Axiomen  I — III  ausgesprochenen 
+Forderungen  hinreichend  sind. 
+
+Göttingen,  den  10.  Mai  1902. 
+
+

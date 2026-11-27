@@ -1,0 +1,1786 @@
+
+
+
+
+
+
+
+J. Hserustev. Neue Begriindung der ebenen Geometrie. 
+
+
+Neue Begriindung der ebenen Geometrie. 
+
+
+Von 
+
+
+J. Hsewtmsiev in Hellerup bei Kopenhagen. 
+
+
+Im 57. Band dieser Annalen hat D. Hilbert mit ausschlieBlicher 
+Benutzung ebener Axiome und zwar ohne Benutzung des Archimedischen 
+Axioms eine Begriindung der Bolyai-Lobatscheffskyschen Geometrie ge- 
+geben. Spiiter hat G. Hessenberg*) die entsprechende Aufgabe hin- 
+sichtlich der elliptischen Geometrie gelést. In diesen beiden Arbeiten 
+wurden indessen noch Axiome iiber das Schneiden der Geraden benutzt, 
+indem Hilbert die Voraussetzung macht, daB zu jeder Geraden zwei 
+Parallelen gezogen werden kénnen, wiihrend Hessenberg von dem Axiome 
+ausgeht, daB je zwei Geraden sich schneiden. 
+
+In dieser Arbeit soll nun gezeigt werden, daB eine Begriindung 
+der allgemeinen ebenen Geometrie ohne Benutzung irgend eines Axioms 
+itiber das Schneiden oder Nicht-Schneiden der Geraden méglich ist, dab 
+also die ebene Geometrie unter ausschlieBlicher Benutzung ebener Axiome, 
+ohne Stetigkeitsbetrachtungen, ganz unabhdngig von der Parallelenfrage auf- 
+gebaut werden kann. 
+
+Wir legen das Hilbertsche Axiomensystem zugrunde (die Axiom- 
+gruppen I—III a. a. O., S. 137); doch heben wir hervor, daB die Axiome 
+der Anordnung bei den folgenden Entwicklungen nur sehr wenig benutzt 
+werden, und es wird daher zum SchluB die Frage aufgeworfen, ob man 
+auch diese Axiome vermeiden kénnte. 
+
+
+§ 1. 
+Einfiihrung uneigentlicher Punkte. 
+Eine Spiegelung an einer Geraden a soll mit S, bezeichnet werden, 
+und wenn ein Punkt A durch diese Spiegelung nach B gefiihrt wird, so 
+schreiben wir B= S,A. 
+
+
+*) G. Hessenberg, Neue Begriindung der Sphiirik, Sitzber. d. Berliner Math. 
+Gesellsch. 1905, 8. 70, und Begriindung der elliptischen Geometrie, diese Annalen, 
+Bd. 61, S. 173. 
+
+
+Mathematische Annalen, LXIIII. 29 
+
+
+
+
+
+
+
+
+450 J. Hyecusiev. 
+
+
+Es seien a und b zwei verschiedene Geraden (Fig. 1) und A ein 
+beliebiger Punkt, der nicht in den beiden Geraden enthalten ist; durch 
+
+
+Spiegelungen an a und b leiten 
+
+
+P wir zwei andere Punkte, B und 
+\ C, ab, derart dab: 
+
+4 \ \ B= 8,5,4, 
+
+i i- aS C = 8,8, A. 
+
+
+
+
+
+@ B und C sind von A ver- 
+schieden, und es ist 
+
+
+AB= AC, 
+
+
+weil die Transformation S,S, 
+A und B nach C, bzw. A fihrt. 
+Haben die Geraden a und b 
+
+
+einen Punkt O gemein, so ist 
+
+
+
+
+
+OB= 0C, 
+be if da O bei den Spiegelungen S, 
+? ' und S, fest bleibt. Sind auBer- 
+j : j dem a und b senkrecht zueinan- 
+€ Q der, so fallen Bund C in 
+y Pig. 1. 
+
+
+einem Punkte von AO zusam- 
+men; in allen anderen Fallen sind B und C verschieden. Aus diesen 
+
+
+Tatsachen geht hervor, daB die Gerade 0A immer Spiegelungsachse der 
+Punkte B und C ist. 
+
+
+Wenn die Geraden a und 6 keinen Punkt gemein haben, so gibt es 
+doch stets eine (und nur eine) Gerade ¢ durch A, welche Spiegelungs- 
+achse der B und C ist. Von dieser Geraden wollen wir sagen, daf sie dem 
+Geradenpaare (ab) angehért. 
+
+Nehmen wir auf der so gefundenen Geraden ¢ einen neuen Punkt A, 
+und konstruieren wir die Punkte 
+
+B, = 8,8,4,, 
+C, = 8,841, 
+so ergibt sich wie oben 
+(1) A, B, = A,C,; 
+nun ist 
+A =8,8,B =8,S,8,C = 8,S,8,S,S,A , 
+C, = 8,8, A, = §,S,8,A, = 8,8,8,8,S8,B,, 
+
+
+und daher: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Neue Begriindung der ebenen Gecmetrie. 
+
+
+(2) AB, = AC,. 
+Die Gerade ¢ ist also Spiegelungsachse der Punkte B, und C,. 
+
+Wir haben also den Satz: 
+
+Satz 1. Durch jeden Punkt A geht eine und nur eine Gerade c, 
+welche einem gegebenen Paare (ab) von sich nicht-schneidenden Geraden an- 
+gehort. Diese Gerade ist durch irgend einen ihrer Punkte eindeutig bestimmt. 
+
+Liegt A auf a bzw. b, so fallt ¢ mit a bzw. b zusammen. 
+
+Nimmt man einen Punkt M, der nicht auf c, und nicht auf CC, 
+liegt, und konstruiert man die Punkte: 
+
+
+N=S,.M, 
+P=S8,8,M, 
+Q — 8,S,N. ? 
+so ist Q das Spiegelbild von P in bezug auf c. In der Tat ist 
+(3) PN=QM, 
+weil PN durch die Transformation S,S, in MQ iibergeht. AuBerdem ist 
+(4) P B, — QC,, 
+
+
+weil PB, durch die Transformation §,S,5,8,S, nach QC, gelangt. End- 
+lich hat man auch 
+
+(5) PB= QC, 
+
+da PB durch die Transformation S,S,S,S,S, in QC itibergeht. 
+
+Da nun das Dreieck NBB, Spiegelbild von MCC, in bezug auf c 
+ist, so zeigen die Gleichungen (3)—(5), dab P durch Spiegelung an ¢ 
+- nach Q gefiihrt wird. 
+
+Es ist nunmehr klar, daB dieses Resultat auch in dem bisher aus- 
+geschlossenen Falle, dab M auf CC, liegt, Geltung hat. 
+
+Da also 
+
+P = 8,9 =8,8,8,N =8,8,8,8,M 
+und 
+P=S8,S5,M, 
+so ist fiir jeden Punkt M: 
+S,S,M = 8,8,S,8,M, 
+
+
+S,S,S, = 8,8,8,. 
+Ist umgekehrt diese Bedingung erfiillt, so muB nach unserer Definition c 
+notwendigerweise dem Geradenpaare (ab) angehéren. Also 
+Satz 2. Die notwendige und hinreichende Bedingung dafiir, dap die 
+Gerade c dem Geradenpaare (ab) angehort, besteht darin, dap 
+S,5,8, = 8,8,8,. 
+Da diese Gleichheit in bezug auf a, b, c symmetrisch ist, so ergibt sich: 
+29° 
+
+
+und daher 
+
+
+
+
+
+
+
+
+452 J. Hyecustev. 
+
+
+Satz 3. Wenn c dem Paare (ab) angehirt, so werden auch a und b 
+den Paaren (be) bew. (ac) angehdren. 
+
+Satz 4. Wenn drei Geraden a,b,c ein gemeinsames Lot n haben, 
+so muB c dem Paare (ab) angehiren. 
+
+Wenn man namlich nach unserer Definition durch den Schnittpunkt 
+von ¢ und  diejenige Gerade konstruiert, welche dem Paare (ab) angehért, 
+so zeigt die Konstruktion, daB diese Gerade mit c zusammenfallen muBb. 
+Umgekehrt gilt: 
+
+Satz 5. Wenn zwei Geraden a und b ein gemeinsames Lot n haben, 
+und wenn eine dritte Gerade c dem Paare (ab) angehjrt, so ist n gemein- 
+sames Lot aller drei Geraden a, b, c. 
+
+Wenn in der Tat von einem Punkte A der Geraden ¢ das Lot ¢, 
+auf » gefallt wird, so muB nach Satz 4 c, dem Paare (ab) angehéren, 
+und ¢, kann somit nicht von ¢ verschieden sein. 
+
+Satz 6. Wenn zwei Geraden zwei gemeinsame Lote haben, so ist jedes 
+Lot der einen Geraden auch ein Lot der anderen. 
+
+Wenn in der Tat von irgend einem Punkte Lote auf die beiden Ge- 
+raden gefillt werden, so fallen diese Lote nach den Sitzen 4 und 1 
+zusammen. 
+
+Da man durch kongruente Verschiebung jede Gerade mit jeder anderen 
+Geraden zur Deckung bringen kann, so folgt weiter der Satz: 
+
+Satz 7. Gibt es ein Viereck mit vier rechten Winkeln, so muB in 
+jedem Viereck mit drei rechten Winkeln der vierte Winkel auch ein rechter sein. 
+
+Aus diesem Satz laBt sich in bekannter einfacher Weise der zweite 
+Legendresche Satz tiber die Winkelsumme des Dreiecks folgern. 
+
+Satz 8. Wenn die Geraden ec und d dem Paare (ab) angehiren, so 
+mupB auch d dem Paare (bce) angehiren. 
+
+Zum Beweise leiten wir von einem beliebigen Punkte A der Ge- 
+raden d die folgenden Punkte ab: 
+
+
+M=S,S,A, 
+N=S,S,A, 
+P=5,5,A, 
+Q=S.S,A. 
+
+
+Aus den beiden ersten Gleichungen geht hervor, daB M und N die 
+Spiegelungsachse d haben, und dab’ AM= AN. Aus den beiden letzten 
+Gleichungen folgert man, daB AP = AQ. Es kommt nun darauf an, zu 
+beweisen, dab P durch Spiegelung an d in Q iibergehen mufb. 
+
+Da nun erstens 
+
+M = 8,8,8,.8,P, 
+Q = 88,8, 8,N 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 
+
+
+und 
+
+
+S,5,8, = 8,8,8,, 
+MQ= PN; 
+
+
+N=S,8,5S,8,P = 8,S,P, 
+Q=S,S,S,S,M= 8,8, M, 
+
+
+so ist 
+
+
+und da zweitens: 
+
+
+so ist auch 
+
+
+NQ= PM. 
+Wir haben somit die folgenden Streckengleichungen: 
+
+
+AM=AN, 
+AP = AQ, 
+NP =MQ, 
+MP=WN@Q. 
+
+
+Wenn nun A, M, N nicht in gerader Linie liegen, so wird das 
+Dreieck A MN an der Geraden d nach AN M gespiegelt, und den obigen 
+Gleichungen zufolge wird dann auch dieselbe Spiegelung P nach Q 
+fiihren, w. z. b. w. 
+
+Liegen A, M, N auf einer Geraden n, so ist diese Gerade gemein- 
+sames Lot der Geraden a, b, d, weil die Gerade AM bei der Transforma- 
+tion S,S, nicht fest bleiben kann, ohne daB sie senkrecht zu a und b ist. 
+Nach Satz 5 ist m also auch Lot der Geraden c und d, und nach Satz 4 
+ist hiermit der Beweis vollendet. 
+
+Die Gesamtheit aller Geraden, welche einem gegebenen Geradenpaare 
+angehéren, nennen wir ein wneigentliches Biischel. Die Sitze 3 und 8 
+zeigen dann, daB ein uneigentliches Biischel durch irgend zwei seiner 
+Geraden eindeutig bestimmt ist; durch jeden Punkt der Ebene geht eine 
+und nur eine Gerade des Biischels. 
+
+Wir kénnen dies etwas anders ausdriicken, wenn wir folgende neue 
+Redeweise einfiihren. Statt ,,uneigentliches Biischel* sagen wir ,,uneigent- 
+licher Punkt*; statt ,,G@eraden, die dem Biischel angehiren“ sagen wir 
+»(eraden, die durch den uneigentlichen Punkt gehen“; statt za sagen, dab 
+ein uneigentliches Biischel durch irgend zwei seiner Geraden eindeutig be- 
+stimmt ist, kénnen wir demnach sagen, daB ein uneigentlicher Punkt durch 
+Schnitt von irgend zwei Geraden, die durch den Punkt gehen, ein- 
+deutig erzeugt wird. 
+
+Nach diesen Verabredungen kénnen wir nun die folgenden Siitze 
+aussprechen: 
+
+Satz 9. Zwei Geraden haben immer einen und nur einen (eigentlichen 
+oder uneigentlichen) Punkt gemein. 
+
+
+
+
+
+
+
+
+454 J. Hyetmsiev. 
+
+
+Satz 10. Durch zwei Punkte, welche nicht beide uneigentlich sind, geht 
+eine und nur eine Gerade. 
+
+Dagegen haben zwei uneigentliche Punkte nicht immer eine Ver- 
+bindungsgerade, was wir sogleich an einem Beispiele zeigen. 
+
+Die Lote einer Geraden haben einen uneigentlichen Punkt gemein, 
+welcher der absolute Pol der Geraden genannt werden soll. Es ist somit 
+klar, daB die absoluten Pole zweier Geraden, deren Schnittpunkt eigentlich 
+ist, keine Verbindungsgerade haben. 
+
+Es hat sich schon aus dem Satze 7 ergeben, daB wir bei dem Aufbau 
+der ebenen Geometrie zwei wesentlich verschiedene Fille zu betrachten 
+haben; im einen Falle, welchen wir als den ordindren Fall bezeichnen 
+werden, gilt der Satz: Irgend zwéi Geraden haben héchstens ein gemein- 
+sames Lot; im anderen Falle, dem singuldren Fall, gilt dagegen der Satz: 
+Wenn zwei Geraden ein gemeinsames Lot haben, so haben sie unend- 
+lich viele. 
+
+
+§ 2. 
+Kongruenz und Symmetrie. 
+
+
+Hilfssatz. Wenn eine Gerade a durch Spiegelung an ¢ in b iiber- 
+geht, so haben die drei Geraden a, b, c einen Punkt gemein. 
+
+Nimmt man in der Tat einen Punkt A auf ¢ und konstruiert man 
+die Punkte S,S,A und S,S8,A, so leuchtet ein, daB diese Punkte durch 
+Spiegelung an ¢ ineinander iibergehen. 
+
+Satz 11. Wenn drei Geraden a, b, ¢ einen (eigentlichen oder uneigent- 
+lichen) Punkt U gemein haben, so kann die Aufeinanderfolge der Spiege- 
+lungen S,, S,, S, durch eine einzige Spiegelung. ersetzt werden. Die Achse 
+dieser Spiegelung geht durch U. 
+
+Es wird geniigen, hier den Fall zu betrachten, wo a, b, ¢ simtlich 
+verschieden sind und ihr gemeinsamer Punkt U uneigentlich ist.*) 
+
+Nach Satz 2 ist die Transformation S,S,S, involutorisch; es bedarf 
+also nur des Nachweises, daB wenigstens zwei Punkte existieren, welche 
+bei der Transformation fest bleiben. Auf c wihlen wir die Punkte A 
+und A, (Fig. 1) und konstruieren die Punkte 
+B =8,8,8,A = 8,8,A 
+und 
+
+B, = 8,5,8,A, = 8,5,A,. 
+
+Die Mittelpunkte O und 0’ der Strecken AB und A, B, bleiben also 
+bei der Transformation S,S,S, ungeindert. BB, fallt nicht auf c; sonst 
+
+*) Im Falle eines eigentlichen Punktes findet man einen Beweis bei F. Schur, 
+Uber den Fundamentalsatz der projektiven Geometrie, Math. Annalen Bd. 51, 8. 404. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 455 
+
+
+miiBten niimlich O und O' auch auf ¢ liegen, was unméglich ist; denn die 
+Transformation S,S, kann keinen eigentlichen Punkt fest lassen, da a 
+und } keinen solchen Punkt gemein haben. Wenn nun 0 und 0’ in 
+einem einzigen Punkte O vereinigt wiiren, so miBte diejenige Gerade n, 
+welche von O auf AA, senkrecht gefillt werden kann, auch auf BB, 
+senkrecht stehen, und da die Gerade BB, auf Grund des oben bewiesenen 
+Hilfssatzes durch U geht, so miiBte » gemeinsames Lot der Geraden a, b, c 
+sein. Wenn also a, b, c kein gemeinsames Lot haben, so ist O notwen- 
+digerweise von O° verschieden, und der erste Teil des Satzes ist somit 
+fiir diesen Fall bewiesen. 
+
+In dem Falle, daB ein gemeinsames Lot m der Geraden a, b, ¢ vor- 
+handen ist, setzen wir voraus, daB der Punkt A auf » gewihlt ist; O fallt 
+dann gleichfalls auf », wihrend dies fiir O’ nicht stattfinden kann, weil 
+B und B, auf derselben Seite von m liegen; es ist also somit auch fiir 
+diesen Fall nachgewiesen, daB O und 0’ verschieden sind. 
+
+Zam Beweis der zweiten Aussage unseres Satzes geniigt es zu be- 
+merken, daB AA, durch die in Rede stehende Spiegelung nach BB, ge- 
+langt, und die Spiegelungsachse daher nach unserem Hilfssatz durch den 
+Schnittpunkt U von AA, und BB, gehen mub. 
+
+Satz 12. Zwei Spiegelungen S, und S, kinnen durch awei andere 
+Spiegelungen dergestalt ersetzt werden, daB die Achse der ersten oder der 
+zweiten dieser Spiegelungen in irgend eine gegebene Gerade c durch den 
+Schnittpunkt von a und b fiillt. 
+
+Die Gleichungen S,S8,= 8,S, und S,S,=— S,S, sind in der Tat gleich- 
+bedeutend mit 
+
+. 8,8,5,=8,, bzw. S,S8,S8,—S8,. 
+
+Satz 13. Vier Spiegelungen S,,8,, 8,, 8, kinnen durch swei Spiege- 
+lungen ersetzt werden. 
+
+Fallen zwei aufeinanderfolgende der Geraden a, b, c, d zusammen, so 
+ist der Satz selbstverstindlich. In allen tibrigen Fallen nehmen wir auf a 
+einen eigentlichen Punkt A, welcher nicht in b enthalten ist, und von A 
+ziehen wir eine Gerade m nach dem Schnittpunkte von b und c. Nach 
+Satz 12 kann alsdann eine Gerade » so bestimmt werden, daB 
+
+
+S,S,= S,,S,; 
+
+
+m™n? 
+
+
+S,5,5,5,— S,S,,5,5,. 
+
+
+es ist also: 
+
+
+Fallt » mit d zusammen, so ist der Beweis hiermit vollendet. Wenn 
+dagegen n von d verschieden ist, so zieht man ferner von A eine Gerade p 
+nach dem Schnittpunkte von m und d und bestimmt eine Gerade q 
+derart, daB 
+
+
+S8,5,= 8,8,: 
+
+
+
+
+
+456 J. Hyecsiev. 
+
+
+also 
+
+
+S,5,S.S, = S,S,,8,8 
+
+
+a™m™p™@* 
+
+
+Da nun die Geraden a, m, p alle durch A gehen, so ist die Trans- 
+formation S,S,,S, einer einzigen Spiegelung S, gleichwertig; schlieBlich 
+erhalt man also: 
+
+S,8,8,S,= S,8,. 
+
+
+Durch eine ithnliche Betrachtung liBt sich leicht zeigen, daB drei 
+Spiegelungen, deren Achsen nicht alle durch einen und denselben Punkt 
+gehen, durch drei Spiegelungen dergestalt ersetzt werden kénnen, da die 
+beiden ersten der Spiegelungsachsen durch irgend einen eigentlichen 
+Punkt P gehen. Bei der von den drei Spiegelungen gebildeten Trans- 
+formation kann der Punkt P nur dann sich selbst entsprechen, wenn 
+er auch auf der dritten Achse liegt. 
+
+Wir kénnen daher die folgenden Siitze aussprechen: 
+
+
+Satz 14. Drei Spiegelungen kinnen nicht einander aufheben. Bei der 
+Aufeinanderfolge von drei Spiegelungen, welche nicht durch eine einzige 
+Spiegelung ersetzt werden kinnen, wird kein eigentlicher Punkt sich selbst 
+entsprechen. 
+
+Satz 15. Eine ungerade Anzahl von Spiegelungen kann nicht durch 
+eine gerade Anzahl von Spiegelungen ersetzt werden. 
+
+{ geraden 
+\ungeraden 
+Anzahl von Spiegelungen imeinander iibergehen, nennen wir bzw. 
+kongruent 
+
+symmetrisch } ” 
+
+Wenn zwei Figuren kongruent sind, so kann die eine Figur durch 
+die Aufeinanderfolge zweier Spiegelungen S, und S, in die andere ver- 
+wandelt werden. Die Transformation S,S, nennen wir eine Drehung 
+und den Schnittpunkt der Spiegelungsachsen a und b nennen wir das 
+Drehzentrum. 
+
+Wenn zwei Figuren symmetrisch sind, so wird entweder eine einzige 
+Spiegelung oder die Aufeinanderfolge von drei Spiegelungen geniigen, um 
+die eine Figur in die andere zu verwandeln. 
+
+Zwei Figuren, deren Punkte einander paarweise so zugeordnet sind, 
+daB die einander zugeordneten Strecken einander gleich sind, sind ent- 
+weder kongruent oder symmetrisch. Denn wenigstens drei Spiegelungen 
+sind hinreichend, um die eine Figur in die andere zu verwandeln. 
+
+Definition. Ein vollstéindiger Winkel (a, b) ist ein geordnetes 
+System von zwei Geraden a und b, die einen eigentlichen Punkt (den 
+Scheitel des Winkels) gemein haben. 
+
+
+Zwei Figuren, welche durch die Aufeinanderfolge einer 
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 457 
+
+
+Indem wir die oben gegebene Definition von kongruenten und sym- 
+metrischen Figuren auf vollstaindige Winkel tibertragen, kénnen wir den 
+folgenden Satz beweisen: 
+
+Satz 16. Wenn ein vollstindiger Winkel (a, b) mit dem Scheitel O 
+gegeben ist, so kann man eine und nur eine Gerade b, finden, welche eine 
+gegebene Gerade a, in einem gegebenen Punkte O, derart schneidet, dap die 
+volistiindigen Winkel (a,b) und (a,,b,) kongruent sind. 
+
+Durch die Aufeinanderfolge von zwei geeigneten Spiegelungen gehen 
+O und a in O, und a, iiber; es wird dann b in die gesuchte Gerade b, 
+iibergehen. Wenn ferner zwei Geraden b, und b, die Bedingung erfiillten, 
+miiBten (a,, b,) und (a,,b,) kongruent sein und somit durch zwei 
+Spiegelungen imeinander iibergehen. Da indessen a, und QO, sich bei 
+diesen Spiegelungen nicht findern wiirden, so miiBten die Spiegelungs- 
+achsen senkrecht aufeinander stehen und durch O, gehen; es miiBte dann 
+auch b, fest bleiben. 
+
+Fiir vollstindige Winkel kann man eine Addition definieren, indem 
+man untereinander kongruente Winkel als gleichwertig betrachtet. Wenn 
+nun zwei vollstindige Winkel (a,b) und (p,q) addiert werden sollen, so 
+bestimmt man eine Gerade c, welche durch den Scheitel von (u, b) lauft, 
+derart, daB (b,c) und (p,q) kongruent werden; man setzt dann: 
+
+(a, b) + (p,q) = (a, ¢). 
+
+Mit Hilfe der oben entwickelten Siitze iiberzeugt man sich ohne 
+Mihe, daB fir diese Addition die gewéhnlichen Gesetze Geltung haben. 
+
+Es sei nur noch bemerkt, daB man dem Winkel (a, a) den Wert 
+Null beilegen muB. 
+
+Satz 17. Wenn vier Geraden a,b, c,d einen eigentlichen Punkt O 
+gemein haben und wenn ferner (a,b) = (c,d), so ist 8,S8,=— S8,S,. 
+
+Ist m eine der Spiegelungsachsen der beiden Geraden a und c, so 
+mu der Winkel (a,b) durch die Transformation S,S,, in (c¢, d) tibergehen. 
+Es sei nun A irgend ein Punkt und es seien weiter 
+
+
+B =S,S,A, 
+A, = 8,8,,4, 
+B, = S,S,Ay- 
+
+
+Die Transformation S,S,, fihrt dann A,a,b nach A,, c,d, also auch 
+S,S,4 = B nach S,S,A,= B,. Es ist also: 
+
+
+B,=8,5,.B, 
+
+
+und daher: 
+S.S,S,8,,4 = 8,8,,8,5,A. 
+
+
+cc m™ a 
+
+
+
+
+
+458 J. Hoetusriev. 
+
+
+Da diese Gleichung fiir jeden Punkt A gelten muB, so haben wir die 
+
+Identitat: 
+S,S,8,8,, = 8.S,,8,8,, 
+also: 
+S_S,=8.8,, 
+w. z. b. w. 
+
+Satz 18. Wenn vier Geraden a, b, c,d durch einen eigentlichen Punkt O 
+laufen und wenn S,S,=S,S,, so ist auch (a,b) = (ce, d). 
+
+In der Tat kann durch O eine und nur eine Gerade d, derart be- 
+stimmt werden, dab (a,b) = (c,d,). Nach Satz 17 ist dann S,S,=— S,S, = S,S,; 
+d, fallt also mit d zusammen. 
+
+Satz 19. Bei jeder symmetrischen Verwandtschaft W, welche keine 
+Spiegelung ist, gibt es eine und nur eine Gerade, welche sich selbst entspricht. 
+
+Wir wihlen eine Strecke AB (Fig. 2), welcher bei der Verwandt- 
+schaft W eine Strecke A, B, entspricht, sodaB die Mittelpunkte M und N 
+der Strecken AA, und BB, 
+verschieden sind. Bei Um- 
+wendung um M gelangt AB 
+nach A, B,; A,B, und A,B, 
+haben eine Spiegelungsachse a, 
+die durch A, liuft und senk- 
+recht auf MN steht (letztere 
+Tatsache ergibt sich aus dem 
+bekannten, leicht beweisbaren 
+Satz, daB die Mittelsenkrechte 
+der Seite B,B, des Dreiecks 
+BB,B, zurV erbindungsgeraden 
+der Mittelpunkte der beiden 
+anderen Seiten senkrecht ist). 
+Die Verwandtschaft W kann somit durch die Aufeinanderfolge einer 
+Umwendung um M und einer Spiegelung an a ersetzt werden; da aber 
+die Gerade MN bei diesen Transformationen fest bleibt, ist hiermit der 
+erste Teil des Satzes bewiesen. 
+
+Da ferner bei der Verwandtschaft W jedem Punkt P der Geraden MN 
+nach Satz 14 ein von P verschiedener Punkt P, entspricht, so kann keine 
+Gerade, welche MN trifft, sich selbst entsprechen; und da eine Gerade }, 
+die ganz auf der einen Seite der Geraden MN liegt, bei der Umwendung 
+um M nach einer Geraden }, auf der anderen Seite von MN gelangt, 
+und da wiederum }, bei der Spiegelung an a auf derselben Seite der 
+Geraden MN liegen bleibt, so kann b bei der Transformation W sich 
+nicht selbst entsprechen. Der Satz 19 ist somit vollstiindig bewiesen. 
+
+Gleichzeitig erkennen wir auch die Richtigkeit der folgenden Tatsache: 
+
+
+
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 459 
+
+
+Satz 20. Die Mittelpunkte der Verbindungsstrecken entsprechender 
+Punkte in zwei kongruenten Punktreihen (AB---) und (A,B,---) fallen 
+entweder in einem einzigen Punkt zusammen oder sie sind in einer und der- 
+selben Geraden enthalten. 
+
+
+§ 3. 
+Vorbereitung zum Beweis des Pascalschen Satzes. 
+
+
+Es seien (Fig. 3) a,b,c drei Geraden, die durch einen (eigentlichen 
+oder uneigentlichen) Punkt P laufen, und O irgend ein (von P verschie- 
+dener) eigentlicher Punkt auf c. Wir fillen die Lote OA und OB auf 
+a und b und be- 
+zeichnen die Gerade 
+OB mit d; wir setzen 
+voraus, daB B nicht 
+nach P fallt. Da die 
+Geraden a, ¢, d nicht 
+durch einen und den- 
+selben Punkt laufen, 
+so kann die Aufein- 
+anderfolge der drei 
+Spiegelungen S,,S.,S, 
+nicht durch eine ein- 
+zige Spiegelung ersetzt 
+werden; denn dann 
+miiBte die Transforma- 
+tion S,S,S, involutorisch sein, was nach Satz 2 unmidglich ist. Es gibt also 
+nach Satz 19 eine und nur eine Gerade g, welche bei der Transformation 
+S,S,S, sich selbst entspricht. Diese Gerade geht durch den Punkt A; 
+wenn nimlich 0, = 8,0, so ist 
+
+
+8,8.8, 0, _ 0, 
+und der Mittelpunkt A der Strecke OO, muB also auf g liegen. 
+
+
+Es laBt sich nun ferner nachweisen, daB g auch durch B iiauft; 
+denn es gibt nach Satz 12 eine Gerade e durch P, so dab 
+
+
+8.5, =—8,8,, 
+
+
+
+
+
+Fig. 3. 
+
+
+also auch 
+8,58, — S,5,8,, 
+
+
+und bei der Transformation S,S,S, muB die von B auf e senkrecht ge- 
+fillte Gerade sich selbst entsprechen; diese Gerade muS daher mit g zu- 
+sammenfallen. 
+
+
+
+
+
+460 J. Hoeimsiev. 
+
+
+SchlieBlich kénnen wir nun eine Gerade p durch O so bestimmen, dab 
+S,8.= S,Soa, 
+und daher: 
+SaS-Sa = SpSoaSa- 
+Die Gerade p erfiillt nach Satz 18 die Kongruenz: 
+(OA, p) = (c,d), 
+und da p senkrecht auf AB steht, weil A4B=g bei der Transformation 
+SaS.Sa= SpSoaSa fest bleibt, so haben wir: 
+Satz 21. Wenn auf zwei verschiedenen Strecken OA und OB Lote 
+in A und B errichtet werden, welche einen (eigentlichen oder uneigentlichen) 
+
+
+Schnittpunkt P haben, und wenn ferner das Lot OQ von O auf AB ge- 
+fallt wird, so gilt immer die Kongruenz: 
+(OA, OQ) =(OP, OB). 
+
+In dem beim Beweise ausgeschlossenen Fall, daB B und P zusammen- 
+fallen, ist der Satz selbstverstiandlich. 
+
+Mit Hilfe dieses Satzes kénnen wir den ersten der beiden Beweise, 
+welche Hilbert*) in den ,,Grundlagen der Geometrie“ fiir einen speziellen 
+Fall des Pascalschen Satzes gegeben hat, unmittelbar fiir den folgenden 
+Satz anwenden: 
+
+Satz 22. Wenn die Ecken eines Sechsecks stimtlich eigentliche Punkte 
+sind und abwechselnd auf zwei Geraden liegen, deren Schnittpunkt ein eigent- 
+licher Punkt S ist, und wenn ferner zwei Paare von gegeniiberliegenden 
+Seiten des Sechsecks je ein gemeinsames Lot haben, das durch S léuft, dann 
+hat auch das dritte Paar von Gegenseiten ein gemeinsames Lot durch S. 
+
+Mit Hilfe eines Beweises von G. Hessenberg**) kévnen wir ferner 
+den folgenden speziellen Fall des Pascalschen Satzes gewinnen: 
+
+Satz 23. Wenn die Ecken eines Sechsecks siimtlich eigentliche Punkte 
+sind und abwechselnd auf zwei Geraden liegen, und wenn ferner die drei 
+Schnittpunkte der Gegenseitenpaare eigentliche Punkte sind, dann liegen diese 
+drei Punkte auf einer und derselben Geraden. 
+
+Der Beweis Hessenbergs stiitzt sich wesentlich auf einen Hilfssatz 
+iiber das vollstindige Vierseit. Dieser Hilfssatz soll hier in folgender, 
+verallgemeinerter Form bewiesen werden (Fig. 4): Es seien p, q, r, s vier 
+Geraden, von denen keine drei durch einen Punkt gehen, und es seien die 
+(eigentlichen oder uneigentlichen) Gegeneckenpaare des von den vier Ge- 
+raden gebildeten vollstiindigen Vierseits durch A A,, BB,, CC, bezeichnet; 
+
+
+*) Hilbert, Grundlagen der Geometrie 1899, p. 28. 
+**) G. Hessenberg, Neue Begriindung der Sphirik, Sitzungsber. d. Berliner Math. 
+Gesellschaft 1905, 8. 70 (Archiv d. Math. u. Physik, Bd. 9). 
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 
+
+
+wenn nun diese Gegeneckenpaare mit einem beliebigen eigentlichen Punkt P, 
+der nicht in eine Ecke des Vierseits fallt, durch die Geradenpaare aa,, 
+bb,, ec, verbunden werden, und wenn dann 
+
+
+(b, c) = (4, ),), 
+(¢, @) = (a, %) 
+
+
+(a,b) = (b,, 4). 
+
+Wir kénnen dies auch in folgender Weise ausdriicken: wenn zwei 
+
+der Geradenpaaren aa,, bb,, cc, gemeinsame Spiegelungsachsen haben, so 
+haben alle drei Geradenpaare gemeinsame Spiegelungsachsen. Zum Beweis 
+
+
+dieses Hilfssatzes bestimmen wir sechs Geraden a’, a,’, b’, b,’, ¢, ¢ 
+derart, daB: 
+
+(6) 8,S,=8, S,, 
+
+(7) S, S, — S, S,, 
+
+(8) SS, = 8, S,, 
+
+(9) S,S,= S,,S,, 
+
+(10) S,S,,= S,.8,, 
+
+(11) S,S,.= 8,, 8, 
+
+Aus den Gleichungen (8), (9), (10) folgert man: 
+(12) S,, 5,8, = 8,8,, 8, 8.5,, 
+und aus (9), (11), (7): 
+
+(13) 8,8. S, = S,8,, S, 8, 8,. 
+
+
+so ist auch 
+
+
+und 
+
+
+
+
+
+
+
+
+
+
+
+462 J. Hoecmsxev. 
+
+
+Ferner ergibt sich aus (7), (6), (8): 
+(14) S,S,,S8, = 8,8,8,8,5,8,5,8,8, = 8,5,5,8,8 
+
+
+ea se eS ee a™c™p* 
+
+
+Die letztere Reduktion erhilt man auf Grund der Identititen: 
+
+
+8,8,S,— S,S,8,, 
+8,8,8, _ S, S,8,, 
+S,8,8, = 8,8, 8,. 
+
+
+Jeder der Ausdriicke auf der rechten Seite der Gleichungen (12), (13), (14) 
+stellt eine Spiegelung dar und es liuft somit jedes der Geradentripel 
+a,b,c’; a,'¢,b'; b’a’e’ durch einen Punkt; da nun nach Voraussetzung 
+
+(b,c) = (¢,,5,), 
+also nach Satz 17: 
+S,S.= S,S,., 
+so ist 
+S,5S,,5,,8,S,= 5,5,,5.,5,8,, 
+und daher, nach (12) und (13): 
+
+
+(15) 8,5, 8,— 5,,,8,, Sy. 
+
+
+Aus dieser Gleichung folgern wir, dab die Geraden a,’, b,’, ¢,', , ¢ 
+einen Punkt gemein haben. 
+
+Da nun Db’ von a,’, ¢,, ¢ verschieden ist und da, wie oben gezeigt, 
+jedes der Geradentripel a,‘b,‘c’, a,'¢,'b’, b'a’e’ durch einen Punkt geht, so 
+leuchtet ein, daB alle sechs Geraden a’, b’, c’, a,’, b,', ¢,’ einen Punkt P’ 
+gemein haben. 
+
+Die Achse der Spiegelung S,S,,8,,5,S, geht also (nach Gleichung (13)) 
+durch P’, und da diese Achse auch durch das Spiegelbild P, von P in 
+bezug auf p gehen muB, weil P, bei der Transformation S,S, S,S,S, fest 
+bleibt, so ist 
+
+S,Sa,S.,S.Sp = Sp, . 
+(P’ ist von P, verschieden, weil z. B. b’ durch P’, aber nicht durch 
+P, Yauft.) 
+In ganz ahnlicher Weise ergibt sich aus Gleichung (14), daB: 
+S,S,S,.8.8, = Spr, - 
+Es ist also: 
+S,S,,8,,5,5,= 5,58, 5,5,5,, 
+und daher 
+S,,5,,8,= S,5,58,= S8.S,8,, 
+also 
+S,,5,, = 5.8,, 
+d. h. (nach Satz 18) 
+(¢, @) = (4,, 4), 
+w. z. b. w. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 463 
+
+
+Wir kénnen jetzt nach Hessenberg den Beweis des Satzes 23 in 
+folgender Weise fiihren (Fig. 5). 
+
+Das Sechseck ABCDEF sei dem Geradenpaar gh einbeschrieben 
+und die Schnittpunkte der gegeniiberliegenden Seiten seien mit P, Q, R 
+
+
+
+
+
+
+
+
+
+
+
+bezeichnet. Auf g bestimmen wir einen Punkt S derart, dab die Geraden- | 
+paare PS, PQ und PC, PF gemeinsame Spiegelungsachsen haben. | 
+Die Gerade F'S =s schneidet die Geraden CB und CD in baw. X 
+und X,. 
+Die Gerade s bildet mit jedem der Dreiecke CQE, BCD, ACR ein 
+volistindiges Vierseit, und wenn wir unseren Hilfssatz auf diese drei Vier- | 
+seite nacheinander anwenden, so ergibt sich, dab die Geradenpaare | 
+PS, PQ 
+PC, PF 
+PX, PE 
+PX,, PB 
+PS, PR 
+gemeinsame Spiegelungsachsen haben; in dieser Reihe finden wir aber die 
+beiden Paare PS, PQ und PS, PR, und die Gerade PQ fallt also mit 
+PR zusammen. 
+
+
+
+
+
+
+
+
+
+
+
+464 J. Hyecusiev. 
+
+
+§ 4. 
+Uber eine spezielle Kollineation. 
+
+
+Es sei (ABC .---) irgend eine Figur, deren Punkte A, B, C, -- 
+simtlich eigentlich sind, und O ein beliebiger eigentlicher Punkt; aus 
+(ABC.---) leiten wir durch eine Drehung um O, welche keine Um- 
+wendung ist, eine neve Figur (A, B,C,---) ab; die Mittelpunkte A, , B,, C,,--- 
+der Strecken AA,, BB,, CC,,--- bilden dann eine dritte Figur, deren 
+Punkte den Punkten der urspriinglichen Figur (ABC ---) eindeutig ent- 
+sprechen. Es besteht also eine eindeutige Transformation, durch welche 
+die Figur (ABC.---) in (A,B,C,---) tibergeht. Diese Transformation 
+neunen wir eine direkte Halbdrehung um O, wihrend die umgekehrte 
+Transformation eine inverse Halbdrehung um O heifen soll. Die Beziehung 
+der beiden Figuren (ABC---) und (A,B,C, ---) ist ein-eindeutig, weil 
+OA, 1 AA,, OB, 1 BB,,---, und 
+
+(OA, OA,) = (OB, OB,) = (OC, OC,) =---. 
+Der Punkt O entspricht sich selbst, und jeder Geraden durch O ent- 
+spricht eine Gerade durch 0. 
+
+Entsprechende Winkel mit dem Scheitel O sind einander kongruent. 
+
+Eine direkte oder inverse Halbdrehung ist bestimmt, wenn das Dreh- 
+zentrum © und zwei durch O gehende einander entsprechende Geraden 
+gegeben sind; diese Geraden kénnen nicht senkrecht zueinander stehen. 
+Bei einer direkten Halbdrehung 
+
+
+
+
+
+24 gehen nach Satz 20 die eigent- 
+
+c B, lichen Punkte einer gegebenen Ge- 
+
+* raden a in eigentliche Punkte einer 
+
+A 7 A, A, Geraden a, tiber; um diese Gerade 
+
+re \ eae * ae % zu konstruieren (Fig. 6), fallen wir 
+B P 
+
+
+c das Lot OA auf a und bestimmen 
+
+¥ den Punkt A,, welcher bei der 
+
+4 gegebenen Halbdrehung dem Punkte 
+
+A entspricht. Die Gerade AA, ist 
+dann die gesuchte. 
+
+Um dies zu zeigen, wihlen wir auf a zwei Punkte B und C derart, 
+daB AB= AC. Diejenige Drehung, aus welcher unsere Halbdrehung 
+abgeleitet ist, kann nun durch die Aufeinanderfolge der Spiegelungen 
+an OA und OA, dargestellt werden; wenn also diese Drehung die Punkte 
+B und C nach B, und C, fihrt, so ist B,C, das Spiegelbild von CB 
+in bezug auf OA,. Da nun die gesuchte Gerade a, durch die Mittel- 
+punkte B, und C, der Strecken BB, und CC, liuft, so steht sie senk- 
+recht auf OA, und fallt daher mit AA, zusammen. 
+
+
+Fig. 6. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 
+
+
+
+
+
+465 
+
+
+Gleichzeitig ergibt sich, daB ein rechter Winkel, dessen einer Schenkel 
+durch O liuft, durch die Halbdrehung in einen rechten Winkel iiber- 
+gehen muB. 
+
+Satz 24. Wenn mehrere Geraden einen (eigentlichen oder wneigent- 
+lichen) Punkt P gemein haben, so werden sie durch jede direkte Halb- 
+drehung in Geraden iibergefiihrt, welche ebenfalls einen Punkt gemein haben. 
+
+Zum Beweis (siehe Fig. 3) ziehen wir durch das Drehzentrum O 
+eine Gerade ¢ nach P (der Fall, daB P in O fallt, ist schon behandelt 
+worden); es seien a und b zwei andere Geraden durch P. Wir fiillen die 
+Lote OA und OB auf a und b, und weiter das Lot OQ auf AB; es ist 
+
+
+dann nach Satz 21: 
+(OA, 0Q) =(e, OB). 
+
+
+Eine direkte Halbdrehung um 0 fihrt nun unsere Figur in eine 
+ganz iahnliche Figur tiber; a, 6, c, OA, OB, OQ gehen in a,, b,, ¢,, 
+OA,, OB,, OQ, iiber, so daB OA, 1 a,, OB, 1 b,, OQ, 1 A,B,, und 
+
+
+(OA,, 0@) sad (4, OB;). 
+
+
+Aus dieser Gleichung ergibt sich nun nach Satz 21, daB die Geraden 
+a,, b,, ¢, einen Punkt P, gemeinsam haben. Wenn wir beliebige andere 
+Geraden durch P ziehen, so leuchtet demnach ein, daB die ihnen ent- 
+sprechenden Geraden durch P, laufen. Wir kénnen also sagen, daB bei 
+jeder direkten Halbdrehung einem (eigentlichen oder uneigentlichen) 
+Punkt P ein Punkt P, eindeutig entspricht; wenn P eine Gerade a 
+durchliiuft, mu8 P, die entsprechende Gerade a, durchlaufen. 
+
+Auch fiir eine inverse Halbdrehung gilt, daB jedem Punkt ein Punkt 
+entspricht; aber ein eigentlicher Punkt wird nicht immer in einen 
+eigentlichen Punkt iibergefiihrt, und Punkte einer Geraden gehen nicht 
+immer in Punkte einer Geraden itiber; indessen kann man immer beliebig 
+viele eigentliche Punkte angeben, deren entsprechende Punkte auch 
+eigentlich sind, und wir kénnen jedenfalls den folgenden Satz aus- 
+sprechen: 
+
+Satz 25. Wenn bei irgend einer (direkten oder inversen) Halbdrehung 
+zwei Punkte A und B in A, und B, iibergehen, und wenn die beiden 
+Geraden AB und A,B, existieren, so wird bei dieser Halbdrehung jedem 
+Punkt der Geraden AB ein Punkt der Geraden A,B, entsprechen. 
+
+Wir schreiten nun zur Betrachtung einer Transformation, die durch 
+die Aufeinanderfolge einer direkten, und einer inversen Halbdrehung, bzw. 
+D, J, mit gemeinsamem Drehzentrum 0, gebildet wird. 
+
+Wenn die Transformation J gewisse eigentliche Punkte oder Geraden 
+in ebensolche iiberfiihrt, so geht aus Satz 21 unmittelbar hervor, daB die 
+Halbdrehungen D und J in bezug auf diese Punkte oder Geraden ver- 
+
+
+Mathematische Annalen. LXIIIL. 80 
+
+
+
+
+
+
+
+
+
+
+
+466 J. Hyecmstev. 
+
+
+tauschbar sind, und auf Grund dieser Tatsache kénnen wir beweisen, 
+daB die beiden Halbdrehungen in bezug auf alle Punkte vertauschbar sind. 
+Es sei U ein beliebiger Punkt, und 
+U,=JU, 
+U, = DU,, 
+
+
+U, = DIU. 
+
+
+Wir wihlen zwei eigentliche Punkte, A, und B,, deren Verbindungs- 
+gerade nicht durch U, geht, und bestimmen die Punkte A, B, A,, B, 
+derart, daB: 
+
+A,B, = J(AB), 
+A, B, = D(A, B,), 
+
+
+also 
+
+
+A, B, = DJ(AB). 
+
+
+A, B, A,, B, sind demnach alle eigentlich; es existieren also die Ver- 
+bindungsgeraden AU, BU, A, U,, B,U,, A, U,, B,U, saimtlich. Da nun 
+die Geraden AU und BU durch die Halbdrehung J in A, U, und B,U, 
+iibergehen, und da wiederum A, U, und B,U, durch die Halbdrehung D 
+nach A,U, und B,U, gefiihrt werden, so miissen AU und BU bei jeder 
+der beiden Transformationen DJ und JD in A,U, und B,U, iiber- 
+
+
+gehen, d. h. 
+U, = DJ(U) = JD(U), w. z. b. w. 
+
+In ithnlicher Weise kann leicht nachgewiesen werden, daB zwei 
+direkte oder zwei inverse Halbdrehungen mit gemeinsamem Drehzentrum 
+vertauschbar sind. Nach diesen Vorbereitungen kénnen wir nun den 
+folgenden Satz beweisen: 
+
+Satz 26. Wenn bei der Aufeinanderfolge von beliebig vielen Halb- 
+drehungen mit gemeinsamem Drehzentrum zwei Punkte A und B in 
+A, und B, iibergehen, und die beiden Geraden AB und A,B, existieren, 
+so wird jeder Punkt der Geraden AB in einen Punkt der Geraden A, B, 
+tibergehen. 
+
+In dem Falle, daB die Halbdrehungen entweder simtlich direkt oder 
+simtlich invers sind, folgt der Satz aus Satz 25. 
+
+Wenn dagegen die Halbdrehungen teilweise invers und teilweise 
+direkt sind, so lassen sie sich wegen des soeben bewiesenen Satzes fiber 
+die Vertauschbarkeit der Halbdrehungen derart ordnen, daB alle vor- 
+kommenden direkten Halbdrehungen zuerst ausgefiihrt werden. Nach 
+Satz 25 ist der Beweis hiermit auch fir diesen Fall erbracht. 
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 
+
+
+§ 5. 
+Einfiihrung uneigentlicher Geraden. 
+
+
+Im folgenden wiahlen wir einen festen eigentlichen Punkt O (den 
+Fundamentalpunkt) als Zentrum derjenigen Halbdrehungen, welche zur 
+Anwendung kommen werden. 
+
+Definition. ine umeigentliche Gerade ist ein System von uneigent- 
+lichen Punkten, welches entweder durch eine Halbdrehung um den Fundamental- 
+punkt in die Gesamtheit der eigentlichen und uneigentlichen Punkte einer 
+gewdhnlichen Geraden iibergehen kann, oder mit der Gesamtheit der abso- 
+luten Pole aller Geraden durch O zusammenfillt. 
+
+Im letzteren Fall soll die uneigentliche Gerade die ausgezeichnete 
+Gerade heiBen. Die Punkte dieser Geraden nennen wir die ausgezeichneten 
+Punkte. 
+
+Satz 27. Wenn drei Punkte U, V, W auf einer uneigentlichen Geraden 
+liegen, so werden diese Punkte durch eine beliebige Halbdrehung D, wm den 
+Fundamentalpunkt in drei Punkte U,, V,, W, verwandelt, welche auf einer 
+(eigentlichen oder uneigentlichen) Geraden liegen. 
+
+Beweis. Sind U, V, W ausgezeichnete Punkte, so gehen sie durch 
+die Halbdrehung D, in ebensolche iiber; dieser Fall ist somit schon 
+erledigt. 
+
+Wenn U, V, W nicht alle ausgezeichnet sind, so muB8 nach unserer 
+Definition eine direkte Halbdrehung existieren, durch welche U, V, W 
+in Punkte U’, V’, W’ einer eigentlichen Geraden tibergehen. Die um- 
+gekehrte Halbdrehung, welche invers sein muB, sei mit J bezeichnet; 
+wir kénnen dann schreiben: 
+
+
+UVW=J(U'V' Ww’). 
+
+
+Es soll nun bewiesen werden, daB man eine Halbdrehung bestimmen 
+kann, bei der U,, V,, W, in Punkte einer eigentlichen Geraden ver- 
+wandelt werden. Wir wihlen eine direkte Halbdrehung D,, derart dab 
+z. B. U, nach einem eigentlichen Punkt U, gefiihrt wird, wihrend V, 
+und W, in V, und W, iibergehen. 
+
+Es ist also: 
+
+
+U,V, W, = D,(U,V,W;), 
+und da der Voraussetzung zufolge 
+
+
+U,V, W, = D,(UVW) 
+
+
+und 
+UVW=JJ(U'V’W’), 
+
+
+U, V, W, = D,D,J(U'V' W’). 
+
+
+so ist: 
+
+
+
+
+
+
+
+
+
+
+
+468 J. Hyecusrev. 
+
+
+Da nun U', V’, W’ auf einer eigentlichen Geraden liegen, und da 
+U, ein eigentlicher Punkt ist, so miissen nach Satz 26 die Punkte U,, 
+V,, W, auch auf einer eigentlichen Geraden liegen, und der Beweis ist 
+hiermit vollendet. 
+
+Nach Einfiihrung der uneigentlichen Geraden haben nun die folgenden 
+Verkniipfungssitze allgemeine Giiltigkeit: 
+
+Satz 28. Irgend zwei Punkte A und B haben eine Verbindungsgerade. 
+
+Es geniigt hier den Fall zu betrachten, daB beide Punkte un- 
+eigentlich sind. 
+
+Es seien erstens die beiden Punkte ausgezeichnete Punkte; dann ist 
+die ausgezeichnete Gerade die gesuchte. 
+
+Ist zweitens A nicht ausgezeichnet, so kénnen wir eine solche Halb- 
+drehung wihlen, daB A bei dieser Halbdrehung in einen eigentlichen 
+Punkt A, verwandelt wird; wenn dann B in B, itibergeht, so haben A, 
+und B, eine eigentliche Verbindungsgerade; die Punkte A und B haben 
+daher eine eigentliche oder uneigentliche Verbindungsgerade. 
+
+Satz 29. Zwei Geraden a und b haben einen und nur einen Punkt 
+gemein. 
+
+Ist eine der Geraden, z. B. a, die ausgezeichnete Gerade, so kénnen 
+wir eine Halbdrehung wihlen, welche b in eine eigentliche Gerade 5b, 
+verwandelt. Bei dieser Halbdrehung bleibt a fest, und da a und b, einen 
+und nur einen Punkt gemein haben, gilt dasselbe von a und b. 
+
+Wenn beide Geraden von der ausgezeichneten Geraden verschieden 
+sind, so gehen sie bei der Aufeinanderfolge von zwei geeigneten Halb- 
+drehungen in zwei eigentliche Geraden tiber, und da diese Geraden einen 
+und nur einen Punkt gemein haben, ist der Beweis hiermit vollendet. 
+
+Satz 30. Die absoluten Pole aller Geraden durch einen festen eigent- 
+lichen Punkt P liegen auf einer Geraden. Diese 
+Gerade soll die absolute Polare von P heiBen. 
+
+Wenn P in den Fundamentalpunkt O 
+fallt, ist der Satz eine unmittelbare Folge 
+unserer Definition. 
+
+Fallt P nicht in O, so ziehen wir 
+(Fig. 7) die Gerade OP = a, das Lot 6 auf 
+a in P, und schlieBlich zwei beliebige 
+aufeinander senkrechte Geraden ¢ und d 
+durch P. 
+
+Es wird dann geniigen zu beweisen, 
+daB die absoluten Pole der Geraden a, b, ¢ auf einer Geraden liegen. 
+
+Wir fallen die Lote OC und OD auf ¢ und d, und ferner die Lote 
+DB auf b und OA auf BD. 
+
+
+
+
+
+
+
+
+Fig. 7. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 469 
+
+Wenn nun OA 1 a, so haben die Geraden a und BD zwei gemein- 
+same Lote b und OA; die absoluten Pole der Geraden durch P fallen 
+dann mit den absoluten Polen der Geraden durch O zusammen und 
+bilden daher die ausgezeichnete Gerade. 
+
+In allen anderen Fiillen trifft das Lot PP, won P auf OA diese 
+Gerade in einem von O verschiedenen Punkt P,. Diejenige Halbdrehung 
+um O, welche P in P, verwandelt, fiihrt nun a nach OA, und BA 
+nach einer Geraden, die durch A liuft; der absolute Pol von }b geht 
+daher als Schnittpunkt der beiden Geraden a und BA bei der erwihnten 
+Halbdrehung in A iiber. Da ferner der absolute Pol von a in den 
+absoluten Pol von OA iibergehen muB, so wird die Verbindungsgerade 
+der absoluten Pole von b und a in die Gerade AB iibergehen: es bedarf 
+also nur noch des Nachweises, daB der absolute Pol von ¢ durch unsere 
+Halbdrehung in einen Punkt von AB verwandelt wird. Um dies zu 
+zeigen, fiillen wir von P und O die Lote PQ und OR auf CD; es ist 
+dann nach Satz 21 
+
+(PQ, d) = (ce, PO) = (d, b). 
+Das Dreieck PQD ist also das Spiegelbild von PBD in bezug auf d, 
+und daher sind d und OD Spiegelungsachsen der Geraden BA und CD. 
+Hieraus geht ferner hervor, daB die Dreiecke ORD und OAD durch 
+Spiegelung an OD ineinander iibergehen. Es ist also: 
+
+
+(OD, 0A) = (OR, OD) = (OC, OP), 
+und daher: 
+(OP, OD) + (OD, 0A) = (OC, OP) + (OP, OD), 
+
+
+(OP, OA) =(OC, OD). 
+Auf Grund dieser Gleichung muB die Gerade OC durch die erwihnte Halb- 
+drehung in OD verwandelt werden, und da ferner d bei der Halbdrehung in 
+eine Gerade durch D iibergeht, so geht der absolute Pol von ¢ als Schnitt- 
+punkt der Geraden OC und d in D iiber. Der Beweis ist hiermit vollendet. 
+
+
+also: 
+
+
+g 6. 
+Beweis des Pascalschen Satzes. 
+A. Der singulire Fall 
+
+Um die Begriindung der Geometrie im singuliiren Falle zu vollziehen, 
+wird es geniigen, den folgenden Satz zu beweisen: 
+
+Satz 31. Hat ein Sechseck seine Ecken abwechselnd auf zwei Geraden 
+mit dem Schnittpunkt S, und liegen zwei von den drei Schnittpunkten der 
+Gegenseitenpaare auf der ausgezeichneten Geraden, dann muB auch der 
+dritte Schnittpunkt auf dieser Geraden liegen. 
+
+
+
+
+
+470 J. Hoetmsuev. 
+
+
+Der Satz ist schon (Satz 22) fiir den speziellen Fall bewiesen, dab 
+alle Ecken wie auch der Punkt S eigentlich sind; der allgemeine Fall 
+kann aber durch Halbdrehungen um den Fundamentalpunkt auf den 
+speziellen Fall zuriickgefiihrt werden. In der Tat kann, da keine der 
+Ecken auf der ausgezeichneten Geraden liegt, durch die Aufeinanderfolge 
+von geeigneten Halbdrehungen um den Fundamentalpunkt erzielt werden, 
+daB alle Ecken in eigentliche Punkte tibergehen, wiihrend der Punkt S 
+entweder nach einem eigentlichen Punkt gefiihrt wird oder auf der aus- 
+gezeichneten Geraden liegt. Tritt ersterer Fall ein, so ist der Satz mithin 
+bewiesen, und fiir den letzteren Fall kann man dann leicht den Beweis 
+indirekt fiihren; doch kann man auch fir letzteren Fall einen direkten 
+Beweis geben, indem die ganze Figur in sich selbst tibergeht durch eine 
+Umwendung um den gemeinsamen Mittelpunkt der beiden ,,Parallelogramme“, 
+welche von den beiden Gegenseitenpaaren des Sechsecks und demjenigen 
+Geradenpaare, welchem das Sechseck einbeschrieben ist, begrenzt werden. 
+
+Da nun in unserer Geometrie die ausgezeichnete Gerade die Rolle 
+der unendlich fernen Geraden in der gewdhnlichen Euklidischen Geometrie 
+spielt, kénnen wir nach Hessenberg*) die Begriindung der Geometrie 
+im singuliren Fall als erledigt betrachten. 
+
+
+B. Der ordinire Fall. 
+
+
+In diesem Falle beweisen wir den allgemeinen Pascalschen Satz iiber 
+das einem Geradenpaare eingeschriebene Sechseck: 
+
+Satz 32. Hat ein Sechseck seine Ecken abwechselnd auf zwei Geraden, 
+so liegen die drei Schnittpunkte der Gegenseitenpaare auf einer Geraden. 
+
+Durch die Aufeinanderfolge geeigneter Halbdrehungen um den Funda- 
+mentalpunkt kénnen wir eine derartige Verwandlung der Figur erzielen, 
+da8 unter den zu betrachtenden neun Punkten jedenfalls keine anderen 
+uneigentlichen Punkte vorhanden sind als solche, die auf der ausgezeich- 
+neten Geraden liegen; unter den Verbindungsgeraden der neun Punkte 
+findet man alsdann héchstens eine uneigentliche Gerade, niimlich die aus- 
+gezeichnete. 
+
+Durch kongruente Verschiebung der in dieser Weise erhaltenen Figur 
+kann man ferner erreichen, dab die zuriickgebliebenen uneigentlichen Punkte 
+nach Punkten auBerhalb der ausgezeichneten Geraden gefiihrt werden; da 
+durch diese Verschiebung die ausgezeichnete Gerade in die absolute Polare 
+eines eigentlichen Punktes iibergeht, also nach Satz 30 in eine uneigent- 
+
+
+*) G. Hessenberg, Beweis des Desarguesschen Satzes aus dem Pascalschen, diese 
+
+
+Ann., Bd. 61, 8. 165, sowie Desarguesscher Satz und Zentralkollineation, Arch. d. 
+Math. u. Phys., II. Reihe, Bd. 6. 
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 471 
+
+
+liche Gerade, und da ferner die eigentlichen Punkte und Geraden in eben- 
+solche iibergehen, so wird es geniigen, unseren Satz fiir die nach der 
+Verschiebung erhaltene Figur zu beweisen. 
+
+SchlieBlich kann nun diese Figur wiederum durch Halbdrehungen 
+um den Fundamentalpunkt derart verwandelt werden, daB siimtliche neun 
+Punkte und deren Verbindungsgeraden in lauter eigentliche Elemente 
+tibergehen, und da der Pascalsche Satz fiir die solchergestalt verwandelte 
+Figur Geltung hat (Satz 23), so muB er auch fiir die urspriingliche Figur 
+gelten. 
+
+' Nach Hessenberg*) ist die Begriindung der ebenen Geometrie hier- 
+mit volilendet. Ferner zeigen die Entwicklungen von F. Schur**), wie 
+man zur analytischen Geometrie gelangt. 
+
+
+§ 7. 
+Uber die Winkelsumme des Dreiecks. 
+
+
+Im singuliiren Fall ist die Winkelsumme eines jeden Dreiecks gleich 
+zwei Rechten. Lie ausgezeichnete Gerade ist die absolute Polare aller 
+eigentlichen Punkte. Wenn keine uneigentlichen Punkte auBerhalb dieser 
+Geraden existieren, so ist die Geometrie die gewdhnliche Euklidische. 
+Wenn es aber andere uneigentliche Punkte gibt, so kénnen die Begriffe 
+
+
+der Anordnung und Kongruenz dahin erweitert werden, daB simtliche 
+ebenen Axiome fiir alle eigentlichen und uneigentlichen Elemente, mit 
+AusschluB der ausgezeichneten Geraden, erfiillt werden. Indem man unter 
+parallelen Geraden solche Geraden versteht, deren Schnittpunkt auf der 
+ausgezeichneten Geraden liegt, wird alsdann auch das Parallelenaxiom 
+erfillt. Die somit erzielte Geometrie ist also die Euklidische. 
+
+Es gibt also wohl, wie M. Dehn bewiesen hat***), eine ,,semi-Euklidische 
+Geometrie“, aber jede solche Geometrie geht, wie sich eben mit Hilfe der 
+von Dehn benutzten Pseudogeometrie schlieBen lift, durch geeignete 
+Hinzufiigung uneigentlicher Elemente in die gewéhnliche Euklidische 
+Geometrie iiber. 
+
+Im ordiniiren Falle ist jeder eigentlichen Geraden und jedem eigent- 
+lichen Punkt ein absoluter Pol bzw. eine absolute Polare ein-eindeutig 
+zugeordnet. Auf projektivem Wege kann diese Beziehung zu einer voll- 
+stiindigen Polaritiéit erweitert werden, und auf jeder Geraden erhalten wir 
+
+
+*) G. Hessenberg, Beweis des Desarguesschen Satzes aus dem Pascalschen, diese 
+Annalen Bd. 61, 8. 161. 
+**) F. Schur, Uber die Grundlagen der Geometrie, diese Annalen, Bd. 55, S. 281 ff. 
+***) M. Dehn, Die Legendreschen Siitze iiber die Winkelsumme des Dreiecks, 
+diese Annalen, Bd. 53, 8. 436. 
+
+
+
+
+
+472 J. Hoetuswev. 
+
+
+dann in bezug auf diese Polaritiit eine absolute Involution von konjugierten 
+Punkten.*) Wie man den Begriff des ,,Trennens“ einfiihren kann, setzen 
+wir als bekannt voraus. 
+
+Mit Hilfe einer kongruenten Verschiebung ergibt sich sogleich der Satz: 
+
+Wenn auf irgend einer eigentlichen Geraden die absolute Involution 
+Guts | ist, so ist die absolute Involution einer jeden eigent- 
+
+ungleichsinnig) —” 
+gleichsinnig 
+ungleichsinnig | 
+
+Ferner haben wir den Satz: 
+
+Ist in irgend einem Vierecke mit drei rechten Winkeln der vierte 
+Winkel stumpf resp. spitz, so ist in jedem Vierecke mit drei rechten 
+Winkeln der vierte Winkel stumpf resp. spitz. 
+
+Hat niimlich das Viereck ABCD bei B, C, D rechte Winkel, und 
+errichtet man in A das Lot a auf AB, so schneiden die Geradenpaare 
+a, AB und AC, AD zwei Punktepaare auf BC aus, welche der absoluten 
+Involution von BC angehéren. Je nachdem diese Involution gleichsinnig 
+oder ungleichsinnig ist, miissen die Geradenpaare a, AB und AC, AD 
+sich trennen oder nicht trennen, und hiermit ist der Satz bewiesen.**) 
+
+Bekanntlich kann nun folgender Satz leicht bewiesen werden: 
+
+Wenn in irgend einem Dreiecke die Winkelsumme gréBer resp. kleiner 
+als zwei rechte Winkel ist, so ist sie in jedem Dreiecke gréBer resp. 
+kleiner als zwei rechte Winkel.***) 
+
+Wenn nun die Winkelsumme des Dreiecks gréBer als zwei rechte 
+Winkel ist, so soll unsere Geometrie die elliptische Geometrie genannt 
+werden. Die absolute Polaritit ist in diesem Falle eine gleichférmige 
+Polaritit; und wenn wir den urspriinglichen Begriff der Bewegung derart 
+erweitern, daB jede Kollineation, durch welche die absolute Polaritit nicht 
+gestért wird, eine Bewegung heiBen soll, so laéBt sich leicht nachweisen, 
+daB die gewéhnlichen Axiome der vollstiindigen elliptischen Geometrie fiir 
+die Gesamtheit unserer eigentlichen und uneigentlichen Elemente Geltung 
+haben. 
+
+Wenn die Winkelsumme des Dreiecks kleiner als zwei rechte Winkel 
+ist, so soll unsere Geometrie die hyperbolische Geometrie genannt werden. 
+
+
+lichen Geraden bzw. 
+
+
+*) Vgl. F. Schur, Uber die Grundlagen der Geometrie, diese Annalen, Bd. 55, S. 286. 
+™) Vgl. M. Pasch, Vorlesungen iiber neuere Geometrie (Leipzig 1882), 8. 163; 
+K. Th. Vahlen, Abstrakte Geometrie (Leipzig 1905), 8. 261, bemerkt, daB der Satz 
+schon von Lambert (Vgl. Stickel und Engel, Die Theorie der Parallellinien (Leipzig 
+1895), 8. 186) ohne Benutzung der Stetigkeit bewiesen worden ist. Der Beweis bei 
+Vahlen, a. a.|O. 8. 258, ist im wesentlichen eine Wiedergabe des Lambertschen 
+Beweises. 
+***) Andere Beweise bei Dehn, a. a. 0., 8. 429 und Schur, a. a. O., 8. 291. 
+
+
+
+
+
+Neue Begriindung der ebenen Geometrie. 473 
+
+
+Die absolute Polaritit ist in diesem Falle eine ungleichférmige Polaritiit. 
+Nehmen wir an, daB der Kreis jede Gerade schneidet, deren Abstand 
+vom Mittelpunkt kleiner ist als der Radius, so existiert fiir die absolute 
+Polaritit eine Ordnungskurve, durch welche die Gesamtheit der eigent- 
+lichen und uneigentlichen Punkte in zwei Bereiche geteilt wird, und der- 
+jenige dieser Bereiche, welcher die eigentlichen Punkte enthilt, wird dann 
+eine Lobatscheffskysche Ebene ausmachen. 
+
+Wir haben also die folgenden Fiille zu unterscheiden: 
+
+1. Die Winkelsumme des Dreiecks ist gleich zwei rechten Winkeln. 
+Die Geometrie ist, entweder unmittelbar oder nach Einfiihrung uneigent- 
+licher Elemente, die Euklidische Geometrie. 
+
+2. Die Winkelsumme des Dreiecks ist gréBer als zwei rechte Winkel. 
+Die Geometrie soll die elliptische Geometrie genannt werden. Nach Ein- 
+fiihrung uneigentlicher Elemente erhilt man die vollstiindige elliptische 
+Geometrie.*) 
+
+3. Die Winkelsumme des Dreiecks ist kleiner als zwei rechte Winkel. 
+Die Geometrie soll die hyperbolische genannt werden. Auf Grund des 
+Axioms tiber das Schneiden eines Kreises mit einer Geraden und nach 
+geeigneter Einfiihrung von uneigentlichen Elementen erhilt man die 
+Lobatscheffskysche Geometrie. 
+
+
+g 8. 
+Uber die Axiome der Anordnung. 
+
+
+Bei der vorstehenden Begriindung der Geometrie haben wir (mit 
+Ausnahme des § 7) die Axiome der Anordnung tatsichlich nur wenig 
+benutzt; hiitten wir von diesen Axiomen unbeschrinkten Gebrauch gemacht, 
+so hiitte manches leichter ausgefiihrt werden kénnen; es war aber unser 
+Ziel, durch die von uns gewihlte Darstellung hervortreten zu lassen, dab 
+die erwihnten Axiome und die durch sie definierten Begriffe, wenn nicht 
+ganz entbehrlich, so doch fiir unseren Zweck nur von sehr geringer Be- 
+deutung sind. Nur bei den Beweisen der Siitze 11 und 19 haben wir 
+von den Anordnungsaxiomen expliziten Gebrauch gemacht; aber auch an 
+diesen Stellen kénnten wir die Begriffe der Anordnung entbehren, wenn 
+nur die folgende Tatsache uns zur Verfiigung steht: Die Mittelpunkte der 
+Seiten eines Dreiecks liegen nicht auf einer Geraden. 
+
+Unsere Begriindung der ebenen Geometrie kénnte alsdann auf Grund 
+der folgenden Axiome durchgefiihrt werden: 
+
+
+*) Wir heben hervor, daB nach unserer Auffassung gerade der hier eia- 
+geschlagene Weg der natiirliche ist, um die vollstindige elliptische Geometrie auf- 
+zubauen. Vgl. hier die Bemerkung von Schur, Math. Annalen Bd. 55, 8. 267 u. 274. 
+
+
+
+
+
+J. Hsetustev. Neue Begriindung der ebenen Geometrie. 
+
+
+1. Durch je zwei Punkte geht eine und nur eine Gerade. 
+
+Das System von zwei Punkten A und B nennen wir eine Strecke 
+(AB oder BA). 
+
+2. Zwei Strecken, die einer dritten Strecke kongruent sind, sind unter- 
+einander kongruent. 
+
+3. Ist A ein gegebener Punkt einer gegebenen Geraden, so kann man 
+auf dieser Geraden zwei und nur zwei Punkte B so bestimmen, daB die 
+Strecke AB emer gegebenen Strecke kongruent wird. 
+
+Jede Beziehung, durch welche jeder Geraden und jedem Punkte in 
+ihr eine Gerade und ein Punkt in ihr eindeutig so zugeordnet ist, dab 
+die in dieser Weise einander entsprechenden Strecken kongruent sind, 
+soll eine Bewegung heiBen. 
+
+4. Es gibt auBer der Identitit eine und nur eine Bewegung, bei welcher 
+alle Punkte einer gegebenen Geraden a fest bleiben. Bei dieser Bewegung 
+wird kein auBerhalb a gelegener Punkt fest bleiben. 
+
+Jede solche Bewegung heiBbt eine Spiegelung. 
+
+Das Aufeinandersenkrechtstehen li8t sich nun leicht definieren. 
+
+5. Es gibt eine Bewegung, bei welcher ein beliebiges gleichschenkliges 
+Dreieck in sich selbst iibergeht, so daB die Spitze fest bleibt, und die beiden 
+Schenkel vertauscht werden. 
+
+6. Jede Strecke hat einen und nur einen Mittelpunkt. 
+
+7. Die Mittelpunkte der Seiten eines Dreiecks liegen nicht auf einer Geraden. 
+
+Die Frage nach der Unabhingigkeit der Axiome 1—7 mag vorlaufig 
+dahingestellt bleiben. 
+
+Ob die Axiome der Anordnung tatsiichlich von den Axiomen 1—7 
+unabhingig sind, wird wesentlich davon abhingen, ob es méglich ist, ein 

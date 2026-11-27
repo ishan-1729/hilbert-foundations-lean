@@ -1,0 +1,806 @@
+man  noch  die  obige  anschauliche  Forderung  über  den  Begriff  der  Zer- 
+legungsgleichheit zu  Hilfe  nimmt. 
+
+Mit  Hilfe  der  beiden  Stetigkeitsaxiome  V  1  und  V  2  ist  es  noch 
+nicht  möglich,  die  ebene  Geometrie  als  identisch  mit  der  gewöhnlichen 
+analytischen  „Cartesischen"  Geometrie  nachzuweisen,  in  der  federn  Zahlen- 
+
+
+Anhang  III:    Begründung  der  Bolyai-Lobatschefskyschen  Geometrie.  107 
+
+paar  ein  Punkt  der  Ebene  entspricht.  Zu  diesem  Nachweise  ist  aber 
+weder  das  Axiom  vom  Dedekindschen  Schnitte,  noch  das  Axiom  von 
+der  Existenz  der  Grenzpunkte  notwendig;  vielmehr  genügt  es,  das 
+Axiom  Y  2  durch  das  Axiom  allgemeineren  Charakters  zu  ersetzen, 
+welches  ich  bereits  in  den  Grundlagen  der  Geometrie1)  aufgestellt  und 
+Axiom  der  Vollständigkeit  genannt  habe. 
+
+
+Anhang  III. 
+Neue  Begründung  der  Bolyai-Lobatschefskyschen  Geometrie. 
+
+Abgedruckt  aus  Math.  Ann.  Bd.  57. 
+
+In  meiner  Festschrift  „Grundlagen  der  Geometrie"  Kap.  I  (S.  2 — S.  18) 2) 
+habe  ich  ein  System  von  Axiomen  für  die  Euklidische  Geometrie  aufgestellt 
+und  dann  gezeigt,  daß  lediglich  auf  Grund  der  die  Ebene  betreffenden  Be- 
+standteile  dieser  Axiome  der  Aufbau  der  ebenen  Euklidischen  Geometrie  mög- 
+lich ist,  selbst  wenn  man  die  Anwendung  der  Stetigkeitsaxiome  vermeidet. 
+In  der  folgenden  Untersuchung  ersetze  ich  das  Parallelenaxiom  durch  eine 
+der  Bolyai-Lobatschefskyschen  Geometrie  entsprechende  Forderung  und  zeige 
+dann  ebenfalls,  daß  ausschließlich  auf  Grund  der  ebenen  Axiome  ohne  An- 
+wendung von  Stetigkeitsaxiomen  die  Begründung  der  Bolyai-Lobatschefskyschen 
+Geometrie  in  der  Ebene  möglich  ist. 
+
+Diese  neue  Begründung  der  Bolyai-Lobatschefskyschen  Geometrie 
+steht,  wie  mir  scheint,  auch  hinsichtlich  ihrer  Einfachheit  den  bisher 
+bekannten  Begründungsarten,  nämlich  derjenigen  von  Bolyai  und  Lobat- 
+schefsky,  die  beide  sich  der  Grenzkugel  bedienten,  und  derjenigen  von 
+F.  Klein  mittels  der  projektiven  Methode  nicht  nach.  Die  genannten 
+Begründungen  benutzen  wesentlich   den  Raum   sowohl  wie  die  Stetigkeit. 
+
+Zur  Erleichterung  des  Verständnisses  stelle  ich  nach  meiner  Festschrift 
+„Grundlagen  der  Geometrie"  die  Axiome  der  ebenen  Geometrie  zusammen, 
+wie  folgt: 
+
+I.   Axiome  der  Verknüpfung. 
+
+I  1.  Zwei  voneinander  verschiedene  Punkte  A  und  B  bestimmen 
+stets  eine  Gerade. 
+
+I  2.  Irgend  zwei  voneinander  verschiedene  Punkte  einer  Geraden 
+bestimmen  diese  Gerade. 
+
+
+1)  §  8  S.  16;  man  vergleiche  auch  meinen  Vortrag  über  den  Zahlbegriff:  Be- 
+richte der  deutschen  Mathematiker-Vereinigung,  1900. 
+
+2)  Vergleiche  auch  meine  Abhandlung  „Über  den  Satz  von  der  Gleichheit  der 
+Basiswinkel  im  gleichschenkligen  Dreieck".  Proceedings  of  the  London  Mathematical 
+Society,  Bd.  35.  1903  Anhang  II. 
+
+
+108         Anhang  III:    Begründung  der  Bolyai-Lobatschefskyaehen  Geometrie. 
+
+I  3.  Auf  jeder  Geraden  gibt  es  wenigstens  zwei  Punkte.  Es  gibt 
+wenigstens  drei  Punkte,  welche  nicht  in  einer  Geraden  liegen. 
+
+II.   Axiome  der  Anordnung. 
+
+II  1.  Wenn  A,  B,  C  Punkte  einer  Geraden  sind  und  B  zwischen 
+A  und  C  liegt,  so  liegt  auch  B  zwischen  C  und  A. 
+
+II  2.  Wenn  A  und  B  zwei  Punkte  einer  Geraden  sind,  so  gibt 
+es  wenigstens  einen  Punkt  C,  der  zwischen  A  und  B  liegt,  und  wenigstens 
+einen  Punkt  B,  so  daß  B  zwischen  A  und  D  liegt. 
+
+II  3.  Unter  irgend  drei  Punkten  einer  Geraden  gibt  es  stets  einen 
+und  nur  einen  Punkt,  der  zwischen  den  beiden  anderen  liegt. 
+
+Erklärung:  Die  zwischen  zwei  Punkten  A  und  B  gelegenen  Punkte 
+heißen  auch  die  Punkte  der  Strecke  AB  oder  BA. 
+
+II  4.  Es  seien  A,  B,  C  drei  nicht  in  gerader  Linie  gelegene  Punkte 
+und  a  eine  Gerade,  die  keinen  der  Punkte  A,  B,  C  trifft;  wenn  dann 
+diese  Gerade  durch  einen  Punkt  der  Strecke  AB  geht,  so  geht  sie  gewiß 
+auch  durch  einen  Punkt  der  Strecke  BC  oder  der  Strecke  AC. 
+
+III.   Axiome  der  Kongruenz. 
+
+Erklärung:  Jede  Gerade  zerfällt  von  irgend  einem  ihrer  Punkte 
+aus  in  zwei  Halbgerade  (Halbstrahlen)  oder  Hälften. 
+
+III  1.  Wenn  A,  B  zwei  Punkte  der  Geraden  a  sind  und  A'  ein  Punkt 
+einer  Geraden  a  ist,  so  kann  man  auf  einer  gegebenen  Hälfte  der  Ge- 
+raden a  von  A'  aus  stets  einen  und  nur  einen  Punkt  B'  finden,  so  daß 
+die  Strecke  AB  der  Strecke  A ' B'  kongruent  oder  gleich  ist;  in  Zeichen: 
+
+AB- A'B'. 
+Jede  Strecke  ist  sich  selbst  kongruent;  in  Zeichen: 
+
+AB  =  AB    und    BA  =  AB. 
+III  2.  Wenn  die  Strecke  AB  sowohl  der  Strecke  A' B'  als  auch  der 
+Strecke  A" B"  kongruent  ist,    so    ist  auch  A '  B'  der    Strecke  A" B" 
+kongruent. 
+
+III  3.  Es  seien  AB  und  BC  zwei  Strecken  ohne  gemeinsame 
+Punkte  auf  a  und  ferner  A'B'  und  B' C  zwei  Strecken  ohne  gemein- 
+same Punkte  auf  einer  Geraden  a';  wenn  dann  AB  =  A'B'  und 
+BC  =  B'C,  so  ist  auch  AC=A'C. 
+
+Erklärung.  Ein  von  einem  Punkte  A  ausgehendes  Paar  von  Halb- 
+geraden h  und  k,  die  nicht  zusammen  eine  Gerade  ausmachen,  nennen 
+wir  einen    Winkel  und  bezeichnen  ihn  entweder  mit 
+
+Die  Punkte  der  Ebene,  welche  bezüglich  h  auf  derselben  Seite  wie 
+
+
+Anhang  III:    Begründung  der  Bolyai-Lobatschefskyschen  Geometrie.         109 
+
+k  und  zugleich  bezüglich  k  auf  derselben  Seite  wie  h  liegen,   bilden  den 
+Winkelraum  von  ^Qik). 
+
+III  4.  Es  sei  ein  Winkel  Qik),  eine  Gerade  a  und  eine  bestimmte 
+Seite  von  a  gegeben.  Es  bedeute  K  eine  Halbgerade  der  Geraden  a,  die 
+vom  Punkte  0  ausgeht:  dann  gibt  es  eine  und  nur  eine  Halbgerade  k',  so 
+daß  der  Winkel  (hh)  dem  Winkel  Qi'k')  kongruent  oder  gleich  ist,  in 
+Zeichen: 
+
+<£  (hk)  =  <£  {h'k') 
+
+und   daß  zugleich  alle  Punkte  des   Winkelraums  von  ^Qi'k')   auf  der 
+gegebenen  Seite  von  a   liegen. 
+
+Jeder  Winkel  ist  sich  selbst  kongruent,  in  Zeichen: 
+
+«£  (hh)  ==  «£  (hh)     und     ^.(Jik)  =  (kh). 
+IH  5.   Wenn  ein  Winkel  (hk)   sowohl  dem  Winkel  Qi'k')  als  auch 
+dem  Winkel  Qi'k")  kongruent  ist,  so   ist  auch  der  Winkel  Qi'k')  dem 
+Winkel  Qi'k")  kongruent. 
+
+III  6.  Wenn  für  zwei  Dreiecke  ABC  und  A'B'C  die  Kongruenzen 
+AB  =  A'B',  AC  =  A'C    und     «£  BAC  =  <£  B'A'C 
+gelten,  so  gilt  auch  stets 
+
+«£  ABC  ==<£  A'B'C  und  ^ACB  =  ^A'C'B'. 
+Aus  den  Axiomen  I — III  folgen  leicht  die  Sätze  über  die  Kongruenz  x>~*J*X-  * 
+der  Dreiecke  und  über  das  gleichschenklige  Dreieck  und  zugleich  erkennt 
+man  die  Möglichkeit,  ein  Lot  zu  errichten  oder  zu  fällen,  sowie  eine  ge- 
+gebene Strecke  oder  einen  gegebenen  Winkel  zu  halbieren.  Insbesondere 
+folgt  auch  wie  bei  Euklid  der  Satz,  daß  in  jedem  Dreiecke  die  Summe 
+zweier  Seiten  größer  als  die  dritte  ist. 
+
+IV.   Axiom  von  den  sich  schneidenden  und  nicht  schneidenden 
+
+Geraden. 
+
+Wir  sprechen  nun  das  Axiom,  welches  in  der  Bolyai-Lobatschefsky- 
+schen Geometrie  dem  Parallelenaxiom  der  Euklidischen  Geometrie  ent- 
+spricht, wie  folgt,  aus: 
+
+IV.  Ist  b  eine  beliebige  Gerade  und  A  ein  nicht  auf  ihr  gelegener 
+Punkt,  so  gibt  es  stets  durch  A  zwei  Halbgerade  aif  a2,  die  nicht  ein 
+und  dieselbe  Gerade  ausmachen  und  die  Gerade  b  nicht  schneiden, 
+während  jede  in  dem  durch  alt  a2  gebildeten  Winkelraum  gelegene  von 
+A  ausgehende  Halbgerade  die  Gerade  b  schneidet. 
+
+Erklärung.  Die  Gerade  b  zerfalle  von  irgend  einem  ihrer  Punkte 
+B  aus  in  die  beiden  Halbgeraden  blf  b2  und  es  mögen  a1}  bt  auf  der 
+einen  und  a2,  b2  auf  der  anderen  Seite  der  Geraden  AB  liegen:  dann  soll 
+die  Halbgerade  o,  zu  der  Halbgeraden  bt  und  ebenso  die  Halbgerade  a2  zu 
+
+
+HO         Anhang'^  III:    Begründung  der  Bolyai-Lobatschefskyschen  Geometrie. 
+
+der  Halbgeraden  b2  parallel  genannt  werden;  desgleichen  sagen  wir,  es  seien 
+die   beiden  Halbgeraden  aif  a2  zu   der    Geraden  b  parallel  und    auch  von 
+
+jeder  der  beiden  Geraden,  von  denen  ax 
+bez.  a2  Halbgerade  sind,  sagen  wir,  daß  sie 
+zu  b  parallel  sind. 
+
+Es  folgt  sofort  die  Richtigkeit  folgen- 
+der Tatsachen: 
+
+Wenn    eine    Gerade    oder    Halbgerade 
+zu  einer  anderen  Geraden  oder  Halbgeraden 
+parallel  ist,  so  ist  stets  auch  diese  zu  jener  parallel. 
+
+Wenn  zwei  Halbgerade  einer  dritten  Halbgeraden  parallel  sind,  so 
+sind  sie  untereinander  parallel. 
+
+Erklärung.  Jede  Halbgerade  bestimmt  ein  Ende;  von  allen  Halb- 
+geraden, die  zueinander  parallel  sind,  sagen  wir,  daß  sie  dasselbe  Ende 
+bestimmen.  Eine  vom  Punkte  A  ausgehende  Halbgerade  mit  dem  Ende  a 
+werde  allgemein  mit  (Act)  bezeichnet.  Eine  Gerade  besitzt  stets  zwei  Enden. 
+Allgemein  werde  eine  Gerade,  deren  Enden  a  und  ß  sind,  mit  (a,  ß)  bezeichnet. 
+Wenn  A,  B  und  Ä,  B'  zwei  Punktepaare  und  a  und  a  zwei  Enden 
+von  derart  sind,  daß  die  Strecken  AB  und  A'B'  einander  gleich  sind  und 
+überdies  der  von  AB  und  der  Halbgeraden  (A,  a)  gebildete  Winkel  gleich 
+dem  von  AB'  und  der  Halbgeraden  (AI,  a)  gebildeten  Winkel  wird,  so 
+ist,  wie  man  leicht  erkennt,  stets  auch  der  von  BA  und  (B,  a)  gebildete 
+Winkel  gleich  dem  von  B' A'  und  (B' a)  gebildeten  Winkel;  die  beiden 
+Figuren  ABa  und  A'B'a   heißen  einander  kongruent. 
+
+Endlich  definieren  wir  noch  in  bekannter  Weise  den  Begriff  des 
+Spiegelbildes : 
+
+Erklärung.  Wenn  wir  von  einem  Punkte  aus  auf  eine  Gerade  das 
+Lot  fällen  und  dieses  über  seinen  Fußpunkt  hinaus  um  sich  selbst  ver- 
+längern, so  heiße  der  entstehende  Endpunkt  das  Spiegelbild  des  ursprüng- 
+lichen Punktes  an  jener  Geraden. 
+
+Die  Spiegelbilder  für  die  Punkte  einer  Geraden  liegen  wiederum 
+auf  einer  Geraden;  diese  heiße  das  Spiegelbild  der  ursprünglichen  Geraden. 
+
+§  1. 
+Hilfssätze. 
+
+Wir  beweisen  zunächst  der  Reihe  nach  folgende  Hilfssätze: 
+Satz  1.    Wenn  zwei  Gerade  eine  dritte  Gerade  unter  gleichen  Gegen- 
+winkeln schneiden,  so  sind  sie  gewiß  nicht  zueinander  parallel. 
+
+Beweis.  Wir  nehmen  im  Gegenteil  an,  daß  die  beiden  Geraden  nach 
+einer  Richtung  hin  zueinander  parallel  wären.  Führen  wir  dann  um  die 
+Mitte   der  auf  der  dritten  Geraden  ausgeschnittenen   Strecke  eine  Halb- 
+
+
+lr. 
+
+
+Anhang  III:    Begründung  der  Bolyai-Lobatschefskyscken  Geometrie.  Hl 
+
+drehung  aus,  d.  h.  konstruieren  wir  über  der  anderen  Seite  jener  Strecke 
+das  betreffende  kongruente  Dreieck,  so  würde  folgen,  daß  die  beiden 
+ersteren  Geraden  auch  nach  der  anderen  Richtung  hin  zueinander  parallel 
+sind,  und  dies  widerspräche  dem  Axiom  IV. 
+
+Satz  2.  Wenn  irgend  zwei  Gerade  a,  b  vorgelegt  sind,  die  sich 
+weder  schneiden  noch  zueinander  parallel  sind,  so  gibt  es  stets  eine  Gerade, 
+welche  auf  beiden  zugleich  senkrecht  steht. 
+
+Beweis.  Von  irgend  zwei  Punkten  A  und  P  der  Geraden  a  fällen 
+wir  die  Lote  AB  und  PB'  auf  die  Gerade  b.  Es  sei  das  Lot  PB'  größer 
+als  das  Lot  AB:  dann  tragen  wir  AB  von  B'  aus  auf  B ' P  ab  bis  Ä, 
+so  daß  der  Punkt  Ä  zwischen  P  und  B'  liegt.  Nunmehr  konstruieren 
+wir  die  Gerade  a    durch  A',  welche  B'A'  in  A'  unter  demselben  Winkel 
+
+
+und  in  demselben*Sinne  wie  die  Gerade  a  das  Lot  B A  in  A  schneidet.  Wir 
+wollen  beweisen,  daß  diese  Gerade  a  notwendig  die  Gerade  a  treffen  muß. 
+
+Zu  dem  Zwecke  bezeichnen  wir  diejenige  Halbgerade,  in  welche  a 
+von  P  aus  zerfällt  und  auf  welcher  der  Punkt  A  liegt,  mit  ay  und  ziehen 
+dann  von  B  aus  eine  Halbgerade  h  parallel  zu  ax.  Ferner  sei  ti  diejenige 
+Halbgerade,  welche  von  B'  unter  demselben  Winkel  gegen  b  und  nach 
+derselben  Richtung  wie  h  von  B  ausgeht.  Da  nach  Satz  1  die  Halb- 
+gerade ti  nicht  zu  h  und  daher  auch  nicht  zu  ax  parallel  ist  und  auch  h 
+gewiß  nicht  schneidet,  so  schneidet  sie,  wie  man  im  Hinblick  auf  Axiom  IV 
+leicht  erkennt,  notwendig  a^  es  sei  T  der  Schnittpunkt  der  Halbgeraden 
+ti  und  ax.  Da  a  wegen  unserer  Konstruktionen  parallel  zu  ti  ist,  so 
+muß  nach  Axiom  II  4  die  Gerade  a  das  Dreieck  PB'T  durch  die  Seite 
+PT  verlassen,  womit  der  gewünschte  Nachweis  erbracht  ist.  Wir  wollen 
+den  Schnittpunkt  der  Geraden  a  und  a    mit  Q  bezeichnen. 
+
+Von  Q  fällen  wir  das  Lot  QR  auf  ?>;  sodann  tragen  wir  B' R  von 
+B  aus  auf  b  bis  zum  Punkte  R'  ab,  so  daß  auf  b  die  Richtung  B  nach 
+R'  dieselbe,  wie  die  von  B'  nach  R  ist.     Ebenso  tragen  wir  die  Strecke 
+
+
+112         Anhang  HI:    Begründung  der  Bolyai-Lobatschefskyschen  Geometrie. 
+
+ÄQ  von  A  aus  auf  a  in  derselben  Richtung  bis  Q'  ab.  Suchen  wir 
+dann  die  Mitten  M  und  N  der  Strecken  QQ'  bez.  RR',  so  liefert  deren 
+Verbindungsgerade  MN  das  gesuchte  gemeinsame  Lot  auf  a  und  b. 
+
+In  der  Tat,  aus  der  Kongruenz  der  Vierecke  A'B'  QR  und  ABQ'R' 
+folgt  die  Gleichheit  der  Strecken  QR  und  Q'R',  sowie  die  Tatsache,  daß 
+Q'R'  auf  b  senkrecht  steht.  Hieraus  wiederum  erschließen  wir  die  Kon- 
+gruenz der  Vierecke  QRMN  und  Q'R'MN  und  damit  ist  die  aufgestellte 
+Behauptung  und  zugleich  der  Satz  2  vollständig  bewiesen. 
+
+Satz  3.  Wenn  irgend  zwei  Halbgeraden  vorgelegt  sind,  so  gibt  es 
+stets  eine  Gerade,  welche  zu  diesen  beiden  Halbgeraden  parallel,  ist  d.  h. 
+es  gibt  stets  eine  Gerade,  die  zwei  vorgeschriebene  Enden  a  und  ß 
+besitzt. 
+
+Beweis.    Wir  ziehen  durch  irgend  einen  Punkt  0  zu  den  vorgelegten 
+
+
+\ 
+
+
+"Jf 
+
+
+Halbgeraden  Parallele  und  tragen  auf  diesen  von  0  aus  gleiche  Strecken 
+ab,  etwa  bis  A  und  B,  so  daß 
+
+OA=  OB 
+
+wird  und   die   von  0  aus  durch  A  gehende  Halbgerade  das  Ende  a  und 
+
+
+Anhang  III:    Begründung  der  Bolyai-Lobatschefskyschen  Geometrie.  113 
+
+die  von  0  aus  durch  B  gehende  Halbgerade  das  Ende  ß  besitzt.  Sodann 
+verbinden  wir  den  Punkt  A  mit  dem  Ende  ß  und  halbieren  den  Winkel 
+zwischen  den  beiden  von  A  ausgehenden  Halbgeraden;  desgleichen  ver- 
+binden wir  den  Punkt  B  mit  dem  Ende  a  und  halbieren  den  Winkel 
+zwischen  den  beiden  von  B  ausgehenden  Halbgeraden.  Die  erstere 
+Halbierungslinie  werde  mit  a,  die  letztere  mit  b  bezeichnet.  Aus  der 
+Kongruenz    der  Figuren  OAß  und  OBu  folgt  die  Gleichheit  der  Winkel 
+
+^(OAß)  =  ^(OBa), 
+^(aAß)=^(aBß) 
+und  aus  letzterer  Gleichung  entnehmen  wir  auch  die  Gleichheit  der  Winkel, 
+die  durch  die  Halbierungen  entstanden  sind,  nämlich 
+
+£  (ccÄa)  =  <£  (aAß)  -  <£  (uBb)  -  «£  (pBß). 
+Es  kommt  zunächst  darauf  an,  zu  zeigen,  daß  die  beiden  Halbierungs- 
+linien a  und  b  sich  weder  schneiden  noch  zueinander  parallel  sind. 
+
+Wir  nehmen  an,  a  und  b  schnitten  sich  im  Punkte  M.  Da  OAB 
+nach  Konstruktion  ein  gleichschenkliges  Dreieck  ist,  so  folgt 
+
+^BAO  =  ^i  ABO 
+and  hieraus  nach  den  vorigen  Gleichungen 
+
+^BAM^^ABM- 
+
+mithin  ist 
+
+AM  -  BM . 
+
+Verbinden  wir  nun  M  mit  dem  Ende  a  durch  eine  Halbgerade,  so  folgt 
+aus  der  letzteren  Streckengleichung  und  wegen  der  Gleichheit  der  Winkel 
+■^C(aAM)  und  (aBM)  die  Kongruenz  der  Figuren  a  AM  und  aBM  und 
+diese  Kongruenz  hätte  die  Gleichheit  der  Winkel  <^  (aMA)  und  <£(aMB) 
+zur  Folge.  Da  diese  Folgerung  offenbar  nicht  zutrifft,  so  ist  die  Annahme 
+zu  verwerfen,  daß  die  Halbierungsgeraden  a  und  b  sich  einander  schneiden. 
+
+Wir  nehmen  ferner  an,  die  Geraden  a  und  b  seien  zueinander 
+parallel;  das  durch  sie  bestimmte  Ende  möge  dann  mit  fi  bezeichnet 
+werden.  Die  von  B  aus  nach  a  gehende  Halbgerade  möge  die  von  A 
+nach  ß  gehende  Halbgerade  im  Punkte  C  und  die  Gerade  a  im  Punkte 
+D  treffen:  dann  beweisen  wir  die  Gleichheit  der  Strecken  DA  und  DB. 
+In  der  Tat,  im  gegenteiligen  Falle  tragen  wir  DA  von  D  aus  auf  DB 
+etwa  bis  B'  ab  und  verbinden  B'  mit  ^  durch  eine  Halbgerade.  Aus  der 
+Kongruenz  der  Figuren  DAa  und  DB'fi  würde  dann  die  Gleichheit  der 
+Winkel  <£  (DAa)  und  «$C  (DB' u)  folgen  und  mithin  wären  auch  die 
+Winkel  <£  (DB' [i)  und  <^C  (DB(i)  einander  gleich,  was  nach  Satz  1  nicht 
+möglich  ist. 
+
+Die  Gleichheit  der  Strecken  DA  und  DB  hat  nun  die  Gleichheit  der 
+Winkel  ^(DAB)  und  <£  (DBA)  zur  Folge  und  da  nach  dem  Früheren 
+
+Hubert,  Grundlagen  der  Geometrie.  8 
+
+
+h^caJjL*  sr  o  ?  aJ>-o^J-  U   srn  F 
+
+
+114         Anhang  III:   Begründung  der  Bolyai-Lobatschefskyschen  Geometrie. 
+
+auch  die  Winkel  <£  (CAB)  und  <£  (CBA)  einander  gleich  sind,  so  würde 
+auch  die  Gleichheit  der  Winkel  <£;  (D  AB)  und  <£  (CAB)  folgen.  Diese 
+Folgerung  trifft  aber  offenbar  nicht  zu  und  mithin  ist  auch  die  Annahme 
+zu  verwerfen,  daß  die  Geraden  a  und  b  einander  parallel  sind. 
+
+Da  nach  diesen  Entwickelungen  die  Geraden  a,  b  sich  weder  schneiden 
+noch  zueinander  parallel  sind,  so  gibt  es  nach  Satz  2  eine  Gerade  c,  die 
+auf  beiden  Geraden  a,  b  senkrecht  steht  etwa  in  den  Punkten  E  bez.  F. 
+Ich  behaupte,  daß  diese  Gerade  c  die  gesuchte  Gerade  ist,  die  die  beiden 
+vorgelegten  Enden  a,  ß  miteinander  verbindet. 
+
+Zum  Beweise  dieser  Behauptung  nehmen  wir  im  Gegenteil  an,  es 
+habe  c  nicht  das  Ende  a.  Dann  verbinden  wir  jeden  der  beiden  Fuß- 
+punkte E  und  F  mit  dem  Ende  a  durch  Halbgerade.  Da  EA  =  FB 
+sein  muß,  wie  leicht  erkannt  wird,  so  folgt  die  Kongruenz  der  Figuren 
+aEA  und  aFB  und  aus  dieser  die  Gleichheit  der  Winkel  <£;  (AEa)  und 
+^C(BFa)  und  folglich  sind  auch  diejenigen  Winkel  einander  gleich,  die 
+die  von  E  und  F  ausgehenden  Halbgeraden  mit  der  Geraden  c  bilden. 
+Diese  Folgerung  widerspricht  dem  Satze  1  und  damit  ist  der  Beweis  für 
+unsere  Behauptung  vollständig  erbracht. 
+
+Satz  4.  Es  seien  a,  b  zwei  zueinander  parallele  Gerade  und  0  ein 
+Punkt  innerhalb  des  zwischen  a  und  b  gelegenen  Gebietes  der  Ebene; 
+ferner  sei  0a  das  Spiegelbild  des  Punktes  0  an  a  und  0b  das  Spiegelbild 
+des  Punktes  0  an  b  und  M  die  Mitte  der  Strecke  0a0b:  dann  steht 
+diejenige  Halbgerade  von  M  aus,  die  zugleich  zu  a  und  b  parallel  ist, 
+senkrecht  in  M  auf  OaOb. 
+
+Beweis.     Denn  im   entgegengesetzten  Falle    errichte   man  nach   der 
+
+nämlichen  Seite  hin  in  M  auf  0„  0.   die  Senk- 
+et    o 
+
+rechte.  Die  Gerade  0a  0b  schneide  a,  b  bez.  in 
+den  Punkten  P,  Q.  Da  P  0  <  PQ  +  Q  0,  mithin 
+POa<POb  ist  und  desgleichen  QOb<QOa, 
+so  fällt  M  notwendig  in  das  Innere  des  zwischen 
+a  und  b  gelegenen  Gebietes  der  Ebene.  Jene 
+Senkrechte  in  M  müßte  daher  eine  der  Ge- 
+raden a  oder  b  treffen;  träfe  sie  etwa  a  im 
+Punkte  A,  so  würde  AOa=AO  und  AOa=AOb 
+folgen  und  mithin  wäre  auch  A  0  =  A  Ob 
+d.  h.  A  müßte  auch  ein  Punkt  von  b  sein, 
+was   der  Voraussetzung  des  Satzes  widerspräche1). 
+
+Satz  5.     Wenn  a,  b}  c  drei  Gerade  sind,  die  das  nämliche  Ende  co 
+
+1)  Diese  Folgerung  stimmt  im  wesentlichen  mit  einer  Schlußweise  von  Lobatschel'sky 
+überein;  vgl.  Neue  Anfangsgründe  der  Geometrie  mit  einer  vollständigen  Theorie  der 
+Parallellinien  (1835)  §  111. 
+
+
+Anhang  III:   Begründung  der  Bolyai-Lobatschefskyschen  Geometrie.         115 
+
+besitzen  und  die  Spiegelungen  an  diesen  Geraden  bez.  mit  Sa,  Sb,  Sc 
+bezeichnet  werden,  so  gibt  es  stets  eine  Gerade  d  mit  demselben  Ende  co, 
+so  daß  die  aufeinanderfolgende  Anwendung  der  Spiegelungen  an  den  Ge- 
+raden a,b,  c  der  Spiegelung  an  der  Geraden  d  gleichkommt,  was  wir 
+durch  die  Formel 
+
+ScSbSa  =  Sd 
+
+ausdrücken. 
+
+Beweis.  Wir  nehmen  zunächst  an,  es  fiele  die  Gerade  b  ins  Innere 
+des  zwischen  a  und  c  gelegenen  Gebietes  der  Ebene.  Dann  sei  0  ein  Punkt 
+auf  b  und  die  Spiegelbilder  von  0  an  a  und  c  seien  bezeichnet  mit  Oa  und  Oc. 
+Bezeichnen  wir  nun  mit  d  diejenige  Gerade,  die  die  Mitte  der  Strecke 
+OaOc  mit  dem  Ende  co  verbindet,  so  sind  wegen  Satz  4  die  Punkte  Oa 
+und  Oc  Spiegelbilder  an  d  und  folglich  ist  die  Operation  SdScSbSa  eine 
+solche,  die  den  Punkt  Oa  sowie  diejenige  Gerade  ungeändert  läßt,  die  Oa 
+mit  dem  Ende  co  verbindet.  Da  jene  Operation  überdies  aus  vier  Spiege- 
+lungen zusammengesetzt  ist,  so  lehren  die  Kongruenzsätze,  daß  jene 
+Operation  die  Identität  ist;  hieraus  folgt  die  Behauptung. 
+
+Wir  erkennen  zweitens  leicht  die  Richtigkeit  des  Satzes  5  in  dem 
+Falle,  daß  die  Geraden  c  und  a  miteinander  übereinstimmen.  Ist  nämlich 
+b'  diejenige  Gerade,  die  aus  b  durch  Spiegelung  an  der  Geraden  a  hervor- 
+geht, und  bezeichnen  wir  mit  Sb,  die  Spiegelung  an  b',  so  erkennen  wir 
+sofort  die  Richtigkeit  der  Formel 
+
+SaSbSa  =  Sb'- 
+Nunmehr  nehmen  wir  drittens  an,  es  fiele  die  Gerade  c  ins  Innere 
+des  zwischen  a  und  b  gelegenen  Gebietes  der  Ebene.    Dann  gibt  es  nach 
+dem  ersten  Teile  dieses  Beweises  gewiß  eine  Gerade  d',  so  daß  die  Formel 
+
+Sa  Sc  Sb  =  sd, 
+
+gilt.  Bezeichnen  wir  mit  d  das  Spiegelbild  von  d'  an  a,  so  ist  nach  dem 
+zweiten  Teile  dieses  Beweises: 
+
+Sc^b^a  =  SaSaScSbSa  =  SaSd'Sa  "■  Sd 
+Damit  ist  Satz  5  vollständig  bewiesen. 
+
+§2. 
+Die  Addition  der  Enden. 
+
+Wir  nehmen  eine  bestimmte  Gerade  an  und  bezeichnen  deren  Enden 
+mit  0  und  oo.  Auf  dieser  Geraden  (0,  oo)  wählen  wir  einen  Punkt  0 
+und  errichten  dann  in  0  ein  Lot;  die  Enden  dieses  Lotes  mögen  mit 
+-\-  1  und  —  1  bezeichnet  werden. 
+
+Wir  definieren  jetzt  die  Summe  zweier  Enden  folgendermaßen: 
+Erklärung.     Es   seien  a,  ß  irgend  zwei   Enden;    ferner  sei  Oa  das 
+
+8* 
+
+
+V 
+
+
+116         Anhang  III:    Begründung  der  Bolyai-Lobatschefskyschen  Geometrie. 
+
+Spiegelbild  des  Punktes  0  an  der  Geraden  (a,  oo)  und  Oß  sei  das  Spiegel- 
+bild des  Punktes  0  an  der  Geraden  (ß,  oo);  die  Mitte  der  Strecke  OaO? 
+verbinden  wir  mit  dem  Ende  oo:    das  andere  Ende   der  so  konstruierten 
+
+Geraden  heiße  die  Summe  der  beiden 
+Enden  a  und  ß  und  werde  mit  a  -f-  ß 
+bezeichnet. 
+
+Wenn  wir  eine  Halbgerade  mit  dem 
+Ende  a  an  der  Geraden  (0,  oo)  spiegeln, 
+so  werde  das  Ende  der  so  entstehenden 
+Halbgeraden  mit  —  a  bezeichnet. 
+
+Wir  erkennen  leicht  die  Richtigkeit 
+der  Gleichungen. 
+
+a  -f-  0         =  a, 
+
+i  +  (-i)-o, 
+
+«  +  (-a)  =  0, 
+u  +  ß         -/).+  «. 
+Die  letzte  Gleichung  spricht  das  Tcommidative  Gesetz  für  die  Addition  von 
+Enden  aus. 
+
+Um  das  assoziative  Gesetz  für  die  Addition  von  Enden  zu  beweisen, 
+bezeichnen  wir  mit  S0,  Sa,  S^  bez.  die  Spiegelungen  an  den  Geraden 
+(0,  oo),  (cc,  oo),  (ß,  oo):  nach  Satz  5  in  §  1  gibt  es  dann  gewiß  eine  Gerade 
+(tf,  oo),  so  daß  für  die  Spiegelung  Sa  an  dieser  Geraden  die  Formel 
+
+gilt.  Da  bei  der  Operation  SpS0Sa  der  Punkt  Oa  in  den  Punkt  0,  über- 
+geht, so  ist  notwendig  (L  das  Spiegelbild  von  Oa  an  der  Geraden 
+((?,  oo)  und  folglich  wird  6  =  a  -f  ß,  d'  h.  es  gilt  die  Formel 
+
+Sa  +  ß^  SßS0Sa. 
+
+Bezeichnet  y  ebenfalls  ein  Ende,  so  lehrt  die  wiederholte  Anwendung 
+der  eben  gefundenen  Formel: 
+
+
+8 
+
+
+«+(/*+/) 
+
+
+Sß+yS0Sa 
+
+
+SyS0SßS0Sa, 
+
+
+V, 
+
+
+£>,  Sn  o„  ,o  —  S.,  Sn  S#  Sn  S, 
+
+
+und  folglich  ist 
+und  mithin  auch 
+
+
+(a  +  ß)  +  y  KJyKJ0KJa  +  ß 
+
+®cc  +  (ß  +  y)  =  ^(a  +  ß)  +  y 
+
+
+ß"0> 
+
+
+«H-tf+y) 
+
+Die  vorhin  abgeleitete  Formel 
+
+
+(«  +  i»)  +  y. 
+
+
+o 
+
+
+8 
+
+
+a  +  ß 
+
+
+8^  S0  Sa 
+
+
+lehrt  zugleich,  daß  die  angegebene  Konstruktion  der  Summe  zweier  Enden 
+von  der  getroffenen  Wahl  des  Punktes  0  auf  der  Geraden  (0,  oo)  un- 
+abhängig ist.     Bezeichnet  mithin    0'  irgend    einen  von    0  verschiedenen 
+
+UxJJL  o_*    Ö      i>"vU*^r      \XCaXT     ff"     vwu^/Ir.    ^cLu^uJjZtttA.     <w4c&_    0t  +  A 
+
+
+Anhang  III:   Begründung  der  Bolyai-Lobatschefskyschen  Geometrie.         117 
+
+Punkt  der  Geraden  (0,  od)  und  sind  Oä,  O'p  die  Spiegelbilder  des  Punktes 
+0'  bez.  an  den  Geraden  (a,  oo),  (/3,  oo),  so  ist  die  Mittelsenkrechte  auf 
+0 *  O'p  wiederum  die  Gerade  (a-\-  ß,  oo). 
+
+Wir  führen  hier  noch  eine  Tatsache  an,  deren  Kenntnis  für  unsere 
+Entwickelungen  in  §  4  nötig  ist. 
+
+Wenn  wir  die  Gerade  (a,  oo)  an  der  Geraden  (ß,  oo)  spiegeln,  so 
+entsteht  die  Gerade  (2/3  —  a,  oo). 
+
+In  der  Tat,  ist  P  irgend  ein  Punkt  derjenigen  Geraden,  die  aus 
+(af  oo)  durch  Spiegelung  an  (/3,  oo)  vorgeht,  so  bleibt  derselbe  offenbar 
+ungeändert,  wenn  wir  auf  ihn  der  Reihe  nach  die  Spiegelungen 
+
+anwenden.     Wegen  der  obigen  Formel  ist  aber 
+
+d.  h.  jener  zusammengesetzte  Prozeß  kommt  einer  Spiegelung  an  der 
+Geraden  (2ß  —  a,  oo)  gleich;  der  Punkt  P  liegt  mithin  notwendig  auf 
+der  letzteren  Geraden. 
+
+§  3. 
+
+Die  Multiplikation  der  Enden. 
+
+Wir  definieren  jetzt  das  Produkt  zweier  Enden  folgendermaßen: 
+Erklärung.    Wenn  ein  Ende  auf  derselben  Seite  der  Geraden  (0,  oo) 
+
+wie  das  Ende  +  1  liegt,   so  heiße   das   Ende  positiv  und  wenn  ein  Ende 
+
+auf  derselben  Seite  der  Geraden  (0,  oo)  wie  das  Ende  —  1  liegt,  so  heiße 
+
+das  Ende  negativ. 
+
+Es  seien  nun  a,  ß  irgend  zwei  von  0  und  oo   verschiedene  Enden. 
+
+Die    beiden    Geraden    (a, — a)    und    {ß,  —  ß)   stehen    senkrecht    auf  der 
+
+Geraden  (0,  oo);   sie  mögen  diese 
+
+Gerade  bez.  in  A  und  B  schneiden. 
+
+Ferner    tragen    wir    die    Strecke 
+
+OA  von  B  aus   auf  der  Geraden 
+
+(0,  oo)   bis    C  in  der   Weise  ab, 
+
+daß   auf  der  Geraden  (0,  oo)  die         +* 
+
+Richtung  von  O  nach  A  die  näm-  a, 
+
+liehe    wie    die    Richtung   von    B 
+
+nach    C    ist:    dann   konstruieren  ß 
+
+wir  in  C  auf  der  Geraden  (0,  oo)  ~ _Tj _Kp 
+
+die     Senkrechte    und    bezeichnen 
+
+das    positive    oder    das    negative 
+
+Ende  dieser  Senkrechten  als  das 
+
+Produkt  aß  der  beiden  Enden  a,  ß, 
+
+
+118        Anhang  III:   Begründung  der  Bolyai-Lobatschefskyschen  Geometrie. 
+
+
+jenachdem  diese  Enden  entweder  beide  positiv  bez.  beide  negativ  oder  eines 
+positiv  und  das  andere  negativ  ist. 
+Wir  setzen  endlich  die  Formel 
+
+ff.O-Oa-0 
+
+fest. 
+
+Auf  Grund  der  Axiome  III,  1 — 3   über  die  Kongruenz  von  Strecken 
+erkennen  wir  unmittelbar  die  Gültigkeit  der  Formeln 
+
+ccß  =  ßa, 
+
+*(ßr)  -  (aß)r, 
+
+d.  h  es  gilt  sowohl  das  kommutative  wie  auch  das  assoziative  Gesetz  für 
+die  Multiplikation  von  Enden. 
+
+Auch  finden  wir  leicht,  daß  die  Formeln 
+
+1  •  a  =  a,     ( —  1)  a  =  —  a. 
+
+gelten  und  daß,  wenn  die  Enden  a,  ß  einer  Geraden  die  Gleichung 
+
+ccß--l 
+
+erfüllen,  diese  durch  den  Punkt  0  gehen  muß. 
+
+Die   Möglichkeit  der  Division  erhellt  unmittelbar;    auch    gibt  es    zu 
+
+jedem  positiven  Ende  tc 
+stets  ein  positives  (und 
+ebenso  ein  negatives)  Ende, 
+dessen  Quadrat  jenem  Ende 
+%  gleich  wird  und  welches 
+daher  mit  yV  bezeiclmet 
+werden  möge. 
+
+Um     das     distributive 
+Gesetz    für    die    Rechnung 
+mit    Enden     zu    beweisen, 
+konstruieren    wir    zunächst 
+aus  den  Enden  ß  und  y  auf 
+die  in  §  2  angegebene  Weise 
+das    Ende    ß  +  y.     Suchen 
+wir    sodann    auf   die    eben 
+angegebene  Weise  die  Enden 
+a/J,    ccy,    u(ß-\-y),    so    er- 
+kennen wir,  daß  diese  Kon- 
+struktion    auf    einer    Ver- 
+schiebung der  Ebene  längs  der  Geraden  (0,  oo)  um  die  Strecke  OA  hinaus- 
+läuft, und  wenn  wir  demnach   die   Summe   der   Enden  aß  und  ay  durch 
+eine  Konstruktion  von  A   aus   anstatt  von  0  aus  ermitteln  —  was  nach 
+
+
+Anhang  III:   Begründung  der  Bolyai-Lobatschefskyschen  Geometrie.         119 
+
+einer  der  Bemerkungen  in  §  2  gestattet  ist  — ,  so  ergibt  sich  in  der  Tat 
+für  diese  Summe  das  Ende  a(ß-\-y),  d.  h.  es  gilt  die  Formel: 
+
+aß  +  ay  =  a(ß-\-y). 
+
+§4. 
+Die  Gleichung  des  Punktes. 
+
+Nachdem  wir  in  §  2 — §3  erkannt  haben,  daß  für  die  Rechnung  mit 
+Enden  die  nämlichen  Regeln  gelten,  wie  für  die  Rechnung  mit  gewöhn- 
+lichen Zahlen,  bietet  der  Aufbau  der  Geometrie  keine  weiteren  Schwierig- 
+keiten;  er  geschehe  etwa  in  folgender  Weise: 
+
+Wenn  |,  r\  die  Enden  irgend  einer  Geraden  sind,  so  mögen  die  Enden 
+
+m  —  in* 
+
+die  Koordinaten  jener  Geraden  heißen.    Es  gilt  die  fundamentale  Tatsache: 
+Wenn  a,  ß,  y   drei    Enden   von   solcher  Beschaffenheit  sind,  daß  das 
+Ende  Accy  —  ß2  positiv    ausfällt,  so  laufen   die  sämtlichen   Geraden,  deren    , ,   ,+> 
+Koordinaten  u,  v  der  Gleichung  ^.^^^^.^^A^-^ß^o,  a:/.^^.^. 
+
+¥«".f-/Jv    l     -" —         *•  ~ — 
+
+genügen,  durch  einen  Punkt.  kv  $y  +-  K^d  +  y)  +■  Av  +•  i  ~  o 
+
+Beweis.    Konstruieren  wir  gemäß  §  2  —  §3  die  Enden 
+
+}C 2"  X_  ß 
+
+yicty  —  §*'  ]/4ay  —  ß*' 
+
+so  nimmt  mit  Rücksicht  auf  die  Bedeutung  der  Koordinaten  u,  v  und  da 
+jedenfalls  a  =f=  0  ist,  die  vorgelegte  lineare  Gleichung  die  Gestalt  an 
+
+(*f-f  A)(xi?  +  A). i. 
+
+Wir  wollen  nunmehr  die  Transformation  eines  willkürlich  veränder- 
+lichen Endes  co  untersuchen,  welche  durch  die  Formel 
+
+co  =  x  co  -j-  A 
+vermittelt    wird.     Zu    dem   Zwecke  betrachten   wir   zunächst    die    Trans- 
+formationen 
+
+co  =  xco     und     co'  =  ra  -f  A. 
+
+Was  die  erstere  Transformation  betrifft,  so  kommt  offenbar  die 
+Multiplikation  des  willkürlichen  Endes  co  mit  einer  Konstanten  %  nach 
+§  3  einer  Verschiebung  der  Ebene  längs  der  Geraden  (0,  oo)  um  eine 
+gewisse  von  %  abhängige  Strecke  gleich. 
+
+Aber  auch  der  letzteren  Transformation,  d.  h.  der  Zufügung  des  Endes 
+A  zu  dem  willkürlich  veränderlichen  Ende  co,  entspricht  eine  gewisse  nur 
+
+
+120         Anhang  III:    Begründung  der  Bolyai-Lobatschefskyschen  Geometrie. 
+
+von  A  abhängige  Bewegung  der  Ebene  in  sieb,  nämlich  eine  solche,  die 
+sich  als  eine  Drehung  der  Ebene  um  das  Ende  oo  auffassen  läßt. 
+
+Um  dies  einzusehen,  bedenken  wir,  daß  nach  den  Darlegungen  am 
+Schluß  von  §  2  die  Gerade  (o,  oo)  durch  Spiegelung  an  der  Geraden 
+(0,  oo)  in  die   Gerade  ( —  ro,  oo)   und  diese   wiederum   durch   Spiegelung 
+
+an  der    Geraden   (— ,  oo)   in  die  Gerade  (ra  -f  A,  oo)   übergeht,   d.  h.   die 
+
+Hinzufügung  des  Endes  A  zu  dem  willkürlich  veränderlichen  Ende  a 
+kommt    den   nacheinander    ausgeführten    Spiegelungen   an    den    Geraden 
+
+(0,  oo)  und  (y,  ooj  gleich. 
+
+Aus  dem  eben  Bewiesenen  folgt,  daß,  wenn  |,  tj  die  Enden  einer 
+Geraden  sind,  durch  die  Formeln 
+
+r(  =  xrj  -f  A 
+
+sich  die  Enden  einer  solchen  Geraden  bestimmen,  die  durch  eine  gewisse 
+allein  von  x,  A  abhängige  Bewegung  der  Ebene  aus  der  Geraden  mit  den 
+Enden  g,  r\  hervorgeht.     Da  aber  die  obige  Gleichung 
+
+(x|  +  A)H  +  A)  =  -l 
+für  die  Enden  |',  tf  die  Relation 
+
+s  v  -  - 1 
+
+zur  Folge  hat  und  nach  einer  Bemerkung  in  §  3  diese  Relation  die  Be- 
+dingung dafür  ist,  daß  die  betreffenden  Geraden  durch  den  Punkt  0  laufen, 
+so  ersehen  wir,  daß  auch  alle  der  ursprünglichen  Gleichung 
+
+(jci  +  A)(>7j  +  A)  =  -  1 
+genügenden   Geraden  (|,  tj)   durch  einen  Punkt  laufen,  und  damit  ist  der 
+Beweis  für  den  aufgestellten  Satz  vollkommen  erbracht. 
+
+Nachdem  wir  erkannt  haben,  daß  die  Gleichung  des  Punktes  in 
+Linienkoordinaten  eine  lineare  ist,  folgern  wir  leicht  den  speziellen  Pascal- 
+schen  Satz  für  das  Geradenpaar  und  den  Desarguesschen  Satz  über 
+perspektiv  liegende  Dreiecke,  sowie  die  übrigen  Sätze  der  projektiven 
+Geometrie.  Auch  sind  dann  die  bekannten  Formeln  der  Bolyai-Lobat- 
+schefskyschen Geometrie  ohne  Schwierigkeit  ableitbar  und  damit  ist  der 
+Aufbau  dieser  Geometrie  mit  alleiniger  Hilfe  der  Axiome  I— IV  vollendet. 
+
+
+Anhang  IV:    Grundlagen  der  Geometrie.  121 
+
