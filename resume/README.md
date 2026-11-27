@@ -192,8 +192,9 @@ upper end is realistic.
 **Source.** J. Hjelmslev, "Neue Begründung der ebenen Geometrie", *Math. Ann.* 64 (1907),
 is public domain and is the source for the lemmas the study could not reconstruct (R1).
 Its OCR text is `resume/sources/Hjelmslev-1907.txt` (section 7 says how to fetch it again). A
-section-by-section reconstruction of it was started but not finished: no digest file of it
-exists (there is no `resume/plans/sources/` directory). The next step is to write that
+section-by-section reconstruction of it was started but not finished: its directory
+(`plans/sources/` in the working directory where the work was done) was created but no file was
+written into it, so nothing of it is here. The next step is to write that
 reconstruction (statements and proofs of the pencil and half-rotation theorems in Hjelmslev's
 form), then turn the study into a blueprint.
 
@@ -243,8 +244,10 @@ against the scan.
 *Grundlagen der Geometrie* (Teubner, 1903, public domain), and the hyperbolic case rests on
 Anhang III ("Neue Begründung der Bolyai-Lobatschefskyschen Geometrie"). Their OCR texts are
 `resume/sources/Anhang-IV.txt` and `resume/sources/Anhang-III.txt`. Plans for stages 1, 2, 3 and 9
-and reconstructions of Anhang IV and Anhang III from the scan were started but not finished; no
-file of them exists (there are no `appendix-s*/` or `sources/` directories under `resume/plans/`).
+and reconstructions of Anhang IV and Anhang III from the scan were started but not finished: in
+the working directory where the work was done the directories `plans/appendix-s2-winding/`,
+`plans/appendix-s3-topology/`, `plans/appendix-s9-invariant/` and `plans/sources/` were created,
+but no file was written into any of them (there was none for stage 1), so nothing of them is here.
 Next step: stage 9 (small and independent), then a blueprint for stages 1–3, with the German text
 of Anhang IV read directly from `resume/sources/Anhang-IV.txt`.
 
