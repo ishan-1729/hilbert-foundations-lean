@@ -5,12 +5,12 @@ Do not edit by hand.
 
 | Status | Units |
 |---|---|
-| proved | 188 |
+| proved | 189 |
 | definition | 106 |
 | remark | 60 |
 | proved (reading) | 41 |
 | proved (corrected) | 22 |
-| stated (open here) | 13 |
+| stated (open here) | 12 |
 
 | Unit | Where | Hilbert (opening words) | Status | Lean declarations |
 |---|---|---|---|---|
@@ -396,7 +396,7 @@ Do not edit by hand.
 | [`s38.ternary`](../HilbertFoundations/Constructions.lean) | § 38 | The demonstration of this theorem presents serious difficulty. It depends essentially upon … | remark | — |
 | [`s38.totally_positive`](../HilbertFoundations/Constructions.lean) | § 38 | Definition. Let $k$ be an arbitrary number field and let $m$ be … | definition | `totallyPositive_of_no_real` |
 | [`s38.two_variables`](../HilbertFoundations/Constructions.lean) | § 38 | It would be perhaps difficult to formulate and to demonstrate the corresponding … | stated (open here) | `TwoVariableClaim`, `isSumSq_eval_nonneg`, `TwoVariableClaim_converse` |
-| [`th.42`](../HilbertFoundations/Constructions.lean) | § 38 | Every totally positive number in $k$ may be represented as the sum … | stated (open here) | `theorem42_for_rat` |
+| [`th.42`](../HilbertFoundations/Constructions.lean) | § 38 | Every totally positive number in $k$ may be represented as the sum … | proved | `theorem42_for_rat` |
 | [`th.43`](../HilbertFoundations/Constructions.lean) | § 38 | Let, $f(x)$ be an integral rational function of $x$ whose coefficients are … | proved | `theorem43_from_theorem42`, `theorem43_degree_le_two` |
 | [`s39.apollonius`](../HilbertFoundations/Constructions.lean) | § 39 | This is, however, not the case with the contact problems of Appolonius. | proved (reading) | `apollonius_case` |
 | [`s39.first_radicand`](../HilbertFoundations/Constructions.lean) | § 39 | In order to show that it is also sufficient, let us assume … | proved | `first_radicand` |

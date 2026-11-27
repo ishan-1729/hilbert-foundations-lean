@@ -33,17 +33,23 @@ and proves towards the units that stay open:
   generated subfields of `ℝ` (Artin 1927). Its proof needs the Artin–Schreier theory of orderings
   and the specialization of an ordering of a function field to a real point (Artin–Lang), neither
   of which is in mathlib; `Theorem44` stays unproved.
-* **`th.42`** (Theorem 42): in a number field every totally positive number is a sum of squares
-  (`theorem42_sum_of_squares`), so that Theorem 42 is equivalent to "every sum of squares in a
-  number field is a sum of four squares" (`theorem42_iff_pythagoras_number_le_four`), a consequence
-  of the Hasse–Minkowski theorem over number fields, which is not available — precisely,
-  Theorem 42 is equivalent to the isotropy over `k` of the forms `x₁² + x₂² + x₃² + x₄² - α x₅²`,
-  `α` totally positive (`theorem42_iff_isotropic`, `four_squares_of_isotropic`); and Theorem 42
-  holds in every field in which `-1` is a sum of three squares
-  (`theorem42_of_neg_one_three_squares`; with three squares when `-1` is a sum of two,
-  `theorem42_of_neg_one_two_squares`).
 * **`s38.two_variables`**: Hilbert's theorem of 1893 for a polynomial of degree at most two in one
   of the variables (`twoVariableClaim_quadratic`).
+
+It also contains the results on the unit **`th.42`** (Theorem 42) that do not need the
+Hasse–Minkowski theorem. Theorem 42 itself is proved in `Theorem42Close.lean`, which imports this
+file (`theorem42 : Theorem42`); the Hasse–Minkowski theorem used there is not proved in this
+project and is taken from the Tau Ceti library, a dependency of the package. Proved here:
+
+* in a number field every totally positive number is a sum of squares
+  (`theorem42_sum_of_squares`), so that Theorem 42 is equivalent to "every sum of squares in a
+  number field is a sum of four squares" (`theorem42_iff_pythagoras_number_le_four`);
+* Theorem 42 is equivalent to the isotropy over `k` of the forms `x₁² + x₂² + x₃² + x₄² - α x₅²`,
+  `α` totally positive (`theorem42_iff_isotropic`); the implication from a nontrivial zero of the
+  form to the four squares, `four_squares_of_isotropic`, is the last step of `theorem42`;
+* the conclusion of Theorem 42 holds in every field of characteristic `0` in which `-1` is a sum
+  of three squares (`theorem42_of_neg_one_three_squares`; with three squares when `-1` is a sum of
+  two, `theorem42_of_neg_one_two_squares`).
 
 ## The proofs
 
@@ -112,7 +118,7 @@ theorem theorem43_polynomial {f : ℚ[X]} (hf : PSD f) : IsSumSq f :=
 theorem theorem43 : Theorem43 :=
   fun f hf => ⟨f, 1, psd_isSumSq hf, IsSumSq.one, one_ne_zero, mul_one f⟩
 
-/-! ## Towards Theorem 42 -/
+/-! ## Theorem 42: the results that do not need the Hasse–Minkowski theorem -/
 
 /-- **The qualitative Theorem 42**: in a number field, every totally positive number is a sum of
 squares of numbers of the field. -/
@@ -151,8 +157,9 @@ theorem theorem42_of_neg_one_three_squares {k : Type*} [Field k] [CharZero k] {i
 /-- **Theorem 42 from the isotropy of `x₁² + x₂² + x₃² + x₄² - α x₅²`**: if this form has a
 nontrivial zero in a field `k` of characteristic `0`, then `α` is a sum of four squares in `k`.
 (For a number field `k` and a totally positive `α` the form is isotropic at every completion of
-`k`; that it is then isotropic over `k` is the Hasse–Minkowski theorem, the statement missing for
-Theorem 42.) -/
+`k`; that it is then isotropic over `k` is the Hasse–Minkowski theorem. `theorem42` in
+`Theorem42Close.lean` takes that theorem from the Tau Ceti library and concludes with the present
+statement.) -/
 theorem four_squares_of_isotropic {k : Type*} [Field k] [CharZero k] {α x₁ x₂ x₃ x₄ x₅ : k}
     (h : x₁ ^ 2 + x₂ ^ 2 + x₃ ^ 2 + x₄ ^ 2 = α * x₅ ^ 2)
     (hne : x₁ ≠ 0 ∨ x₂ ≠ 0 ∨ x₃ ≠ 0 ∨ x₄ ≠ 0 ∨ x₅ ≠ 0) :
@@ -177,9 +184,11 @@ theorem four_squares_of_isotropic {k : Type*} [Field k] [CharZero k] {α x₁ x�
     linear_combination -h
 
 /-- **Theorem 42 is equivalent to the isotropy of the forms `x₁² + x₂² + x₃² + x₄² - α x₅²`** over
-every number field `k`, for the totally positive numbers `α` of `k`: the precise statement (an
-instance of the Hasse–Minkowski theorem over number fields, Hilbert's "ternary diophantine
-equation" being the case of three variables) that is missing for Theorem 42. -/
+every number field `k`, for the totally positive numbers `α` of `k`: an instance of the
+Hasse–Minkowski theorem over number fields (Hilbert's "ternary diophantine equation" being the case
+of three variables). The isotropy is proved in `Theorem42Close.lean`
+(`exists_isotropic_of_totallyPositive`, for `α ≠ 0`), from the Hasse–Minkowski theorem of the
+Tau Ceti library, and Theorem 42 with it (`theorem42`). -/
 theorem theorem42_iff_isotropic :
     Theorem42 ↔ ∀ (k : Type) [Field k] [NumberField k] (α : k), TotallyPositive α →
       ∃ x₁ x₂ x₃ x₄ x₅ : k, x₁ ^ 2 + x₂ ^ 2 + x₃ ^ 2 + x₄ ^ 2 = α * x₅ ^ 2 ∧

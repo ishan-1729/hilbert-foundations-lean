@@ -35,8 +35,11 @@ Sections of Hilbert's text covered here (full text in `data/foundations.json`):
 
 The units `th.43`, `s39.regular_polygons` and `s39.malfatti` are stated in this file and proved in
 `ConstructionsClose.lean`, which imports it (`theorem43`, `regularPolygonsClaim`, `malfattiClaim`);
-the partial results on the units `th.42`, `th.44` and `s38.two_variables`, which stay open, are
-also there.
+the partial results on the units `th.44` and `s38.two_variables`, which stay open, are also there.
+The unit `th.42` is stated in this file and proved in `Theorem42Close.lean` (`theorem42`), from
+the Hasse–Minkowski theorem of the Tau Ceti library, which is a dependency of the package and is
+not part of this project; the results on Theorem 42 that do not use that theorem are in
+`ConstructionsAux7.lean` and `ConstructionsClose.lean`.
 
 ## The setting
 
@@ -862,30 +865,49 @@ theorem totallyPositive_of_no_real {k : Type*} [Field k]
 > Every totally positive number in $k$ may be represented as the sum of four squares, whose bases are integral or fractional numbers of the field $k$.
 
 **Lean reading.** `Theorem42`: for every number field `k` and every totally positive `α ∈ k`, there
-are `a, b, c, d ∈ k` with `α = a² + b² + c² + d²`. Hilbert's proof rests on his theory of relatively
-quadratic fields (the solvability of `αξ² + βη² + γζ² = 0`, i.e. the Hasse principle for ternary
-forms) and is only sketched; the theorem was proved by Siegel (1921). That is far beyond this
-project. Proved here: the case `k = ℚ` (`theorem42_rat`, from Lagrange's theorem), every field
-containing `√-1` (`theorem42_of_sq_eq_neg_one`: `α = ((α+1)/2)² + (i(α-1)/2)²`), and the converse
-(a nonzero sum of four squares is totally positive, `totallyPositive_of_sum_sq`). The use Hilbert
-makes of it in Theorem 43 is formalized as `negOneSumSq_of_theorem42`.
+are `a, b, c, d ∈ k` with `α = a² + b² + c² + d²`. Proved in `Theorem42Close.lean`, which imports
+this file: `theorem42 : Theorem42`. Hilbert's proof rests on his theory of relatively quadratic
+fields (the solvability of `αξ² + βη² + γζ² = 0`, i.e. the Hasse principle for ternary forms) and
+is only sketched; the theorem was proved by Siegel (1921). The proof of `theorem42` does not carry
+out Hilbert's sketch. It applies the Hasse–Minkowski theorem — a quadratic form over a number field
+that has a nontrivial zero in every completion of the field has a nontrivial zero in the field —
+to the form `x₁² + x₂² + x₃² + x₄² - α x₅²`.
 
-Partial results (`ConstructionsClose.lean`): the qualitative theorem, without a bound on the number
-of squares — in a number field every totally positive number is a sum of squares
-(`theorem42_sum_of_squares`: for `α = a(θ)` in `k = ℚ(θ)` and `p` the minimal polynomial of `θ`,
-the polynomial `a + c p² (1 + a²)` never becomes negative for a suitable rational `c > 0`, hence is
-a sum of squares of polynomials by Theorem 43 in the form `theorem43_polynomial`, and its value at
-`θ` is `α`). Consequently Theorem 42 is equivalent to "in every number field a sum of squares is a
-sum of four squares" (`theorem42_iff_pythagoras_number_le_four`), and to the isotropy over `k` of
-the forms `x₁² + x₂² + x₃² + x₄² - α x₅²` for every number field `k` and every totally positive
-`α ∈ k` (`theorem42_iff_isotropic`, with `four_squares_of_isotropic`). The conclusion of
-Theorem 42 holds for every number of a field of characteristic `0` in which `-1` is a sum of three
-squares (`theorem42_of_neg_one_three_squares`; with three squares when `-1` is a sum of two,
-`theorem42_of_neg_one_two_squares`). Still missing: the bound of four squares, i.e. the isotropy
-of these forms, which is an instance of the Hasse–Minkowski theorem over number fields and is not
-in mathlib.
+The Hasse–Minkowski theorem is not proved in this project. It is taken from the Tau Ceti library
+(<https://github.com/TauCetiProject/TauCeti>, Apache License 2.0), which the package uses as a
+dependency, pinned to a commit in `lakefile.toml`; none of its code is copied, and the header of
+`Theorem42Close.lean` lists the declarations of it that are used. What this project proves is the
+application. For `α ≠ 0` the form is regular of rank five, so it is isotropic at every finite place
+of `k`; at a real place, which is a real embedding `φ` of `k`, total positivity gives `φ α > 0`,
+and `(√(φ α), 0, 0, 0, 1)` is a zero. The form is therefore isotropic over `k`
+(`exists_isotropic_of_totallyPositive`), and a nontrivial zero of it gives `α` as a sum of four
+squares (`four_squares_of_isotropic` in `ConstructionsClose.lean`, which also treats the zeros with
+`x₅ = 0`).
 
-**Status.** stated (open here)
+Earlier results, which do not use the Hasse–Minkowski theorem. In `ConstructionsAux7.lean`: the
+case `k = ℚ` (`theorem42_rat`, from Lagrange's theorem), every field containing `√-1`
+(`theorem42_of_sq_eq_neg_one`: `α = ((α+1)/2)² + (i(α-1)/2)²`), and the converse (a nonzero sum of
+four squares is totally positive, `totallyPositive_of_sum_sq`). The case `k = ℚ` is a special case
+now subsumed. The use Hilbert makes of the theorem in Theorem 43 is formalized as
+`negOneSumSq_of_theorem42`.
+
+In `ConstructionsClose.lean`: the qualitative theorem, without a bound on the number of squares —
+in a number field every totally positive number is a sum of squares (`theorem42_sum_of_squares`:
+for `α = a(θ)` in `k = ℚ(θ)` and `p` the minimal polynomial of `θ`, the polynomial
+`a + c p² (1 + a²)` never becomes negative for a suitable rational `c > 0`, hence is a sum of
+squares of polynomials by Theorem 43 in the form `theorem43_polynomial`, and its value at `θ` is
+`α`). It is a consequence of `theorem42` now, but it is proved without the Hasse–Minkowski theorem,
+and it is the form used for Theorem 44 (unit `th.44`). Theorem 42 is equivalent to "in every number
+field a sum of squares is a sum of four squares" (`theorem42_iff_pythagoras_number_le_four`), and
+to the isotropy over `k` of the forms `x₁² + x₂² + x₃² + x₄² - α x₅²` for every number field `k`
+and every totally positive `α ∈ k` (`theorem42_iff_isotropic`); with `theorem42` both sides of each
+equivalence hold, and the implication from the isotropy, `four_squares_of_isotropic`, is the last
+step of `theorem42`. The conclusion of Theorem 42 holds for every number of a field of
+characteristic `0` in which `-1` is a sum of three squares (`theorem42_of_neg_one_three_squares`,
+used in `four_squares_of_isotropic` for the zeros with `x₅ = 0`; with three squares when `-1` is a
+sum of two, `theorem42_of_neg_one_two_squares`).
+
+**Status.** proved
 -/
 
 theorem theorem42_for_rat (α : ℚ) (h : TotallyPositive α) :
@@ -901,7 +923,9 @@ theorem theorem42_for_rat (α : ℚ) (h : TotallyPositive α) :
 
 **Lean reading.** Hilbert names the proposition (the norm-residue criterion for the solvability
 of a ternary quadratic equation, i.e. the Hasse principle) without stating it; there is no
-statement to formalize. It is not used elsewhere here.
+statement to formalize. The proof of Theorem 42 (`theorem42` in `Theorem42Close.lean`, unit
+`th.42`) does not state this proposition: it applies the Hasse–Minkowski theorem for forms in four
+and in five variables, taken from the Tau Ceti library, to one form in five variables.
 
 **Status.** remark
 -/
@@ -931,8 +955,10 @@ weights (`isSumSq_of_dominant`), and positive rational numbers are sums of four 
 **Hilbert's own proof is formalized in full** as an implication (`theorem42_imp_theorem43`): by
 induction on the degree, with the reducible case (an irreducible factor with a real root divides
 `f` twice, units `s38.factor_cases`) and the irreducible case (`-1` is a sum of four squares in
-`ℚ(θ)` by Theorem 42, unit `s38.reduction`). Theorem 42 is open here (unit `th.42`), so that route
-is conditional; `theorem43` does not use it. The case of degree `≤ 2`
+`ℚ(θ)` by Theorem 42, unit `s38.reduction`). Its hypothesis, Theorem 42, is proved in
+`Theorem42Close.lean` (`theorem42`, unit `th.42`), a later file, from the Hasse–Minkowski theorem
+of the Tau Ceti library; so Hilbert's route is complete as well, and it depends on that library.
+`theorem43` does not use Theorem 42 and depends on mathlib only. The case of degree `≤ 2`
 (`theorem43_natDegree_le_two`: `4a f = (2ax + b)² + (4ac - b²)`) is a special case now subsumed.
 
 **Status.** proved

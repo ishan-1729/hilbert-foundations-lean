@@ -13,6 +13,13 @@ scope = "leanprover-community"
 # mathlib release tag v4.36.0 (commit fc4f59e577feb1a4956671bc04ac18aaaf8cd842), matching lean-toolchain
 rev = "v4.36.0"
 
+# Tau Ceti, pinned to its last commit on Lean v4.36.0 and the mathlib commit above. Only the modules
+# imported by HilbertFoundations/Theorem42Close.lean are built (the Hasse–Minkowski theorem).
+[[require]]
+name = "TauCeti"
+git = "https://github.com/TauCetiProject/TauCeti"
+rev = "aa3cfad1274c06cff25f2b58848498b3c3f68d0f"
+
 [[lean_lib]]
 name = "HilbertFoundations"
 

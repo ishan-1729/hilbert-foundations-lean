@@ -31,7 +31,8 @@ def TotallyPositive {k : Type*} [Field k] (α : k) : Prop :=
   ∀ σ : k →+* ℂ, (∀ x : k, (σ x).im = 0) → 0 < (σ α).re
 
 /-- **Theorem 42** (Hilbert's statement, proved by Siegel in 1921): in every number field, every
-totally positive number is a sum of four squares of numbers of the field. -/
+totally positive number is a sum of four squares of numbers of the field. The statement is proved
+in `Theorem42Close.lean` (`theorem42`), from the Hasse–Minkowski theorem of the Tau Ceti library. -/
 def Theorem42 : Prop :=
   ∀ (k : Type) [Field k] [NumberField k] (α : k), TotallyPositive α →
     ∃ a b c d : k, α = a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2

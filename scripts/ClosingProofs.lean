@@ -46,6 +46,10 @@ example : Theorem43 := theorem43
 example : RegularPolygonsClaim := regularPolygonsClaim
 example : MalfattiClaim := malfattiClaim
 
+/-! ## `th.42` (`Theorem42Close.lean`) -/
+
+example : Theorem42 := theorem42
+
 /-! ## `concl.semi_euclidean`, `concl.non_legendrian`, `concl.legendre_archimedes`,
 `app.main_theorem` (`CommentaryClose.lean`) -/
 

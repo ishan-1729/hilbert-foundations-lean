@@ -4,7 +4,7 @@ David Hilbert's *The Foundations of Geometry*, in E. J. Townsend's authorized En
 
 Townsend translated the first German edition (*Grundlagen der Geometrie*, 1899) together with the additions Hilbert made for the French edition. The axiom system formalized here is the one of this edition, which is not that of the later ones: II 4 is the four-point axiom, IV 6 concludes the congruence of both remaining angles, and the Axiom of Completeness is a remark of § 8, added for the French edition.
 
-Every axiom, definition, theorem and claim of the book is a *unit*: the Introduction, the seven chapters (§§ 1–39), the Conclusion and the Appendix give 430 units. Each unit quotes the text, says how it is read in Lean, and is followed by the declarations that state and prove it. Where the text is false or imprecise as printed, the unit says what is wrong and the corrected statement is proved. Thirteen units are stated as `Prop`s and not proved; they are listed [below](#what-is-not-proved) with what is missing.
+Every axiom, definition, theorem and claim of the book is a *unit*: the Introduction, the seven chapters (§§ 1–39), the Conclusion and the Appendix give 430 units. Each unit quotes the text, says how it is read in Lean, and is followed by the declarations that state and prove it. Where the text is false or imprecise as printed, the unit says what is wrong and the corrected statement is proved. Twelve units are stated as `Prop`s and not proved; they are listed [below](#what-is-not-proved) with what is missing.
 
 ## Highlights
 
@@ -17,6 +17,7 @@ Every axiom, definition, theorem and claim of the book is a *unit*: the Introduc
 - **Desargues's theorem (Chapter V).** `theorem32` ([`Desargues.lean`](HilbertFoundations/Desargues.lean)) proves it in a plane geometry with I 1–2, II, III, IV, without Archimedes's axiom. `theorem33` and `theorem33_exists` ([`NonDesargues.lean`](HilbertFoundations/NonDesargues.lean)) give a plane satisfying I 1–2, II–III, IV 1–5, V in which it fails; the model is the Moulton plane of the translator's note, and the computations of Hilbert's own ellipse construction are verified separately. [`DesarguesAlgebra.lean`](HilbertFoundations/DesarguesAlgebra.lean) builds the algebra of segments from Desargues's theorem without congruence and proves `theorem35`: a plane geometry with I 1–2, II, III that has a line satisfies Desargues's theorem if and only if it is part of a geometry of space with I, II, III.
 - **Non-pascalian geometry (Chapter VI),** in [`NonPascal.lean`](HilbertFoundations/NonPascal.lean). `theorem38`: an archimedean number system is commutative, by Hilbert's argument. `theorem39`: Hilbert's `Ω(s, t)` is `OmegaST`, a division ring of skew Laurent series with `t s = 2 s t`, ordered, non-archimedean and not commutative (`OmegaST.t_mul_s_ne`). The coordinate space over it, with the numbers acting on the right (`Coord OmegaSTᵐᵒᵖ 3`), satisfies I, II, III and has a plane in which Pascal's theorem fails (`theorem37`, `nonpascal_geometry`); `theorem36` is the positive statement with Archimedes's axiom.
 - **Constructions (Chapter VII).** In [`Constructions.lean`](HilbertFoundations/Constructions.lean), `theorem40` shows, in the coordinate plane over an ordered Pythagorean field, that the constructions by the axioms can be carried out by straight-edge and transferer of segments, and `theorem41` that, when the frame `(0,0)`, `(1,0)`, `(0,1)` is among the given points, a point is so constructible if and only if its co-ordinates lie in the domain `Ω(R)`; `compass_not_rt` gives a compass construction that is not of this kind. Theorem 43 is `theorem43` in [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean), proved in the stronger form `theorem43_polynomial` (the denominator is `1`) and without Theorem 42; Hilbert's own derivation from Theorem 42 is formalized as the implication `theorem42_imp_theorem43`. The same file proves that the regular polygons constructible with the compass and the circles of Malfatti are constructible by straight-edge and transferer (`regularPolygonsClaim`, `malfattiClaim`).
+- **Theorem 42 (Chapter VII):** every totally positive number of a number field is a sum of four squares of numbers of the field. `theorem42` in [`Theorem42Close.lean`](HilbertFoundations/Theorem42Close.lean) proves it from the Hasse–Minkowski theorem for quadratic forms over number fields. That theorem is not proved in this project: it is taken from the library [Tau Ceti](https://github.com/TauCetiProject/TauCeti) (The Tau Ceti contributors, Apache License 2.0), which is a dependency of the package; none of its code is copied. This project contributes the application: the form `x₁² + x₂² + x₃² + x₄² − α x₅²`, its isotropy at the finite places (rank five) and at the real places (from total positivity), and the passage from a zero of the form to four squares (`four_squares_of_isotropic`).
 - **The Axiom of Completeness.** `completenessGivesBolzano` and `completenessGivesReals` in [`CompletenessClose.lean`](HilbertFoundations/CompletenessClose.lean): a geometry of space with groups I–V and `SpaceComplete` has Bolzano's property, and the points of a segment correspond in order to the real numbers.
 - **Dehn's geometries (Conclusion).** [`CommentaryClose.lean`](HilbertFoundations/CommentaryClose.lean) constructs the semi-euclidean geometry (the finite part of the plane over `Ω(t)`, `semiEuclideanGeometryExists`) and the non-legendrian geometry (the part of an elliptic plane over the hyperreal numbers infinitely near to a point, `nonLegendrianGeometryExists`), and deduces `legendreNeedsArchimedes`.
 - **Jordan's curve theorem (Appendix).** Hilbert quotes "the theorem of C. Jordan" without proof; the unit `app.jordan_theorem` states it for the closed curves `γ : ℝ → ℂ` of period 1 without double points (`JordanCurveTheorem`). The proof of the Jordan curve theorem is not a proof of this project: it is the formalization of Maehara's proof, from the Brouwer fixed point theorem, in the repository [rkirov/jordan_pick](https://github.com/rkirov/jordan_pick) by Rado Kirov (Apache License 2.0), four files of which are copied without change into [`JordanPick/`](JordanPick/README.md). This project contributes the transport to the statement of the unit, `jordanCurveTheorem` in [`JordanCurveClose.lean`](HilbertFoundations/JordanCurveClose.lean).
@@ -27,17 +28,17 @@ Every unit is a block `## [id] Title` in one of the fourteen chapter files, with
 
 | Status | Units |
 |---|---|
-| proved: the statement, read as in the Lean reading, is formalized at full strength and proved | 188 |
+| proved: the statement, read as in the Lean reading, is formalized at full strength and proved | 189 |
 | proved (reading): Hilbert's words admit more than one precise reading; the Lean reading says which one is formalized and why | 41 |
 | proved (corrected): false or imprecise as printed; the corrected statement is proved, and the Lean reading says what is wrong | 22 |
 | definition: a definition or an axiom | 106 |
 | remark: prose without mathematical content to prove | 60 |
-| stated (open here): formalized as a `Prop`; only the partial results named in the Lean reading are proved | 13 |
+| stated (open here): formalized as a `Prop`; only the partial results named in the Lean reading are proved | 12 |
 | **total** | **430** |
 
 - No declaration uses `sorry`: an open unit is a definition of a `Prop`, never a theorem with an incomplete proof. `scripts/AxiomsAudit.lean` checks that every declaration of the namespace `HilbertFoundations` depends only on Lean's standard axioms `propext`, `Classical.choice` and `Quot.sound`.
 - The 430 units are the 68 statements that the text labels (the 21 axioms of groups I–V, counting the Axiom of Completeness, the 3 axioms of the Appendix and Theorems 1–44) and 362 unlabelled definitions, claims and remarks of the running text.
-- Of Theorems 1–44, 30 are `proved`, 6 are `proved (reading)` (33, 35, 36, 38, 39, 40), 6 are `proved (corrected)` (4, 14, 18, 21, 23, 41) and 2 are open (42, 44).
+- Of Theorems 1–44, 31 are `proved`, 6 are `proved (reading)` (33, 35, 36, 38, 39, 40), 6 are `proved (corrected)` (4, 14, 18, 21, 23, 41) and one is open (44). Theorem 42 is among the 31; its proof rests on the Hasse–Minkowski theorem, which is not proved in this project but taken from the dependency Tau Ceti.
 - The unit-by-unit map, with each unit's section, opening words, status and Lean declarations, is [docs/UNITS.md](docs/UNITS.md). It is generated by `scripts/unit_table.py`.
 - The conventions, the readings and the corrections are discussed in [docs/FAITHFULNESS.md](docs/FAITHFULNESS.md); the edition and its copyright status are in [docs/SOURCES.md](docs/SOURCES.md).
 
@@ -59,10 +60,9 @@ The other units with this status are `th.4`, `s9.sqrt`, `s23.conventions_valid`,
 
 ## What is not proved
 
-Thirteen units have the status `stated (open here)`. Each is a `Prop` with its partial results proved; the unit block says precisely what is missing.
+Twelve units have the status `stated (open here)`. Each is a `Prop` with its partial results proved; the unit block says precisely what is missing.
 
-**Sums of squares and the criterion of § 39** (three units in [`Constructions.lean`](HilbertFoundations/Constructions.lean); partial results in [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean)):
-- `th.42`, Theorem 42 (`Theorem42`): every totally positive number of a number field is a sum of four squares of the field. Proved: the case `ℚ` (`theorem42_rat`) and the theorem without the bound on the number of squares (`theorem42_sum_of_squares`). Missing: the bound four, which is equivalent to the isotropy of the forms `x₁² + x₂² + x₃² + x₄² - α x₅²` over number fields (`theorem42_iff_isotropic`), an instance of the Hasse–Minkowski theorem; mathlib does not have it.
+**Sums of squares and the criterion of § 39** (two units in [`Constructions.lean`](HilbertFoundations/Constructions.lean); partial results in [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean)):
 - `s38.two_variables` (`TwoVariableClaim`): a real polynomial in two variables that is nowhere negative is a quotient of sums of squares of polynomials (Hilbert, 1893). Proved: polynomials of degree at most two in the variable `y` (`twoVariableClaim_quadratic`). Missing: the general case, which needs Hilbert's argument on ternary forms or Artin's theorem.
 - `th.44`, Theorem 44 (`Theorem44`): the criterion for a construction by straight-edge and transferer. Proved: the necessity of the condition for any number of parameters (`condition_necessary`); both directions when the co-ordinates of the given points are rational functions of a single parameter (`theorem44_one_parameter`), which is the case Hilbert demonstrates, or algebraic numbers (`theorem44_algebraic`); and the equivalence of the general case with the generalization of Theorem 43 to several parameters (`theorem44_iff_generalized_theorem43`). Missing: that generalization, Artin's solution of Hilbert's seventeenth problem with rational coefficients. Hilbert leaves the general case open himself (unit `s39.general_case`).
 
@@ -79,6 +79,8 @@ Thirteen units have the status `stated (open here)`. Each is a `Prop` with its p
 - `app.invariant_subgroup` (`AppendixEuclideanTheorem`): if the displacements have an invariant sub-group, the geometry is euclidean. It rests on the main theorem. Proved: the euclidean plane satisfies the added condition (`euclideanPlane_hasInvariantSubgroup`).
 
 Two classical theorems occur only as hypotheses inside units whose own claim is proved: `LegendreTheorem` and `ArchimedesAngleSumGivesParallels` in `Commentary.lean` are stated and not proved. What a unit with another status leaves unformalized (for instance Hilbert's ellipse geometry of § 23 as a model, or Dehn's form of the theorem on the case without parallels) is said in its Lean reading; see also [docs/FAITHFULNESS.md](docs/FAITHFULNESS.md).
+
+Two units are proved with a theorem whose proof is not this project's: `app.jordan_theorem` with the Jordan curve theorem of the copied library `JordanPick`, and `th.42` with the Hasse–Minkowski theorem of the dependency Tau Ceti. In both cases this repository proves the passage from that theorem to the statement of the unit; for `th.42` this includes the verification of the hypotheses of the Hasse–Minkowski theorem at the places of the field.
 
 ## Reading a unit
 
@@ -125,7 +127,7 @@ The unit ids are `ax.I1`, …, `ax.V`, `ax.completeness` for the axioms, `th.1`,
 | Conclusion | [`Commentary.lean`](HilbertFoundations/Commentary.lean) | 15 |
 | Appendix | [`Commentary.lean`](HilbertFoundations/Commentary.lean) | 21 |
 
-Seven further files contain no unit blocks. They prove statements that a chapter file states as a `Prop`, because the proof uses later chapters, is long, or (for `JordanCurveClose.lean`) uses the copied library `JordanPick`:
+Eight further files contain no unit blocks. They prove statements that a chapter file states as a `Prop`, because the proof uses later chapters, is long, or uses code that is not this project's: the copied library `JordanPick` (for `JordanCurveClose.lean`) or the dependency Tau Ceti (for `Theorem42Close.lean`):
 
 | File | Units it proves | Main declarations |
 |---|---|---|
@@ -133,16 +135,20 @@ Seven further files contain no unit blocks. They prove statements that a chapter
 | [`CongruenceClose.lean`](HilbertFoundations/CongruenceClose.lean) | `th.18`, `s7.circle_properties` | `theorem18`, `theorem18_distinct`, `circlePropertiesClaim` |
 | [`CompletenessClose.lean`](HilbertFoundations/CompletenessClose.lean) | `s8.bolzano`, `s8.real_numbers` | `completenessGivesBolzano`, `completenessGivesReals` |
 | [`CoordinatesClose.lean`](HilbertFoundations/CoordinatesClose.lean) | `s17.space`, `s17.ideal`, `s30.any_dimension` | `spaceCoordinatesClaim`, `idealElementsClaim`, `anyDimensionClaim` |
-| [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean) | `th.43`, `s39.regular_polygons`, `s39.malfatti`; partial results for `th.42`, `th.44`, `s38.two_variables` | `theorem43`, `regularPolygonsClaim`, `malfattiClaim`, `theorem44_one_parameter` |
+| [`ConstructionsClose.lean`](HilbertFoundations/ConstructionsClose.lean) | `th.43`, `s39.regular_polygons`, `s39.malfatti`; partial results for `th.44`, `s38.two_variables`; the results on `th.42` that do not need the Hasse–Minkowski theorem | `theorem43`, `regularPolygonsClaim`, `malfattiClaim`, `theorem44_one_parameter`, `four_squares_of_isotropic` |
 | [`CommentaryClose.lean`](HilbertFoundations/CommentaryClose.lean) | `concl.semi_euclidean`, `concl.non_legendrian`, `concl.legendre_archimedes`; partial results for the Appendix | `semiEuclideanGeometryExists`, `nonLegendrianGeometryExists`, `legendreNeedsArchimedes`, `steps_of_main` |
 | [`JordanCurveClose.lean`](HilbertFoundations/JordanCurveClose.lean) | `app.jordan_theorem`, from the Jordan curve theorem of the copied library `JordanPick` | `jordanCurveTheorem`, `IsClosedJordanCurve.exists_sphere_map`, `jordanCurveTheorem_of_isometry` |
+| [`Theorem42Close.lean`](HilbertFoundations/Theorem42Close.lean) | `th.42`, from the Hasse–Minkowski theorem of the dependency Tau Ceti | `theorem42`, `exists_isotropic_of_totallyPositive`, `not_anisotropic_diagonalForm5` |
 
 The directory [`JordanPick/`](JordanPick/) is not part of the formalization of the book and was not written for this repository. It holds four Lean files copied without change from <https://github.com/rkirov/jordan_pick> (Rado Kirov, Apache License 2.0, commit `7905cd4`): a proof of the Jordan curve theorem by Maehara's method, with the Brouwer fixed point theorem for the plane. The files are built as a second library of the package, `JordanPick`, and are used only by `JordanCurveClose.lean`. [`JordanPick/README.md`](JordanPick/README.md) gives the source, the commit, the checksums of the files and what differs from the upstream repository; see also [docs/SOURCES.md](docs/SOURCES.md).
+
+The library [Tau Ceti](https://github.com/TauCetiProject/TauCeti) (The Tau Ceti contributors, Apache License 2.0) is used in a different way: it is a dependency of the package, fetched by Lake, and none of its code is copied into this repository. `lakefile.toml` and `lake-manifest.json` pin it to the commit `aa3cfad1274c06cff25f2b58848498b3c3f68d0f`, its last commit on Lean v4.36.0, which uses the same mathlib commit as this repository. It is imported by one file, `Theorem42Close.lean`, which takes from it the Hasse–Minkowski theorem for quadratic forms over number fields, with the definitions the theorem is stated in; the header of that file lists the declarations used. Lake builds only the Tau Ceti modules that this file imports, directly or through other modules: 1,044 modules, about 255,000 lines. Tau Ceti is not part of the formalization of the book, and the Hasse–Minkowski theorem is not a result of this project; see [docs/SOURCES.md](docs/SOURCES.md) and [docs/FAITHFULNESS.md](docs/FAITHFULNESS.md), "Third-party code".
 
 ## Layout
 
 ```
-HilbertFoundations.lean                  root: imports the fourteen chapter files and the seven closing files
+lakefile.toml, lake-manifest.json        the package and its two direct dependencies, mathlib v4.36.0 and Tau Ceti, each pinned to a commit
+HilbertFoundations.lean                  root: imports the fourteen chapter files and the eight closing files
 HilbertFoundations/Basic.lean            primitive notions, the axioms as Props and classes, conventions, status vocabulary
 HilbertFoundations/Order.lean            §§ 2–5: connection, order, parallels
 HilbertFoundations/Congruence.lean       §§ 6–7: congruence
@@ -158,8 +164,10 @@ HilbertFoundations/NonPascal.lean        §§ 31–35: Pascal's theorem and comm
 HilbertFoundations/Constructions.lean    §§ 36–39: constructions by straight-edge and transferer
 HilbertFoundations/Commentary.lean       Introduction, Conclusion, Appendix
 HilbertFoundations/OrderPolygon.lean, CongruenceClose.lean, CompletenessClose.lean,
-  CoordinatesClose.lean, ConstructionsClose.lean, CommentaryClose.lean, JordanCurveClose.lean
-                                         proofs of statements that the chapter files state (table above)
+  CoordinatesClose.lean, ConstructionsClose.lean, CommentaryClose.lean, JordanCurveClose.lean,
+  Theorem42Close.lean
+                                         proofs of statements that the chapter files state (table above);
+                                         Theorem42Close.lean is the only file that imports the dependency Tau Ceti
 HilbertFoundations/<Name>Aux*.lean       105 helper modules of the files above
 JordanPick/JordanCurve.lean, JordanPick/JordanCurve/{Arcs,Brouwer,Counting}.lean
                                          third-party code, copied without change from rkirov/jordan_pick (Rado Kirov,
@@ -182,20 +190,21 @@ scripts/ClosingProofs.lean               checks that the closing files prove the
 
 ## Building and checking
 
-Lean v4.36.0 and mathlib v4.36.0 are pinned in `lean-toolchain` and `lakefile.toml`.
+Lean v4.36.0 and mathlib v4.36.0 are pinned in `lean-toolchain` and `lakefile.toml`. The dependency Tau Ceti is pinned to a commit in `lakefile.toml`, and `lake-manifest.json` records the commit of every dependency.
 
 ```sh
-lake exe cache get                       # download prebuilt mathlib
-lake build                               # every file
+lake exe cache get                       # download prebuilt mathlib (mathlib only)
+lake build                               # every file, and the Tau Ceti modules that Theorem42Close.lean imports
 lake env lean scripts/AxiomsAudit.lean   # axiom audit
 lake env lean scripts/ClosingProofs.lean # the closing files prove the units as stated
 python3 scripts/unit_table.py --check    # regenerate docs/UNITS.md and check statuses
 ```
 
-- `scripts/AxiomsAudit.lean` imports the root module and reports an error for every declaration of the namespace `HilbertFoundations` that depends on an axiom other than `propext`, `Classical.choice` and `Quot.sound`; a `sorry` would appear as `sorryAx`. The axioms are collected through everything a declaration depends on, so the declarations of the copied library `JordanPick` (namespace `JordanCurve`) that `jordanCurveTheorem` uses are covered through it; the audit does not examine the other declarations of that library.
-- `scripts/ClosingProofs.lean` checks, for every unit whose statement is a `Prop` of a chapter file proved in one of the seven closing files, that the closing theorem has exactly that `Prop` as its type; for `th.18` and `app.main_theorem` it checks the refutations of the statements as printed.
+- `lake exe cache get` covers mathlib only. `lake build` therefore also compiles, from source, the Tau Ceti modules that `Theorem42Close.lean` imports, directly or through other modules: 1,044 modules, which take about half an hour the first time; later builds reuse them. The other modules of Tau Ceti are not built. A target that does not depend on `Theorem42Close.lean`, such as `lake build HilbertFoundations.Constructions`, does not build any of them.
+- `scripts/AxiomsAudit.lean` imports the root module and reports an error for every declaration of the namespace `HilbertFoundations` that depends on an axiom other than `propext`, `Classical.choice` and `Quot.sound`; a `sorry` would appear as `sorryAx`. The axioms are collected through everything a declaration depends on, so the declarations of the copied library `JordanPick` (namespace `JordanCurve`) that `jordanCurveTheorem` uses are covered through it; the audit does not examine the other declarations of that library. In the same way the declarations of Tau Ceti that the proof of `theorem42` uses are covered through `theorem42`, with everything they depend on; the declarations of Tau Ceti are not examined one by one, and those that `theorem42` does not use are outside the audit.
+- `scripts/ClosingProofs.lean` checks, for every unit whose statement is a `Prop` of a chapter file proved in one of the eight closing files, that the closing theorem has exactly that `Prop` as its type (for `th.42`, that `theorem42` has the type `Theorem42`); for `th.18` and `app.main_theorem` it checks the refutations of the statements as printed.
 - `scripts/unit_table.py` rewrites `docs/UNITS.md` from the unit blocks. With `--check` it fails if a unit has no status or a placeholder status, if a labelled axiom or theorem of `data/foundations.json` has no unit, if a unit id occurs twice, or if a unit whose status begins with `proved` is followed by a declaration containing `sorry`.
-- The CI workflow runs `lake build`, the audit, `scripts/ClosingProofs.lean` and the unit map check, and fails if `docs/UNITS.md` differs from the generated file.
+- The CI workflow runs `lake build` (which includes the Tau Ceti modules), the audit, `scripts/ClosingProofs.lean` and the unit map check, and fails if `docs/UNITS.md` differs from the generated file.
 - `python3 scripts/check.py HilbertFoundations/Order.lean` checks one file: it builds the project modules the file imports and then runs `lake env lean` on it. `--slots N` (default 3) bounds the number of Lean processes when several checks run at once, and `--no-deps` skips the build of the imports.
 
 `lake build` builds several files in parallel. If memory is short, build a few modules at a time, for instance `lake build HilbertFoundations.Order`, then `lake build HilbertFoundations.Congruence HilbertFoundations.Analytic`.
@@ -208,4 +217,5 @@ Lean checks that a statement is proved, not that it is the statement Hilbert mad
 
 - Lean code and documentation: [Apache License 2.0](LICENSE).
 - The four Lean files in `JordanPick/` are copied, without change, from <https://github.com/rkirov/jordan_pick>, which is under the Apache License 2.0, the licence of this repository. Their copyright belongs to their author, Rado Kirov, not to this project; see [`JordanPick/README.md`](JordanPick/README.md).
+- The library Tau Ceti (<https://github.com/TauCetiProject/TauCeti>), which `HilbertFoundations/Theorem42Close.lean` imports, is under the Apache License 2.0. Its copyright belongs to its contributors, not to this project: the headers of its files name "The Tau Ceti contributors", and a few of them individual authors (see [docs/SOURCES.md](docs/SOURCES.md)). It is a dependency that Lake fetches from its own repository: none of its files is in this repository, and it is not redistributed here.
 - Quotations from Townsend's translation in the Lean files and in `data/` are from the 1902 translation (in the Project Gutenberg transcription), which is in the public domain in the USA; see [docs/SOURCES.md](docs/SOURCES.md).
