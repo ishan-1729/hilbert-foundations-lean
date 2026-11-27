@@ -50,6 +50,10 @@ example : MalfattiClaim := malfattiClaim
 
 example : Theorem42 := theorem42
 
+/-! ## `s38.two_variables` (`TwoVariablesClose.lean`) -/
+
+example : TwoVariableClaim := twoVariableClaim
+
 /-! ## `concl.semi_euclidean`, `concl.non_legendrian`, `concl.legendre_archimedes`,
 `app.main_theorem` (`CommentaryClose.lean`) -/
 

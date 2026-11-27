@@ -19,7 +19,7 @@ This file closes units of `Constructions.lean` that were stated there as open:
 * **`s39.malfatti`** — `malfattiClaim : MalfattiClaim`. The circles of Malfatti of every triangle
   are constructible by straight-edge and transferer.
 
-and proves towards the units that stay open:
+and proves, towards the unit `th.44`, which stays open, and the unit `s38.two_variables`:
 
 * **`th.44`** (Theorem 44) — proved **in the case that Hilbert demonstrates**, "the co-ordinates of
   the given points are rational functions, having rational coefficients, of a single parameter
@@ -34,7 +34,8 @@ and proves towards the units that stay open:
   and the specialization of an ordering of a function field to a real point (Artin–Lang), neither
   of which is in mathlib; `Theorem44` stays unproved.
 * **`s38.two_variables`**: Hilbert's theorem of 1893 for a polynomial of degree at most two in one
-  of the variables (`twoVariableClaim_quadratic`).
+  of the variables (`twoVariableClaim_quadratic`). The theorem itself is proved in
+  `TwoVariablesClose.lean`, from Artin's theorem as proved in the dependency `hilbert17`.
 
 It also contains the results on the unit **`th.42`** (Theorem 42) that do not need the
 Hasse–Minkowski theorem. Theorem 42 itself is proved in `Theorem42Close.lean`, which imports this

@@ -6,8 +6,9 @@ import HilbertFoundations.ConstructionsCloseAux5
 # Helper module for `ConstructionsClose.lean`: definite functions of two variables, quadratic case
 
 This module contains no unit of Hilbert's text. It proves Hilbert's claim on the definite
-polynomials of two variables (unit `s38.two_variables`, `TwoVariableClaim`, which stays open) in
-the special case of a polynomial of degree at most `2` in one of the variables:
+polynomials of two variables (unit `s38.two_variables`, `TwoVariableClaim`) in the special case of
+a polynomial of degree at most `2` in one of the variables, without Artin's theorem, from which
+`TwoVariablesClose.lean` proves the claim itself:
 
 `f = P(x) y² + Q(x) y + R(x) ≥ 0` on `ℝ²` implies `f · D = N` with sums of squares `N`, `D ≠ 0`.
 

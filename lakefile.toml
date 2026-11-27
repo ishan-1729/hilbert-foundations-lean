@@ -14,11 +14,21 @@ scope = "leanprover-community"
 rev = "v4.36.0"
 
 # Tau Ceti, pinned to its last commit on Lean v4.36.0 and the mathlib commit above. Only the modules
-# imported by HilbertFoundations/Theorem42Close.lean are built (the Hasse–Minkowski theorem).
+# imported by HilbertFoundations/Theorem42Close.lean (the Hasse–Minkowski theorem) and by the package
+# hilbert17 below are built.
 [[require]]
 name = "TauCeti"
 git = "https://github.com/TauCetiProject/TauCeti"
 rev = "aa3cfad1274c06cff25f2b58848498b3c3f68d0f"
+
+# Artin's theorem on definite polynomials (the solution of Hilbert's seventeenth problem), from a fork of
+# https://github.com/pd4st8hb95-hub/hilbert17-lean: the branch `lean-v4.36-tauceti` of the fork builds that
+# proof on the toolchain of this package (see its PORT-NOTES.md). None of its code is copied here. Only
+# HilbertFoundations/TwoVariablesClose.lean imports it.
+[[require]]
+name = "hilbert17"
+git = "https://github.com/ishan-1729/hilbert17-lean"
+rev = "a1a089e7e5080a2a27f0e95bf7b0e760f62ed4e5"
 
 [[lean_lib]]
 name = "HilbertFoundations"

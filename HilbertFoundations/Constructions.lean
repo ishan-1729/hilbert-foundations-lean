@@ -35,7 +35,10 @@ Sections of Hilbert's text covered here (full text in `data/foundations.json`):
 
 The units `th.43`, `s39.regular_polygons` and `s39.malfatti` are stated in this file and proved in
 `ConstructionsClose.lean`, which imports it (`theorem43`, `regularPolygonsClaim`, `malfattiClaim`);
-the partial results on the units `th.44` and `s38.two_variables`, which stay open, are also there.
+the partial results on the unit `th.44`, which stays open, and on `s38.two_variables` are also
+there. The unit `s38.two_variables` is stated in this file and proved in
+`TwoVariablesClose.lean` (`twoVariableClaim`), from Artin's theorem as proved in the package
+`hilbert17`, which is a dependency of the package and is not copied here.
 The unit `th.42` is stated in this file and proved in `Theorem42Close.lean` (`theorem42`), from
 the Hasse–Minkowski theorem of the Tau Ceti library, which is a dependency of the package and is
 not part of this project; the results on Theorem 42 that do not use that theorem are in
@@ -1104,20 +1107,24 @@ theorem negOneSumSq_from_theorem42 (h42 : Theorem42) : NegOneSumSq :=
 
 **Lean reading.** `TwoVariableClaim`: every polynomial `f ∈ ℝ[x, y]` with `f ≥ 0` on `ℝ²` is a
 quotient `N / D` of sums of squares in `ℝ[x, y]` (`f · D = N`, `D ≠ 0`). This is Hilbert's theorem
-of 1893 (Acta Math. 17); its proof (via ternary quartic forms) is far beyond this project. Proved
-in this file: the trivial converse, such a quotient is nonnegative wherever `D` does not vanish
-(`TwoVariableClaim_converse`).
+of 1893 (Acta Math. 17). Proved in `TwoVariablesClose.lean`, which imports this file:
+`twoVariableClaim : TwoVariableClaim`. Hilbert's own proof, by the theory of ternary forms, is not
+formalized. The statement is the case of two variables of Artin's theorem of 1927 (the solution of
+Hilbert's seventeenth problem), and that theorem is not proved in this project: it is taken from
+the package `hilbert17`, a dependency (a branch of a fork of the repository
+<https://github.com/pd4st8hb95-hub/hilbert17-lean>, none of whose code is copied here), which
+proves it with the Tau Ceti library. The header of `TwoVariablesClose.lean` says what is taken
+from where. What this project proves is the passage from Artin's theorem for `n = 2` to the
+statement above.
 
-Partial results (`ConstructionsClose.lean`): the claim for a polynomial of degree at most two in
-the variable `y` (`twoVariableClaim_quadratic`). If `f = P(x) y² + Q(x) y + R(x) ≥ 0` on `ℝ²`,
-then `P ≥ 0` and `4PR - Q² ≥ 0` on `ℝ`, both are sums of two squares of real polynomials, and
-`4 P f = (2 P y + Q)² + (4 P R - Q²)`; the denominator `4P` is in general not constant. Still
-missing: `TwoVariableClaim` itself, Hilbert's theorem of 1893 for polynomials of arbitrary degree.
-It needs either Hilbert's argument on ternary forms (theory of algebraic curves) or Artin's
-theorem over `ℝ(x, y)` (orderings of fields and their specialization to real points), neither of
-which is in mathlib.
+Proved in this file: the trivial converse, such a quotient is nonnegative wherever `D` does not
+vanish (`TwoVariableClaim_converse`). Proved in `ConstructionsClose.lean`, without the dependency:
+the claim for a polynomial of degree at most two in the variable `y`
+(`twoVariableClaim_quadratic`). If `f = P(x) y² + Q(x) y + R(x) ≥ 0` on `ℝ²`, then `P ≥ 0` and
+`4PR - Q² ≥ 0` on `ℝ`, both are sums of two squares of real polynomials, and
+`4 P f = (2 P y + Q)² + (4 P R - Q²)`; the denominator `4P` is in general not constant.
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 /-- Hilbert's theorem on definite polynomials in two variables (1893). -/
