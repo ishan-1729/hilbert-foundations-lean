@@ -54,6 +54,10 @@ example : Theorem42 := theorem42
 
 example : TwoVariableClaim := twoVariableClaim
 
+/-! ## `th.44` (`Theorem44Close.lean`) -/
+
+example : Theorem44 := theorem44
+
 /-! ## `concl.semi_euclidean`, `concl.non_legendrian`, `concl.legendre_archimedes`,
 `app.main_theorem` (`CommentaryClose.lean`) -/
 

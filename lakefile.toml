@@ -14,8 +14,8 @@ scope = "leanprover-community"
 rev = "v4.36.0"
 
 # Tau Ceti, pinned to its last commit on Lean v4.36.0 and the mathlib commit above. Only the modules
-# imported by HilbertFoundations/Theorem42Close.lean (the Hasse–Minkowski theorem) and by the library
-# Hilbert17 below are built.
+# imported by HilbertFoundations/Theorem42Close.lean (the Hasse–Minkowski theorem),
+# HilbertFoundations/Theorem44Close.lean (the real closure) and the library Hilbert17 below are built.
 [[require]]
 name = "TauCeti"
 git = "https://github.com/TauCetiProject/TauCeti"
@@ -34,8 +34,8 @@ leanOptions = { relaxedAutoImplicit = false, maxSynthPendingDepth = 3 }
 # Vendored proof of Artin's theorem on definite polynomials, the solution of Hilbert's seventeenth problem
 # (see Hilbert17/README.md). The library has no root module `Hilbert17.lean`; its modules are the files of
 # the directory `Hilbert17/`. The upstream package sets no Lean options, so `autoImplicit` has Lean's
-# default value there; it is set to that value here. Only HilbertFoundations/TwoVariablesClose.lean
-# imports the library.
+# default value there; it is set to that value here. Only HilbertFoundations/TwoVariablesClose.lean,
+# HilbertFoundations/Theorem44Close.lean and its helper module Theorem44CloseAux1.lean import the library.
 [[lean_lib]]
 name = "Hilbert17"
 globs = ["Hilbert17.+"]

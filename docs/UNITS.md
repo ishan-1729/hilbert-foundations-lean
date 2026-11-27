@@ -5,12 +5,12 @@ Do not edit by hand.
 
 | Status | Units |
 |---|---|
-| proved | 190 |
+| proved | 191 |
 | definition | 106 |
 | remark | 60 |
 | proved (reading) | 41 |
 | proved (corrected) | 22 |
-| stated (open here) | 11 |
+| stated (open here) | 10 |
 
 | Unit | Where | Hilbert (opening words) | Status | Lean declarations |
 |---|---|---|---|---|
@@ -407,7 +407,7 @@ Do not edit by hand.
 | [`s39.regular_polygons`](../HilbertFoundations/Constructions.lean) | § 39 | As an example of the application of theorem 44, we may consider … | proved | `EuclidClosure`, `RegularPolygonsClaim`, `regular_polygons_small` |
 | [`s39.remark`](../HilbertFoundations/Constructions.lean) | § 39 | Just as with the expression $f_2$, any other rational function $\phi_2(p, \sqrt{f_1})$ … | proved (reading) | `tower_remark`, `tower_remark_over`, `tower_sufficient_over`, `tower_sufficient` |
 | [`s39.sum_of_squares`](../HilbertFoundations/Constructions.lean) | § 39 | Moreover, the formul{\ae} \begin{eqnarray*} \sqrt{a^2 + b^2 + c^2} & = & … | proved | `sqrt_sum_three_sq`, `sqrt_sum_sq_mem` |
-| [`th.44`](../HilbertFoundations/Constructions.lean) | § 39 | Suppose we have given a problem in geometrical construction, which is of … | stated (open here) | `theorem44_def`, `ratField_eq_closure_empty`, `towerFieldOver_rat`, `validTowerOver_rat`, `realTowerOver_rat`, `pythClosure_rat_iff`, `theorem44_from_theorem43For`, `theorem44_without_parameters` |
+| [`th.44`](../HilbertFoundations/Constructions.lean) | § 39 | Suppose we have given a problem in geometrical construction, which is of … | proved | `theorem44_def`, `ratField_eq_closure_empty`, `towerFieldOver_rat`, `validTowerOver_rat`, `realTowerOver_rat`, `pythClosure_rat_iff`, `theorem44_from_theorem43For`, `theorem44_without_parameters` |
 | [`concl.angle_sum`](../HilbertFoundations/Commentary.lean) | Conclusion | By aid of the preceding theorem, we may now introduce an algebra … | stated (open here) | `ExteriorConfig`, `AngleSumEqTwoRight`, `AngleSumLtTwoRight`, `AngleSumGtTwoRight`, `meets_comm`, `angleSumEqTwoRight_of_parallels`, `AngleSumTheorem` |
 | [`concl.dehn`](../HilbertFoundations/Commentary.lean) | Conclusion | In the treatment of all questions of this character, I believe the … | remark | — |
 | [`concl.dehn_order`](../HilbertFoundations/Commentary.lean) | Conclusion | Moreover, the axioms of order are stated in a more general manner … | proved (corrected) | `SepOf`, `FourPoint`, `FivePoint`, `FivePointConsequenceLiteral`, `FivePointCorrected`, `LinBtw`, `strictMono_sort`, `fourPoint_lin`, `fivePointCorrected_lin`, `fivePoint_of_corrected`, `not_fivePointConsequenceLiteral`, `linBtw_iff_between`, `sepOf_iff`, `fourPoint_line`, `fivePointCorrected_line` |

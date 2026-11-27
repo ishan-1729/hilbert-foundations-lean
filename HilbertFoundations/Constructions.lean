@@ -35,9 +35,13 @@ Sections of Hilbert's text covered here (full text in `data/foundations.json`):
 
 The units `th.43`, `s39.regular_polygons` and `s39.malfatti` are stated in this file and proved in
 `ConstructionsClose.lean`, which imports it (`theorem43`, `regularPolygonsClaim`, `malfattiClaim`);
-the partial results on the unit `th.44`, which stays open, and on `s38.two_variables` are also
-there. The unit `s38.two_variables` is stated in this file and proved in
-`TwoVariablesClose.lean` (`twoVariableClaim`), from Artin's theorem as proved in the library
+the partial results on the units `th.44` and `s38.two_variables` are also there. The unit `th.44`
+is stated in this file and proved in `Theorem44Close.lean` (`theorem44`), from Hilbert's reduction
+and Artin's theorem of 1927 for the finitely generated subfields of `ℝ`, with the separation of
+the non-sums of squares by orderings and the transfer of sign conditions taken from the library
+`Hilbert17` and the real closure from the Tau Ceti library; the passage from an ordering to an
+embedding into `ℝ` (Artin–Lang) is proved there. The unit `s38.two_variables` is stated in this
+file and proved in `TwoVariablesClose.lean` (`twoVariableClaim`), from Artin's theorem as proved in the library
 `Hilbert17`, a copy of files of another project (directory `Hilbert17/`), which is not part of
 this project.
 The unit `th.42` is stated in this file and proved in `Theorem42Close.lean` (`theorem42`), from
@@ -901,8 +905,8 @@ for `α = a(θ)` in `k = ℚ(θ)` and `p` the minimal polynomial of `θ`, the po
 `a + c p² (1 + a²)` never becomes negative for a suitable rational `c > 0`, hence is a sum of
 squares of polynomials by Theorem 43 in the form `theorem43_polynomial`, and its value at `θ` is
 `α`). It is a consequence of `theorem42` now, but it is proved without the Hasse–Minkowski theorem,
-and it is the form used for Theorem 44 (unit `th.44`). Theorem 42 is equivalent to "in every number
-field a sum of squares is a sum of four squares" (`theorem42_iff_pythagoras_number_le_four`), and
+and it is the form used for Theorem 44 with algebraic coordinates (unit `th.44`). Theorem 42 is
+equivalent to "in every number field a sum of squares is a sum of four squares" (`theorem42_iff_pythagoras_number_le_four`), and
 to the isotropy over `k` of the forms `x₁² + x₂² + x₃² + x₄² - α x₅²` for every number field `k`
 and every totally positive `α ∈ k` (`theorem42_iff_isotropic`); with `theorem42` both sides of each
 equivalence hold, and the implication from the isotropy, `four_squares_of_isotropic`, is the last
@@ -1174,39 +1178,40 @@ theorem replaces Theorem 43. Hilbert's sufficiency argument is formalized for **
 as a reduction (`theorem44For_of_theorem43For`, `theorem44_from_theorem43For`): Theorem 44 for `R`
 follows from `Theorem43For R` — every number of `R` that is nonnegative for all real values of the
 parameters is a quotient of two sums of squares in `R` — which for `R = ℚ` is Lagrange's theorem
-(`theorem43For_rat`). For one parameter, `Theorem43For ℚ(p)` is Theorem 43 for rational functions
-(proved, see below); for several parameters it is Hilbert's seventeenth problem (Artin 1927),
-which Hilbert himself leaves open (unit `s39.general_case`). So the sufficiency remains open here
-beyond the case of a single parameter. The minimality of `n` is not needed in the statement: for a
+(`theorem43For_rat`). For one parameter, `Theorem43For ℚ(p)` is Theorem 43 for rational functions;
+for several parameters it is Hilbert's seventeenth problem (Artin 1927), which Hilbert himself
+leaves open (unit `s39.general_case`). The minimality of `n` is not needed in the statement: for a
 minimal `n` the tower field is the field generated over `R` by the coordinates of the desired
 points (degree `2^n`), so "all numbers of the tower lie in `Ω(R)`" is "the desired points are
 constructible".
 
-Partial results (`ConstructionsClose.lean`): the case that Hilbert demonstrates, the coordinates of
-the given points being rational functions with rational coefficients of a single parameter `p` —
-`theorem44_one_parameter`: `Theorem44For ℚ(S)` for every real `p` and every finite set `S` of
-numbers of `ℚ(p)`; in particular `theorem44_single_parameter` (`R = ℚ(p)`) and, without parameter,
-`theorem44_algebraic` (given points with algebraic coordinates). The proof is the reduction above
-with `Theorem43For ℚ(p)`: for `p` transcendental (`theorem43_rational_functions`) the real
-embeddings of `ℚ(p)` are the substitutions `p ↦ c`, `c` transcendental; a number `N(p)/D(p)`
-nonnegative under all of them gives a polynomial `N D` that never becomes negative (the
-transcendental numbers are dense in `ℝ`), a sum of squares by Theorem 43 (`theorem43`). For `p`
-algebraic, `ℚ(p)` is a number field and its totally positive numbers are sums of squares
-(`theorem42_sum_of_squares`). The domain `ℚ(S) ⊆ ℚ(p)` is `ℚ(q)` for a single `q` by Lüroth's
-theorem; the real values of the parameter are then those of `q`, which may be more than the values
+Proved in `Theorem44Close.lean`, which imports `ConstructionsClose.lean`: `theorem44 : Theorem44`,
+for any number of parameters, as `theorem44_of_theorem43For` applied to
+`theorem43For_closure : Theorem43For ℚ(S)` for every finite `S ⊆ ℝ` — Artin's solution of
+Hilbert's seventeenth problem for the finitely generated subfields of `ℝ`: a number of `ℚ(S)` that
+is not a sum of squares is negative in some ordering of `ℚ(S)` (Artin–Schreier), hence negative
+under some embedding of `ℚ(S)` into `ℝ`. The separation by orderings and the transfer of sign
+conditions between real closed fields are taken from the library `Hilbert17` (directory
+`Hilbert17/`, a copy of files of another project, see `Hilbert17/README.md`), the real closure of
+an ordered field from the Tau Ceti library; neither is proved in this project. What this project
+proves is the passage from an ordering of the finitely generated field to an embedding into `ℝ`
+(Artin–Lang: a transcendence basis and a primitive element, a simple real zero of the minimal
+polynomial obtained by the transfer, and its persistence at a point with algebraically independent
+coordinates); the header of `Theorem44Close.lean` says what is taken from where.
+
+Earlier partial results (`ConstructionsClose.lean`), without those libraries: the case that
+Hilbert demonstrates, a single parameter `p` (`theorem44_one_parameter`, `Theorem44For ℚ(S)` for
+every finite `S ⊆ ℚ(p)`, by Lüroth's theorem; in particular `theorem44_single_parameter`), from
+`Theorem43For ℚ(p)`: for `p` transcendental by Theorem 43 (`theorem43_rational_functions`), for
+`p` algebraic because the totally positive numbers of a number field are sums of squares
+(`theorem42_sum_of_squares`; `theorem44_algebraic`: given points with algebraic coordinates). The
+real values of the parameter of `ℚ(S) = ℚ(q)` are those of `q`, which may be more than the values
 `q(p)` for real `p` (`abs_notMem_pythClosure_sq`: `|p| ∉ Ω(ℚ(p²))` for `p` transcendental).
 Moreover the reduction is an equivalence: `Theorem44For R ↔ Theorem43For R` for every `R`
 (`theorem44For_iff`), and `Theorem44 ↔ ∀ S, Theorem43For ℚ(S)`
-(`theorem44_iff_generalized_theorem43`). Still missing: `Theorem43For R` (every number of `R` that
-is nonnegative under all embeddings of `R` into `ℝ` is a quotient of two sums of squares of numbers
-of `R`) for the domains `R` generated by finitely many real numbers that are not contained in a
-field `ℚ(p)` and do not consist of algebraic numbers: two or more independent parameters, or
-coordinates that are algebraic, not rational, functions of one parameter. This is Artin's
-solution of Hilbert's seventeenth problem with rational coefficients. It needs the Artin–Schreier
-theory of orderings and the specialization of an ordering of a function field to a real point
-(Artin–Lang), neither of which is in mathlib.
+(`theorem44_iff_generalized_theorem43`).
 
-**Status.** stated (open here)
+**Status.** proved
 -/
 
 theorem theorem44_def : Theorem44 = ∀ S : Finset ℝ, Theorem44For (Subfield.closure (S : Set ℝ)) :=
@@ -1387,8 +1392,10 @@ which gives the sufficiency in Theorem 44 from `Theorem43For R` (`tower_sufficie
 Unconditionally without parameters (`tower_remark`, `R = ℚ`, Lagrange's theorem in place of
 Theorem 43; `tower_sufficient`: the tower lies in `Ω`). For one parameter `Theorem43For ℚ(p)` is
 proved in `ConstructionsClose.lean` (`theorem43_rational_functions` for `p` transcendental, from
-Theorem 43; `theorem43For_of_algebraic` in `ConstructionsCloseAux5.lean` for `p` algebraic), so
-there the remark holds unconditionally; see unit `th.44`.
+Theorem 43; `theorem43For_of_algebraic` in `ConstructionsCloseAux5.lean` for `p` algebraic), and
+for every domain generated by finitely many real numbers in `Theorem44Close.lean`
+(`theorem43For_closure`, from Artin's theorem), so for all these domains the remark holds
+unconditionally; see unit `th.44`.
 
 **Status.** proved (reading)
 -/
@@ -1422,11 +1429,14 @@ theorem tower_sufficient (l : List ℝ) (hv : ValidTower l) (h : RealTower l) :
 generated by finitely many real numbers (any number of parameters) follows from `Theorem43For R`
 for every such `R`, the generalization of Theorem 43 to functions of several parameters (and to
 algebraic coefficients). That generalization is Hilbert's seventeenth problem (every definite
-rational function of several variables is a sum of squares of rational functions), solved by
-Artin in 1927 — not formalized here, so `Theorem44` stays open. The converse dependence is proved
-in `ConstructionsClose.lean` (`theorem44_iff_generalized_theorem43`): the general case of
-Theorem 44 is equivalent to that generalization. For a single parameter the generalization follows
-from Theorem 43 itself, and Theorem 44 is proved (`theorem44_one_parameter`, unit `th.44`).
+rational function of several variables is a sum of squares of rational functions), which Hilbert
+leaves open and Artin solved in 1927. The converse dependence is proved in `ConstructionsClose.lean`
+(`theorem44_iff_generalized_theorem43`): the general case of Theorem 44 is equivalent to that
+generalization. For a single parameter the generalization follows from Theorem 43 itself
+(`theorem44_one_parameter`). For every finitely generated domain it is proved in
+`Theorem44Close.lean` (`theorem43For_closure`, Artin's theorem, with the separation by orderings
+and the transfer of sign conditions taken from the library `Hilbert17` and the real closure from
+the Tau Ceti library), and with it the general case of Theorem 44 (`theorem44`, unit `th.44`).
 
 **Status.** proved (reading)
 -/

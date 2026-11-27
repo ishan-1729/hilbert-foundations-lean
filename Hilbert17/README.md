@@ -5,9 +5,13 @@ Geometry*. They are a copy of 18 files of another project, with the changes list
 "Modifications", and contain a proof of Artin's theorem of 1927, the solution of Hilbert's
 seventeenth problem, for polynomials with real coefficients: a polynomial in any number of
 variables that takes no negative value is a sum of squares of rational functions. They are used in
-one place: `HilbertFoundations/TwoVariablesClose.lean` derives from them the statement
+two places. `HilbertFoundations/TwoVariablesClose.lean` derives from them the statement
 `TwoVariableClaim` of the unit `s38.two_variables` (§ 38), Hilbert's theorem of 1893 on the definite
 functions of two variables, which the book mentions without proof.
+`HilbertFoundations/Theorem44Close.lean`, with its helper module `Theorem44CloseAux1.lean`, takes
+from them two steps of Artin's argument, the separation of the non-sums of squares by orderings
+and the transfer of sign conditions between real closed fields, and proves with them the statement
+`Theorem44` of the unit `th.44` (Theorem 44, § 39).
 
 ## Source
 
@@ -82,15 +86,31 @@ The statement used by `HilbertFoundations/TwoVariablesClose.lean` is one:
   `0 ≤ MvPolynomial.eval x f` for all `x : Fin n → ℝ`, there are `m`, a polynomial `q ≠ 0` and
   polynomials `p i`, `i : Fin m`, with `q ^ 2 * f = ∑ i, p i ^ 2`.
 
+The statements used by `HilbertFoundations/Theorem44Close.lean` and its helper module
+`HilbertFoundations/Theorem44CloseAux1.lean` are three:
+
+* `Hilbert17.RingPreordering.isSumSq_iff_nonneg_all_orders`, in
+  `Hilbert17/OrderingSeparation.lean`: in a semireal field an element is a sum of squares if and
+  only if it is nonnegative in every ordering of the field (the statement of the rewritten file,
+  see "Modifications");
+* `Hilbert17Transfer.exists_matching_signs_eval₂`, in `Hilbert17/FiniteVariableTransfer.lean`:
+  for two ring homomorphisms of a ring `A` into real closed fields that give the same signs to the
+  elements of `A`, every point of the first field at which finitely many polynomials in `n`
+  variables over `A` have given signs has a counterpart in the second with the same signs;
+* `Hilbert17Transfer.eval₂_finSuccEquiv`, in `Hilbert17/FinSuccEvaluation.lean`: the evaluation of
+  a polynomial in `n + 1` variables read as a polynomial in one variable over the polynomials in
+  `n` variables.
+
 The suffix `_candidate` is part of the upstream name; the theorem has no hypothesis other than that
 `f` takes no negative value. The header comments of several files say "source draft", "not yet
 elaborated" or "not yet compiled", and the docstring of `hilbert17Real_candidate` calls the theorem
 a candidate. This is the wording of the upstream author from before the upstream build was
 verified, and it is kept as it is. The files compile in this repository, and the axiom audit of
-this repository (`scripts/AxiomsAudit.lean`) examines `HilbertFoundations.twoVariableClaim` with
-everything its proof depends on, so it covers the declarations of this directory that the proof
-uses. In the same way the header of `ConditionalArtin.lean` says that `NegativePointTransfer` is an
-unproved input: it is a hypothesis of the theorems of that file, and
+this repository (`scripts/AxiomsAudit.lean`) examines `HilbertFoundations.twoVariableClaim` and
+`HilbertFoundations.theorem44` with everything their proofs depend on, so it covers the
+declarations of this directory that the proofs use. In the same way the header of
+`ConditionalArtin.lean` says that `NegativePointTransfer` is an unproved input: it is a hypothesis
+of the theorems of that file, and
 `negativePointTransfer_of_isRealClosed` in `RealClosureTransfer.lean` proves it.
 
 ## Modifications
@@ -195,4 +215,7 @@ What differs from the upstream repository outside the files:
   `lake-manifest.json`; the upstream repository builds against its own copies of them.
 * There is no root module `Hilbert17.lean` here: the upstream one imports upstream files that
   are not copied. The library is declared with `globs = ["Hilbert17.+"]`, so that its modules are
-  the files of this directory, and it is reached through `import Hilbert17.RealClosureTransfer`.
+  the files of this directory, and it is reached through `import Hilbert17.RealClosureTransfer`
+  (`TwoVariablesClose.lean`), `import Hilbert17.FiniteVariableTransfer` and
+  `import Hilbert17.OrderingSeparation` (`Theorem44Close.lean`), and
+  `import Hilbert17.FinSuccEvaluation` (`Theorem44CloseAux1.lean`).

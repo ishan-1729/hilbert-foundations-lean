@@ -21,6 +21,7 @@ import HilbertFoundations.CommentaryClose
 import HilbertFoundations.JordanCurveClose
 import HilbertFoundations.Theorem42Close
 import HilbertFoundations.TwoVariablesClose
+import HilbertFoundations.Theorem44Close
 
 /-!
 # Hilbert, *The Foundations of Geometry*, in Lean
@@ -28,14 +29,16 @@ import HilbertFoundations.TwoVariablesClose
 Root module (built by `lake build`, imported by `scripts/AxiomsAudit.lean`): the axioms and every
 chapter, in the order of the book, then the introduction, conclusion and appendix (`Commentary`).
 
-The last nine imports are the proofs of statements that the chapter files only state: Theorem 6
+The last ten imports are the proofs of statements that the chapter files only state: Theorem 6
 (`OrderPolygon`), Theorem 18 and the properties of the circle (`CongruenceClose`), the consequences
 of the axiom of completeness (`CompletenessClose`), co-ordinates in space (`CoordinatesClose`),
 Theorem 43 and the constructions of § 39 (`ConstructionsClose`), Dehn's geometries of the
 conclusion (`CommentaryClose`), Jordan's curve theorem (`JordanCurveClose`, from the proof in
 the library `JordanPick`, a copy of files of another project: see `JordanPick/README.md`),
 Theorem 42 (`Theorem42Close`, from the Hasse–Minkowski theorem of the library Tau Ceti, a
-dependency of this package), and Hilbert's theorem on the definite functions of two variables
+dependency of this package), Hilbert's theorem on the definite functions of two variables
 (`TwoVariablesClose`, from the proof of Artin's theorem in the library `Hilbert17`, a copy of
-files of another project: see `Hilbert17/README.md`).
+files of another project: see `Hilbert17/README.md`), and Theorem 44 (`Theorem44Close`, from
+Artin's theorem for the finitely generated subfields of `ℝ`, with the separation by orderings and
+the transfer of sign conditions of the library `Hilbert17` and the real closure of Tau Ceti).
 -/
